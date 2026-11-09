@@ -1,0 +1,2547 @@
+{
+ "version": 1,
+ "topics": [
+  {
+   "id": "history",
+   "name": "History",
+   "short": "History",
+   "color": "#E0A458",
+   "icon": "columns"
+  },
+  {
+   "id": "psychology",
+   "name": "Psychology & Behaviour",
+   "short": "Psychology",
+   "color": "#7FB7BE",
+   "icon": "brain"
+  },
+  {
+   "id": "literature",
+   "name": "Literature & Writing",
+   "short": "Literature",
+   "color": "#D17A8C",
+   "icon": "feather"
+  }
+ ],
+ "paths": [
+  {
+   "id": "rome",
+   "topic": "history",
+   "title": "The Fall of Rome",
+   "blurb": "Decline, transformation, plague and the empire that refused to die."
+  },
+  {
+   "id": "collapse",
+   "topic": "history",
+   "title": "Collapse & Resilience",
+   "blurb": "Why complex societies break, and what survives the wreckage."
+  },
+  {
+   "id": "divergence",
+   "topic": "history",
+   "title": "Why Some Nations Got Rich",
+   "blurb": "Geography, institutions, coal, crops and luck."
+  },
+  {
+   "id": "revolutions",
+   "topic": "history",
+   "title": "Revolutions & Nations",
+   "blurb": "Print, nationalism, uprisings and how wars begin."
+  },
+  {
+   "id": "biases",
+   "topic": "psychology",
+   "title": "Cognitive Biases",
+   "blurb": "The predictable ways a fast mind gets things wrong."
+  },
+  {
+   "id": "replication",
+   "topic": "psychology",
+   "title": "Famous Findings, Re-examined",
+   "blurb": "Psychology's replication crisis, case by case."
+  },
+  {
+   "id": "social",
+   "topic": "psychology",
+   "title": "The Social Animal",
+   "blurb": "Obedience, conformity, dissonance and moral intuition."
+  },
+  {
+   "id": "habits",
+   "topic": "psychology",
+   "title": "Habits & Motivation",
+   "blurb": "What actually changes behaviour, and what doesn't."
+  },
+  {
+   "id": "novels",
+   "topic": "literature",
+   "title": "How Novels Work",
+   "blurb": "Plot, voice, character and the machinery of fiction."
+  },
+  {
+   "id": "craft",
+   "topic": "literature",
+   "title": "The Writer's Craft",
+   "blurb": "Hard-won rules, and when to break them."
+  },
+  {
+   "id": "theory",
+   "topic": "literature",
+   "title": "Theory Without Tears",
+   "blurb": "Big ideas in criticism, in plain words."
+  },
+  {
+   "id": "mind",
+   "topic": "literature",
+   "title": "Stories & the Mind",
+   "blurb": "What reading does to us, according to the evidence."
+  }
+ ],
+ "cards": [
+  {
+   "id": "gibbon-decline",
+   "topic": "history",
+   "title": "Gibbon's verdict: Rome fell to barbarism and religion",
+   "summary": "Edward Gibbon's The History of the Decline and Fall of the Roman Empire, published in six volumes between 1776 and 1789, set the terms of a debate that is still running. Gibbon tracked the empire from the age of the Antonines, which he regarded as the happiest period in human history, through to the fall of Constantinople in 1453. His most famous diagnosis, made late in the work, is that he had described the triumph of barbarism and religion. In his telling, Rome rotted from within before it was pushed from outside: the army was barbarised and became a kingmaker, civic virtue gave way to luxury and dependence, and Christianity redirected talent and loyalty away from the state towards the church and the afterlife. Barbarian invasions were the final blow to a body that had already lost its strength. Gibbon wrote as an Enlightenment ironist, and his chapters fifteen and sixteen on early Christianity were scandalous in his own day. Modern historians reject much of his moralising, especially the idea of Christian otherworldliness as a cause of collapse, yet the scale of his synthesis and the elegance of his prose keep the book in print. Reading him is also a lesson in how history writing reflects its own era: Gibbon's Rome is partly a mirror held up to Georgian Britain and its anxieties about empire, luxury and decline.",
+   "deepDive": "Gibbon's real method is worth noticing: he read nearly every surviving ancient source and footnoted obsessively, often with biting asides. Those footnotes are a pleasure in themselves. The weak point is causation. He never separates the western collapse in the fifth century from the eastern empire's survival for another thousand years, which undercuts any simple claim that Christianity doomed Rome, since the east was at least as Christian as the west.",
+   "source": {
+    "title": "The History of the Decline and Fall of the Roman Empire",
+    "author": "Edward Gibbon",
+    "year": 1776,
+    "url": "https://en.wikipedia.org/wiki/The_History_of_the_Decline_and_Fall_of_the_Roman_Empire"
+   },
+   "readings": [
+    {
+     "kind": "book",
+     "title": "The History of the Decline and Fall of the Roman Empire, Vol. 1 (free e-text)",
+     "author": "Edward Gibbon",
+     "year": 1776,
+     "url": "https://www.gutenberg.org/ebooks/731"
+    },
+    {
+     "kind": "book",
+     "title": "The World of Late Antiquity",
+     "author": "Peter Brown",
+     "year": 1971,
+     "url": "https://en.wikipedia.org/wiki/Peter_Brown_(historian)"
+    },
+    {
+     "kind": "book",
+     "title": "The Fall of Rome and the End of Civilization",
+     "author": "Bryan Ward-Perkins",
+     "year": 2005,
+     "url": "https://en.wikipedia.org/wiki/Bryan_Ward-Perkins"
+    }
+   ],
+   "paths": [
+    "rome"
+   ]
+  },
+  {
+   "id": "brown-late-antiquity",
+   "topic": "history",
+   "title": "Rome didn't fall, it transformed: the idea of Late Antiquity",
+   "summary": "In 1971 Peter Brown published The World of Late Antiquity, a short, richly illustrated book that changed how historians talk about the period from roughly 150 to 750 AD. Instead of a story of decline and fall, Brown described a world of creative transformation. The late Roman centuries produced new forms of religious life such as monasticism and the cult of saints, new art, new law codes, and new ideas about the self and the holy man. The Mediterranean remained connected, and cultures from Ireland to Persia continued to borrow from Roman models. In this framing the end of the western emperors in 476 was a political event that mattered less to ordinary people than older narratives assumed, and the barbarian kingdoms that followed often kept Roman administration, Latin and Roman law. The concept of Late Antiquity became a whole academic field, with its own journals and chairs, and it shifted attention towards religion, culture and continuity. Critics argue that the transformation school went too far, turning violence, economic collapse and lost literacy into a story of cultural change in which nobody suffers. That counterattack, led by archaeologists such as Bryan Ward-Perkins, is covered in another card. The useful lesson is that words like fall and transformation are not neutral labels: each one decides in advance what counts as the important evidence.",
+   "deepDive": "Brown's later work deepened the theme. The Rise of Western Christendom traces how Christianity reshaped Europe between 200 and 1000, and Through the Eye of a Needle shows how wealth and the church interacted in the fourth and fifth centuries. A good exercise is to read Brown and Ward-Perkins back to back: both are excellent historians looking at the same centuries, and their disagreement is mostly about which evidence should carry the most weight.",
+   "source": {
+    "title": "The World of Late Antiquity",
+    "author": "Peter Brown",
+    "year": 1971,
+    "url": "https://en.wikipedia.org/wiki/Late_antiquity"
+   },
+   "readings": [
+    {
+     "kind": "book",
+     "title": "The Rise of Western Christendom",
+     "author": "Peter Brown",
+     "year": 1996,
+     "url": "https://en.wikipedia.org/wiki/Peter_Brown_(historian)"
+    },
+    {
+     "kind": "book",
+     "title": "Barbarian Migrations and the Roman West, 376-568",
+     "author": "Guy Halsall",
+     "year": 2007,
+     "url": "https://en.wikipedia.org/wiki/Guy_Halsall"
+    },
+    {
+     "kind": "book",
+     "title": "The Fall of Rome and the End of Civilization",
+     "author": "Bryan Ward-Perkins",
+     "year": 2005,
+     "url": "https://en.wikipedia.org/wiki/Bryan_Ward-Perkins"
+    }
+   ],
+   "paths": [
+    "rome"
+   ]
+  },
+  {
+   "id": "ward-perkins-pottery",
+   "topic": "history",
+   "title": "The pots don't lie: material evidence for Rome's collapse",
+   "summary": "Bryan Ward-Perkins, an Oxford archaeologist and historian, wrote The Fall of Rome and the End of Civilization (2005) as a deliberate challenge to the idea that the end of the western empire was a gentle transformation. His case rests on things rather than texts. In Roman Britain and much of the western Mediterranean, mass-produced pottery, roof tiles and coins circulated widely, even in modest rural homes. After the fifth century these goods largely vanish. Buildings shift from stone and tile to wood and thatch, coin use collapses, and the size of cattle in the archaeological record declines, suggesting poorer husbandry. In some regions, Ward-Perkins argues, living standards fell to levels below those of the pre-Roman Iron Age. He describes the Roman economy as a sophisticated, specialised system: when the political and military structure that protected trade broke down, specialisation unravelled and people were thrown back on local, cruder production. The argument is not that culture ended, but that complexity, comfort and literacy shrank dramatically for most people. His book is a strong reminder that economies built on specialisation and long supply chains are efficient but fragile, and that historians should look at what ordinary households owned, not only at what elites wrote.",
+   "deepDive": "Independent evidence supports the idea of a large economic contraction. Lead pollution trapped in Greenland ice, a by-product of Roman silver mining and smelting, rises during the Roman peak and falls sharply with the plague of the second century and again in late antiquity. A 2018 study in PNAS used this ice-core record as a year-by-year proxy for the European economy. Shipwreck counts in the Mediterranean follow a similar curve.",
+   "source": {
+    "title": "The Fall of Rome and the End of Civilization",
+    "author": "Bryan Ward-Perkins",
+    "year": 2005,
+    "url": "https://en.wikipedia.org/wiki/Bryan_Ward-Perkins"
+   },
+   "readings": [
+    {
+     "kind": "paper",
+     "title": "Lead pollution recorded in Greenland ice indicates European emissions tracked plagues, wars, and imperial expansion during antiquity",
+     "author": "McConnell et al.",
+     "year": 2018,
+     "url": "https://doi.org/10.1073/pnas.1721818115"
+    },
+    {
+     "kind": "book",
+     "title": "The Fall of the Roman Empire: A New History",
+     "author": "Peter Heather",
+     "year": 2005,
+     "url": "https://en.wikipedia.org/wiki/Peter_Heather"
+    },
+    {
+     "kind": "book",
+     "title": "Framing the Early Middle Ages",
+     "author": "Chris Wickham",
+     "year": 2005,
+     "url": "https://en.wikipedia.org/wiki/Chris_Wickham"
+    }
+   ],
+   "paths": [
+    "rome"
+   ]
+  },
+  {
+   "id": "harper-climate-plague",
+   "topic": "history",
+   "title": "Climate and plague: the environmental fall of Rome",
+   "summary": "Kyle Harper's The Fate of Rome (2017) adds two actors that older histories barely mentioned: the climate and microbes. Harper argues that the empire grew during the Roman Climate Optimum, a period of relatively warm, stable and wet conditions across the Mediterranean that supported high agricultural output. Its connectivity, with roads, ports and dense cities, was an engine of prosperity but also a highway for disease. The Antonine Plague, from about 165 AD, probably smallpox, killed a large share of the population. The Plague of Cyprian in the mid-third century deepened the crisis of that era. Most dramatic was the Plague of Justinian from 541, now confirmed by ancient DNA as Yersinia pestis, the bacterium behind the Black Death. It struck just as a cluster of volcanic eruptions in 536 and 540 ushered in a sharp cold phase that climate scientists call the Late Antique Little Ice Age. Harper's case is that these shocks, not just political failures, repeatedly knocked the empire down. He is careful to say that nature acted through society: a different empire might have absorbed the blows differently. Some historians argue that he overstates the mortality of particular plagues, and the size of the Justinianic plague's death toll remains actively debated.",
+   "deepDive": "The scientific sources behind the book are worth reading directly. Tree-ring studies reconstructed a cold period from 536 to about 660 AD, and genomic work on skeletons from Bavarian graves recovered Yersinia pestis DNA from the sixth century. A 2019 paper in PNAS by Mordechai and colleagues argued the Justinianic plague had a smaller impact than often claimed, which shows how lively the debate still is.",
+   "source": {
+    "title": "The Fate of Rome: Climate, Disease, and the End of an Empire",
+    "author": "Kyle Harper",
+    "year": 2017,
+    "url": "https://en.wikipedia.org/wiki/Kyle_Harper"
+   },
+   "readings": [
+    {
+     "kind": "paper",
+     "title": "Cooling and societal change during the Late Antique Little Ice Age from 536 to around 660 AD",
+     "author": "Büntgen et al.",
+     "year": 2016,
+     "url": "https://doi.org/10.1038/ngeo2652"
+    },
+    {
+     "kind": "paper",
+     "title": "Yersinia pestis and the Plague of Justinian 541-543 AD: a genomic analysis",
+     "author": "Wagner et al.",
+     "year": 2014,
+     "url": "https://doi.org/10.1016/S1473-3099(13)70323-2"
+    },
+    {
+     "kind": "paper",
+     "title": "The Justinianic Plague: An inconsequential pandemic?",
+     "author": "Mordechai et al.",
+     "year": 2019,
+     "url": "https://doi.org/10.1073/pnas.1903797116"
+    }
+   ],
+   "paths": [
+    "rome",
+    "collapse"
+   ]
+  },
+  {
+   "id": "third-century-crisis",
+   "topic": "history",
+   "title": "The Crisis of the Third Century and the empire that rebooted",
+   "summary": "Between the murder of the emperor Severus Alexander in 235 and the accession of Diocletian in 284, the Roman Empire almost disintegrated. In roughly fifty years there were more than twenty recognised emperors, most of whom died violently. Persia, under the new and aggressive Sasanian dynasty, captured the emperor Valerian in 260. Germanic groups raided across the Rhine and Danube. The empire split into three: a breakaway Gallic Empire in the west and the Palmyrene Empire of Queen Zenobia in the east. The silver content of the coinage collapsed, prices rose, and plague struck. Yet the empire survived. Aurelian reunited it in the 270s, and Diocletian then rebuilt the state. He multiplied provinces, separated civil and military commands, enlarged the army, created the Tetrarchy of two senior and two junior emperors, and tried to fix prices by decree. Constantine continued the overhaul, founding Constantinople and backing Christianity. The late empire that emerged was more bureaucratic, more militarised and more heavily taxed than the earlier principate. The episode matters because it shows that a state can survive a near-total breakdown by reinventing itself, and that the reforms which save a system can also make it more rigid and expensive to run in the long term.",
+   "deepDive": "Diocletian's Edict on Maximum Prices of 301 is one of the most famous failed economic policies in history: it set maximum prices for over a thousand goods and wages, with severe penalties, and was widely ignored. Fragments of the inscription survive across the eastern empire. It is a useful case study for anyone interested in what happens when governments try to control inflation by command rather than by fixing the money supply.",
+   "source": {
+    "title": "How Rome Fell: Death of a Superpower",
+    "author": "Adrian Goldsworthy",
+    "year": 2009,
+    "url": "https://en.wikipedia.org/wiki/Adrian_Goldsworthy"
+   },
+   "readings": [
+    {
+     "kind": "paper",
+     "title": "Crisis of the Third Century",
+     "author": "Wikipedia",
+     "year": 2024,
+     "url": "https://en.wikipedia.org/wiki/Crisis_of_the_Third_Century"
+    },
+    {
+     "kind": "book",
+     "title": "Diocletian and the Roman Recovery",
+     "author": "Stephen Williams",
+     "year": 1985,
+     "url": "https://www.routledge.com/Diocletian-and-the-Roman-Recovery/Williams/p/book/9780415918275"
+    },
+    {
+     "kind": "paper",
+     "title": "Edict on Maximum Prices",
+     "author": "Wikipedia",
+     "year": 2024,
+     "url": "https://en.wikipedia.org/wiki/Edict_on_Maximum_Prices"
+    }
+   ],
+   "paths": [
+    "rome"
+   ]
+  },
+  {
+   "id": "heather-huns",
+   "topic": "history",
+   "title": "The Hunnic domino: an outside shock that broke the West",
+   "summary": "Peter Heather's The Fall of the Roman Empire: A New History (2005) pushes back against both Gibbon's internal rot and the gentle transformation school. Heather argues that the fourth-century empire was not terminally weak; it was large, rich and militarily capable. What broke it was an external shock. In the 370s the Huns moved west across the steppe, displacing Gothic groups who sought refuge inside the empire. Rome's mishandling of these refugees led to the catastrophic defeat at Adrianople in 378, where the eastern emperor Valens was killed. A second wave of displacement around 405 to 408 pushed Vandals, Alans, Sueves and others across the Rhine. These groups did not leave. They carved out territories in Gaul, Spain and, crucially, North Africa, which the Vandals took in 439. Africa was the western empire's richest tax base, and its loss crippled the state's capacity to pay the army. A shrinking revenue base meant fewer soldiers, which meant more territory lost: a death spiral. In Heather's account the western empire did not collapse because Romans became decadent but because of a fiscal-military feedback loop triggered by migration from far beyond its borders.",
+   "deepDive": "Heather's most provocative idea, developed in Empires and Barbarians (2009), is that Rome created its own nemesis: centuries of contact, trade, war and subsidies made the Germanic societies on its borders larger, richer and better organised. In that sense the barbarians who brought down the West were partly a product of the empire itself, a pattern seen in other imperial frontiers.",
+   "source": {
+    "title": "The Fall of the Roman Empire: A New History",
+    "author": "Peter Heather",
+    "year": 2005,
+    "url": "https://en.wikipedia.org/wiki/Peter_Heather"
+   },
+   "readings": [
+    {
+     "kind": "book",
+     "title": "Empires and Barbarians",
+     "author": "Peter Heather",
+     "year": 2009,
+     "url": "https://en.wikipedia.org/wiki/Peter_Heather"
+    },
+    {
+     "kind": "paper",
+     "title": "Battle of Adrianople",
+     "author": "Wikipedia",
+     "year": 2024,
+     "url": "https://en.wikipedia.org/wiki/Battle_of_Adrianople"
+    },
+    {
+     "kind": "book",
+     "title": "Barbarian Migrations and the Roman West, 376-568",
+     "author": "Guy Halsall",
+     "year": 2007,
+     "url": "https://en.wikipedia.org/wiki/Guy_Halsall"
+    }
+   ],
+   "paths": [
+    "rome"
+   ]
+  },
+  {
+   "id": "byzantium-survival",
+   "topic": "history",
+   "title": "The Rome that didn't fall: Byzantium's thousand-year afterlife",
+   "summary": "Most popular histories end Rome in 476, when the last western emperor, Romulus Augustulus, was deposed. But the people we call Byzantines called themselves Romans, and their empire, centred on Constantinople, lasted until the Ottoman conquest in 1453. Judith Herrin's Byzantium: The Surprising Life of a Medieval Empire (2007) argues that this state was not a decadent, scheming oriental footnote, as Enlightenment writers portrayed it, but one of the most durable and innovative polities in history. It preserved Roman law, most famously through Justinian's codification, the Corpus Juris Civilis, which later shaped legal systems across Europe. It kept Greek classical texts alive, many of which reached the Renaissance West through Byzantine scholars. It acted as a buffer between Europe and successive powers to the east, and its Orthodox Christianity and alphabet shaped the Slavic world, including Russia. The empire survived the loss of its richest provinces to the Arab conquests in the seventh century by reorganising itself around a smaller, defensible core. Byzantium is therefore the key test case for any theory of Rome's fall: whatever killed the West had to be something the East could survive, which points towards geography, fiscal base and Constantinople's formidable walls.",
+   "deepDive": "The Theodosian Walls of Constantinople, completed in the fifth century, held the city against attackers for about eight centuries; it fell in 1204 only to crusaders who came in by sea and over the sea walls, and in 1453 to an Ottoman army equipped with large cannon. Anthony Kaldellis has argued, in Romanland (2019), that historians should take Byzantine Roman identity at face value and call the state what its people did: the Roman empire.",
+   "source": {
+    "title": "Byzantium: The Surprising Life of a Medieval Empire",
+    "author": "Judith Herrin",
+    "year": 2007,
+    "url": "https://en.wikipedia.org/wiki/Judith_Herrin"
+   },
+   "readings": [
+    {
+     "kind": "book",
+     "title": "Romanland: Ethnicity and Empire in Byzantium",
+     "author": "Anthony Kaldellis",
+     "year": 2019,
+     "url": "https://www.hup.harvard.edu/books/9780674986510"
+    },
+    {
+     "kind": "paper",
+     "title": "Corpus Juris Civilis",
+     "author": "Wikipedia",
+     "year": 2024,
+     "url": "https://en.wikipedia.org/wiki/Corpus_Juris_Civilis"
+    },
+    {
+     "kind": "paper",
+     "title": "Fall of Constantinople",
+     "author": "Wikipedia",
+     "year": 2024,
+     "url": "https://en.wikipedia.org/wiki/Fall_of_Constantinople"
+    }
+   ],
+   "paths": [
+    "rome"
+   ]
+  },
+  {
+   "id": "tainter-complexity",
+   "topic": "history",
+   "title": "Why complex societies collapse: diminishing returns",
+   "summary": "Joseph Tainter, an anthropologist, offered a general theory in The Collapse of Complex Societies (1988). He reviewed many earlier explanations, such as resource depletion, invaders, class conflict and mismanagement, and found each one incomplete. His alternative is economic. Societies solve problems by adding complexity: more bureaucracy, more specialists, more soldiers, more infrastructure. Early investments in complexity pay off handsomely, but each additional layer yields less benefit for its cost. Eventually a society reaches a point of diminishing and then negative marginal returns, where it spends ever more simply to maintain itself. At that point it becomes vulnerable: a shock that would once have been absorbed can trigger collapse, and collapse itself can be a rational, economising response, as people stop paying for a centre that no longer delivers. Tainter applied the model to the western Roman Empire, the Classic Maya and the Chacoan society of the American Southwest. In the Roman case, he pointed to escalating taxation and military costs in the late empire, which burdened peasants so heavily that some abandoned land. Tainter's framework is attractive because it is general and testable. Critics note that measuring complexity and its returns is hard, and that collapse is often less total, and recovery faster, than the model implies.",
+   "deepDive": "Tainter is often read alongside Jared Diamond's Collapse (2005), which emphasises environmental damage. The two differ: Diamond stresses choices about resources, while Tainter argues that environmental problems are just one of many stresses that a society with high costs of complexity struggles to meet. The edited volume Questioning Collapse (2010) collects anthropologists who argue that popular collapse narratives often ignore how societies adapted and continued.",
+   "source": {
+    "title": "The Collapse of Complex Societies",
+    "author": "Joseph Tainter",
+    "year": 1988,
+    "url": "https://en.wikipedia.org/wiki/Joseph_Tainter"
+   },
+   "readings": [
+    {
+     "kind": "book",
+     "title": "Collapse: How Societies Choose to Fail or Succeed",
+     "author": "Jared Diamond",
+     "year": 2005,
+     "url": "https://en.wikipedia.org/wiki/Collapse:_How_Societies_Choose_to_Fail_or_Succeed"
+    },
+    {
+     "kind": "book",
+     "title": "Questioning Collapse",
+     "author": "Patricia McAnany & Norman Yoffee (eds.)",
+     "year": 2010,
+     "url": "https://en.wikipedia.org/wiki/Questioning_Collapse"
+    },
+    {
+     "kind": "paper",
+     "title": "Societal collapse",
+     "author": "Wikipedia",
+     "year": 2024,
+     "url": "https://en.wikipedia.org/wiki/Societal_collapse"
+    }
+   ],
+   "paths": [
+    "collapse",
+    "rome"
+   ]
+  },
+  {
+   "id": "bronze-age-collapse",
+   "topic": "history",
+   "title": "1177 BC: the first globalised world, and its systems failure",
+   "summary": "Around 1200 to 1150 BC the interconnected civilisations of the eastern Mediterranean fell within a few generations. Mycenaean palaces in Greece were destroyed and Linear B writing disappeared. The Hittite Empire in Anatolia vanished. The great trading city of Ugarit on the Syrian coast was destroyed, and Egypt survived only in weakened form. Eric Cline's 1177 B.C.: The Year Civilization Collapsed (2014) describes this world as an early globalised economy, with palaces trading tin, copper, grain, luxury goods and diplomatic gifts across long distances, as shown by archives like the Amarna letters and the Uluburun shipwreck. Older accounts blamed the mysterious Sea Peoples, raiders recorded by Ramesses III, whose inscriptions date a great battle to about 1177 BC. Cline argues that no single cause is sufficient. Instead he describes a perfect storm: drought supported by pollen and climate data, earthquakes, famine, internal revolts, disruption of trade routes, and migration and raiding. Because these states depended on one another, failure cascaded. The book reads well as a lesson in complexity science: tightly coupled systems are efficient in good times and fragile in bad times, and the same links that spread prosperity can spread collapse.",
+   "deepDive": "Cline has since written a sequel, After 1177 B.C. (2024), which examines how different societies responded: some disappeared, others such as the Phoenicians adapted and thrived, spreading the alphabet that underlies Greek and Latin scripts. A paleoclimate study by Kaniewski and colleagues using sediment cores from Cyprus and Syria linked the collapse to a multi-century drought, one of several lines of evidence that have pulled climate into the story.",
+   "source": {
+    "title": "1177 B.C.: The Year Civilization Collapsed",
+    "author": "Eric H. Cline",
+    "year": 2014,
+    "url": "https://en.wikipedia.org/wiki/1177_B.C.:_The_Year_Civilization_Collapsed"
+   },
+   "readings": [
+    {
+     "kind": "paper",
+     "title": "Environmental roots of the Late Bronze Age crisis",
+     "author": "Kaniewski et al.",
+     "year": 2013,
+     "url": "https://doi.org/10.1371/journal.pone.0071004"
+    },
+    {
+     "kind": "paper",
+     "title": "Late Bronze Age collapse",
+     "author": "Wikipedia",
+     "year": 2024,
+     "url": "https://en.wikipedia.org/wiki/Late_Bronze_Age_collapse"
+    },
+    {
+     "kind": "book",
+     "title": "After 1177 B.C.: The Survival of Civilizations",
+     "author": "Eric H. Cline",
+     "year": 2024,
+     "url": "https://en.wikipedia.org/wiki/Eric_H._Cline"
+    }
+   ],
+   "paths": [
+    "collapse"
+   ]
+  },
+  {
+   "id": "diamond-geography",
+   "topic": "history",
+   "title": "Guns, germs and geography: why Eurasia got a head start",
+   "summary": "Jared Diamond's Guns, Germs, and Steel (1997) asks why Eurasian societies, rather than those of the Americas, Africa or Australia, ended up conquering much of the world. His answer is explicitly not about differences between peoples but about geography. The Fertile Crescent and China happened to have many wild plants and animals suitable for domestication: large-seeded grasses like wheat and barley, and big mammals such as cattle, sheep, goats, pigs and horses. Food production allowed denser populations, specialists, states, writing and metallurgy. Living close to livestock exposed Eurasians to crowd diseases like smallpox and measles, to which they developed some immunity, and these germs later devastated the peoples of the Americas. Eurasia's east-west axis also helped: crops and techniques spread more easily along similar latitudes and climates than along the north-south axes of the Americas and Africa. The book won the Pulitzer Prize and remains hugely influential. Historians and anthropologists criticise it for geographic determinism, for downplaying human agency, institutions and colonial violence, and for broad generalisations. Even critics agree it popularised a powerful idea: early ecological luck can compound over thousands of years into huge differences in power.",
+   "deepDive": "The most cited follow-up test is the debate between geography and institutions. Acemoglu, Johnson and Robinson argued in 2001 that colonial institutions, not geography, explain modern income gaps, using European settler mortality as a natural experiment. Diamond responded that geography shapes which institutions arise in the first place. The east-west axis claim has also been tested empirically by economists studying the diffusion of crops and technologies.",
+   "source": {
+    "title": "Guns, Germs, and Steel",
+    "author": "Jared Diamond",
+    "year": 1997,
+    "url": "https://en.wikipedia.org/wiki/Guns,_Germs,_and_Steel"
+   },
+   "readings": [
+    {
+     "kind": "paper",
+     "title": "The Colonial Origins of Comparative Development: An Empirical Investigation",
+     "author": "Acemoglu, Johnson & Robinson",
+     "year": 2001,
+     "url": "https://doi.org/10.1257/aer.91.5.1369"
+    },
+    {
+     "kind": "book",
+     "title": "Why Nations Fail",
+     "author": "Daron Acemoglu & James A. Robinson",
+     "year": 2012,
+     "url": "https://en.wikipedia.org/wiki/Why_Nations_Fail"
+    },
+    {
+     "kind": "book",
+     "title": "The Dawn of Everything",
+     "author": "David Graeber & David Wengrow",
+     "year": 2021,
+     "url": "https://en.wikipedia.org/wiki/The_Dawn_of_Everything"
+    }
+   ],
+   "paths": [
+    "divergence"
+   ]
+  },
+  {
+   "id": "acemoglu-institutions",
+   "topic": "history",
+   "title": "Inclusive vs extractive: why some nations get rich",
+   "summary": "In Why Nations Fail (2012), the economists Daron Acemoglu and James Robinson argue that prosperity depends mainly on institutions, the rules that structure economic and political life. Inclusive economic institutions protect property rights, enforce contracts, allow free entry into markets and reward innovation. Extractive institutions are designed to channel wealth to a narrow elite, through forced labour, monopolies or arbitrary confiscation. Economic institutions in turn depend on political ones: inclusive politics, with power distributed and constrained, tends to sustain inclusive economics. Their favourite illustration is Nogales, a city split by the US-Mexico border, where similar people and geography produce very different outcomes. Other examples include North and South Korea, and the divergent paths of colonial societies built on settlement versus extraction. The authors stress critical junctures, such as the Black Death or the Glorious Revolution of 1688 in England, when small institutional differences can send societies down different paths. They also describe a creative destruction problem: elites often block new technologies that threaten their power. Acemoglu, Johnson and Robinson received the 2024 Nobel Memorial Prize in Economic Sciences for this research programme. Critics argue that the definitions of inclusive and extractive can be stretched to fit any case after the fact, and that rapid growth in China complicates the thesis.",
+   "deepDive": "The empirical foundation is the 2001 American Economic Review paper on colonial origins, which used historical settler mortality as an instrument for institutions. That paper has been challenged on the quality of the mortality data, most prominently by David Albouy, and the authors replied. Following that exchange is a good lesson in how economic history arguments are actually tested.",
+   "source": {
+    "title": "Why Nations Fail",
+    "author": "Daron Acemoglu & James A. Robinson",
+    "year": 2012,
+    "url": "https://en.wikipedia.org/wiki/Why_Nations_Fail"
+   },
+   "readings": [
+    {
+     "kind": "paper",
+     "title": "The Colonial Origins of Comparative Development",
+     "author": "Acemoglu, Johnson & Robinson",
+     "year": 2001,
+     "url": "https://doi.org/10.1257/aer.91.5.1369"
+    },
+    {
+     "kind": "paper",
+     "title": "The Colonial Origins of Comparative Development: An Empirical Investigation: Comment",
+     "author": "David Albouy",
+     "year": 2012,
+     "url": "https://doi.org/10.1257/aer.102.6.3059"
+    },
+    {
+     "kind": "book",
+     "title": "The Narrow Corridor",
+     "author": "Daron Acemoglu & James A. Robinson",
+     "year": 2019,
+     "url": "https://en.wikipedia.org/wiki/Daron_Acemoglu"
+    }
+   ],
+   "paths": [
+    "divergence"
+   ]
+  },
+  {
+   "id": "pomeranz-divergence",
+   "topic": "history",
+   "title": "The Great Divergence: coal, colonies and luck",
+   "summary": "Why did Britain, and not the Yangzi Delta in China, have the first industrial revolution? In The Great Divergence (2000), Kenneth Pomeranz challenged the long-standing assumption that Europe was already far ahead before 1800. Comparing the most advanced regions of each, rather than whole continents, he argued that around 1750 England and the Yangzi Delta were broadly similar in life expectancy, consumption, commercialisation and the functioning of markets. Both faced ecological limits: land was scarce, and fuel, food and fibre all competed for it. Britain escaped this trap through two strokes of fortune. First, it had large coal deposits close to where they were needed, and coal substituted for wood, freeing land. Second, it had the Americas: colonies supplied sugar, cotton and timber, effectively adding vast ghost acres of land, and much of this was produced by enslaved labour. In this account the divergence was late, sudden and contingent rather than the product of deep European cultural superiority. The book launched the California School of economic history and an intense debate. Later quantitative work on real wages and GDP, by scholars such as Robert Allen and Stephen Broadberry, suggests that north-west Europe had pulled ahead earlier than Pomeranz claimed, but his emphasis on energy and resources has proved enduring.",
+   "deepDive": "Robert Allen's The British Industrial Revolution in Global Perspective (2009) offers a complementary explanation: Britain had unusually high wages and unusually cheap coal, which made it profitable to invent machines that substituted capital and energy for labour. Joel Mokyr, by contrast, emphasises an Enlightenment culture of useful knowledge. Reading the three together covers the main positions.",
+   "source": {
+    "title": "The Great Divergence",
+    "author": "Kenneth Pomeranz",
+    "year": 2000,
+    "url": "https://en.wikipedia.org/wiki/The_Great_Divergence_(book)"
+   },
+   "readings": [
+    {
+     "kind": "book",
+     "title": "The British Industrial Revolution in Global Perspective",
+     "author": "Robert C. Allen",
+     "year": 2009,
+     "url": "https://en.wikipedia.org/wiki/Bob_Allen_(economic_historian)"
+    },
+    {
+     "kind": "book",
+     "title": "A Culture of Growth",
+     "author": "Joel Mokyr",
+     "year": 2016,
+     "url": "https://en.wikipedia.org/wiki/Joel_Mokyr"
+    },
+    {
+     "kind": "paper",
+     "title": "Great Divergence",
+     "author": "Wikipedia",
+     "year": 2024,
+     "url": "https://en.wikipedia.org/wiki/Great_Divergence"
+    }
+   ],
+   "paths": [
+    "divergence"
+   ]
+  },
+  {
+   "id": "columbian-exchange",
+   "topic": "history",
+   "title": "The Columbian Exchange: the biggest ecological event in history",
+   "summary": "In 1972 the historian Alfred Crosby published The Columbian Exchange, coining a term for the massive transfer of plants, animals, people and pathogens between the Old and New Worlds after 1492. The exchange went both ways. From the Americas came maize, potatoes, cassava, tomatoes, chilli peppers, cacao and tobacco. Potatoes and maize later fuelled population growth in places as far apart as Ireland, China and West Africa. From the Old World came wheat, sugar cane, coffee, horses, cattle, pigs and sheep, which transformed American landscapes and economies, and allowed the Plains peoples to build horse cultures. The darkest part of the exchange was disease. Smallpox, measles, influenza and other Old World infections spread through populations with no prior exposure, contributing to catastrophic mortality among Indigenous Americans in the sixteenth and seventeenth centuries, alongside war, enslavement and displacement. The labour gap that colonists created was then filled by the forced migration of millions of enslaved Africans, which made the exchange human as well as biological. Crosby argued that historians had ignored biology in favour of politics and economics. His book helped create the field of environmental history and remains a foundational text.",
+   "deepDive": "Economists Nathan Nunn and Nancy Qian estimated in a 2011 paper that the introduction of the potato alone accounted for about a quarter of the growth in Old World population and urbanisation between 1700 and 1900. Charles C. Mann's 1493 (2011) is a lively popular update of Crosby's argument, covering silver flows to China, malaria and rubber.",
+   "source": {
+    "title": "The Columbian Exchange: Biological and Cultural Consequences of 1492",
+    "author": "Alfred W. Crosby",
+    "year": 1972,
+    "url": "https://en.wikipedia.org/wiki/Alfred_W._Crosby"
+   },
+   "readings": [
+    {
+     "kind": "paper",
+     "title": "The Columbian Exchange: A History of Disease, Food, and Ideas",
+     "author": "Nunn & Qian",
+     "year": 2010,
+     "url": "https://doi.org/10.1257/jep.24.2.163"
+    },
+    {
+     "kind": "paper",
+     "title": "The Potato's Contribution to Population and Urbanization: Evidence from a Historical Experiment",
+     "author": "Nunn & Qian",
+     "year": 2011,
+     "url": "https://doi.org/10.1093/qje/qjr009"
+    },
+    {
+     "kind": "book",
+     "title": "1493: Uncovering the New World Columbus Created",
+     "author": "Charles C. Mann",
+     "year": 2011,
+     "url": "https://en.wikipedia.org/wiki/1493_(book)"
+    }
+   ],
+   "paths": [
+    "divergence"
+   ]
+  },
+  {
+   "id": "scheidel-leveler",
+   "topic": "history",
+   "title": "The Great Leveler: only catastrophe has flattened inequality",
+   "summary": "In The Great Leveler (2017), the Stanford historian Walter Scheidel makes a bleak argument about thousands of years of economic history. Inequality, he claims, tends to rise in settled, stable societies, as elites accumulate wealth and pass it on. Significant reductions in inequality have almost always been caused by violent shocks, which he calls the Four Horsemen of levelling: mass-mobilisation warfare, transformative revolution, state collapse, and lethal pandemics. The two World Wars, with their huge taxation, destruction of capital and mobilisation of labour, compressed incomes across the industrial world. Communist revolutions in Russia and China levelled wealth through expropriation and terror. The collapse of states such as the western Roman Empire destroyed elite fortunes along with everything else. And the Black Death, by killing perhaps a third or more of Europe's population, made labour scarce, pushing up wages for survivors for generations. Scheidel tests peaceful alternatives such as land reform, economic crises and democratisation and finds that their effects were usually modest. He is careful to say this is not an argument in favour of catastrophe but a challenge: if modern societies want lower inequality without disaster, they would be doing something historically unusual.",
+   "deepDive": "The Black Death case is backed by wage data showing real wages for unskilled workers in England and elsewhere rising after 1348 and staying high for over a century. Thomas Piketty's Capital in the Twenty-First Century (2013) reaches a related conclusion about the twentieth century: the wars and the policies they enabled, not the normal workings of capitalism, caused the great compression of wealth from 1914 to 1945.",
+   "source": {
+    "title": "The Great Leveler: Violence and the History of Inequality",
+    "author": "Walter Scheidel",
+    "year": 2017,
+    "url": "https://en.wikipedia.org/wiki/Walter_Scheidel"
+   },
+   "readings": [
+    {
+     "kind": "book",
+     "title": "Capital in the Twenty-First Century",
+     "author": "Thomas Piketty",
+     "year": 2013,
+     "url": "https://en.wikipedia.org/wiki/Capital_in_the_Twenty-First_Century"
+    },
+    {
+     "kind": "paper",
+     "title": "Consequences of the Black Death",
+     "author": "Wikipedia",
+     "year": 2024,
+     "url": "https://en.wikipedia.org/wiki/Consequences_of_the_Black_Death"
+    },
+    {
+     "kind": "paper",
+     "title": "Black Death",
+     "author": "Wikipedia",
+     "year": 2024,
+     "url": "https://en.wikipedia.org/wiki/Black_Death"
+    }
+   ],
+   "paths": [
+    "collapse"
+   ]
+  },
+  {
+   "id": "anderson-imagined",
+   "topic": "history",
+   "title": "Nations are imagined communities, built by print",
+   "summary": "Benedict Anderson's Imagined Communities (1983) offered one of the most influential explanations of nationalism. A nation, he argued, is an imagined political community: imagined because members will never meet most of their fellow citizens, yet each has a mental image of their communion. This does not mean nations are fake. It means they are social creations with specific historical origins. Anderson traced those origins to print capitalism. From the sixteenth century, printers seeking larger markets published in vernacular languages rather than Latin, standardising them and creating reading publics. Newspapers and novels then trained people to imagine simultaneous lives: readers of the same paper understood that thousands of others were reading the same news on the same day. Anderson also argued, against Eurocentric accounts, that some of the first national movements arose among Creole elites in the Americas, whose careers and newspapers were bounded by colonial administrative units that later became new countries. The theory explains why nations feel ancient while being relatively modern, and why people will die for an abstraction. Critics note that it underplays pre-modern ethnic identities and the role of states and religion, but the phrase imagined community has passed into common use far beyond academia.",
+   "deepDive": "Anderson's book pairs naturally with Ernest Gellner's Nations and Nationalism (1983), published the same year, which links nationalism to industrialisation and mass education, and with Eric Hobsbawm and Terence Ranger's The Invention of Tradition (1983), which shows how many supposedly ancient rituals, such as Highland tartans, were relatively recent creations.",
+   "source": {
+    "title": "Imagined Communities",
+    "author": "Benedict Anderson",
+    "year": 1983,
+    "url": "https://en.wikipedia.org/wiki/Imagined_Communities"
+   },
+   "readings": [
+    {
+     "kind": "book",
+     "title": "Nations and Nationalism",
+     "author": "Ernest Gellner",
+     "year": 1983,
+     "url": "https://en.wikipedia.org/wiki/Ernest_Gellner"
+    },
+    {
+     "kind": "book",
+     "title": "The Invention of Tradition",
+     "author": "Eric Hobsbawm & Terence Ranger (eds.)",
+     "year": 1983,
+     "url": "https://en.wikipedia.org/wiki/The_Invention_of_Tradition"
+    },
+    {
+     "kind": "book",
+     "title": "The Printing Press as an Agent of Change",
+     "author": "Elizabeth Eisenstein",
+     "year": 1979,
+     "url": "https://en.wikipedia.org/wiki/Elizabeth_Eisenstein"
+    }
+   ],
+   "paths": [
+    "revolutions"
+   ]
+  },
+  {
+   "id": "tocqueville-paradox",
+   "topic": "history",
+   "title": "The Tocqueville paradox: revolutions come when things improve",
+   "summary": "In The Old Regime and the Revolution (1856), Alexis de Tocqueville noticed something counterintuitive about France before 1789. The parts of France where the Revolution was most intense were not the poorest and most oppressed but those where conditions had been improving. The monarchy of Louis XVI had begun reforms, and prosperity had grown during the eighteenth century. Tocqueville's insight was that the most dangerous moment for a bad government is usually when it begins to reform: grievances that were patiently endured when they seemed inevitable become intolerable once people can imagine their removal. Rising expectations outpace actual improvements. He also argued that the Revolution was less of a break than it appeared. The old monarchy had already centralised power, undermined local aristocratic institutions and built a bureaucratic state, and the revolutionaries and Napoleon completed that work. Sociologists later formalised the first idea. James C. Davies proposed the J-curve in 1962: revolutions are most likely when a long period of rising expectations and gratifications is followed by a short, sharp reversal, opening a gap between what people expect and what they get. The idea is now often called the Tocqueville effect, and it is invoked to explain unrest in societies that are in many ways getting better.",
+   "deepDive": "Ted Robert Gurr's Why Men Rebel (1970) generalised this as relative deprivation: people rebel not because they are badly off in absolute terms but because of the gap between what they believe they deserve and what they can get. Empirical support for relative-deprivation theory is mixed, and political scientists now put more weight on state capacity and the organisation of opposition, as in Theda Skocpol's States and Social Revolutions (1979).",
+   "source": {
+    "title": "The Old Regime and the Revolution",
+    "author": "Alexis de Tocqueville",
+    "year": 1856,
+    "url": "https://en.wikipedia.org/wiki/The_Old_Regime_and_the_Revolution"
+   },
+   "readings": [
+    {
+     "kind": "paper",
+     "title": "Toward a Theory of Revolution",
+     "author": "James C. Davies",
+     "year": 1962,
+     "url": "https://doi.org/10.2307/2089714"
+    },
+    {
+     "kind": "book",
+     "title": "States and Social Revolutions",
+     "author": "Theda Skocpol",
+     "year": 1979,
+     "url": "https://en.wikipedia.org/wiki/States_and_Social_Revolutions"
+    },
+    {
+     "kind": "paper",
+     "title": "Tocqueville effect",
+     "author": "Wikipedia",
+     "year": 2024,
+     "url": "https://en.wikipedia.org/wiki/Tocqueville_effect"
+    }
+   ],
+   "paths": [
+    "revolutions"
+   ]
+  },
+  {
+   "id": "eisenstein-print",
+   "topic": "history",
+   "title": "The printing press as an agent of change",
+   "summary": "Johannes Gutenberg's movable-type press, developed in Mainz around 1450, is often credited with almost everything that followed: the Reformation, the Scientific Revolution and modern nationalism. Elizabeth Eisenstein's two-volume The Printing Press as an Agent of Change (1979) gave this intuition a scholarly form. She argued that print created a communications revolution through features that scribal culture lacked. Standardisation meant thousands of identical copies, so scholars across Europe could refer to the same page, map or diagram. Preservation meant texts were less likely to be lost. Dissemination meant ideas spread faster and further. Errors could be identified and corrected in later editions, creating a cumulative process of improvement that Eisenstein linked to the rise of science. Print also amplified Martin Luther's pamphlets after 1517, making the Reformation hard to suppress. Critics such as Adrian Johns argued that early print was much less fixed and reliable than Eisenstein claimed, with piracy and error widespread, and that trust in print had to be socially constructed. Economic historians have since added quantitative evidence: cities that adopted printing early grew faster in the following century. The debate is a useful lens for thinking about the internet and AI: technology enables change, but people and institutions decide what it becomes.",
+   "deepDive": "Jeremiah Dittmar's 2011 study in the Quarterly Journal of Economics found that European cities that adopted printing in the fifteenth century grew between 1500 and 1600 substantially faster than similar cities that did not. Adrian Johns's The Nature of the Book (1998) is the classic critique, focusing on the messy world of London printers and booksellers.",
+   "source": {
+    "title": "The Printing Press as an Agent of Change",
+    "author": "Elizabeth L. Eisenstein",
+    "year": 1979,
+    "url": "https://en.wikipedia.org/wiki/Elizabeth_Eisenstein"
+   },
+   "readings": [
+    {
+     "kind": "paper",
+     "title": "Information Technology and Economic Change: The Impact of the Printing Press",
+     "author": "Jeremiah E. Dittmar",
+     "year": 2011,
+     "url": "https://doi.org/10.1093/qje/qjr035"
+    },
+    {
+     "kind": "book",
+     "title": "The Nature of the Book",
+     "author": "Adrian Johns",
+     "year": 1998,
+     "url": "https://en.wikipedia.org/wiki/Adrian_Johns"
+    },
+    {
+     "kind": "paper",
+     "title": "Printing press",
+     "author": "Wikipedia",
+     "year": 2024,
+     "url": "https://en.wikipedia.org/wiki/Printing_press"
+    }
+   ],
+   "paths": [
+    "revolutions"
+   ]
+  },
+  {
+   "id": "scott-against-grain",
+   "topic": "history",
+   "title": "Against the grain: why the first states were built on cereals",
+   "summary": "James C. Scott, a political scientist and anthropologist at Yale, argues in Against the Grain (2017) that the standard story of civilisation has the order and the moral wrong. Domestication of plants and animals happened thousands of years before the first states appeared in Mesopotamia around 3100 BC, so farming did not immediately produce cities and kings. Many people lived for long periods in mixed economies of farming, foraging, fishing and herding, especially in rich wetlands. Scott's key observation is that early states were built on grain: wheat, barley, and later rice and maize. Cereals ripen at the same time, are visible in fields, can be measured, stored and transported, and are therefore ideal for taxation. Root crops and lentils, which grow underground or ripen continuously, are much harder to tax. Early states, in Scott's view, were fragile enterprises of tax collection, conscription, forced labour and slavery, often surrounded by walls designed as much to keep subjects in as enemies out. Disease thrived in dense settlements alongside domesticated animals. Collapse was frequent, and for many subjects it may have been a relief. Scott's account is deliberately provocative, and specialists dispute some details, but it encourages readers to see states as one option among many rather than the inevitable endpoint of history.",
+   "deepDive": "Scott's earlier Seeing Like a State (1998) is the classic companion: it shows how modern states made societies legible through standardised surnames, maps, measures and planned cities, and how grand high-modernist schemes such as Soviet collectivisation and planned Brasília failed when they ignored local knowledge. Graeber and Wengrow's The Dawn of Everything (2021) extends the argument that early humans experimented widely with political forms.",
+   "source": {
+    "title": "Against the Grain: A Deep History of the Earliest States",
+    "author": "James C. Scott",
+    "year": 2017,
+    "url": "https://en.wikipedia.org/wiki/Against_the_Grain:_A_Deep_History_of_the_Earliest_States"
+   },
+   "readings": [
+    {
+     "kind": "book",
+     "title": "Seeing Like a State",
+     "author": "James C. Scott",
+     "year": 1998,
+     "url": "https://en.wikipedia.org/wiki/Seeing_Like_a_State"
+    },
+    {
+     "kind": "book",
+     "title": "The Dawn of Everything",
+     "author": "David Graeber & David Wengrow",
+     "year": 2021,
+     "url": "https://en.wikipedia.org/wiki/The_Dawn_of_Everything"
+    },
+    {
+     "kind": "paper",
+     "title": "Neolithic Revolution",
+     "author": "Wikipedia",
+     "year": 2024,
+     "url": "https://en.wikipedia.org/wiki/Neolithic_Revolution"
+    }
+   ],
+   "paths": [
+    "collapse",
+    "divergence"
+   ]
+  },
+  {
+   "id": "sleepwalkers-1914",
+   "topic": "history",
+   "title": "The Sleepwalkers: how Europe stumbled into the First World War",
+   "summary": "For decades the dominant explanation of 1914 placed most of the blame on Germany, especially after the Hamburg historian Fritz Fischer argued in the 1960s that German leaders pursued aggressive war aims. Christopher Clark's The Sleepwalkers (2012) shifted the question from why to how. Clark reconstructs the decisions in Vienna, Berlin, St Petersburg, Paris, London and Belgrade in fine-grained detail, beginning not with the assassination of Archduke Franz Ferdinand in Sarajevo on 28 June 1914 but with Serbian politics and the alliance system of the previous decade. His central image is that the leaders of Europe were sleepwalkers: watchful but unseeing, haunted by dreams, yet blind to the reality of the horror they were about to bring into the world. Each government acted on narrow calculations of prestige, fear and credibility, assumed the other side would back down, and was hemmed in by mobilisation timetables and alliance commitments. Responsibility was shared and diffuse rather than concentrated in a single capital. The book was a bestseller, especially in Germany, and was criticised by some historians for diluting German and Austrian responsibility. It remains a masterclass in how crises escalate when decision-makers misread each other.",
+   "deepDive": "Barbara Tuchman's The Guns of August (1962), a Pulitzer winner, covers the first month of the war and reportedly influenced John F. Kennedy during the Cuban Missile Crisis in 1962, when he was keen to avoid the kind of miscalculation that led to 1914. Margaret MacMillan's The War That Ended Peace (2013) offers another excellent, balanced account of the road to war.",
+   "source": {
+    "title": "The Sleepwalkers: How Europe Went to War in 1914",
+    "author": "Christopher Clark",
+    "year": 2012,
+    "url": "https://en.wikipedia.org/wiki/The_Sleepwalkers_(Clark_book)"
+   },
+   "readings": [
+    {
+     "kind": "book",
+     "title": "The Guns of August",
+     "author": "Barbara W. Tuchman",
+     "year": 1962,
+     "url": "https://en.wikipedia.org/wiki/The_Guns_of_August"
+    },
+    {
+     "kind": "book",
+     "title": "The War That Ended Peace",
+     "author": "Margaret MacMillan",
+     "year": 2013,
+     "url": "https://en.wikipedia.org/wiki/Margaret_MacMillan"
+    },
+    {
+     "kind": "paper",
+     "title": "Causes of World War I",
+     "author": "Wikipedia",
+     "year": 2024,
+     "url": "https://en.wikipedia.org/wiki/Causes_of_World_War_I"
+    }
+   ],
+   "paths": [
+    "revolutions"
+   ]
+  },
+  {
+   "id": "braudel-longue-duree",
+   "topic": "history",
+   "title": "Braudel's three speeds of time",
+   "summary": "Fernand Braudel's The Mediterranean and the Mediterranean World in the Age of Philip II, first published in 1949 and largely drafted while he was a prisoner of war in Germany, is one of the most ambitious history books ever written. Instead of a single narrative, Braudel divided history into three layers moving at different speeds. The first is geographical time, the longue durée: mountains, plains, seas, climate and routes, which change almost imperceptibly and constrain human life for centuries. The second is social time, the medium-term rhythms of economies, states, societies and civilisations, measured in decades: price cycles, trade networks and demographic change. The third is the history of events, l'histoire événementielle, the fast-moving surface of battles, treaties and individual decisions, which Braudel compared to foam on the waves of deeper tides. Philip II of Spain appears late in the book and seems almost powerless against the slow forces surrounding him. Braudel became a leader of the Annales school, which pushed historians towards social and economic structures, quantitative data and interdisciplinary methods. The idea of history moving at multiple speeds has become a standard tool: a useful habit is to ask, of any news story, which layer of time it actually belongs to.",
+   "deepDive": "Braudel later extended his approach to a global scale in Civilization and Capitalism, 15th-18th Century (1979), a three-volume study of material life, markets and world economies. A modern successor to his Mediterranean is The Corrupting Sea (2000) by Peregrine Horden and Nicholas Purcell, which emphasises the Mediterranean's fragmented micro-regions and their connectivity.",
+   "source": {
+    "title": "The Mediterranean and the Mediterranean World in the Age of Philip II",
+    "author": "Fernand Braudel",
+    "year": 1949,
+    "url": "https://en.wikipedia.org/wiki/Fernand_Braudel"
+   },
+   "readings": [
+    {
+     "kind": "paper",
+     "title": "Longue durée",
+     "author": "Wikipedia",
+     "year": 2024,
+     "url": "https://en.wikipedia.org/wiki/Longue_dur%C3%A9e"
+    },
+    {
+     "kind": "book",
+     "title": "The Corrupting Sea",
+     "author": "Peregrine Horden & Nicholas Purcell",
+     "year": 2000,
+     "url": "https://en.wikipedia.org/wiki/The_Corrupting_Sea"
+    },
+    {
+     "kind": "paper",
+     "title": "Annales school",
+     "author": "Wikipedia",
+     "year": 2024,
+     "url": "https://en.wikipedia.org/wiki/Annales_school"
+    }
+   ],
+   "paths": [
+    "collapse"
+   ]
+  },
+  {
+   "id": "system1-system2",
+   "topic": "psychology",
+   "title": "Two systems: fast intuition and slow reasoning",
+   "summary": "Daniel Kahneman's Thinking, Fast and Slow (2011) popularised a framework that psychologists call dual-process theory. System 1 is fast, automatic, effortless and associative: it recognises faces, reads emotions, completes the phrase bread and..., and produces instant impressions. System 2 is slow, deliberate and effortful: it solves 17 times 24, checks an argument, or fills in a tax form. Kahneman's key point is that System 1 runs constantly and generates most of our judgements, while System 2 is lazy and often simply endorses what System 1 proposes. A classic illustration is the bat-and-ball problem from Shane Frederick's Cognitive Reflection Test: a bat and a ball cost 1.10 in total, and the bat costs 1.00 more than the ball; how much is the ball? Most people instantly think 10 cents, but the answer is 5 cents. The intuitive answer comes easily, and many people never check it. Much of the book catalogues heuristics and biases discovered with Amos Tversky, showing how System 1's shortcuts produce systematic errors. Kahneman himself described the two systems as useful fictions, characters in a story rather than literal brain modules, and researchers continue to debate whether two distinct systems exist or a continuum of processing.",
+   "deepDive": "Kahneman was unusually open about the book's weaknesses. In 2017 he acknowledged, in response to a blog analysis of replication problems, that he had placed too much faith in underpowered studies in the chapter on priming, several of which have failed to replicate. The broader dual-process framework is better supported, though Evans and Stanovich's 2013 review discusses the many variants and the criticisms.",
+   "source": {
+    "title": "Thinking, Fast and Slow",
+    "author": "Daniel Kahneman",
+    "year": 2011,
+    "url": "https://en.wikipedia.org/wiki/Thinking,_Fast_and_Slow"
+   },
+   "readings": [
+    {
+     "kind": "paper",
+     "title": "Judgment under Uncertainty: Heuristics and Biases",
+     "author": "Tversky & Kahneman",
+     "year": 1974,
+     "url": "https://doi.org/10.1126/science.185.4157.1124"
+    },
+    {
+     "kind": "paper",
+     "title": "Cognitive Reflection and Decision Making",
+     "author": "Shane Frederick",
+     "year": 2005,
+     "url": "https://doi.org/10.1257/089533005775196732"
+    },
+    {
+     "kind": "paper",
+     "title": "Dual-Process Theories of Higher Cognition: Advancing the Debate",
+     "author": "Evans & Stanovich",
+     "year": 2013,
+     "url": "https://doi.org/10.1177/1745691612460685"
+    }
+   ],
+   "paths": [
+    "biases"
+   ],
+   "caution": "The priming studies cited in the book (e.g. elderly-word priming slowing walking speed) have largely failed to replicate; Kahneman publicly acknowledged this."
+  },
+  {
+   "id": "anchoring",
+   "topic": "psychology",
+   "title": "Anchoring: the first number sticks",
+   "summary": "Anchoring is the tendency for an initial number to pull later estimates towards it, even when that number is obviously irrelevant. In their 1974 Science paper, Amos Tversky and Daniel Kahneman described an experiment in which a wheel of fortune, rigged to stop at either 10 or 65, was spun in front of participants. They were then asked whether the percentage of African countries in the United Nations was higher or lower than that number, and then to estimate the actual percentage. Those who saw 10 gave a median estimate of 25 per cent; those who saw 65 gave 45 per cent. A random number had shifted their judgement. Anchoring has since been found in many settings: real-estate agents' valuations shifted by listing prices, negotiators influenced by first offers, and judges' sentencing decisions affected by prosecutors' demands. Two main explanations exist. One is insufficient adjustment: people start from the anchor and adjust, but stop too early. The other is selective accessibility: considering the anchor makes anchor-consistent information more available in memory. Practical lessons follow. In negotiations, making the first offer can be an advantage. When estimating, it helps to generate your own number before seeing anyone else's.",
+   "deepDive": "Anchoring is one of the more robust effects in judgement research and replicated in the Many Labs 1 project in 2014, although some specific variants, such as incidental anchors that people barely notice, have produced smaller or inconsistent effects. Furnham and Boo's 2011 review summarises decades of work across domains, including expertise: experts are generally susceptible, not immune.",
+   "source": {
+    "title": "Judgment under Uncertainty: Heuristics and Biases",
+    "author": "Amos Tversky & Daniel Kahneman",
+    "year": 1974,
+    "url": "https://doi.org/10.1126/science.185.4157.1124"
+   },
+   "readings": [
+    {
+     "kind": "paper",
+     "title": "A literature review of the anchoring effect",
+     "author": "Furnham & Boo",
+     "year": 2011,
+     "url": "https://doi.org/10.1016/j.socec.2010.10.008"
+    },
+    {
+     "kind": "paper",
+     "title": "Investigating Variation in Replicability: A Many Labs Replication Project",
+     "author": "Klein et al.",
+     "year": 2014,
+     "url": "https://doi.org/10.1027/1864-9335/a000178"
+    },
+    {
+     "kind": "paper",
+     "title": "Playing Dice With Criminal Sentences: The Influence of Irrelevant Anchors on Experts' Judicial Decision Making",
+     "author": "Englich, Mussweiler & Strack",
+     "year": 2006,
+     "url": "https://doi.org/10.1177/0146167205282152"
+    }
+   ],
+   "paths": [
+    "biases"
+   ]
+  },
+  {
+   "id": "availability",
+   "topic": "psychology",
+   "title": "Availability: what comes to mind feels more common",
+   "summary": "The availability heuristic, described by Amos Tversky and Daniel Kahneman in 1973, is the tendency to judge how frequent or likely something is by how easily examples come to mind. Often that works well, since common things are usually easier to recall. But ease of recall is also influenced by vividness, recency, emotion and media coverage, so the heuristic produces predictable errors. In one of their experiments, people were asked whether English words more often begin with the letter K or have K as the third letter. Most said words beginning with K were more frequent, because it is easier to search memory by first letter, although words with K in the third position are more common in typical text. In everyday life, dramatic causes of death such as plane crashes, shark attacks and terrorism tend to be overestimated relative to common killers like diabetes, heart disease and falls, partly because the former receive more news coverage. Availability also helps explain why people buy more flood insurance just after a flood and then let policies lapse. Paul Slovic and colleagues documented these risk misperceptions in classic studies. The practical defence is to ask for base rates and data: how often does this actually happen, compared with what else?",
+   "deepDive": "Norbert Schwarz and colleagues refined the idea in 1991 with a clever twist: people asked to recall twelve examples of their own assertive behaviour rated themselves as less assertive than people asked to recall six, because recalling twelve felt hard. The subjective ease of retrieval, not the number of examples retrieved, drove the judgement. Cass Sunstein and Timur Kuran later described availability cascades, in which media attention and public concern reinforce each other.",
+   "source": {
+    "title": "Availability: A heuristic for judging frequency and probability",
+    "author": "Amos Tversky & Daniel Kahneman",
+    "year": 1973,
+    "url": "https://doi.org/10.1016/0010-0285(73)90033-9"
+   },
+   "readings": [
+    {
+     "kind": "paper",
+     "title": "Ease of retrieval as information: Another look at the availability heuristic",
+     "author": "Schwarz et al.",
+     "year": 1991,
+     "url": "https://doi.org/10.1037/0022-3514.61.2.195"
+    },
+    {
+     "kind": "paper",
+     "title": "Availability Cascades and Risk Regulation",
+     "author": "Kuran & Sunstein",
+     "year": 1999,
+     "url": "https://doi.org/10.2307/1229439"
+    },
+    {
+     "kind": "paper",
+     "title": "Perception of risk",
+     "author": "Paul Slovic",
+     "year": 1987,
+     "url": "https://doi.org/10.1126/science.3563507"
+    }
+   ],
+   "paths": [
+    "biases"
+   ]
+  },
+  {
+   "id": "prospect-theory",
+   "topic": "psychology",
+   "title": "Prospect theory: losses loom larger than gains",
+   "summary": "In 1979 Daniel Kahneman and Amos Tversky published Prospect Theory: An Analysis of Decision under Risk in Econometrica, one of the most cited papers in economics. Standard expected-utility theory assumed people evaluate outcomes in terms of final wealth. Prospect theory proposed instead that people evaluate gains and losses relative to a reference point, usually the status quo. Three features matter. First, the value function is concave for gains and convex for losses, so people tend to be risk-averse for gains, preferring a sure 500 to a 50 per cent chance of 1,000, but risk-seeking for losses, preferring a gamble to a sure loss. Second, loss aversion: losses hurt more than equivalent gains please, with early estimates suggesting losses weigh roughly twice as much. Third, probability weighting: people overweight small probabilities and underweight moderate and high ones, which helps explain why the same person might buy both lottery tickets and insurance. Prospect theory explained puzzles such as the endowment effect, in which people demand more to give up a mug than they would pay to buy it, and the disposition effect, in which investors sell winners too early and hold losers too long. It became a cornerstone of behavioural economics and contributed to Kahneman's 2002 Nobel prize.",
+   "deepDive": "Loss aversion is now debated. Gal and Rucker argued in 2018 that many classic demonstrations can be explained by status quo bias or inertia rather than losses truly looming larger than gains, and that loss aversion appears mainly for large stakes. Others have defended the concept with large-sample evidence, such as a 2024 meta-analysis by Brown and colleagues estimating a loss-aversion coefficient of around 2. The basic reference-dependence of preferences is widely accepted.",
+   "source": {
+    "title": "Prospect Theory: An Analysis of Decision under Risk",
+    "author": "Daniel Kahneman & Amos Tversky",
+    "year": 1979,
+    "url": "https://doi.org/10.2307/1914185"
+   },
+   "readings": [
+    {
+     "kind": "paper",
+     "title": "The Loss of Loss Aversion: Will It Loom Larger Than Its Gain?",
+     "author": "Gal & Rucker",
+     "year": 2018,
+     "url": "https://doi.org/10.1002/jcpy.1047"
+    },
+    {
+     "kind": "paper",
+     "title": "Experimental Tests of the Endowment Effect and the Coase Theorem",
+     "author": "Kahneman, Knetsch & Thaler",
+     "year": 1990,
+     "url": "https://doi.org/10.1086/261737"
+    },
+    {
+     "kind": "book",
+     "title": "Misbehaving: The Making of Behavioral Economics",
+     "author": "Richard H. Thaler",
+     "year": 2015,
+     "url": "https://en.wikipedia.org/wiki/Misbehaving_(book)"
+    }
+   ],
+   "paths": [
+    "biases"
+   ],
+   "caution": "The size and generality of loss aversion is contested (see Gal & Rucker, 2018); reference dependence itself is well supported."
+  },
+  {
+   "id": "framing",
+   "topic": "psychology",
+   "title": "Framing: same facts, different choices",
+   "summary": "In a 1981 Science paper, Amos Tversky and Daniel Kahneman presented what became known as the Asian disease problem. Participants were told that the United States was preparing for an outbreak expected to kill 600 people and asked to choose between two programmes. In one version, Program A would save 200 people for certain, while Program B had a one-third probability of saving all 600 and a two-thirds probability of saving nobody. Most chose A, the sure thing. In another version the same options were described in terms of deaths: under Program C, 400 people would die for certain; under Program D, there was a one-third probability that nobody would die and a two-thirds probability that all 600 would die. Now most chose D, the gamble. The options were mathematically identical; only the description had changed. This is a framing effect, and it follows directly from prospect theory: framing outcomes as gains encourages risk aversion, while framing them as losses encourages risk seeking. Framing effects appear in medicine, where survival rates and mortality rates lead patients and doctors to different treatment choices, in marketing, where 90 per cent fat-free sounds better than 10 per cent fat, and in politics. The broader lesson is that preferences are often constructed at the moment of choice rather than simply retrieved.",
+   "deepDive": "A 1982 study by McNeil and colleagues in the New England Journal of Medicine found that physicians, patients and graduate students all preferred surgery to radiation therapy for lung cancer more often when outcomes were framed in terms of survival rather than mortality. A 1998 meta-analysis by Kühberger found framing effects reliable but sensitive to task details, and the Asian disease effect replicated in the Many Labs projects.",
+   "source": {
+    "title": "The Framing of Decisions and the Psychology of Choice",
+    "author": "Amos Tversky & Daniel Kahneman",
+    "year": 1981,
+    "url": "https://doi.org/10.1126/science.7455683"
+   },
+   "readings": [
+    {
+     "kind": "paper",
+     "title": "On the elicitation of preferences for alternative therapies",
+     "author": "McNeil, Pauker, Sox & Tversky",
+     "year": 1982,
+     "url": "https://doi.org/10.1056/NEJM198205273062103"
+    },
+    {
+     "kind": "paper",
+     "title": "The Influence of Framing on Risky Decisions: A Meta-analysis",
+     "author": "Anton Kühberger",
+     "year": 1998,
+     "url": "https://doi.org/10.1006/obhd.1998.2781"
+    },
+    {
+     "kind": "book",
+     "title": "Thinking, Fast and Slow",
+     "author": "Daniel Kahneman",
+     "year": 2011,
+     "url": "https://en.wikipedia.org/wiki/Thinking,_Fast_and_Slow"
+    }
+   ],
+   "paths": [
+    "biases"
+   ]
+  },
+  {
+   "id": "confirmation-bias",
+   "topic": "psychology",
+   "title": "Confirmation bias, and why reason may have evolved to argue",
+   "summary": "Confirmation bias is the tendency to seek, interpret and remember information in ways that support what we already believe. Peter Wason's 2-4-6 task from 1960 is a classic demonstration. Participants were told that the sequence 2, 4, 6 fitted a rule and were asked to discover the rule by proposing other sequences. Most guessed something like numbers increasing by two and tested only sequences that fitted their hypothesis, such as 8, 10, 12, receiving confirmation each time. Few tried sequences that could falsify it. The actual rule was simply any ascending sequence. Raymond Nickerson's 1998 review documented confirmation bias across science, law, medicine and everyday reasoning. Later work showed that people evaluate evidence for their own side less critically than evidence against it, a pattern called motivated reasoning. Hugo Mercier and Dan Sperber offered a provocative explanation in The Enigma of Reason (2017): human reasoning did not evolve to find truth in isolation but to produce arguments that persuade others and to evaluate others' arguments. On this view, it is natural that we are good at finding reasons for our own views and poor at criticising them, but much better at spotting flaws in other people's arguments. The practical implication is that reasoning works best in groups that argue in good faith.",
+   "deepDive": "Mercier and Sperber's interactionist theory predicts that group discussion should improve reasoning on logical problems, and there is evidence that it does: groups solving the Wason selection task, another classic logic puzzle, perform far better than individuals. The original argumentative theory was laid out in a 2011 target article in Behavioral and Brain Sciences, with dozens of peer commentaries that make useful reading in themselves.",
+   "source": {
+    "title": "Confirmation bias: A ubiquitous phenomenon in many guises",
+    "author": "Raymond S. Nickerson",
+    "year": 1998,
+    "url": "https://doi.org/10.1037/1089-2680.2.2.175"
+   },
+   "readings": [
+    {
+     "kind": "paper",
+     "title": "On the failure to eliminate hypotheses in a conceptual task",
+     "author": "P. C. Wason",
+     "year": 1960,
+     "url": "https://doi.org/10.1080/17470216008416717"
+    },
+    {
+     "kind": "paper",
+     "title": "Why do humans reason? Arguments for an argumentative theory",
+     "author": "Mercier & Sperber",
+     "year": 2011,
+     "url": "https://doi.org/10.1017/S0140525X10000968"
+    },
+    {
+     "kind": "book",
+     "title": "The Enigma of Reason",
+     "author": "Hugo Mercier & Dan Sperber",
+     "year": 2017,
+     "url": "https://www.hup.harvard.edu/books/9780674237827"
+    }
+   ],
+   "paths": [
+    "biases"
+   ]
+  },
+  {
+   "id": "dunning-kruger",
+   "topic": "psychology",
+   "title": "Dunning-Kruger: what the famous graph actually shows",
+   "summary": "In 1999 Justin Kruger and David Dunning published Unskilled and Unaware of It in the Journal of Personality and Social Psychology. Cornell undergraduates took tests of logical reasoning, grammar and humour, then estimated how well they had done relative to their peers. Those in the bottom quarter, who scored around the 12th percentile, estimated that they were around the 62nd. Top performers slightly underestimated their relative standing. Kruger and Dunning argued that the skills needed to perform well are often the same skills needed to recognise good performance, so the incompetent suffer a double burden: they make mistakes and cannot see them. The paper became a cultural meme, often illustrated with a curve showing confidence soaring at low knowledge, dipping into a valley of despair and rising again. That curve does not appear in the original paper. More importantly, statisticians have argued that part of the pattern is a statistical artefact. If everyone's self-assessment is noisy and people generally rate themselves as above average, regression to the mean alone will make low scorers appear to overestimate and high scorers appear to underestimate. Some reanalyses suggest the effect is smaller than the classic graph implies, while Dunning and others argue that real metacognitive deficits remain once artefacts are controlled for.",
+   "deepDive": "Nuhfer and colleagues showed in 2016 that random data can reproduce the classic Dunning-Kruger graph, and in 2017 that self-assessments of well-measured competence were reasonably accurate. Gignac and Zajenkowski in 2020 used more appropriate statistical tests on intelligence data and found only weak evidence for the effect. The fair summary: people are imperfect judges of their own competence, but the meme overstates the original findings.",
+   "source": {
+    "title": "Unskilled and unaware of it",
+    "author": "Justin Kruger & David Dunning",
+    "year": 1999,
+    "url": "https://doi.org/10.1037/0022-3514.77.6.1121"
+   },
+   "readings": [
+    {
+     "kind": "paper",
+     "title": "Random Number Simulations Reveal How Random Noise Affects the Measurements and Graphical Portrayals of Self-Assessed Competency",
+     "author": "Nuhfer et al.",
+     "year": 2016,
+     "url": "https://doi.org/10.5038/1936-4660.9.1.4"
+    },
+    {
+     "kind": "paper",
+     "title": "The Dunning-Kruger effect is (mostly) a statistical artefact",
+     "author": "Gignac & Zajenkowski",
+     "year": 2020,
+     "url": "https://doi.org/10.1016/j.intell.2020.101449"
+    },
+    {
+     "kind": "paper",
+     "title": "Dunning–Kruger effect",
+     "author": "Wikipedia",
+     "year": 2024,
+     "url": "https://en.wikipedia.org/wiki/Dunning%E2%80%93Kruger_effect"
+    }
+   ],
+   "paths": [
+    "biases",
+    "replication"
+   ],
+   "caution": "Part of the classic pattern can be produced by regression to the mean and measurement noise; the popular 'Mount Stupid' curve is not in the original paper."
+  },
+  {
+   "id": "planning-fallacy",
+   "topic": "psychology",
+   "title": "The planning fallacy and the outside view",
+   "summary": "The planning fallacy, a term coined by Kahneman and Tversky in 1979, is the tendency to underestimate how long tasks will take, how much they will cost and how many things will go wrong, even when we know that similar tasks have overrun in the past. In a 1994 study, Roger Buehler, Dale Griffin and Michael Ross asked psychology students to estimate when they would finish their honours theses. The average prediction was about 34 days; the average actual time was about 56 days, and only around 30 per cent finished by their predicted date. Even their worst-case estimates were often too optimistic. The cause seems to be that people plan from the inside view: they imagine the specific steps of the project and how it will unfold, and neglect the many ways it could be interrupted. Kahneman's remedy is the outside view, also called reference-class forecasting: start by asking how long similar projects typically took, then adjust for specifics. The Danish planning scholar Bent Flyvbjerg has applied this to megaprojects such as bridges, rail lines, Olympic Games and IT systems, finding that the great majority run over budget or schedule, often dramatically. His later book How Big Things Get Done (2023) recommends slow, careful planning followed by fast delivery.",
+   "deepDive": "Kahneman tells a personal version of this story: he once led a team writing a curriculum textbook, and the team estimated about two years. When he asked an experienced colleague how long similar teams had taken, the answer was seven to ten years, with many never finishing. The book took eight years. Flyvbjerg's 2006 paper in the Project Management Journal explains how reference-class forecasting is used in practice.",
+   "source": {
+    "title": "Exploring the planning fallacy",
+    "author": "Buehler, Griffin & Ross",
+    "year": 1994,
+    "url": "https://doi.org/10.1037/0022-3514.67.3.366"
+   },
+   "readings": [
+    {
+     "kind": "paper",
+     "title": "From Nobel Prize to Project Management: Getting Risks Right",
+     "author": "Bent Flyvbjerg",
+     "year": 2006,
+     "url": "https://doi.org/10.1177/875697280603700302"
+    },
+    {
+     "kind": "book",
+     "title": "How Big Things Get Done",
+     "author": "Bent Flyvbjerg & Dan Gardner",
+     "year": 2023,
+     "url": "https://en.wikipedia.org/wiki/Bent_Flyvbjerg"
+    },
+    {
+     "kind": "paper",
+     "title": "Planning fallacy",
+     "author": "Wikipedia",
+     "year": 2024,
+     "url": "https://en.wikipedia.org/wiki/Planning_fallacy"
+    }
+   ],
+   "paths": [
+    "biases"
+   ]
+  },
+  {
+   "id": "ego-depletion",
+   "topic": "psychology",
+   "title": "Ego depletion: is willpower a tank that runs dry?",
+   "summary": "In 1998 Roy Baumeister and colleagues published a study that launched a huge research programme. Participants who had been told to resist a plate of freshly baked chocolate chip cookies and eat radishes instead gave up sooner on an unsolvable puzzle than those who had been allowed to eat the cookies. Baumeister proposed that self-control draws on a limited resource, like a muscle that tires with use, a process he called ego depletion. Hundreds of studies followed, finding that one act of self-control impaired the next. A later line of work claimed that glucose fuelled the resource, and that sugary drinks could restore it. Baumeister and the journalist John Tierney popularised the idea in the bestselling book Willpower (2011). Then the effect began to wobble. Meta-analyses that corrected for publication bias found much smaller effects, possibly close to zero. In 2016 a pre-registered, multi-lab replication involving 23 laboratories and more than 2,000 participants found an effect very close to zero. A second large multi-site study published in 2021 also found a very small effect at best. The glucose findings were also challenged, since the brain's glucose use barely changes during self-control tasks. Ego depletion is now a textbook example of the replication crisis.",
+   "deepDive": "Not everyone accepts that ego depletion is dead. Baumeister and colleagues argued that the replication used a weak manipulation. An alternative theory from Veronika Job, Carol Dweck and Gregory Walton suggests that depletion effects appear mainly in people who believe willpower is limited. Michael Inzlicht has proposed that self-control fatigue reflects shifting motivation and priorities rather than resource depletion. The practical takeaway is modest: rest and motivation matter, but there is no reliable evidence that willpower is a fuel tank.",
+   "source": {
+    "title": "Ego depletion: Is the active self a limited resource?",
+    "author": "Baumeister, Bratslavsky, Muraven & Tice",
+    "year": 1998,
+    "url": "https://doi.org/10.1037/0022-3514.74.5.1252"
+   },
+   "readings": [
+    {
+     "kind": "paper",
+     "title": "A Multilab Preregistered Replication of the Ego-Depletion Effect",
+     "author": "Hagger et al.",
+     "year": 2016,
+     "url": "https://doi.org/10.1177/1745691616652873"
+    },
+    {
+     "kind": "paper",
+     "title": "A Multisite Preregistered Paradigmatic Test of the Ego-Depletion Effect",
+     "author": "Vohs et al.",
+     "year": 2021,
+     "url": "https://doi.org/10.1177/0956797621989733"
+    },
+    {
+     "kind": "paper",
+     "title": "Ego depletion—Is it all in your head?",
+     "author": "Job, Dweck & Walton",
+     "year": 2010,
+     "url": "https://doi.org/10.1177/0956797610384745"
+    }
+   ],
+   "paths": [
+    "replication"
+   ],
+   "caution": "Large preregistered multi-lab replications (2016, 2021) found effects near zero. Treat ego depletion as unproven."
+  },
+  {
+   "id": "power-posing",
+   "topic": "psychology",
+   "title": "Power posing: the TED talk that didn't replicate",
+   "summary": "In 2010 Dana Carney, Amy Cuddy and Andy Yap published a study in Psychological Science claiming that holding expansive, high-power poses for two minutes, such as standing with hands on hips or leaning back with feet on a desk, increased feelings of power and risk taking, raised testosterone and lowered the stress hormone cortisol. The study had 42 participants. Cuddy's 2012 TED talk on the idea became one of the most watched of all time, promising a simple trick for job interviews and presentations. In 2015 Eva Ranehill and colleagues ran a replication with around 200 participants and found no effect on hormones or risk taking, though people did report feeling slightly more powerful. In 2016 Dana Carney, the lead author of the original paper, posted a statement saying she no longer believed power-pose effects were real and describing analytic choices in the original study that inflated the results. Other analyses using p-curve methods suggested the published literature lacked evidential value for the behavioural and hormonal claims. Cuddy and colleagues continued to argue for a smaller, real effect on self-reported feelings of power, which some evidence supports. The episode became a cautionary tale about small samples, flexible analysis and how quickly a catchy finding can outrun its evidence.",
+   "deepDive": "The power-posing saga also became a story about the culture of science: debates moved from journals to blogs and social media, and the treatment of Cuddy prompted discussion about how to criticise findings without personal attacks. Simmons and Simonsohn's 2017 p-curve analysis and Cuddy, Schultz and Fosse's 2018 response are a good pair to read for both sides.",
+   "source": {
+    "title": "Power Posing: Brief Nonverbal Displays Affect Neuroendocrine Levels and Risk Tolerance",
+    "author": "Carney, Cuddy & Yap",
+    "year": 2010,
+    "url": "https://doi.org/10.1177/0956797610383437"
+   },
+   "readings": [
+    {
+     "kind": "paper",
+     "title": "Assessing the Robustness of Power Posing: No Effect on Hormones and Risk Tolerance in a Large Sample of Men and Women",
+     "author": "Ranehill et al.",
+     "year": 2015,
+     "url": "https://doi.org/10.1177/0956797614553946"
+    },
+    {
+     "kind": "paper",
+     "title": "Power Posing: P-Curving the Evidence",
+     "author": "Simmons & Simonsohn",
+     "year": 2017,
+     "url": "https://doi.org/10.1177/0956797616658563"
+    },
+    {
+     "kind": "paper",
+     "title": "P-Curving a More Comprehensive Body of Research on Postural Feedback Reveals Clear Evidential Value for Power-Posing Effects",
+     "author": "Cuddy, Schultz & Fosse",
+     "year": 2018,
+     "url": "https://doi.org/10.1177/0956797617746749"
+    }
+   ],
+   "paths": [
+    "replication"
+   ],
+   "caution": "Hormonal and behavioural effects did not replicate; the original first author disavowed the effect in 2016. A small effect on feeling powerful may exist."
+  },
+  {
+   "id": "replication-crisis",
+   "topic": "psychology",
+   "title": "The replication crisis: how psychology checked its own work",
+   "summary": "In 2015 the Open Science Collaboration, a group of 270 researchers led by Brian Nosek, published the results of an attempt to replicate 100 studies from three leading psychology journals. While 97 per cent of the original studies had reported statistically significant results, only about 36 per cent of the replications did, and effect sizes were on average about half as large. The paper, published in Science, crystallised what is now called the replication crisis. The causes were already understood. In 2005 John Ioannidis had argued that most published research findings are false, given small samples, small effects and flexible designs. In 2011 Joseph Simmons, Leif Nelson and Uri Simonsohn showed that common practices, such as testing several outcomes, adding participants until results became significant, or dropping conditions, which they later called p-hacking, could make almost any hypothesis look supported; they even demonstrated that listening to a Beatles song made participants younger. Publication bias, where journals favour positive results, compounded the problem. The response has been substantial: pre-registration of hypotheses, registered reports accepted before results are known, larger multi-lab studies, open data and code. The crisis is painful, but it is also an example of science correcting itself.",
+   "deepDive": "Replication rates vary by field and by type of claim. Large projects such as Many Labs have found that some classic effects, such as anchoring and framing, replicate well, while many social priming effects do not. Camerer and colleagues found in 2018 that replications of social science experiments published in Nature and Science succeeded about 62 per cent of the time, and that prediction markets of researchers could forecast which ones would replicate.",
+   "source": {
+    "title": "Estimating the reproducibility of psychological science",
+    "author": "Open Science Collaboration",
+    "year": 2015,
+    "url": "https://doi.org/10.1126/science.aac4716"
+   },
+   "readings": [
+    {
+     "kind": "paper",
+     "title": "Why Most Published Research Findings Are False",
+     "author": "John P. A. Ioannidis",
+     "year": 2005,
+     "url": "https://doi.org/10.1371/journal.pmed.0020124"
+    },
+    {
+     "kind": "paper",
+     "title": "False-Positive Psychology",
+     "author": "Simmons, Nelson & Simonsohn",
+     "year": 2011,
+     "url": "https://doi.org/10.1177/0956797611417632"
+    },
+    {
+     "kind": "paper",
+     "title": "Evaluating the replicability of social science experiments in Nature and Science between 2010 and 2015",
+     "author": "Camerer et al.",
+     "year": 2018,
+     "url": "https://doi.org/10.1038/s41562-018-0399-z"
+    }
+   ],
+   "paths": [
+    "replication"
+   ]
+  },
+  {
+   "id": "stanford-prison",
+   "topic": "psychology",
+   "title": "The Stanford Prison Experiment, revisited",
+   "summary": "In August 1971 the Stanford psychologist Philip Zimbardo turned a basement corridor into a mock prison and randomly assigned two dozen male student volunteers to be guards or prisoners. The study was planned to last two weeks but was halted after six days, as guards became abusive and several prisoners showed signs of acute distress. For decades the experiment was taught as proof that ordinary people placed in powerful roles will spontaneously become cruel: the situation, not personality, explains behaviour. Zimbardo later used it to interpret the abuses at Abu Ghraib prison in Iraq in his book The Lucifer Effect (2007). The study was never published in a major peer-reviewed journal in the usual form, and critics long questioned it. In 2018 the French researcher Thibault Le Texier published Histoire d'un mensonge, based on archival recordings and documents, and a 2019 article in American Psychologist. He showed that guards were given guidance on how to behave, that the experimenters encouraged toughness, and that some participants later said they had been acting. Earlier, the BBC Prison Study by Alex Haslam and Stephen Reicher in 2002 found that guards did not automatically become tyrannical. The current view is that the experiment is better understood as a demonstration of leadership and demand characteristics than of spontaneous role conformity.",
+   "deepDive": "Haslam and Reicher propose an alternative account they call engaged followership: people do harmful things not because they blindly conform to roles but because they identify with a leader and a cause they believe is right. They apply the same lens to Milgram's obedience studies. Zimbardo responded to the critiques on his website, defending the study's core lessons.",
+   "source": {
+    "title": "Debunking the Stanford Prison Experiment",
+    "author": "Thibault Le Texier",
+    "year": 2019,
+    "url": "https://doi.org/10.1037/amp0000401"
+   },
+   "readings": [
+    {
+     "kind": "paper",
+     "title": "Rethinking the psychology of tyranny: The BBC prison study",
+     "author": "Reicher & Haslam",
+     "year": 2006,
+     "url": "https://doi.org/10.1348/014466605X48998"
+    },
+    {
+     "kind": "book",
+     "title": "The Lucifer Effect",
+     "author": "Philip Zimbardo",
+     "year": 2007,
+     "url": "https://en.wikipedia.org/wiki/The_Lucifer_Effect"
+    },
+    {
+     "kind": "paper",
+     "title": "Stanford prison experiment",
+     "author": "Wikipedia",
+     "year": 2024,
+     "url": "https://en.wikipedia.org/wiki/Stanford_prison_experiment"
+    }
+   ],
+   "paths": [
+    "replication",
+    "social"
+   ],
+   "caution": "Archival evidence shows guards were coached and participants felt demand to perform; the classic 'situations make people cruel' lesson is not supported as taught."
+  },
+  {
+   "id": "milgram-obedience",
+   "topic": "psychology",
+   "title": "Milgram's obedience studies: what they do and don't show",
+   "summary": "In the early 1960s at Yale, Stanley Milgram recruited ordinary men from New Haven for what they were told was a study of learning and punishment. Each participant, the teacher, was instructed to give electric shocks of increasing voltage to a learner, actually a confederate, whenever he made a mistake. The shock generator was labelled from 15 to 450 volts, with markings such as Danger: Severe Shock. The learner protested, screamed and eventually fell silent. When teachers hesitated, the experimenter used scripted prods to encourage them to continue. In the best-known version, published in 1963, 26 of 40 participants, 65 per cent, went all the way to 450 volts. Milgram connected his findings to the Holocaust and the trial of Adolf Eichmann, arguing that ordinary people would harm others when instructed by an authority. Milgram ran many variations: obedience fell sharply when the experimenter gave orders by phone, when the teacher had to place the learner's hand on a shock plate, or when other teachers refused. Later archival work by Gina Perry showed that the experimenter sometimes went beyond the script, and that many participants doubted the shocks were real. Partial replications, such as Jerry Burger's in 2009, which stopped at 150 volts for ethical reasons, found similar rates of continuing.",
+   "deepDive": "Milgram's book Obedience to Authority (1974) describes all the variations and is more nuanced than the textbook summary. A key detail: when the experimenter said you have no other choice, you must go on, the prod that sounds most like a direct order, participants typically refused, which Haslam and Reicher argue shows that people were persuaded to help science, not merely obeying.",
+   "source": {
+    "title": "Behavioral study of obedience",
+    "author": "Stanley Milgram",
+    "year": 1963,
+    "url": "https://doi.org/10.1037/h0040525"
+   },
+   "readings": [
+    {
+     "kind": "paper",
+     "title": "Replicating Milgram: Would people still obey today?",
+     "author": "Jerry M. Burger",
+     "year": 2009,
+     "url": "https://doi.org/10.1037/a0010932"
+    },
+    {
+     "kind": "book",
+     "title": "Obedience to Authority: An Experimental View",
+     "author": "Stanley Milgram",
+     "year": 1974,
+     "url": "https://en.wikipedia.org/wiki/Obedience_to_Authority:_An_Experimental_View"
+    },
+    {
+     "kind": "paper",
+     "title": "Milgram experiment",
+     "author": "Wikipedia",
+     "year": 2024,
+     "url": "https://en.wikipedia.org/wiki/Milgram_experiment"
+    }
+   ],
+   "paths": [
+    "social"
+   ],
+   "caution": "The headline 65% comes from one variant; archival work shows deviations from the script and participant doubts about the shocks. Interpret with care."
+  },
+  {
+   "id": "asch-conformity",
+   "topic": "psychology",
+   "title": "Asch's lines: the pressure to agree",
+   "summary": "In the early 1950s Solomon Asch asked groups of college students to do a simple perceptual task: look at a reference line and say which of three comparison lines matched it in length. The answer was obvious. But in each group only one person was a real participant; the others were confederates instructed to give the same wrong answer on certain trials. The real participant answered last or second to last. Across critical trials, participants conformed to the wrong majority about a third of the time, and around three quarters conformed at least once. Yet the result is often misremembered. Most responses were independent, and about a quarter of participants never conformed at all. Asch himself emphasised independence as much as conformity. His variations showed that a single dissenting confederate who gave the correct answer dramatically reduced conformity, and that conformity rose with group size up to about three or four people and then levelled off. Writing answers privately also reduced it. A 1996 meta-analysis by Rod Bond and Peter Smith found that conformity in the Asch paradigm had declined in the United States since the 1950s, and was higher in collectivist than individualist cultures. The practical lesson is that one ally can make it far easier to say what you see.",
+   "deepDive": "Asch distinguished between people who genuinely came to doubt their perception and people who knew the majority was wrong but went along to avoid standing out, an early version of the distinction between informational and normative influence later formalised by Deutsch and Gerard in 1955. A 1990 paper by Ronald Friend, Yvonne Rafferty and Dana Bramel argued that textbooks systematically exaggerate the degree of conformity Asch found.",
+   "source": {
+    "title": "Studies of independence and conformity: I. A minority of one against a unanimous majority",
+    "author": "Solomon E. Asch",
+    "year": 1956,
+    "url": "https://doi.org/10.1037/h0093718"
+   },
+   "readings": [
+    {
+     "kind": "paper",
+     "title": "Culture and conformity: A meta-analysis of studies using Asch's line judgment task",
+     "author": "Bond & Smith",
+     "year": 1996,
+     "url": "https://doi.org/10.1037/0033-2909.119.1.111"
+    },
+    {
+     "kind": "paper",
+     "title": "A study of normative and informational social influences upon individual judgment",
+     "author": "Deutsch & Gerard",
+     "year": 1955,
+     "url": "https://doi.org/10.1037/h0046408"
+    },
+    {
+     "kind": "paper",
+     "title": "Asch conformity experiments",
+     "author": "Wikipedia",
+     "year": 2024,
+     "url": "https://en.wikipedia.org/wiki/Asch_conformity_experiments"
+    }
+   ],
+   "paths": [
+    "social"
+   ]
+  },
+  {
+   "id": "cognitive-dissonance",
+   "topic": "psychology",
+   "title": "Cognitive dissonance: when actions rewrite beliefs",
+   "summary": "Leon Festinger proposed in 1957 that holding two inconsistent cognitions, such as I smoke and smoking kills, creates an uncomfortable state he called cognitive dissonance, which people are motivated to reduce. They can change their behaviour, but often it is easier to change a belief or add a justification. The theory grew partly out of fieldwork. In When Prophecy Fails (1956), Festinger, Henry Riecken and Stanley Schachter infiltrated a small group in Chicago whose leader predicted that a flood would destroy the world and that believers would be rescued by a flying saucer. When the prophecy failed, some members became more committed and began to seek converts, reducing dissonance by gathering social support. The classic experiment came in 1959. Festinger and James Carlsmith had participants do a tedious task, turning pegs on a board, and then paid them either 1 dollar or 20 dollars to tell the next participant it was enjoyable. Afterwards, those paid 1 dollar rated the task as more enjoyable than those paid 20. The explanation: 20 dollars was sufficient justification for lying, while 1 dollar was not, so the poorly paid participants resolved their dissonance by changing their attitude. Dissonance theory became one of the most influential ideas in social psychology, explaining effort justification, post-decision rationalisation and why sunk costs feel so sticky.",
+   "deepDive": "Some dissonance findings have held up better than others. A large multi-site registered replication of the induced compliance paradigm, published by Vaidis and colleagues in 2024, failed to find the classic attitude change effect, prompting debate about which parts of the theory remain solid. Carol Tavris and Elliot Aronson's Mistakes Were Made (But Not by Me) is a readable application to politics, law and relationships.",
+   "source": {
+    "title": "Cognitive consequences of forced compliance",
+    "author": "Leon Festinger & James M. Carlsmith",
+    "year": 1959,
+    "url": "https://doi.org/10.1037/h0041593"
+   },
+   "readings": [
+    {
+     "kind": "book",
+     "title": "When Prophecy Fails",
+     "author": "Festinger, Riecken & Schachter",
+     "year": 1956,
+     "url": "https://en.wikipedia.org/wiki/When_Prophecy_Fails"
+    },
+    {
+     "kind": "book",
+     "title": "A Theory of Cognitive Dissonance",
+     "author": "Leon Festinger",
+     "year": 1957,
+     "url": "https://en.wikipedia.org/wiki/Cognitive_dissonance"
+    },
+    {
+     "kind": "book",
+     "title": "Mistakes Were Made (But Not by Me)",
+     "author": "Carol Tavris & Elliot Aronson",
+     "year": 2007,
+     "url": "https://en.wikipedia.org/wiki/Mistakes_Were_Made_(But_Not_by_Me)"
+    }
+   ],
+   "paths": [
+    "social"
+   ],
+   "caution": "A 2024 multi-lab registered replication of the classic induced-compliance paradigm did not find the expected attitude change."
+  },
+  {
+   "id": "marshmallow-test",
+   "topic": "psychology",
+   "title": "The marshmallow test: willpower or circumstance?",
+   "summary": "In the late 1960s and early 1970s Walter Mischel and colleagues at Stanford's Bing Nursery School offered young children a choice: one treat now, or two if they could wait while the experimenter left the room, often for up to 15 or 20 minutes. Children used inventive strategies to wait, such as covering their eyes or singing. The original studies focused on what helped children delay, showing that distraction and thinking about the treat in abstract ways helped. The famous part came later. Follow-up studies, such as Shoda, Mischel and Peake in 1990, found that preschoolers who waited longer were rated as more competent adolescents and had higher SAT scores. The marshmallow test became a parable for self-control as a key to success. But the follow-up samples were small and drawn from children of Stanford staff and students. In 2018 Tyler Watts, Greg Duncan and Haonan Quan conducted a conceptual replication using a larger and more diverse sample of over 900 children. They found that the association between delay and later achievement was about half the size of the original and was reduced by roughly two thirds once family background, early cognitive ability and home environment were controlled for. Other research suggests that waiting is also a rational response to whether adults are trustworthy.",
+   "deepDive": "A 2013 study by Celeste Kidd, Holly Palmeri and Richard Aslin showed that children who first experienced an unreliable experimenter, who broke promises about art supplies, waited much less than children who experienced a reliable one. Mischel's own book The Marshmallow Test (2014) emphasises that self-control is a set of learnable strategies, not a fixed trait.",
+   "source": {
+    "title": "Revisiting the Marshmallow Test",
+    "author": "Watts, Duncan & Quan",
+    "year": 2018,
+    "url": "https://doi.org/10.1177/0956797618761661"
+   },
+   "readings": [
+    {
+     "kind": "paper",
+     "title": "Predicting adolescent cognitive and self-regulatory competencies from preschool delay of gratification",
+     "author": "Shoda, Mischel & Peake",
+     "year": 1990,
+     "url": "https://doi.org/10.1037/0012-1649.26.6.978"
+    },
+    {
+     "kind": "paper",
+     "title": "Rational snacking: Young children's decision-making on the marshmallow task is moderated by beliefs about environmental reliability",
+     "author": "Kidd, Palmeri & Aslin",
+     "year": 2013,
+     "url": "https://doi.org/10.1016/j.cognition.2012.08.004"
+    },
+    {
+     "kind": "paper",
+     "title": "Stanford marshmallow experiment",
+     "author": "Wikipedia",
+     "year": 2024,
+     "url": "https://en.wikipedia.org/wiki/Stanford_marshmallow_experiment"
+    }
+   ],
+   "paths": [
+    "replication",
+    "habits"
+   ],
+   "caution": "Larger, more diverse samples show a much weaker link between waiting and later success once family background is controlled."
+  },
+  {
+   "id": "learned-helplessness-reversed",
+   "topic": "psychology",
+   "title": "Learned helplessness, turned upside down",
+   "summary": "In 1967 Martin Seligman and Steven Maier reported experiments in which dogs that had received inescapable shocks later failed to escape shocks they could easily avoid by jumping over a low barrier, while dogs that had received escapable shocks learned quickly. Seligman and Maier proposed that the animals had learned that their actions did not matter, a state they called learned helplessness. The theory became highly influential in explaining depression, and Seligman later developed it into ideas about explanatory style and positive psychology. Fifty years later, Maier and Seligman revisited the theory in light of neuroscience and concluded that the original explanation had it backwards. Passivity in response to prolonged aversive events is not learned; it is the default mammalian response, mediated by serotonin neurons in a brainstem region called the dorsal raphe nucleus. What animals learn, through a circuit involving the medial prefrontal cortex, is that they have control, which suppresses that default passivity. In other words, we do not learn helplessness; we learn hope, or at least controllability. This reversal has implications for therapy and resilience: experiences of mastery may protect against later stress, consistent with research on how early control buffers future reactions.",
+   "deepDive": "The original experiments raise ethical concerns that would make them hard to approve today. Seligman's work on explanatory style led to the Penn Resiliency Program and, controversially, to US Army resilience training. His later Learned Optimism (1990) applies the ideas to everyday life. Maier and Seligman's 2016 Psychological Review paper is unusually candid about how a well-known theory was revised by its own creators.",
+   "source": {
+    "title": "Learned helplessness at fifty: Insights from neuroscience",
+    "author": "Steven F. Maier & Martin E. P. Seligman",
+    "year": 2016,
+    "url": "https://doi.org/10.1037/rev0000033"
+   },
+   "readings": [
+    {
+     "kind": "paper",
+     "title": "Failure to escape traumatic shock",
+     "author": "Seligman & Maier",
+     "year": 1967,
+     "url": "https://doi.org/10.1037/h0024514"
+    },
+    {
+     "kind": "book",
+     "title": "Learned Optimism",
+     "author": "Martin E. P. Seligman",
+     "year": 1990,
+     "url": "https://en.wikipedia.org/wiki/Martin_Seligman"
+    },
+    {
+     "kind": "paper",
+     "title": "Learned helplessness",
+     "author": "Wikipedia",
+     "year": 2024,
+     "url": "https://en.wikipedia.org/wiki/Learned_helplessness"
+    }
+   ],
+   "paths": [
+    "habits"
+   ]
+  },
+  {
+   "id": "habits-context",
+   "topic": "psychology",
+   "title": "Habits live in context, not in willpower",
+   "summary": "Wendy Wood, a psychologist at the University of Southern California, has spent decades studying habits. In diary studies she and her colleagues found that roughly 43 per cent of everyday behaviours were performed almost daily, in the same context, usually while people were thinking about something else. Wood and David Neal's 2007 review in Psychological Review describes habits as learned associations between contexts and responses: a location, time, preceding action or set of people triggers a behaviour automatically, largely independent of current goals. This explains why good intentions often fail to change behaviour, and why people who appear to have great self-control may in fact simply have arranged their lives so that they rarely need it. Research shows that changing context, for example moving house or changing jobs, offers a window in which old habits are disrupted and new ones are easier to form. How long does a habit take to form? A 2010 study by Phillippa Lally and colleagues, tracking 96 volunteers who tried to adopt new daily behaviours, found a median of 66 days for the behaviour to reach a plateau of automaticity, with a huge range from 18 to 254 days. The popular claim that it takes 21 days is not supported. Practical advice follows: add friction to bad habits, remove friction from good ones, and attach new behaviours to stable cues.",
+   "deepDive": "Wood's book Good Habits, Bad Habits (2019) summarises the research for a general audience. A related finding: in studies of self-control, people high in trait self-control report fewer temptations, not more successful resistance, which suggests their advantage lies in habits and environments. Galla and Duckworth's 2015 study supports this idea.",
+   "source": {
+    "title": "A new look at habits and the habit-goal interface",
+    "author": "Wendy Wood & David T. Neal",
+    "year": 2007,
+    "url": "https://doi.org/10.1037/0033-295X.114.4.843"
+   },
+   "readings": [
+    {
+     "kind": "paper",
+     "title": "How are habits formed: Modelling habit formation in the real world",
+     "author": "Lally, van Jaarsveld, Potts & Wardle",
+     "year": 2010,
+     "url": "https://doi.org/10.1002/ejsp.674"
+    },
+    {
+     "kind": "paper",
+     "title": "More than resisting temptation: Beneficial habits mediate the relationship between self-control and positive life outcomes",
+     "author": "Galla & Duckworth",
+     "year": 2015,
+     "url": "https://doi.org/10.1037/pspp0000026"
+    },
+    {
+     "kind": "book",
+     "title": "Good Habits, Bad Habits",
+     "author": "Wendy Wood",
+     "year": 2019,
+     "url": "https://us.macmillan.com/books/9781250159076/goodhabitsbadhabits"
+    }
+   ],
+   "paths": [
+    "habits"
+   ]
+  },
+  {
+   "id": "self-determination",
+   "topic": "psychology",
+   "title": "Self-determination theory: autonomy, competence, relatedness",
+   "summary": "Self-determination theory, developed by Edward Deci and Richard Ryan from the 1970s onward, is one of the most widely tested theories of human motivation. Its core claim is that people have three basic psychological needs: autonomy, the sense that one's actions are self-endorsed; competence, the sense of being effective; and relatedness, feeling connected to others. When these needs are supported, people tend to be more intrinsically motivated, more persistent and report greater wellbeing. When they are thwarted, motivation becomes controlled by pressure, guilt or rewards, and wellbeing suffers. An early and provocative finding was the undermining effect, also called the overjustification effect: offering tangible rewards for an activity people already enjoy can reduce their later intrinsic interest. In a classic study by Mark Lepper, David Greene and Richard Nisbett in 1973, preschoolers who expected a certificate for drawing later drew less in free time than those who had not been promised a reward. A 1999 meta-analysis by Deci, Richard Koestner and Ryan of 128 experiments found that expected, tangible, task-contingent rewards reliably undermined intrinsic motivation, while verbal praise tended to enhance it. The theory has influenced education, healthcare, sport, workplace management and video game design.",
+   "deepDive": "The undermining effect has been contested: Eisenberger and Cameron argued in 1996 that rewards' negative effects are limited and avoidable. Daniel Pink's popular book Drive (2009) draws heavily on self-determination theory but simplifies it. Ryan and Deci's 2000 American Psychologist article is the clearest short introduction.",
+   "source": {
+    "title": "Self-determination theory and the facilitation of intrinsic motivation, social development, and well-being",
+    "author": "Richard M. Ryan & Edward L. Deci",
+    "year": 2000,
+    "url": "https://doi.org/10.1037/0003-066X.55.1.68"
+   },
+   "readings": [
+    {
+     "kind": "paper",
+     "title": "A meta-analytic review of experiments examining the effects of extrinsic rewards on intrinsic motivation",
+     "author": "Deci, Koestner & Ryan",
+     "year": 1999,
+     "url": "https://doi.org/10.1037/0033-2909.125.6.627"
+    },
+    {
+     "kind": "paper",
+     "title": "Undermining children's intrinsic interest with extrinsic reward",
+     "author": "Lepper, Greene & Nisbett",
+     "year": 1973,
+     "url": "https://doi.org/10.1037/h0035519"
+    },
+    {
+     "kind": "paper",
+     "title": "Self-determination theory",
+     "author": "Wikipedia",
+     "year": 2024,
+     "url": "https://en.wikipedia.org/wiki/Self-determination_theory"
+    }
+   ],
+   "paths": [
+    "habits"
+   ]
+  },
+  {
+   "id": "peak-end",
+   "topic": "psychology",
+   "title": "The peak-end rule: memory edits your experiences",
+   "summary": "Daniel Kahneman distinguished between the experiencing self, which lives through moments, and the remembering self, which keeps score and makes decisions. They often disagree. In a 1993 experiment, Kahneman, Barbara Fredrickson, Charles Schreiber and Donald Redelmeier had participants immerse one hand in painfully cold water at 14 degrees Celsius for 60 seconds. In another trial they immersed a hand for 60 seconds at 14 degrees followed by 30 more seconds while the water was warmed slightly to about 15 degrees, still unpleasant but less so. When asked which trial they would repeat, most chose the longer one, even though it involved more total pain. Retrospective evaluations followed the peak-end rule: they were dominated by the most intense moment and by how the experience ended, while duration was largely neglected. In a 1996 study of colonoscopy patients, Redelmeier and Kahneman found that patients' memories of pain were predicted by peak and end intensity rather than duration. A later randomised trial found that adding a short, less uncomfortable period at the end of a colonoscopy improved patients' memories and made them more willing to return. The idea has since been used in service design, teaching and experience design: endings deserve attention.",
+   "deepDive": "Kahneman discusses the two selves at length in Thinking, Fast and Slow and in his TED talk The riddle of experience vs. memory (2010). The peak-end rule is not universal; reviews such as Fredrickson's 2000 paper show that it fits some kinds of experiences better than others, and duration is not always ignored.",
+   "source": {
+    "title": "When more pain is preferred to less: Adding a better end",
+    "author": "Kahneman, Fredrickson, Schreiber & Redelmeier",
+    "year": 1993,
+    "url": "https://doi.org/10.1111/j.1467-9280.1993.tb00589.x"
+   },
+   "readings": [
+    {
+     "kind": "paper",
+     "title": "Patients' memories of painful medical treatments: real-time and retrospective evaluations of two minimally invasive procedures",
+     "author": "Redelmeier & Kahneman",
+     "year": 1996,
+     "url": "https://doi.org/10.1016/0304-3959(96)02994-6"
+    },
+    {
+     "kind": "paper",
+     "title": "Memories of colonoscopy: a randomized trial",
+     "author": "Redelmeier, Katz & Kahneman",
+     "year": 2003,
+     "url": "https://doi.org/10.1016/S0304-3959(03)00003-4"
+    },
+    {
+     "kind": "paper",
+     "title": "Peak–end rule",
+     "author": "Wikipedia",
+     "year": 2024,
+     "url": "https://en.wikipedia.org/wiki/Peak%E2%80%93end_rule"
+    }
+   ],
+   "paths": [
+    "biases"
+   ]
+  },
+  {
+   "id": "growth-mindset",
+   "topic": "psychology",
+   "title": "Growth mindset: big idea, small effects",
+   "summary": "Stanford psychologist Carol Dweck proposed that people hold implicit theories about ability. Those with a fixed mindset believe intelligence is a fixed trait; those with a growth mindset believe it can be developed through effort, strategy and help. In early studies, children praised for being smart after a task were more likely to avoid challenges and to perform worse after failure than children praised for effort. Dweck's book Mindset (2006) became a bestseller, and growth-mindset interventions spread into schools worldwide. The research has since been scrutinised. A 2018 pair of meta-analyses by Victoria Sisk, Brooke Macnamara and colleagues found that the overall relationship between mindsets and academic achievement was weak, and that mindset interventions had very small average effects on academic performance, though possibly larger effects for students at risk of failing. On the other side, a large pre-registered national study in the United States, led by David Yeager and published in Nature in 2019, found that a brief online growth-mindset intervention modestly improved grades among lower-achieving students and increased enrolment in advanced maths courses, especially in schools with supportive peer norms. A fair summary is that mindset is a real but modest lever, more likely to help under the right conditions than to transform outcomes on its own.",
+   "deepDive": "Dweck herself has warned against a false growth mindset, praising effort alone even when it is not working, and has emphasised that strategies and help-seeking matter as much as effort. A 2022 meta-analysis by Macnamara and Burgoyne argued that positive results were concentrated in studies with methodological weaknesses or financial conflicts of interest, while others disputed that interpretation, so the debate continues.",
+   "source": {
+    "title": "Mindset: The New Psychology of Success",
+    "author": "Carol S. Dweck",
+    "year": 2006,
+    "url": "https://en.wikipedia.org/wiki/Mindset_(book)"
+   },
+   "readings": [
+    {
+     "kind": "paper",
+     "title": "To What Extent and Under Which Circumstances Are Growth Mind-Sets Important to Academic Achievement? Two Meta-Analyses",
+     "author": "Sisk et al.",
+     "year": 2018,
+     "url": "https://doi.org/10.1177/0956797617739704"
+    },
+    {
+     "kind": "paper",
+     "title": "A national experiment reveals where a growth mindset improves achievement",
+     "author": "Yeager et al.",
+     "year": 2019,
+     "url": "https://doi.org/10.1038/s41586-019-1466-y"
+    },
+    {
+     "kind": "paper",
+     "title": "Praise for intelligence can undermine children's motivation and performance",
+     "author": "Mueller & Dweck",
+     "year": 1998,
+     "url": "https://doi.org/10.1037/0022-3514.75.1.33"
+    }
+   ],
+   "paths": [
+    "habits",
+    "replication"
+   ],
+   "caution": "Average effects of mindset interventions are small; benefits appear concentrated among lower-achieving students in supportive contexts."
+  },
+  {
+   "id": "haidt-elephant",
+   "topic": "psychology",
+   "title": "The elephant and the rider: intuition first, reasoning second",
+   "summary": "Jonathan Haidt's social intuitionist model, introduced in a 2001 Psychological Review paper titled The Emotional Dog and Its Rational Tail, challenged the view that moral judgements are mainly the product of reasoning. Haidt argued that moral judgements are usually fast intuitions, and that reasoning typically comes afterwards to justify them, especially when we need to persuade others. In studies on moral dumbfounding, participants heard stories designed to be offensive yet harmless, such as consensual sibling incest with contraception and no consequences. Many insisted the act was wrong, yet could not find reasons once their objections about harm were ruled out; they would say they just knew it was wrong. In The Happiness Hypothesis (2006) and The Righteous Mind (2012), Haidt uses the metaphor of a rider, conscious reasoning, sitting on an elephant, automatic intuition: the rider can guide but mostly serves the elephant. With colleagues, Haidt developed moral foundations theory, which proposes several intuitive foundations of morality, such as care, fairness, loyalty, authority and sanctity, later adding liberty. Survey studies suggest political liberals in the United States emphasise care and fairness, while conservatives draw more evenly on all foundations. Critics argue that the foundations are not as distinct or innate as claimed and that the measurement has psychometric problems.",
+   "deepDive": "The moral dumbfounding findings have been re-examined: some replications found that dumbfounded responses are less common than the original work suggested, and that many participants offer reasons that are coherent from their point of view. Kurt Gray and colleagues propose a rival theory of dyadic morality in which perceived harm underlies all moral judgement. Reading both gives a balanced picture.",
+   "source": {
+    "title": "The emotional dog and its rational tail: A social intuitionist approach to moral judgment",
+    "author": "Jonathan Haidt",
+    "year": 2001,
+    "url": "https://doi.org/10.1037/0033-295X.108.4.814"
+   },
+   "readings": [
+    {
+     "kind": "book",
+     "title": "The Righteous Mind",
+     "author": "Jonathan Haidt",
+     "year": 2012,
+     "url": "https://en.wikipedia.org/wiki/The_Righteous_Mind"
+    },
+    {
+     "kind": "paper",
+     "title": "Liberals and conservatives rely on different sets of moral foundations",
+     "author": "Graham, Haidt & Nosek",
+     "year": 2009,
+     "url": "https://doi.org/10.1037/a0015141"
+    },
+    {
+     "kind": "paper",
+     "title": "Moral foundations theory",
+     "author": "Wikipedia",
+     "year": 2024,
+     "url": "https://en.wikipedia.org/wiki/Moral_foundations_theory"
+    }
+   ],
+   "paths": [
+    "social"
+   ]
+  },
+  {
+   "id": "aristotle-poetics",
+   "topic": "literature",
+   "title": "Aristotle's Poetics: plot is the soul of tragedy",
+   "summary": "Aristotle's Poetics, written in the fourth century BC and probably surviving as lecture notes, is the oldest surviving work of literary theory in the Western tradition and remains startlingly practical. Aristotle treats poetry as mimesis, the imitation of action, and argues that of the six parts of tragedy, plot, character, thought, diction, song and spectacle, plot is the most important; he calls it the soul of tragedy. A good plot is a unified whole with a beginning, middle and end, in which events follow from one another by necessity or probability rather than simply happening one after another. The best plots contain peripeteia, a reversal of fortune, and anagnorisis, a recognition, a change from ignorance to knowledge. In Sophocles' Oedipus the King, Aristotle's favourite example, the two coincide: the messenger who comes to free Oedipus from fear reveals who he really is. The ideal tragic hero is neither perfectly good nor wicked but falls through some hamartia, an error or flaw, which produces pity and fear in the audience and leads to catharsis, a much-debated term meaning purgation, purification or clarification of those emotions. Screenwriting manuals still echo Aristotle's insistence that events be causally linked: and then is weak, but therefore and but are strong.",
+   "deepDive": "A lost second book of the Poetics, on comedy, is famously the MacGuffin of Umberto Eco's novel The Name of the Rose (1980). The meaning of catharsis remains one of the most debated questions in classics; Stephen Halliwell's translations and commentaries are a good scholarly guide. The Poetics is short enough to read in an afternoon in a free translation.",
+   "source": {
+    "title": "Poetics",
+    "author": "Aristotle",
+    "year": -335,
+    "url": "https://en.wikipedia.org/wiki/Poetics_(Aristotle)"
+   },
+   "readings": [
+    {
+     "kind": "book",
+     "title": "Poetics (free e-text, trans. S. H. Butcher)",
+     "author": "Aristotle",
+     "year": -335,
+     "url": "https://www.gutenberg.org/ebooks/1974"
+    },
+    {
+     "kind": "paper",
+     "title": "Peripeteia",
+     "author": "Wikipedia",
+     "year": 2024,
+     "url": "https://en.wikipedia.org/wiki/Peripeteia"
+    },
+    {
+     "kind": "book",
+     "title": "The Name of the Rose",
+     "author": "Umberto Eco",
+     "year": 1980,
+     "url": "https://en.wikipedia.org/wiki/The_Name_of_the_Rose"
+    }
+   ],
+   "paths": [
+    "novels"
+   ]
+  },
+  {
+   "id": "freytag-shapes",
+   "topic": "literature",
+   "title": "From Freytag's pyramid to the six shapes of stories",
+   "summary": "In Die Technik des Dramas (1863), the German novelist and playwright Gustav Freytag analysed five-act tragedies, especially Shakespeare and Greek drama, and described a dramatic structure now taught as Freytag's pyramid: exposition, rising action, climax, falling action and catastrophe or denouement. The model was built for tragedy and fits many modern stories imperfectly, but it gives writers a vocabulary for tension, turning points and release. A century later, Kurt Vonnegut proposed a more playful approach. In a lecture later included in his collection Palm Sunday (1981), and drawing on a master's thesis he said the University of Chicago had rejected, he plotted stories on a graph of good fortune against time. Man in Hole falls into trouble and climbs out; Boy Meets Girl gains, loses and regains; Cinderella rises, falls and then rises higher. In 2016 a team at the University of Vermont, led by Andrew Reagan, tested a version of this idea using sentiment analysis on more than 1,300 works of fiction from Project Gutenberg. They found that emotional trajectories cluster into six basic shapes: rags to riches, riches to rags, man in a hole, Icarus, Cinderella and Oedipus. They also found that some shapes, such as Icarus and Oedipus, were associated with more downloads, suggesting audiences enjoy particular combinations of rise and fall.",
+   "deepDive": "Sentiment-based story arcs have limits: measuring the emotional tone of words is not the same as measuring plot, and literary scholars have criticised computational studies for oversimplification. Matthew Jockers's Syuzhet package sparked a similar debate in 2015, when Annie Swafford pointed out technical problems with its smoothing method. These debates are a good introduction to the field of digital humanities and its promise and pitfalls.",
+   "source": {
+    "title": "Die Technik des Dramas",
+    "author": "Gustav Freytag",
+    "year": 1863,
+    "url": "https://en.wikipedia.org/wiki/Gustav_Freytag"
+   },
+   "readings": [
+    {
+     "kind": "paper",
+     "title": "The emotional arcs of stories are dominated by six basic shapes",
+     "author": "Reagan et al.",
+     "year": 2016,
+     "url": "https://doi.org/10.1140/epjds/s13688-016-0093-1"
+    },
+    {
+     "kind": "book",
+     "title": "Palm Sunday: An Autobiographical Collage",
+     "author": "Kurt Vonnegut",
+     "year": 1981,
+     "url": "https://en.wikipedia.org/wiki/Palm_Sunday_(book)"
+    },
+    {
+     "kind": "paper",
+     "title": "Dramatic structure",
+     "author": "Wikipedia",
+     "year": 2024,
+     "url": "https://en.wikipedia.org/wiki/Dramatic_structure"
+    }
+   ],
+   "paths": [
+    "novels"
+   ]
+  },
+  {
+   "id": "hero-journey",
+   "topic": "literature",
+   "title": "The hero's journey and its critics",
+   "summary": "Joseph Campbell's The Hero with a Thousand Faces (1949) argued that myths from around the world share a common pattern, which he called the monomyth. Drawing on comparative mythology and Jungian psychology, Campbell described a hero who receives a call to adventure, often refuses it, crosses a threshold into an unknown world with the help of a mentor, faces trials, undergoes a supreme ordeal, gains a reward and returns transformed, bringing a boon to the community. His summary formula: a hero ventures from the common world into a region of supernatural wonder, wins a decisive victory and comes back with the power to bestow benefits on others. George Lucas said Campbell's work influenced Star Wars, and in the 1980s Christopher Vogler, a Hollywood story analyst, wrote a memo for Disney adapting Campbell into a twelve-stage template later published as The Writer's Journey. The structure has since shaped countless films and novels. Critics argue that Campbell selected and flattened his examples to fit the pattern, ignored myths that do not fit, centred male heroes and treated non-Western traditions superficially. Folklorists generally prefer more empirical approaches. For writers, the monomyth is best treated as one useful pattern among many rather than a universal law of storytelling.",
+   "deepDive": "A more rigorous precursor is Vladimir Propp's Morphology of the Folktale (1928), which analysed a defined corpus of Russian fairy tales rather than all world myth. The folklorist Alan Dundes was a sharp critic of Campbell's method. Maureen Murdock's The Heroine's Journey (1990) was written partly as a response to the male focus of Campbell's model.",
+   "source": {
+    "title": "The Hero with a Thousand Faces",
+    "author": "Joseph Campbell",
+    "year": 1949,
+    "url": "https://en.wikipedia.org/wiki/The_Hero_with_a_Thousand_Faces"
+   },
+   "readings": [
+    {
+     "kind": "book",
+     "title": "The Writer's Journey: Mythic Structure for Writers",
+     "author": "Christopher Vogler",
+     "year": 1992,
+     "url": "https://en.wikipedia.org/wiki/The_Writer's_Journey:_Mythic_Structure_for_Writers"
+    },
+    {
+     "kind": "paper",
+     "title": "Hero's journey",
+     "author": "Wikipedia",
+     "year": 2024,
+     "url": "https://en.wikipedia.org/wiki/Hero's_journey"
+    },
+    {
+     "kind": "book",
+     "title": "Morphology of the Folktale",
+     "author": "Vladimir Propp",
+     "year": 1928,
+     "url": "https://en.wikipedia.org/wiki/Morphology_of_the_Folktale"
+    }
+   ],
+   "paths": [
+    "novels"
+   ]
+  },
+  {
+   "id": "propp-functions",
+   "topic": "literature",
+   "title": "Propp's 31 functions: the grammar of fairy tales",
+   "summary": "In Morphology of the Folktale, published in Russian in 1928 and translated into English in 1958, the Soviet folklorist Vladimir Propp analysed 100 Russian wonder tales from Alexander Afanasyev's collection. Instead of classifying tales by theme or character, as earlier folklorists had done, Propp focused on what characters do in the plot. He identified 31 functions, recurring narrative actions that always appear in the same order, though not every tale contains all of them. They include absentation, a family member leaves home; interdiction, the hero is warned; violation of the interdiction; villainy or lack; the hero's departure; testing by a donor; the acquisition of a magical agent; struggle with the villain; victory; return; pursuit; rescue; the unrecognised arrival; a false hero's claim; a difficult task; recognition; exposure of the false hero; and finally wedding. He also identified seven character roles, or spheres of action: the villain, the donor, the helper, the princess and her father, the dispatcher, the hero and the false hero. Propp's key insight was that the functions are stable while the characters filling them change. A dragon, witch or tsar can all be the villain. The book became foundational for structuralism, narratology and later for computational storytelling and game design.",
+   "deepDive": "Propp's work became internationally influential only after its 1958 English translation, when structuralists such as Claude Lévi-Strauss engaged with it, sometimes critically. A. J. Greimas reduced Propp's roles to an actantial model of six positions: subject, object, sender, receiver, helper and opponent. Researchers in artificial intelligence have used Proppian functions as a grammar for automated story generation.",
+   "source": {
+    "title": "Morphology of the Folktale",
+    "author": "Vladimir Propp",
+    "year": 1928,
+    "url": "https://en.wikipedia.org/wiki/Morphology_of_the_Folktale"
+   },
+   "readings": [
+    {
+     "kind": "paper",
+     "title": "Vladimir Propp",
+     "author": "Wikipedia",
+     "year": 2024,
+     "url": "https://en.wikipedia.org/wiki/Vladimir_Propp"
+    },
+    {
+     "kind": "paper",
+     "title": "Actantial model",
+     "author": "Wikipedia",
+     "year": 2024,
+     "url": "https://en.wikipedia.org/wiki/Actantial_model"
+    },
+    {
+     "kind": "book",
+     "title": "The Hero with a Thousand Faces",
+     "author": "Joseph Campbell",
+     "year": 1949,
+     "url": "https://en.wikipedia.org/wiki/The_Hero_with_a_Thousand_Faces"
+    }
+   ],
+   "paths": [
+    "novels",
+    "theory"
+   ]
+  },
+  {
+   "id": "free-indirect",
+   "topic": "literature",
+   "title": "Free indirect style: the novel's great invention",
+   "summary": "Free indirect discourse, or free indirect style, is a way of narrating that blends a third-person narrator's voice with a character's thoughts, without quotation marks or tags like she thought. Compare she thought, I will be late again, with: She would be late again, of course. The second sentence is grammatically the narrator's, yet the of course belongs to the character. The technique lets a writer move fluidly between inside and outside, sympathy and irony, in a way that drama and first-person narration cannot easily manage. Jane Austen is often credited with perfecting it in English, notably in Emma (1815), where the reader sees events through Emma's misjudgements while the narrator quietly signals they are mistaken. Gustave Flaubert made it central to Madame Bovary (1856), and the trial of the book for offending public morals partly turned on whether the narrator or Emma was responsible for its sensuous passages. In How Fiction Works (2008), the critic James Wood argues that free indirect style is the novel's defining technique, because it allows a story to be told simultaneously through a character's eyes and language and through an author's eyes and language. Once you notice it, you will see it on nearly every page of modern fiction, from Henry James to Sally Rooney.",
+   "deepDive": "Linguists and narratologists have studied the grammar of free indirect style closely; Ann Banfield's Unspeakable Sentences (1982) argued that some of its sentences cannot be spoken by anyone, a provocative claim about narration. Dorrit Cohn's Transparent Minds (1978) is the classic survey of how fiction presents consciousness, including psycho-narration, quoted monologue and narrated monologue, her term for free indirect style.",
+   "source": {
+    "title": "How Fiction Works",
+    "author": "James Wood",
+    "year": 2008,
+    "url": "https://en.wikipedia.org/wiki/James_Wood_(critic)"
+   },
+   "readings": [
+    {
+     "kind": "paper",
+     "title": "Free indirect speech",
+     "author": "Wikipedia",
+     "year": 2024,
+     "url": "https://en.wikipedia.org/wiki/Free_indirect_speech"
+    },
+    {
+     "kind": "book",
+     "title": "Emma (free e-text)",
+     "author": "Jane Austen",
+     "year": 1815,
+     "url": "https://www.gutenberg.org/ebooks/158"
+    },
+    {
+     "kind": "book",
+     "title": "Transparent Minds",
+     "author": "Dorrit Cohn",
+     "year": 1978,
+     "url": "https://en.wikipedia.org/wiki/Dorrit_Cohn"
+    }
+   ],
+   "paths": [
+    "novels",
+    "craft"
+   ]
+  },
+  {
+   "id": "chekhov-gun",
+   "topic": "literature",
+   "title": "Chekhov's gun: every detail is a promise",
+   "summary": "Chekhov's gun is the dramatic principle that every element introduced into a story should be necessary, and that details which are emphasised should eventually pay off. It is named after Anton Chekhov, who expressed the idea in several forms in letters and conversations. The best-known version, recorded by acquaintances, says roughly that if you show a rifle hanging on the wall in the first act, it must go off by the third act, and if it is not going to be fired, it should not be hanging there. Chekhov's point was about economy: audiences and readers treat what is foregrounded as significant, so a writer who introduces unused elements breaks an implicit promise. Chekhov's own plays illustrate this, sometimes literally. In The Seagull a gun appears and is fired, and Uncle Vanya contains a pistol scene. The principle connects to foreshadowing and setup-and-payoff, which screenwriters treat as essential. It also has interesting tensions. Mystery writers deliberately use red herrings, details that look significant but mislead. Realist novelists sometimes include incidental details to create a sense of reality, which the critic Roland Barthes called the reality effect. Good writers learn to distinguish between details that build a world and details that make a promise.",
+   "deepDive": "Because Chekhov's statements survive mainly in other people's recollections and letters, wording varies between sources, and the principle has been attributed in slightly different forms. Barthes's essay The Reality Effect (1968) is a short, stimulating counterpoint, arguing that some details in realist fiction, like a barometer in Flaubert, exist precisely because they serve no narrative function except to signal that this is the real world.",
+   "source": {
+    "title": "Letters and recorded conversations",
+    "author": "Anton Chekhov",
+    "year": 1889,
+    "url": "https://en.wikipedia.org/wiki/Chekhov's_gun"
+   },
+   "readings": [
+    {
+     "kind": "book",
+     "title": "The Seagull",
+     "author": "Anton Chekhov",
+     "year": 1896,
+     "url": "https://en.wikipedia.org/wiki/The_Seagull"
+    },
+    {
+     "kind": "paper",
+     "title": "Roland Barthes",
+     "author": "Wikipedia",
+     "year": 2024,
+     "url": "https://en.wikipedia.org/wiki/Roland_Barthes"
+    },
+    {
+     "kind": "paper",
+     "title": "Foreshadowing",
+     "author": "Wikipedia",
+     "year": 2024,
+     "url": "https://en.wikipedia.org/wiki/Foreshadowing"
+    }
+   ],
+   "paths": [
+    "craft"
+   ]
+  },
+  {
+   "id": "show-tell",
+   "topic": "literature",
+   "title": "Show, don't tell, and when to ignore it",
+   "summary": "Show, don't tell is perhaps the most repeated piece of writing advice. It means rendering experience through concrete action, dialogue, sensory detail and scene, so readers infer emotions and meanings, rather than stating them in summary. Instead of writing that a character was nervous, a writer might show her fiddling with her ring and checking the clock. The distinction was popularised by Percy Lubbock in The Craft of Fiction (1921), which praised Henry James's scenic method and argued that the art of fiction begins when the novelist treats the story as something to be shown. In 1961, Wayne C. Booth's The Rhetoric of Fiction challenged this orthodoxy. Booth argued that telling, the narrator's direct commentary and summary, is an essential and powerful resource, and that great novelists from Fielding to George Eliot use it brilliantly. All fiction is rhetoric, he argued, the author guiding readers' responses; the question is not whether to tell, but how well. Modern craft teachers usually agree: telling is efficient for transitions, background and compressing time, while showing is better for emotionally important moments. A novel that only shows can feel slow and opaque, while one that only tells can feel lifeless. The skill is choosing which mode to use for which moment.",
+   "deepDive": "Booth's book also introduced two influential concepts: the implied author, the version of the author that a text projects, distinct from the real person, and the unreliable narrator. Ursula K. Le Guin's Steering the Craft (1998) offers practical exercises that mix showing and telling and pushes back against rigid rules.",
+   "source": {
+    "title": "The Rhetoric of Fiction",
+    "author": "Wayne C. Booth",
+    "year": 1961,
+    "url": "https://en.wikipedia.org/wiki/The_Rhetoric_of_Fiction"
+   },
+   "readings": [
+    {
+     "kind": "book",
+     "title": "The Craft of Fiction (free e-text)",
+     "author": "Percy Lubbock",
+     "year": 1921,
+     "url": "https://www.gutenberg.org/ebooks/18961"
+    },
+    {
+     "kind": "paper",
+     "title": "Show, don't tell",
+     "author": "Wikipedia",
+     "year": 2024,
+     "url": "https://en.wikipedia.org/wiki/Show,_don't_tell"
+    },
+    {
+     "kind": "book",
+     "title": "Steering the Craft",
+     "author": "Ursula K. Le Guin",
+     "year": 1998,
+     "url": "https://en.wikipedia.org/wiki/Steering_the_Craft"
+    }
+   ],
+   "paths": [
+    "craft"
+   ]
+  },
+  {
+   "id": "unreliable-narrator",
+   "topic": "literature",
+   "title": "The unreliable narrator: reading between the lies",
+   "summary": "An unreliable narrator is one whose account of events the reader comes to distrust. The term was coined by Wayne C. Booth in The Rhetoric of Fiction (1961), where he described a narrator as reliable when he or she speaks for or acts in accordance with the norms of the work, and unreliable when not. Unreliability comes in many forms. A narrator may be lying, as in Agatha Christie's The Murder of Roger Ackroyd (1926), whose twist provoked controversy about fair play. A narrator may be naive, like Huckleberry Finn, whose innocent descriptions expose the cruelty of the adults around him. A narrator may be self-deceiving, like Stevens the butler in Kazuo Ishiguro's The Remains of the Day (1989), whose formal, restrained language reveals by omission the love and moral failures he cannot admit. Or a narrator may be manipulative and charming, like Humbert Humbert in Vladimir Nabokov's Lolita (1955), whose elegant prose invites readers into complicity with his crimes. Unreliable narration creates a double reading: we follow the narrator's version while constructing a different story from clues, contradictions and gaps. It makes the reader an active detective and often produces dramatic irony. Later narratologists, such as Ansgar Nünning, argued that unreliability depends partly on readers' own assumptions and cultural frames.",
+   "deepDive": "James Phelan and Mary Patricia Martin proposed a useful typology: narrators can misreport facts, misread or misinterpret them, or misregard them in an ethical sense, and each can be underreporting rather than wrong. Their essay on The Remains of the Day is a model of close reading. Try rereading Ishiguro's opening pages with this framework in mind.",
+   "source": {
+    "title": "The Rhetoric of Fiction",
+    "author": "Wayne C. Booth",
+    "year": 1961,
+    "url": "https://en.wikipedia.org/wiki/The_Rhetoric_of_Fiction"
+   },
+   "readings": [
+    {
+     "kind": "paper",
+     "title": "Unreliable narrator",
+     "author": "Wikipedia",
+     "year": 2024,
+     "url": "https://en.wikipedia.org/wiki/Unreliable_narrator"
+    },
+    {
+     "kind": "book",
+     "title": "The Remains of the Day",
+     "author": "Kazuo Ishiguro",
+     "year": 1989,
+     "url": "https://en.wikipedia.org/wiki/The_Remains_of_the_Day"
+    },
+    {
+     "kind": "book",
+     "title": "The Murder of Roger Ackroyd",
+     "author": "Agatha Christie",
+     "year": 1926,
+     "url": "https://en.wikipedia.org/wiki/The_Murder_of_Roger_Ackroyd"
+    }
+   ],
+   "paths": [
+    "novels",
+    "craft"
+   ]
+  },
+  {
+   "id": "defamiliarization",
+   "topic": "literature",
+   "title": "Defamiliarisation: art makes the stone stony",
+   "summary": "In his 1917 essay Art as Device, sometimes translated as Art as Technique, the Russian critic Viktor Shklovsky argued that habit dulls perception. Once actions become habitual, they become automatic, and we stop truly seeing the things around us: walking, talking, even our own furniture and relationships. Shklovsky wrote that art exists to recover the sensation of life, to make the stone stony. Its method is ostranenie, usually translated as defamiliarisation or estrangement: presenting familiar things in an unfamiliar way, so that perception is slowed down and made difficult again. His favourite examples came from Leo Tolstoy, who often describes things as if seeing them for the first time, without naming them. In the story Kholstomer, the narrator is a horse, who finds human ideas about property absurd: people call him my horse, though they do not ride him or feed him. In War and Peace, an opera is described by a naive viewer as painted cardboard and people singing strangely, stripping away the conventions that make it meaningful. Shklovsky became a leading figure in Russian Formalism, which focused on literary devices rather than biography or politics. Defamiliarisation anticipates Bertolt Brecht's alienation effect in theatre, and it remains one of the best explanations of what poets and novelists do with language.",
+   "deepDive": "Shklovsky's essay is often included in the anthology Russian Formalist Criticism: Four Essays, translated by Lee T. Lemon and Marion J. Reis (1965). Brecht's Verfremdungseffekt, developed in the 1930s, aimed to make audiences think critically rather than identify emotionally, and the similarity in terms is not a coincidence; Brecht had contact with Russian avant-garde ideas.",
+   "source": {
+    "title": "Art as Device",
+    "author": "Viktor Shklovsky",
+    "year": 1917,
+    "url": "https://en.wikipedia.org/wiki/Defamiliarization"
+   },
+   "readings": [
+    {
+     "kind": "paper",
+     "title": "Viktor Shklovsky",
+     "author": "Wikipedia",
+     "year": 2024,
+     "url": "https://en.wikipedia.org/wiki/Viktor_Shklovsky"
+    },
+    {
+     "kind": "paper",
+     "title": "Russian formalism",
+     "author": "Wikipedia",
+     "year": 2024,
+     "url": "https://en.wikipedia.org/wiki/Russian_formalism"
+    },
+    {
+     "kind": "paper",
+     "title": "Distancing effect",
+     "author": "Wikipedia",
+     "year": 2024,
+     "url": "https://en.wikipedia.org/wiki/Distancing_effect"
+    }
+   ],
+   "paths": [
+    "theory",
+    "craft"
+   ]
+  },
+  {
+   "id": "death-of-author",
+   "topic": "literature",
+   "title": "The death of the author, and the birth of the reader",
+   "summary": "Roland Barthes's short essay The Death of the Author, published in English in 1967 in the American magazine Aspen and in French in 1968, attacked a dominant habit of criticism: explaining a work by referring to the author's life, intentions and psychology. Barthes argued that a text is not a line of words releasing a single theological meaning, the message of an Author-God, but a multidimensional space in which a variety of writings, none of them original, blend and clash. Writing is a tissue of quotations drawn from innumerable centres of culture. Once a text is written, the author loses control over its meaning, and the unity of a text lies not in its origin but in its destination: the reader. The essay ends with the famous claim that the birth of the reader must be at the cost of the death of the Author. The argument was part of the broader shift from structuralism to post-structuralism and connected to political critiques of authority. Michel Foucault responded in 1969 with What Is an Author?, which examined the author function, how the idea of an author organises discourse and assigns responsibility. Critics such as E. D. Hirsch defended authorial intention as the standard of valid interpretation. Today most readers hold a middle position, but Barthes made it impossible to treat the author's biography as the only key.",
+   "deepDive": "An earlier and very different argument against relying on authors' intentions came from the American New Critics W. K. Wimsatt and Monroe Beardsley in The Intentional Fallacy (1946), which held that a poem's meaning should be judged from the text itself. Comparing it with Barthes shows how similar conclusions can come from very different theories of language and culture.",
+   "source": {
+    "title": "The Death of the Author",
+    "author": "Roland Barthes",
+    "year": 1967,
+    "url": "https://en.wikipedia.org/wiki/The_Death_of_the_Author"
+   },
+   "readings": [
+    {
+     "kind": "paper",
+     "title": "What Is an Author?",
+     "author": "Michel Foucault",
+     "year": 1969,
+     "url": "https://en.wikipedia.org/wiki/What_Is_an_Author%3F"
+    },
+    {
+     "kind": "paper",
+     "title": "Intentional fallacy",
+     "author": "Wikipedia",
+     "year": 2024,
+     "url": "https://en.wikipedia.org/wiki/Intentional_fallacy"
+    },
+    {
+     "kind": "book",
+     "title": "Validity in Interpretation",
+     "author": "E. D. Hirsch",
+     "year": 1967,
+     "url": "https://en.wikipedia.org/wiki/E._D._Hirsch"
+    }
+   ],
+   "paths": [
+    "theory"
+   ]
+  },
+  {
+   "id": "bakhtin-polyphony",
+   "topic": "literature",
+   "title": "Polyphony: Dostoevsky and the novel of many voices",
+   "summary": "The Russian thinker Mikhail Bakhtin argued in Problems of Dostoevsky's Art (1929), revised and expanded in 1963 as Problems of Dostoevsky's Poetics, that Fyodor Dostoevsky had invented a new kind of novel: the polyphonic novel. In most fiction, Bakhtin said, characters' voices are ultimately subordinated to the author's single vision; the author knows more and has the last word. In Dostoevsky, by contrast, there is a plurality of independent and unmerged voices and consciousnesses, each with equal rights and its own world. Characters such as Raskolnikov in Crime and Punishment or Ivan Karamazov in The Brothers Karamazov are not mouthpieces; their ideas are fully voiced, even those the author disagreed with, and the novel does not resolve their argument. Bakhtin connected this to his broader concept of dialogism: all language is shaped by previous uses and anticipated responses, and every utterance is a link in a chain of dialogue. He also developed heteroglossia, the coexistence of many social languages within a novel, and the carnivalesque, the subversive, festive inversion of hierarchies he traced in Rabelais. Bakhtin worked largely in obscurity under Stalin, and was exiled to Kazakhstan, but his ideas spread widely after the 1960s and transformed literary studies, linguistics and cultural theory.",
+   "deepDive": "Bakhtin's essays collected in English as The Dialogic Imagination (1981) are the best entry point to heteroglossia. His Rabelais and His World (written in the 1940s, published 1965) introduced the carnivalesque. For a lively application, read Dostoevsky's Notes from Underground (1864) with Bakhtin's idea of the word with a sideways glance: a narrator who constantly anticipates and argues with his imagined reader.",
+   "source": {
+    "title": "Problems of Dostoevsky's Poetics",
+    "author": "Mikhail Bakhtin",
+    "year": 1963,
+    "url": "https://en.wikipedia.org/wiki/Problems_of_Dostoevsky's_Poetics"
+   },
+   "readings": [
+    {
+     "kind": "book",
+     "title": "The Dialogic Imagination",
+     "author": "Mikhail Bakhtin",
+     "year": 1981,
+     "url": "https://en.wikipedia.org/wiki/The_Dialogic_Imagination"
+    },
+    {
+     "kind": "paper",
+     "title": "Polyphony (literature)",
+     "author": "Wikipedia",
+     "year": 2024,
+     "url": "https://en.wikipedia.org/wiki/Polyphony_(literature)"
+    },
+    {
+     "kind": "book",
+     "title": "Notes from Underground (free e-text)",
+     "author": "Fyodor Dostoevsky",
+     "year": 1864,
+     "url": "https://www.gutenberg.org/ebooks/600"
+    }
+   ],
+   "paths": [
+    "theory",
+    "novels"
+   ]
+  },
+  {
+   "id": "iceberg-theory",
+   "topic": "literature",
+   "title": "Hemingway's iceberg: the power of what you leave out",
+   "summary": "Ernest Hemingway's theory of omission, often called the iceberg theory, holds that a writer can leave out important things and the story will be stronger for it, provided the writer knows what is being omitted. In Death in the Afternoon (1932), his book about bullfighting, Hemingway compared prose to an iceberg: the dignity of its movement comes from the fact that only one eighth of it is above water. If a writer knows enough about what he is writing, he can omit things he knows, and the reader will feel them as strongly as if they had been stated. But if a writer omits things because he does not know them, the result is simply hollow. Hemingway later said in interviews that he left out the war from Big Two-Hearted River (1925), a story in which a young man fishes alone; the trauma is never mentioned, yet it shapes every careful, almost ritual action. Hills Like White Elephants (1927) never names the operation the couple discusses, yet readers usually infer it. The iceberg theory owes something to Hemingway's training as a newspaper reporter at the Kansas City Star, whose style sheet demanded short sentences and vigorous English. It has influenced minimalists like Raymond Carver. The lesson for any writer is that subtext lives in the gaps, and that understatement only works when it rests on knowledge.",
+   "deepDive": "In his 1958 Paris Review interview, Hemingway described his practice of knowing much more than he put in. Raymond Carver's essay On Writing (1981) and the story collection What We Talk About When We Talk About Love (1981), heavily cut by his editor Gordon Lish, carry the approach to extremes, and later publication of Carver's original drafts as Beginners revealed how much had been removed.",
+   "source": {
+    "title": "Death in the Afternoon",
+    "author": "Ernest Hemingway",
+    "year": 1932,
+    "url": "https://en.wikipedia.org/wiki/Death_in_the_Afternoon"
+   },
+   "readings": [
+    {
+     "kind": "paper",
+     "title": "Iceberg theory",
+     "author": "Wikipedia",
+     "year": 2024,
+     "url": "https://en.wikipedia.org/wiki/Iceberg_theory"
+    },
+    {
+     "kind": "paper",
+     "title": "Ernest Hemingway, The Art of Fiction No. 21 (Paris Review interview)",
+     "author": "George Plimpton",
+     "year": 1958,
+     "url": "https://www.theparisreview.org/interviews/4825/the-art-of-fiction-no-21-ernest-hemingway"
+    },
+    {
+     "kind": "book",
+     "title": "What We Talk About When We Talk About Love",
+     "author": "Raymond Carver",
+     "year": 1981,
+     "url": "https://en.wikipedia.org/wiki/What_We_Talk_About_When_We_Talk_About_Love"
+    }
+   ],
+   "paths": [
+    "craft"
+   ]
+  },
+  {
+   "id": "flat-round",
+   "topic": "literature",
+   "title": "Flat and round characters: Forster's test",
+   "summary": "In Aspects of the Novel (1927), based on lectures he gave at Trinity College, Cambridge, E. M. Forster offered one of the most useful distinctions in criticism: flat and round characters. Flat characters, he said, are constructed around a single idea or quality and can be summed up in a sentence. Dickens's Mrs Micawber, who repeatedly declares she will never desert Mr Micawber, is Forster's example. Flat characters are easily recognised and remembered, and they are not necessarily a flaw: they can be comic, vivid and efficient, and Dickens's novels are crowded with them. Round characters are more complex, capable of development and contradiction. Forster's test is famous: a round character is capable of surprising in a convincing way. If it never surprises, it is flat; if it does not convince, it is flat pretending to be round. Forster considered Jane Austen a master of round characters, even her minor ones. The same book distinguishes story, a narrative of events arranged in time sequence, from plot, which emphasises causality. The king died and then the queen died is a story; the king died, and then the queen died of grief is a plot. Aspects of the Novel remains readable, witty and practical, a rare work of criticism that writers can use directly.",
+   "deepDive": "Forster also discusses fantasy, prophecy, pattern and rhythm in the novel, the latter being his term for repetition with variation, as in the recurring little phrase of Vinteuil's sonata in Proust. Critics have since complicated his binary; James Wood argues that flatness can be a powerful technique in its own right, and that some flat characters are more alive than round ones.",
+   "source": {
+    "title": "Aspects of the Novel",
+    "author": "E. M. Forster",
+    "year": 1927,
+    "url": "https://en.wikipedia.org/wiki/Aspects_of_the_Novel"
+   },
+   "readings": [
+    {
+     "kind": "paper",
+     "title": "Character (arts)",
+     "author": "Wikipedia",
+     "year": 2024,
+     "url": "https://en.wikipedia.org/wiki/Character_(arts)"
+    },
+    {
+     "kind": "book",
+     "title": "How Fiction Works",
+     "author": "James Wood",
+     "year": 2008,
+     "url": "https://en.wikipedia.org/wiki/James_Wood_(critic)"
+    },
+    {
+     "kind": "book",
+     "title": "David Copperfield (free e-text)",
+     "author": "Charles Dickens",
+     "year": 1850,
+     "url": "https://www.gutenberg.org/ebooks/766"
+    }
+   ],
+   "paths": [
+    "novels",
+    "craft"
+   ]
+  },
+  {
+   "id": "rise-novel",
+   "topic": "literature",
+   "title": "The rise of the novel: realism, individuals and readers",
+   "summary": "Why did the novel emerge as a dominant form in eighteenth-century England? Ian Watt's The Rise of the Novel (1957) offered an influential answer focused on three writers: Daniel Defoe, Samuel Richardson and Henry Fielding. Watt argued that the novel was distinguished by formal realism, a set of narrative techniques that gave the impression of an authentic report of individual experience. Unlike earlier romances and epics, which used traditional plots and types, novels such as Robinson Crusoe (1719) and Pamela (1740) featured particular individuals with ordinary names, placed in specific times and places, whose lives unfolded through cause and effect. Watt connected this to broader changes: philosophical individualism and empiricism from Descartes and Locke; the rise of Protestant introspection and diary keeping; economic individualism, of which Crusoe is a famous parable; and the growth of a middle-class reading public, especially women, with more leisure, circulating libraries and a booming print trade. Later critics challenged Watt's narrow focus on English male authors, pointing to earlier women novelists such as Aphra Behn and Eliza Haywood, to the long tradition of prose fiction in other cultures, and to the wider European picture. Still, Watt's question, what social changes made the novel possible, remains central to literary history.",
+   "deepDive": "Margaret Anne Doody's The True Story of the Novel (1996) argues the novel is far older, tracing it to ancient Greek and Roman prose fiction. Michael McKeon's The Origins of the English Novel, 1600-1740 (1987) offers a more dialectical account. For a global counterpoint, consider The Tale of Genji, written in Japan around 1000 AD, often called the first novel.",
+   "source": {
+    "title": "The Rise of the Novel",
+    "author": "Ian Watt",
+    "year": 1957,
+    "url": "https://en.wikipedia.org/wiki/The_Rise_of_the_Novel"
+   },
+   "readings": [
+    {
+     "kind": "book",
+     "title": "Robinson Crusoe (free e-text)",
+     "author": "Daniel Defoe",
+     "year": 1719,
+     "url": "https://www.gutenberg.org/ebooks/521"
+    },
+    {
+     "kind": "paper",
+     "title": "Novel",
+     "author": "Wikipedia",
+     "year": 2024,
+     "url": "https://en.wikipedia.org/wiki/Novel"
+    },
+    {
+     "kind": "book",
+     "title": "The Tale of Genji",
+     "author": "Murasaki Shikibu",
+     "year": 1010,
+     "url": "https://en.wikipedia.org/wiki/The_Tale_of_Genji"
+    }
+   ],
+   "paths": [
+    "novels"
+   ]
+  },
+  {
+   "id": "fiction-theory-of-mind",
+   "topic": "literature",
+   "title": "Does reading fiction make you more empathetic?",
+   "summary": "The idea that literature cultivates empathy is old, but in recent decades psychologists have tried to test it. Keith Oatley and Raymond Mar argued that fiction works as a simulation of social experience: just as flight simulators train pilots, stories let readers practise understanding other minds. In correlational studies, people who read more fiction tended to score higher on measures of theory of mind and empathy, though such associations could reflect who chooses to read. In 2013, David Kidd and Emanuele Castano published a widely reported experiment in Science. Participants who read short excerpts of literary fiction, by authors such as Don DeLillo and Louise Erdrich, performed better immediately afterwards on tests of theory of mind, such as the Reading the Mind in the Eyes Test, than those who read popular fiction, non-fiction or nothing. The study received enormous attention. However, a 2016 replication attempt by Maria Eugenia Panero and colleagues, involving several labs and a larger sample, did not reproduce the effect of a single brief reading session. Later meta-analyses suggest that fiction reading may have small positive effects on social cognition, but that the evidence is mixed and effect sizes are modest. The more robust finding is the correlation between lifetime reading and social cognition, whose direction of causality is still uncertain.",
+   "deepDive": "Dodell-Feder and Tamir's 2018 meta-analysis found a small but statistically significant effect of fiction reading on social cognition across experiments, while warning of publication bias. Kidd and Castano responded to failed replications with further studies. Keith Oatley's Such Stuff as Dreams (2011) is an accessible account of fiction as simulation.",
+   "source": {
+    "title": "Reading Literary Fiction Improves Theory of Mind",
+    "author": "David Comer Kidd & Emanuele Castano",
+    "year": 2013,
+    "url": "https://doi.org/10.1126/science.1239918"
+   },
+   "readings": [
+    {
+     "kind": "paper",
+     "title": "Does reading a single passage of literary fiction really improve theory of mind? An attempt at replication",
+     "author": "Panero et al.",
+     "year": 2016,
+     "url": "https://doi.org/10.1037/pspa0000064"
+    },
+    {
+     "kind": "paper",
+     "title": "Fiction reading has a small positive impact on social cognition: A meta-analysis",
+     "author": "Dodell-Feder & Tamir",
+     "year": 2018,
+     "url": "https://doi.org/10.1037/xge0000395"
+    },
+    {
+     "kind": "paper",
+     "title": "The Function of Fiction is the Abstraction and Simulation of Social Experience",
+     "author": "Mar & Oatley",
+     "year": 2008,
+     "url": "https://doi.org/10.1111/j.1745-6924.2008.00073.x"
+    }
+   ],
+   "paths": [
+    "mind"
+   ],
+   "caution": "The headline 2013 one-session effect did not replicate in a 2016 multi-lab study; meta-analyses suggest small effects at best."
+  },
+  {
+   "id": "narrative-transportation",
+   "topic": "literature",
+   "title": "Narrative transportation: why stories persuade",
+   "summary": "In 2000, Melanie Green and Timothy Brock introduced the concept of narrative transportation in the Journal of Personality and Social Psychology. Transportation is the experience of being absorbed into a story, a combination of attention, imagery and emotion in which readers lose track of their surroundings. Green and Brock developed a scale to measure it, asking people how much they could picture events, how much they wanted to learn how the story ended, and whether they felt emotionally involved. In their experiments, participants who were more transported by a story, such as one about a young girl murdered by a psychiatric patient at a shopping mall, were more likely to adopt beliefs consistent with the story and less likely to find faults in it, even when the story was labelled fiction. Transportation seems to persuade through different routes from arguments. Absorbed readers are less inclined to counter-argue, they identify with characters, and the story's events feel like experience rather than claims. This helps explain the power of narrative in advertising, health communication, political messaging and misinformation. A 2014 meta-analysis by Tom van Laer and colleagues confirmed that transportation predicts changes in attitudes and intentions across studies. The practical lesson cuts both ways: a good story is a strong tool for teaching and a strong tool for manipulation.",
+   "deepDive": "Green and Brock's transportation-imagery model connects to earlier work by Richard Gerrig, whose Experiencing Narrative Worlds (1993) used the metaphor of travel to describe reading. Health researchers have used narrative interventions, for example stories about cancer screening, with some success, though narrative persuasion also makes false information harder to correct.",
+   "source": {
+    "title": "The role of transportation in the persuasiveness of public narratives",
+    "author": "Melanie C. Green & Timothy C. Brock",
+    "year": 2000,
+    "url": "https://doi.org/10.1037/0022-3514.79.5.701"
+   },
+   "readings": [
+    {
+     "kind": "paper",
+     "title": "The Extended Transportation-Imagery Model: A Meta-Analysis of the Antecedents and Consequences of Consumers' Narrative Transportation",
+     "author": "van Laer et al.",
+     "year": 2014,
+     "url": "https://doi.org/10.1086/673383"
+    },
+    {
+     "kind": "book",
+     "title": "Experiencing Narrative Worlds",
+     "author": "Richard J. Gerrig",
+     "year": 1993,
+     "url": "https://yalebooks.yale.edu/book/9780300054347/experiencing-narrative-worlds/"
+    },
+    {
+     "kind": "paper",
+     "title": "Transportation theory (psychology)",
+     "author": "Wikipedia",
+     "year": 2024,
+     "url": "https://en.wikipedia.org/wiki/Transportation_theory_(psychology)"
+    }
+   ],
+   "paths": [
+    "mind"
+   ]
+  },
+  {
+   "id": "orwell-politics-language",
+   "topic": "literature",
+   "title": "Orwell's rules: bad prose and bad politics",
+   "summary": "George Orwell's essay Politics and the English Language, published in the magazine Horizon in 1946, argues that the decline of a language has political and economic causes, but that bad language also enables bad thinking. Orwell collected examples of what he considered sloppy contemporary prose and identified recurring faults: dying metaphors used without thought, pretentious diction, meaningless words and verbal false limbs that pad sentences. Most seriously, he argued that political language is designed to make lies sound truthful and murder respectable. Euphemism allows people to name terrible things without calling up mental pictures of them; he gave examples such as pacification for bombing villages and driving out inhabitants. Orwell ended the essay with six rules. In summary: never use a metaphor, simile or figure of speech you are used to seeing in print; never use a long word where a short one will do; if it is possible to cut a word out, always cut it out; never use the passive where you can use the active; never use a foreign phrase, scientific word or jargon if you can think of an everyday equivalent; and break any of these rules sooner than say anything outright barbarous. The last rule matters: Orwell framed them as aids to thinking clearly, not mechanical laws.",
+   "deepDive": "Linguists have pointed out that Orwell breaks his own rules in the essay, including using the passive voice often, and that some of his examples are unfair. Geoffrey Pullum has criticised the anti-passive advice found in Orwell and Strunk and White. The essay's connection to Newspeak in Nineteen Eighty-Four (1949), published three years later, is direct and worth tracing.",
+   "source": {
+    "title": "Politics and the English Language",
+    "author": "George Orwell",
+    "year": 1946,
+    "url": "https://en.wikipedia.org/wiki/Politics_and_the_English_Language"
+   },
+   "readings": [
+    {
+     "kind": "paper",
+     "title": "Politics and the English Language (full text, The Orwell Foundation)",
+     "author": "George Orwell",
+     "year": 1946,
+     "url": "https://www.orwellfoundation.com/the-orwell-foundation/orwell/essays-and-other-works/politics-and-the-english-language/"
+    },
+    {
+     "kind": "book",
+     "title": "Nineteen Eighty-Four",
+     "author": "George Orwell",
+     "year": 1949,
+     "url": "https://en.wikipedia.org/wiki/Nineteen_Eighty-Four"
+    },
+    {
+     "kind": "paper",
+     "title": "Newspeak",
+     "author": "Wikipedia",
+     "year": 2024,
+     "url": "https://en.wikipedia.org/wiki/Newspeak"
+    }
+   ],
+   "paths": [
+    "craft"
+   ]
+  },
+  {
+   "id": "curse-of-knowledge",
+   "topic": "literature",
+   "title": "The curse of knowledge and classic style",
+   "summary": "In The Sense of Style (2014), the cognitive psychologist Steven Pinker argues that the single best explanation of why good people write bad prose is the curse of knowledge: once you know something, it is very hard to imagine what it is like not to know it. Experts forget that readers do not share their jargon, abbreviations and background assumptions. The term comes from economics: in 1989 Colin Camerer, George Loewenstein and Martin Weber showed that better-informed traders could not ignore their private knowledge when predicting the judgements of less-informed traders, even when it would have paid them to do so. A memorable demonstration came from Elizabeth Newton's 1990 Stanford dissertation: people asked to tap the rhythm of a well-known song, such as Happy Birthday, predicted listeners would identify around half the songs, but listeners identified only about 2.5 per cent. The tappers could hear the melody in their heads; the listeners heard only knocks. Pinker's remedy is classic style, a concept he borrows from Francis-Noël Thomas and Mark Turner's Clear and Simple as the Truth (1994). In classic style, the writer acts as a guide directing the reader's gaze to something in the world, as in a conversation between equals. The best practical defence is to show drafts to people outside your field.",
+   "deepDive": "Pinker's book also defends some traditional rules and rejects others, including many prohibitions in usage guides such as the ban on split infinitives. Thomas and Turner's book contrasts classic style with plain, practical, reflexive and prophetic styles. The Newton tapping study is described in Chip and Dan Heath's Made to Stick (2007).",
+   "source": {
+    "title": "The Sense of Style",
+    "author": "Steven Pinker",
+    "year": 2014,
+    "url": "https://en.wikipedia.org/wiki/The_Sense_of_Style"
+   },
+   "readings": [
+    {
+     "kind": "paper",
+     "title": "The Curse of Knowledge in Economic Settings: An Experimental Analysis",
+     "author": "Camerer, Loewenstein & Weber",
+     "year": 1989,
+     "url": "https://doi.org/10.1086/261651"
+    },
+    {
+     "kind": "book",
+     "title": "Clear and Simple as the Truth: Writing Classic Prose",
+     "author": "Francis-Noël Thomas & Mark Turner",
+     "year": 1994,
+     "url": "https://en.wikipedia.org/wiki/Mark_Turner_(cognitive_scientist)"
+    },
+    {
+     "kind": "paper",
+     "title": "Curse of knowledge",
+     "author": "Wikipedia",
+     "year": 2024,
+     "url": "https://en.wikipedia.org/wiki/Curse_of_knowledge"
+    }
+   ],
+   "paths": [
+    "craft",
+    "mind"
+   ]
+  },
+  {
+   "id": "stream-of-consciousness",
+   "topic": "literature",
+   "title": "Stream of consciousness: from William James to Woolf",
+   "summary": "The phrase stream of consciousness comes from psychology before it entered literature. In The Principles of Psychology (1890), William James argued that consciousness does not appear to itself chopped up in bits; it is nothing jointed, it flows. A river or a stream, he said, are the metaphors by which it is most naturally described. In the early twentieth century, novelists tried to capture this flow on the page. Dorothy Richardson's Pilgrimage sequence, beginning in 1915, was described by the novelist May Sinclair in 1918 as stream of consciousness, the first application of the term to fiction. James Joyce's Ulysses (1922) pushed the technique to extremes, culminating in Molly Bloom's final monologue, eight enormous unpunctuated sentences. Virginia Woolf, in her essay Modern Fiction, urged writers to record the atoms as they fall upon the mind in the order in which they fall, and in Mrs Dalloway (1925) and To the Lighthouse (1927) she moved fluidly between characters' minds, using free indirect style rather than raw interior monologue. William Faulkner's The Sound and the Fury (1929) opens with the fragmented perceptions of Benjy, a cognitively disabled man, whose section disorients readers. The technique reflected modernist interest in subjectivity, time and memory, influenced by James, Henri Bergson and Freud.",
+   "deepDive": "Critics distinguish between stream of consciousness as a subject, the representation of mental flow, and interior monologue as a technique, direct quotation of a character's thoughts. Édouard Dujardin's Les Lauriers sont coupés (1887), which Joyce acknowledged as an influence, is an early example. Robert Humphrey's Stream of Consciousness in the Modern Novel (1954) is a classic study.",
+   "source": {
+    "title": "The Principles of Psychology",
+    "author": "William James",
+    "year": 1890,
+    "url": "https://en.wikipedia.org/wiki/The_Principles_of_Psychology"
+   },
+   "readings": [
+    {
+     "kind": "paper",
+     "title": "Stream of consciousness (narrative mode)",
+     "author": "Wikipedia",
+     "year": 2024,
+     "url": "https://en.wikipedia.org/wiki/Stream_of_consciousness"
+    },
+    {
+     "kind": "book",
+     "title": "Mrs Dalloway",
+     "author": "Virginia Woolf",
+     "year": 1925,
+     "url": "https://en.wikipedia.org/wiki/Mrs_Dalloway"
+    },
+    {
+     "kind": "book",
+     "title": "Ulysses (free e-text)",
+     "author": "James Joyce",
+     "year": 1922,
+     "url": "https://www.gutenberg.org/ebooks/4300"
+    }
+   ],
+   "paths": [
+    "novels",
+    "mind"
+   ]
+  },
+  {
+   "id": "objective-correlative",
+   "topic": "literature",
+   "title": "The objective correlative: emotion through things",
+   "summary": "In his 1919 essay Hamlet and His Problems, T. S. Eliot made a provocative claim: Shakespeare's Hamlet, far from being a masterpiece, was most certainly an artistic failure. His reason introduced one of the most famous terms in twentieth-century criticism. The only way of expressing emotion in the form of art, Eliot argued, is by finding an objective correlative, a set of objects, a situation, a chain of events which shall be the formula of that particular emotion, so that when the external facts are given, the emotion is immediately evoked. Eliot's examples came from Macbeth, where Lady Macbeth's sleepwalking scene gives her state of mind through concrete details. In Hamlet, by contrast, Eliot argued that the prince's disgust exceeds anything the plot provides: his mother's remarriage is not an adequate correlative for the intensity of his feeling, so the emotion seems inexpressible and baffling. Many critics reject the judgement of Hamlet, and the phrase itself had been used earlier by the American painter Washington Allston. But the idea has been enormously useful for writers. Instead of naming emotions, find the concrete objects and events that will carry them, like the shoes in a tragedy or the empty chair at the table. It is a sharper version of show, don't tell.",
+   "deepDive": "Eliot's poetry applies the idea: The Love Song of J. Alfred Prufrock (1915) communicates paralysis and anxiety through images of evening sky, half-deserted streets and coffee spoons, rather than direct statement. Eliot's essay appears in The Sacred Wood (1920), which is in the public domain and available free online.",
+   "source": {
+    "title": "Hamlet and His Problems",
+    "author": "T. S. Eliot",
+    "year": 1919,
+    "url": "https://en.wikipedia.org/wiki/Objective_correlative"
+   },
+   "readings": [
+    {
+     "kind": "book",
+     "title": "The Sacred Wood (free e-text)",
+     "author": "T. S. Eliot",
+     "year": 1920,
+     "url": "https://www.gutenberg.org/ebooks/57795"
+    },
+    {
+     "kind": "paper",
+     "title": "The Love Song of J. Alfred Prufrock",
+     "author": "Wikipedia",
+     "year": 2024,
+     "url": "https://en.wikipedia.org/wiki/The_Love_Song_of_J._Alfred_Prufrock"
+    },
+    {
+     "kind": "paper",
+     "title": "Hamlet",
+     "author": "Wikipedia",
+     "year": 2024,
+     "url": "https://en.wikipedia.org/wiki/Hamlet"
+    }
+   ],
+   "paths": [
+    "craft",
+    "theory"
+   ]
+  }
+ ]
+}

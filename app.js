@@ -1,0 +1,431 @@
+(() => {
+'use strict';
+/* ---------- Icons ---------- */
+const P = (d, extra='') => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" ${extra}>${d}</svg>`;
+const I = {
+  search: P('<circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/>'),
+  bookmark: P('<path d="M6 4.5A1.5 1.5 0 0 1 7.5 3h9A1.5 1.5 0 0 1 18 4.5V21l-6-4-6 4z"/>'),
+  bookmarkFill: P('<path d="M6 4.5A1.5 1.5 0 0 1 7.5 3h9A1.5 1.5 0 0 1 18 4.5V21l-6-4-6 4z" fill="currentColor"/>'),
+  check: P('<path d="m5 12.5 4.5 4.5L19 7.5"/>', 'stroke-width="2.2"'),
+  close: P('<path d="m6 9 6 6 6-6"/>', 'stroke-width="2"'),
+  x: P('<path d="M18 6 6 18M6 6l12 12"/>'),
+  back: P('<path d="m15 18-6-6 6-6"/>', 'stroke-width="2"'),
+  right: P('<path d="m9 18 6-6-6-6"/>', 'stroke-width="2"'),
+  ext: P('<path d="M7 17 17 7M8 7h9v9"/>'),
+  flame: P('<path d="M12 2.5c.5 3.5 4.5 5.5 4.5 10a4.5 4.5 0 0 1-9 0c0-2 1-3.5 2-4.5 0 1.5.8 2.6 1.8 3C10.8 8.5 11 5 12 2.5Z" fill="currentColor" stroke="none"/>'),
+  compass: P('<circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5z"/>'),
+  layers: P('<path d="m12 3 9 5-9 5-9-5z"/><path d="m3 13 9 5 9-5"/>'),
+  chart: P('<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>'),
+  book: P('<path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M4 20.5A2.5 2.5 0 0 0 6.5 23H20v-5"/>'),
+  paper: P('<path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/>'),
+  globe: P('<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>'),
+  warn: P('<path d="M10.3 4.2 2.6 18a2 2 0 0 0 1.7 3h15.4a2 2 0 0 0 1.7-3L13.7 4.2a2 2 0 0 0-3.4 0Z"/><path d="M12 9.5v4M12 17h.01"/>'),
+  dive: P('<path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/>'),
+  arrowR: P('<path d="M5 12h14M13 6l6 6-6 6"/>', 'stroke-width="2"'),
+  swipe: P('<path d="M7 12h12M15 8l4 4-4 4M5 8v8"/>'),
+  sparkle: P('<path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M5.6 18.4l2.8-2.8M15.6 8.4l2.8-2.8"/>'),
+};
+
+/* ---------- Utils ---------- */
+const $ = (s, r=document) => r.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const pad = n => String(n).padStart(2,'0');
+const dayKey = (d=new Date()) => `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;
+const addDays = (d, n) => { const x = new Date(d); x.setDate(x.getDate()+n); return x; };
+const haptic = (ms=8) => { try { navigator.vibrate && navigator.vibrate(ms); } catch(e){} };
+const hash = s => { let h = 2166136261; for (const c of s) { h ^= c.charCodeAt(0); h = Math.imul(h, 16777619); } return h >>> 0; };
+const rng = seed => () => { seed |= 0; seed = seed + 0x6D2B79F5 | 0; let t = Math.imul(seed ^ seed >>> 15, 1 | seed); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; };
+const minutes = c => Math.max(1, Math.ceil((c.summary.split(' ').length + c.deepDive.split(' ').length) / 200));
+const yearStr = y => y < 0 ? `c. ${-y} BC` : String(y);
+
+/* ---------- State ---------- */
+const KEY = 'folio.v1';
+const defaults = { saved:{}, read:{}, days:{}, goal:3, theme:'dark', seed: Math.floor(Math.random()*1e9), hinted:false, filter:'all' };
+let S;
+try { S = Object.assign({}, defaults, JSON.parse(localStorage.getItem(KEY) || '{}')); } catch(e) { S = {...defaults}; }
+const save = () => { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch(e){} };
+save();
+
+let D = null, byId = {}, topicById = {}, pathById = {};
+const color = t => `var(--${t})`;
+
+function streak() {
+  const met = k => (S.days[k] || 0) >= S.goal;
+  let d = new Date(), n = 0;
+  if (!met(dayKey(d))) d = addDays(d, -1);
+  while (met(dayKey(d))) { n++; d = addDays(d, -1); }
+  return n;
+}
+function bestStreak() {
+  const keys = Object.keys(S.days).filter(k => S.days[k] >= S.goal).sort();
+  let best = 0, run = 0, prev = null;
+  for (const k of keys) {
+    const cur = new Date(k + 'T12:00:00');
+    run = prev && Math.round((cur - prev) / 864e5) === 1 ? run + 1 : 1;
+    best = Math.max(best, run); prev = cur;
+  }
+  return Math.max(best, streak());
+}
+const todayCount = () => S.days[dayKey()] || 0;
+
+function setRead(id, val) {
+  const was = !!S.read[id];
+  if (val === was) return;
+  const k = dayKey();
+  if (val) {
+    S.read[id] = k; S.days[k] = (S.days[k] || 0) + 1;
+    if (S.days[k] === S.goal) setTimeout(() => toast(I.flame, `Daily goal hit · ${streak()}-day streak`), 250), haptic([10,60,14]);
+    else haptic(10);
+  } else {
+    const rk = S.read[id]; delete S.read[id];
+    if (S.days[rk]) S.days[rk] = Math.max(0, S.days[rk] - 1);
+    haptic(6);
+  }
+  save();
+}
+function toggleSave(id) {
+  if (S.saved[id]) delete S.saved[id]; else S.saved[id] = Date.now();
+  haptic(S.saved[id] ? 12 : 6); save();
+  return !!S.saved[id];
+}
+
+/* ---------- Toast ---------- */
+let toastT;
+function toast(icon, msg) {
+  const t = $('#toast');
+  t.innerHTML = `<span class="ti">${icon}</span>${esc(msg)}`;
+  t.classList.add('show'); clearTimeout(toastT);
+  toastT = setTimeout(() => t.classList.remove('show'), 2600);
+}
+
+/* ---------- Art ---------- */
+function pathArt(p) {
+  const r = rng(hash(p.id)); const c = color(p.topic); let s = '';
+  if (p.topic === 'history') {
+    for (let i = 0; i < 5; i++) { const x = 20 + i * 28; s += `<path d="M${x} 170 V${70 + r()*20} a14 14 0 0 1 28 0 V170" stroke="${c}" stroke-opacity="${.18 + i*.1}" fill="none" stroke-width="2"/>`; }
+    s += `<circle cx="${100 + r()*30}" cy="${40 + r()*20}" r="18" fill="${c}" fill-opacity=".35"/>`;
+  } else if (p.topic === 'psychology') {
+    for (let i = 0; i < 4; i++) s += `<circle cx="${70 + r()*50}" cy="${60 + r()*50}" r="${26 + r()*34}" stroke="${c}" stroke-opacity="${.2 + r()*.35}" fill="${c}" fill-opacity="${r()*.08}" stroke-width="2"/>`;
+  } else {
+    for (let i = 0; i < 7; i++) { const w = 40 + r()*90; s += `<rect x="${40}" y="${30 + i*17}" width="${w}" height="5" rx="2.5" fill="${c}" fill-opacity="${.15 + r()*.3}"/>`; }
+    s += `<path d="M150 20 C110 60 100 110 60 160" stroke="${c}" stroke-opacity=".55" stroke-width="2" fill="none"/>`;
+  }
+  return `<svg class="art" viewBox="0 0 170 170">${s}</svg>`;
+}
+const emptyArt = (kind) => kind === 'saved'
+  ? `<svg class="art" viewBox="0 0 120 120" fill="none"><circle cx="60" cy="60" r="56" fill="var(--surface)"/><rect x="34" y="30" width="44" height="58" rx="6" fill="var(--surface-3)" transform="rotate(-8 56 59)"/><path d="M46 28h28a4 4 0 0 1 4 4v58l-18-11-18 11V32a4 4 0 0 1 4-4Z" fill="var(--surface-2)" stroke="var(--warn)" stroke-width="2.4" stroke-linejoin="round"/><path d="m90 30 3 6 6 3-6 3-3 6-3-6-6-3 6-3z" fill="var(--warn)" opacity=".8"/></svg>`
+  : `<svg class="art" viewBox="0 0 120 120" fill="none"><circle cx="60" cy="60" r="56" fill="var(--surface)"/><circle cx="54" cy="54" r="22" stroke="var(--muted)" stroke-width="4"/><path d="m71 71 16 16" stroke="var(--muted)" stroke-width="5" stroke-linecap="round"/></svg>`;
+
+/* ---------- Components ---------- */
+function cardMeta(c) {
+  const bits = [`<span>${minutes(c)} min</span>`, `<i class="dot"></i>`, `<span>${esc(c.source.author.split(/,|&| and /)[0].trim())}</span>`];
+  return `<div class="meta">${bits.join('')}<span class="grow"></span>${S.saved[c.id] ? `<span class="badge sv">${I.bookmarkFill}</span>` : ''}${S.read[c.id] ? `<span class="badge ok">${I.check}</span>` : ''}</div>`;
+}
+function ideaCard(c, i, seq) {
+  return `<button class="card${S.read[c.id] ? ' read' : ''}" style="--c:${color(c.topic)};--i:${Math.min(i,10)}" data-open="${c.id}" data-seq="${seq}">
+    <div class="kicker">${esc(topicById[c.topic].short)}</div>
+    <h4>${esc(c.title)}</h4>
+    <p>${esc(c.summary)}</p>
+    ${cardMeta(c)}
+  </button>`;
+}
+const SEQS = {}; let seqN = 0;
+const regSeq = ids => { const k = 's' + (++seqN); SEQS[k] = ids; return k; };
+
+/* ---------- Discover ---------- */
+function feedOrder() {
+  const r = rng(S.seed); const arr = D.cards.map(c => [r(), c]);
+  arr.sort((a,b) => a[0]-b[0]);
+  return arr.map(x => x[1]);
+}
+function greeting() { const h = new Date().getHours(); return h < 5 ? 'Up late' : h < 12 ? 'Good morning' : h < 18 ? 'Good afternoon' : 'Good evening'; }
+function renderDiscover() {
+  const el = $('#s-discover');
+  const f = S.filter;
+  let list = feedOrder().filter(c => f === 'all' || c.topic === f);
+  const unread = list.filter(c => !S.read[c.id]);
+  const ordered = [...unread, ...list.filter(c => S.read[c.id])];
+  const pickPool = unread.length ? unread : list;
+  const pick = pickPool[hash(dayKey() + f) % pickPool.length];
+  const rest = ordered.filter(c => c !== pick);
+  const seq = regSeq([pick.id, ...rest.map(c => c.id)]);
+  const tc = todayCount(), goal = S.goal, pct = Math.min(1, tc / goal), st = streak();
+  const C = 2 * Math.PI * 27;
+  const now = new Date();
+  const dateStr = now.toLocaleDateString('en-GB', { weekday:'long', day:'numeric', month:'long' });
+  const goalMsg = tc >= goal ? `Goal done. ${tc > goal ? `${tc} ideas today.` : 'Anything more is a bonus.'}` : `${goal - tc} more to keep your streak${st ? ` of ${st}` : ''} going.`;
+  el.innerHTML = `
+    <header class="topbar">
+      <div><div class="eyebrow">${esc(dateStr)}</div><h1 class="h-title">${greeting()}</h1></div>
+      <div class="row">
+        <span class="pill${st ? ' hot' : ''}" aria-label="${st} day streak">${I.flame}${st}</span>
+        <button class="icon-btn" data-act="search" aria-label="Search">${I.search}</button>
+      </div>
+    </header>
+    <div class="goal">
+      <div class="ring"><svg viewBox="0 0 64 64"><circle class="trk" cx="32" cy="32" r="27" fill="none" stroke-width="6"/><circle class="val" cx="32" cy="32" r="27" fill="none" stroke-width="6" stroke-linecap="round" stroke-dasharray="${C}" stroke-dashoffset="${C * (1 - pct)}"/></svg><b>${Math.min(tc, 99)}/${goal}</b></div>
+      <div style="flex:1;min-width:0;position:relative;z-index:1">
+        <h3>${tc >= goal ? 'Daily goal complete' : 'Today\u2019s reading'}</h3>
+        <p>${esc(goalMsg)}</p>
+        ${unread.length ? `<button class="btn" data-open="${unread[0] === pick ? pick.id : unread[0].id}" data-seq="${seq}">${tc ? 'Continue' : 'Start reading'} ${I.arrowR}</button>` : `<button class="btn ghost" data-tab="paths">Explore paths ${I.arrowR}</button>`}
+      </div>
+    </div>
+    <div class="chips" role="tablist">
+      ${[{id:'all', short:'All ideas'}, ...D.topics].map(t => `<button class="chip${f === t.id ? ' on' : ''}" data-filter="${t.id}" role="tab" aria-selected="${f === t.id}" ${t.id !== 'all' ? `style="${f === t.id ? '' : `color:${color(t.id)}`}"` : ''}>${t.id !== 'all' ? '<i></i>' : ''}${esc(t.short)}</button>`).join('')}
+    </div>
+    <button class="feature" style="--c:${color(pick.topic)}" data-open="${pick.id}" data-seq="${seq}">
+      <span class="glow"></span>
+      <div class="kicker">${I.sparkle.replace('<svg', '<svg width="14" height="14"')} Today\u2019s pick · ${esc(topicById[pick.topic].short)}</div>
+      <h3>${esc(pick.title)}</h3>
+      <p>${esc(pick.summary)}</p>
+      ${cardMeta(pick)}
+    </button>
+    <div class="section-h"><h2>${f === 'all' ? 'Your feed' : esc(topicById[f].name)}</h2><span>${list.length - unread.length} of ${list.length} read</span></div>
+    <div class="cards">${rest.map((c,i) => ideaCard(c, i, seq)).join('')}</div>
+    <p class="foot-note">${D.cards.length} ideas · every source links to the real book or paper.<br>More are added to the library over time.</p>`;
+}
+
+/* ---------- Paths ---------- */
+function pathCards(p) { return D.cards.filter(c => c.paths.includes(p.id)); }
+function renderPaths() {
+  const el = $('#s-paths'); let i = 0;
+  el.innerHTML = `
+    <header class="topbar"><div><div class="eyebrow">Curated collections</div><h1 class="h-title">Paths</h1></div></header>
+    <p style="color:var(--muted);margin:2px 0 4px;font-size:14.5px">Read a handful of linked ideas in order and see how the arguments talk to each other.</p>
+    ${D.topics.map(t => `
+      <div class="section-h"><h2 style="color:${color(t.id)}">${esc(t.name)}</h2></div>
+      <div class="paths">${D.paths.filter(p => p.topic === t.id).map(p => {
+        const cs = pathCards(p), done = cs.filter(c => S.read[c.id]).length;
+        return `<button class="path" style="--c:${color(p.topic)};--i:${i++}" data-path="${p.id}">
+          <span class="tint"></span>${pathArt(p)}
+          <div class="kicker">${cs.length} ideas</div>
+          <h3>${esc(p.title)}</h3><p>${esc(p.blurb)}</p>
+          <div class="bar"><i style="width:${cs.length ? done / cs.length * 100 : 0}%"></i></div>
+          <div class="foot"><span>${done === cs.length ? 'Completed' : done ? 'In progress' : 'Not started'}</span><span>${done}/${cs.length}</span></div>
+        </button>`; }).join('')}</div>`).join('')}`;
+}
+function openPath(id, push=true) {
+  const p = pathById[id]; const cs = pathCards(p); const done = cs.filter(c => S.read[c.id]).length;
+  const seq = regSeq(cs.map(c => c.id));
+  const next = cs.find(c => !S.read[c.id]) || cs[0];
+  const el = $('#push');
+  el.dataset.path = id;
+  el.innerHTML = `
+    <button class="icon-btn back" data-act="pop" aria-label="Back">${I.back}</button>
+    <div class="hero" style="--c:${color(p.topic)}"><span class="tint"></span>
+      <div class="eyebrow" style="color:${color(p.topic)}">${esc(topicById[p.topic].name)} · Path</div>
+      <h1>${esc(p.title)}</h1>
+      <p class="lede">${esc(p.blurb)}</p>
+      <div class="bar" style="--c:${color(p.topic)}"><i style="width:${done / cs.length * 100}%"></i></div>
+      <div class="row" style="justify-content:space-between;margin:10px 0 18px;font-size:13px;color:var(--muted)"><span>${done} of ${cs.length} read</span><span>~${cs.reduce((a,c) => a + minutes(c), 0)} min total</span></div>
+      <button class="btn block" data-open="${next.id}" data-seq="${seq}">${done === 0 ? 'Start path' : done === cs.length ? 'Read again' : 'Continue path'} ${I.arrowR}</button>
+    </div>
+    <ol class="steps">${cs.map((c, i) => `<li><button class="step${S.read[c.id] ? ' done' : ''}" style="--c:${color(c.topic)}" data-open="${c.id}" data-seq="${seq}">
+      <span class="n">${S.read[c.id] ? I.check : i + 1}</span>
+      <span><h4>${esc(c.title)}</h4><p>${esc(c.source.author)} · ${yearStr(c.source.year)} · ${minutes(c)} min</p></span></button></li>`).join('')}</ol>`;
+  el.setAttribute('aria-hidden', 'false');
+  if (push) { el.scrollTop = 0; requestAnimationFrame(() => el.classList.add('open')); pushHist('path'); }
+}
+function closePath() { const el = $('#push'); el.classList.remove('open'); el.setAttribute('aria-hidden','true'); delete el.dataset.path; }
+
+/* ---------- Saved ---------- */
+function renderSaved() {
+  const el = $('#s-saved');
+  const ids = Object.keys(S.saved).filter(id => byId[id]).sort((a,b) => S.saved[b] - S.saved[a]);
+  const seq = regSeq(ids);
+  el.innerHTML = `
+    <header class="topbar"><div><div class="eyebrow">Your library</div><h1 class="h-title">Saved</h1></div>${ids.length ? `<span class="pill">${I.bookmarkFill.replace('<svg','<svg style="color:var(--warn)"')}${ids.length}</span>` : ''}</header>
+    ${ids.length ? `<div class="cards" style="margin-top:14px">${ids.map((id,i) => ideaCard(byId[id], i, seq)).join('')}</div>`
+    : `<div class="empty">${emptyArt('saved')}<h3>Nothing saved yet</h3><p>Tap the bookmark on any idea and it will wait for you here, even offline.</p><button class="btn" data-tab="discover">Browse ideas ${I.arrowR}</button></div>`}`;
+}
+
+/* ---------- Progress ---------- */
+function renderProgress() {
+  const el = $('#s-progress');
+  const st = streak(), best = bestStreak(), total = Object.keys(S.read).filter(id => byId[id]).length;
+  const week = [...Array(7)].map((_, i) => { const d = addDays(new Date(), i - 6); const k = dayKey(d); const n = S.days[k] || 0; return { l: d.toLocaleDateString('en-GB', { weekday:'narrow' }), n, today: i === 6 }; });
+  el.innerHTML = `
+    <header class="topbar"><div><div class="eyebrow">Your reading</div><h1 class="h-title">Progress</h1></div></header>
+    <div class="stats">
+      <div class="stat big"><div class="flame">${I.flame}</div><div><b>${st}</b><span>${st === 1 ? 'day' : 'days'} streak · best ${best}</span></div></div>
+      <div class="week stat" style="display:flex">${week.map(w => `<div class="${w.today ? 'today' : ''}"><i class="${w.n >= S.goal ? 'full' : w.n ? 'part' : ''}">${w.n >= S.goal ? I.check : ''}</i>${w.l}</div>`).join('')}</div>
+      <div class="stat"><b>${total}</b><span>ideas read</span></div>
+      <div class="stat"><b>${Object.keys(S.saved).length}</b><span>saved</span></div>
+    </div>
+    <div class="section-h"><h2>By topic</h2></div>
+    <div class="group">${D.topics.map(t => { const cs = D.cards.filter(c => c.topic === t.id); const n = cs.filter(c => S.read[c.id]).length;
+      return `<div class="tp" style="--c:${color(t.id)}"><div class="row"><b style="font-weight:600">${esc(t.name)}</b><span>${n}/${cs.length}</span></div><div class="bar"><i style="width:${n / cs.length * 100}%"></i></div></div>`; }).join('')}</div>
+    <div class="section-h"><h2>Settings</h2></div>
+    <div class="group">
+      <div class="item"><span class="lbl">Daily goal<small>Ideas per day to keep a streak</small></span><div class="seg" data-seg="goal">${[1,3,5,10].map(g => `<button class="${S.goal === g ? 'on' : ''}" data-goal="${g}">${g}</button>`).join('')}</div></div>
+      <div class="item"><span class="lbl">Appearance</span><div class="seg">${['dark','light'].map(t => `<button class="${S.theme === t ? 'on' : ''}" data-theme-set="${t}">${t[0].toUpperCase() + t.slice(1)}</button>`).join('')}</div></div>
+      <button class="item" data-act="reset"><span class="lbl danger">Reset progress</span></button>
+    </div>
+    <p class="foot-note">Folio stores everything on this device. No account, no tracking.<br>Psychology ideas flag replication concerns where the evidence is shaky.<br>v1 · ${D.cards.length} ideas · ${D.paths.length} paths</p>`;
+}
+
+/* ---------- Search ---------- */
+function openSearch() {
+  const el = $('#search');
+  el.innerHTML = `<div class="search-head"><label class="field">${I.search}<input type="search" placeholder="Ideas, authors, books…" autocomplete="off" enterkeyhint="search" aria-label="Search ideas"></label><button class="cancel" data-act="closeSearch">Cancel</button></div><div class="search-body" id="sres"></div>`;
+  el.classList.add('open'); el.setAttribute('aria-hidden','false');
+  const inp = $('input', el);
+  inp.addEventListener('input', () => runSearch(inp.value));
+  runSearch('');
+  setTimeout(() => inp.focus(), 60);
+  pushHist('search');
+}
+function runSearch(q) {
+  const box = $('#sres'); q = q.trim();
+  if (!q) {
+    box.innerHTML = `<div class="section-h" style="margin-top:4px"><h2>Browse by topic</h2></div><div class="chips" style="margin:0;padding:0;flex-wrap:wrap">${D.topics.map(t => `<button class="chip" style="color:${color(t.id)}" data-sq="${esc(t.short)}"><i></i>${esc(t.short)}</button>`).join('')}</div>
+      <div class="section-h"><h2>Try</h2></div><div class="chips" style="margin:0;padding:0;flex-wrap:wrap">${['Kahneman','Rome','replication','Barthes','plague','novel','habits','Orwell'].map(s => `<button class="chip" data-sq="${s}">${s}</button>`).join('')}</div>`;
+    return;
+  }
+  const terms = q.toLowerCase().split(/\s+/);
+  const scored = D.cards.map(c => {
+    const hay = { t: c.title.toLowerCase(), a: (c.source.author + ' ' + c.source.title + ' ' + c.readings.map(r => r.author + ' ' + r.title).join(' ')).toLowerCase(), b: (c.summary + ' ' + c.deepDive + ' ' + topicById[c.topic].name).toLowerCase() };
+    let s = 0;
+    for (const w of terms) { const ts = hay.t.includes(w) ? 5 : 0, as = hay.a.includes(w) ? 3 : 0, bs = hay.b.includes(w) ? 1 : 0; if (!ts && !as && !bs) return [0, c]; s += ts + as + bs; }
+    return [s, c];
+  }).filter(x => x[0] > 0).sort((a,b) => b[0] - a[0]).map(x => x[1]);
+  const seq = regSeq(scored.map(c => c.id));
+  const re = new RegExp('(' + terms.map(t => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|') + ')', 'gi');
+  const hl = s => esc(s).replace(re, '<mark>$1</mark>');
+  box.innerHTML = scored.length ? `<div class="section-h" style="margin-top:2px"><h2>${scored.length} result${scored.length > 1 ? 's' : ''}</h2></div><div class="cards">${scored.map((c,i) => `<button class="card" style="--c:${color(c.topic)};--i:${Math.min(i,8)}" data-open="${c.id}" data-seq="${seq}"><div class="kicker">${esc(topicById[c.topic].short)}</div><h4>${hl(c.title)}</h4><p>${hl(c.source.author)} · ${esc(c.source.title)}</p></button>`).join('')}</div>`
+    : `<div class="empty">${emptyArt('search')}<h3>No matches</h3><p>Nothing for \u201c${esc(q)}\u201d yet. Try an author, a book or a broader word.</p></div>`;
+}
+function closeSearch() { const el = $('#search'); el.classList.remove('open'); el.setAttribute('aria-hidden','true'); document.activeElement && document.activeElement.blur(); }
+
+/* ---------- Reader ---------- */
+let R = { ids: [], idx: 0 };
+function para(text) {
+  // split long summary into 2–3 paragraphs at sentence boundaries
+  const sents = text.match(/[^.!?]+[.!?]+(\s|$)/g) || [text];
+  const n = sents.length, parts = n > 9 ? 3 : n > 4 ? 2 : 1, per = Math.ceil(n / parts), out = [];
+  for (let i = 0; i < n; i += per) out.push(sents.slice(i, i + per).join('').trim());
+  return out.map(p => `<p>${esc(p)}</p>`).join('');
+}
+function refIcon(r) { return r.kind === 'book' ? I.book : /wikipedia\.org/.test(r.url) ? I.globe : I.paper; }
+function refKind(r) { return r.kind === 'book' ? 'Book' : /wikipedia\.org/.test(r.url) ? 'Overview' : /doi\.org/.test(r.url) ? 'Paper' : 'Read'; }
+function pageHTML(c) {
+  const t = topicById[c.topic];
+  return `<article class="page" style="--c:${color(c.topic)}" data-id="${c.id}"><div class="page-in">
+    <div class="kicker"><i></i>${esc(t.name)}</div>
+    <h1>${esc(c.title)}</h1>
+    <a class="byline" href="${esc(c.source.url)}" target="_blank" rel="noopener"><span class="bk">${/doi\.org/.test(c.source.url) ? I.paper : I.book}</span><span><b>${esc(c.source.title)}</b><span>${esc(c.source.author)} · ${yearStr(c.source.year)}</span></span></a>
+    ${c.caution ? `<div class="caution">${I.warn}<div><b>Replication note</b>${esc(c.caution)}</div></div>` : ''}
+    <div class="prose">${para(c.summary)}</div>
+    <div class="deep"><button data-act="deep" aria-expanded="false"><span class="ic">${I.dive}</span><b>Deep dive<small>Nuance, debates and what to watch for</small></b><span class="chev">${I.close}</span></button><div class="body"><div><p>${esc(c.deepDive)}</p></div></div></div>
+    <section class="further"><h2>Go deeper</h2>
+      ${c.readings.map(r => `<a class="ref" href="${esc(r.url)}" target="_blank" rel="noopener"><span class="ty">${refIcon(r)}</span><span class="tx"><b>${esc(r.title)}</b><span><em>${refKind(r)}</em>${r.author === 'Wikipedia' ? 'Wikipedia' : `${esc(r.author)} · ${yearStr(r.year)}`}</span></span><span class="go">${I.ext}</span></a>`).join('')}
+    </section>
+  </div></article>`;
+}
+function openReader(ids, startId) {
+  R.ids = ids; R.idx = Math.max(0, ids.indexOf(startId));
+  const el = $('#reader');
+  el.innerHTML = `
+    <div class="reader-top"><button class="icon-btn" data-act="closeReader" aria-label="Close">${I.close}</button><div class="count" id="rcount"></div><button class="icon-btn" data-act="share" aria-label="Share">${P('<path d="M12 3v13M7 8l5-5 5 5"/><path d="M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/>')}</button><div class="progress"><i id="rprog"></i></div></div>
+    <div class="pager" id="pager">${ids.map(id => pageHTML(byId[id])).join('')}</div>
+    <div class="reader-bar"><button class="icon-btn" id="rsave" data-act="rsave" aria-label="Save">${I.bookmark}</button><div class="mid"><button class="btn" id="rread" data-act="rread"></button></div><button class="icon-btn" id="rnext" data-act="rnext" aria-label="Next idea">${I.right}</button></div>
+    ${!S.hinted && ids.length > 1 ? `<div class="hint">${I.swipe} Swipe sideways for the next idea</div>` : ''}`;
+  if (!S.hinted && ids.length > 1) { S.hinted = true; save(); }
+  const pager = $('#pager');
+  el.setAttribute('aria-hidden','false');
+  requestAnimationFrame(() => { pager.scrollLeft = R.idx * pager.clientWidth; syncReader(); requestAnimationFrame(() => el.classList.add('open')); });
+  let raf;
+  pager.addEventListener('scroll', () => { cancelAnimationFrame(raf); raf = requestAnimationFrame(() => { const i = Math.round(pager.scrollLeft / pager.clientWidth); if (i !== R.idx) { R.idx = i; syncReader(); haptic(4); } }); }, { passive: true });
+  pushHist('reader');
+}
+function syncReader() {
+  const c = byId[R.ids[R.idx]]; if (!c) return;
+  const el = $('#reader');
+  el.style.setProperty('--c', color(c.topic));
+  $('#rcount').textContent = R.ids.length > 1 ? `${R.idx + 1} of ${R.ids.length}` : topicById[c.topic].short;
+  $('#rprog').style.width = ((R.idx + 1) / R.ids.length * 100) + '%';
+  const sv = $('#rsave'); sv.classList.toggle('on', !!S.saved[c.id]); sv.innerHTML = S.saved[c.id] ? I.bookmarkFill : I.bookmark; sv.setAttribute('aria-pressed', !!S.saved[c.id]);
+  const rb = $('#rread'); const isRead = !!S.read[c.id];
+  rb.className = 'btn' + (isRead ? ' done' : '');
+  rb.innerHTML = isRead ? `${I.check} Read` : 'Mark as read';
+  const last = R.idx >= R.ids.length - 1;
+  $('#rnext').style.opacity = last ? .35 : 1;
+}
+function readerGo(d) { const pager = $('#pager'); const i = Math.min(R.ids.length - 1, Math.max(0, R.idx + d)); pager.scrollTo({ left: i * pager.clientWidth, behavior: 'smooth' }); }
+function closeReader() { const el = $('#reader'); el.classList.remove('open'); el.setAttribute('aria-hidden','true'); setTimeout(() => { if (!el.classList.contains('open')) el.innerHTML = ''; }, 520); refresh(); }
+
+/* ---------- History (back button) ---------- */
+const stack = [];
+function pushHist(kind) { stack.push(kind); history.pushState({ k: kind, n: stack.length }, ''); }
+function closeTop(fromPop) {
+  const k = stack.pop(); if (!k) return;
+  if (k === 'reader') closeReader(); else if (k === 'search') closeSearch(); else if (k === 'path') closePath();
+  if (!fromPop) history.back();
+}
+window.addEventListener('popstate', () => { if (stack.length) closeTop(true); });
+
+/* ---------- Tabs ---------- */
+const TABS = [['discover','Discover',I.compass],['paths','Paths',I.layers],['saved','Saved',I.bookmark],['progress','Progress',I.chart]];
+let tab = 'discover';
+function renderTabs() { $('#tabbar').innerHTML = TABS.map(([id, l, ic]) => `<button class="tab${tab === id ? ' on' : ''}" data-tab="${id}" aria-label="${l}" aria-current="${tab === id ? 'page' : 'false'}">${id === 'saved' && tab === id ? I.bookmarkFill : ic}<span>${l}</span></button>`).join(''); }
+function setTab(id) {
+  if (id === tab) { const s = $('#s-' + id); s.scrollTo({ top: 0, behavior: 'smooth' }); return; }
+  tab = id; haptic(5);
+  document.querySelectorAll('.screen').forEach(s => s.classList.toggle('active', s.id === 's-' + id));
+  render(id); renderTabs();
+}
+function render(id) { ({ discover: renderDiscover, paths: renderPaths, saved: renderSaved, progress: renderProgress })[id](); }
+function refresh() {
+  const sc = $('#s-' + tab), top = sc.scrollTop; render(tab); sc.scrollTop = top;
+  const push = $('#push'); if (push.dataset.path) { const t = push.scrollTop; openPath(push.dataset.path, false); push.scrollTop = t; }
+}
+function applyTheme() {
+  document.documentElement.dataset.theme = S.theme;
+  document.querySelector('meta[name="theme-color"]').content = S.theme === 'light' ? '#f6f3ed' : '#0c0c0e';
+}
+
+/* ---------- Events ---------- */
+document.addEventListener('click', e => {
+  const t = e.target.closest('[data-open],[data-tab],[data-filter],[data-path],[data-act],[data-goal],[data-theme-set],[data-sq]');
+  if (!t) return;
+  if (t.dataset.open) { openReader(SEQS[t.dataset.seq] || [t.dataset.open], t.dataset.open); haptic(6); return; }
+  if (t.dataset.tab) { if (stack.length) while (stack.length) closeTop(); setTab(t.dataset.tab); return; }
+  if (t.dataset.filter) { S.filter = t.dataset.filter; save(); haptic(5); const sc = $('#s-discover'); const y = sc.scrollTop; renderDiscover(); sc.scrollTop = y; return; }
+  if (t.dataset.path) { openPath(t.dataset.path); haptic(6); return; }
+  if (t.dataset.goal) { S.goal = +t.dataset.goal; save(); haptic(6); renderProgress(); return; }
+  if (t.dataset.themeSet) { S.theme = t.dataset.themeSet; save(); applyTheme(); haptic(6); renderProgress(); return; }
+  if (t.dataset.sq) { const inp = $('#search input'); inp.value = t.dataset.sq; runSearch(inp.value); return; }
+  const a = t.dataset.act;
+  if (a === 'search') openSearch();
+  else if (a === 'closeSearch' || a === 'pop' || a === 'closeReader') closeTop();
+  else if (a === 'deep') { const d = t.parentElement; const open = d.classList.toggle('open'); t.setAttribute('aria-expanded', open); haptic(5); }
+  else if (a === 'rsave') { const on = toggleSave(R.ids[R.idx]); syncReader(); if (on) toast(I.bookmarkFill, 'Saved to your library'); }
+  else if (a === 'rread') { const id = R.ids[R.idx]; setRead(id, !S.read[id]); syncReader(); }
+  else if (a === 'rnext') { const id = R.ids[R.idx]; if (!S.read[id]) { setRead(id, true); syncReader(); } if (R.idx < R.ids.length - 1) setTimeout(() => readerGo(1), 160); else { toast(I.check, 'End of this set'); } }
+  else if (a === 'share') { const c = byId[R.ids[R.idx]]; const text = `${c.title}\n\n${c.source.title} — ${c.source.author} (${yearStr(c.source.year)})\n${c.source.url}`; if (navigator.share) navigator.share({ title: c.title, text }).catch(() => {}); else navigator.clipboard && navigator.clipboard.writeText(text).then(() => toast(I.check, 'Copied to clipboard')); }
+  else if (a === 'reset') { if (confirm('Reset reading progress, streaks and saved ideas on this device?')) { S = { ...defaults, theme: S.theme, seed: S.seed }; save(); refresh(); toast(I.check, 'Progress reset'); } }
+});
+document.addEventListener('keydown', e => {
+  if (!$('#reader').classList.contains('open')) return;
+  if (e.key === 'ArrowRight') readerGo(1); else if (e.key === 'ArrowLeft') readerGo(-1); else if (e.key === 'Escape') closeTop();
+});
+let rz; window.addEventListener('resize', () => { clearTimeout(rz); rz = setTimeout(() => { const p = $('#pager'); if (p) p.scrollLeft = R.idx * p.clientWidth; }, 80); });
+document.addEventListener('visibilitychange', () => { if (!document.hidden && D) refresh(); });
+
+/* ---------- Boot ---------- */
+async function boot() {
+  applyTheme();
+  try {
+    const res = await fetch('data/cards.json', { cache: 'no-cache' });
+    D = await res.json();
+  } catch (e) {
+    $('#splash').innerHTML = '<p style="color:var(--muted);padding:30px;text-align:center">Couldn\u2019t load ideas. Check your connection and reopen Folio.</p>'; return;
+  }
+  D.cards.forEach(c => byId[c.id] = c); D.topics.forEach(t => topicById[t.id] = t); D.paths.forEach(p => pathById[p.id] = p);
+  if (S.filter !== 'all' && !topicById[S.filter]) S.filter = 'all';
+  renderTabs(); renderDiscover();
+  requestAnimationFrame(() => setTimeout(() => $('#splash').classList.add('gone'), 250));
+  if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});
+}
+boot();
+})();
