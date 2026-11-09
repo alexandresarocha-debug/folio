@@ -6,6 +6,8 @@
 <title>Folio — Ideas worth going deeper on</title>
 <meta name="description" content="Well-developed ideas from history, psychology and literature, each leading to the books and papers behind it.">
 <meta name="theme-color" content="#0c0c0e">
+<script>try{var s=JSON.parse(localStorage.getItem('folio.v1')||'{}');var t=s.theme==='light'?'light':'dark';document.documentElement.dataset.theme=t;var m=document.querySelector('meta[name="theme-color"]');if(m)m.content=t==='light'?'#f6f3ed':'#0c0c0e'}catch(e){}</script>
+<style>html{background:#0c0c0e}html[data-theme="light"]{background:#f6f3ed}</style>
 <meta name="color-scheme" content="dark light">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
@@ -30,19 +32,18 @@
 <link rel="apple-touch-startup-image" media="(device-width: 440px) and (device-height: 956px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="splash/1320x2868.png">
 <link rel="apple-touch-startup-image" media="(device-width: 402px) and (device-height: 874px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="splash/1206x2622.png">
 <link rel="stylesheet" href="styles.css">
-<script>try{var s=JSON.parse(localStorage.getItem('folio.v1')||'{}');if(s.theme==='light')document.documentElement.dataset.theme='light'}catch(e){}</script>
 </head>
 <body>
-<div class="splash" id="splash"><img src="icons/icon-192.png" alt=""></div>
+<div class="splash" id="splash"><div class="splash-mark"><img src="icons/icon-192.png" alt="" width="88" height="88"><div class="splash-name">Folio</div></div></div>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
 <linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffc07a"/><stop offset="1" stop-color="#ff7a3d"/></linearGradient>
 </defs></svg>
 <div id="app">
   <main class="screens">
     <section class="screen active" id="s-discover" aria-label="Discover"></section>
-    <section class="screen" id="s-paths" aria-label="Paths"></section>
-    <section class="screen" id="s-saved" aria-label="Saved"></section>
-    <section class="screen" id="s-progress" aria-label="Progress"></section>
+    <section class="screen" id="s-paths" aria-label="Paths" inert></section>
+    <section class="screen" id="s-saved" aria-label="Saved" inert></section>
+    <section class="screen" id="s-progress" aria-label="Progress" inert></section>
   </main>
   <nav class="tabbar" id="tabbar" aria-label="Main"></nav>
 </div>
