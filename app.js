@@ -35,7 +35,7 @@ const addDays = (d, n) => { const x = new Date(d); x.setDate(x.getDate()+n); ret
 const haptic = (ms=8) => { try { navigator.vibrate && navigator.vibrate(ms); } catch(e){} };
 const reduceMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 function syncInert() {
-  const covered = ['#reader', '#search', '#push'].some(s => $(s).getAttribute('aria-hidden') === 'false');
+  const covered = ['#reader', '#search', '#push', '#work'].some(s => $(s).getAttribute('aria-hidden') === 'false');
   if (covered) $('#app').setAttribute('inert', ''); else $('#app').removeAttribute('inert');
 }
 function beginScreen(el) { if (el.dataset.booted) el.dataset.settled = '1'; }
@@ -315,7 +315,9 @@ function runSearch(q) {
   }
   const terms = q.toLowerCase().split(/\s+/);
   const scored = D.cards.map(c => {
-    const hay = { t: c.title.toLowerCase(), a: (c.source.author + ' ' + c.source.title + ' ' + c.readings.map(r => r.author + ' ' + r.title).join(' ')).toLowerCase(), b: (c.summary + ' ' + c.deepDive + ' ' + topicById[c.topic].name).toLowerCase() };
+    const deeper = (c.goDeeper || []).map(w => w.authors + ' ' + w.title).join(' ');
+    const further = (c.furtherReading || []).map(r => r.author + ' ' + r.title).join(' ');
+    const hay = { t: c.title.toLowerCase(), a: (c.source.author + ' ' + c.source.title + ' ' + deeper + ' ' + further).toLowerCase(), b: (c.summary + ' ' + c.deepDive + ' ' + topicById[c.topic].name).toLowerCase() };
     let s = 0;
     for (const w of terms) { const ts = hay.t.includes(w) ? 5 : 0, as = hay.a.includes(w) ? 3 : 0, bs = hay.b.includes(w) ? 1 : 0; if (!ts && !as && !bs) return [0, c]; s += ts + as + bs; }
     return [s, c];
@@ -338,7 +340,7 @@ function para(text) {
   for (let i = 0; i < n; i += per) out.push(sents.slice(i, i + per).join('').trim());
   return out.map(p => `<p>${esc(p)}</p>`).join('');
 }
-function refIcon(r) { return r.kind === 'book' ? I.book : /wikipedia\.org/.test(r.url) ? I.globe : I.paper; }
+function refIcon(r) { const url = r.url || ''; if (/doi\.org/.test(url)) return I.paper; if (r.kind === 'paper') return I.paper; if (/wikipedia\.org/.test(url)) return I.globe; return I.book; }
 function refKind(r) { return r.kind === 'book' ? 'Book' : /wikipedia\.org/.test(r.url) ? 'Overview' : /doi\.org/.test(r.url) ? 'Paper' : 'Read'; }
 function pageHTML(c) {
   const t = topicById[c.topic];
@@ -349,9 +351,8 @@ function pageHTML(c) {
     ${c.caution ? `<div class="caution">${I.warn}<div><b>Replication note</b>${esc(c.caution)}</div></div>` : ''}
     <div class="prose">${para(c.summary)}</div>
     <div class="deep"><button data-act="deep" aria-expanded="false"><span class="ic">${I.dive}</span><b>Deep dive<small>Nuance, debates and what to watch for</small></b><span class="chev">${I.close}</span></button><div class="body"><div class="prose deep-prose">${para(c.deepDive)}</div></div></div>
-    <section class="further"><h2>Go deeper</h2>
-      ${c.readings.map(r => `<a class="ref" href="${esc(r.url)}" target="_blank" rel="noopener"><span class="ty">${refIcon(r)}</span><span class="tx"><b>${esc(r.title)}</b><span><em>${refKind(r)}</em>${r.author === 'Wikipedia' ? 'Wikipedia' : `${esc(r.author)} · ${yearStr(r.year)}`}</span></span><span class="go">${I.ext}</span></a>`).join('')}
-    </section>
+    ${(c.goDeeper || []).length ? `<section class="further"><h2>Go deeper</h2><p class="further-lead">Full texts you can read here. Each one is in the public domain or under a license that allows it.</p>${c.goDeeper.map(w => `<button class="ref work-ref" type="button" data-work="${esc(w.id)}" data-card="${esc(c.id)}"><span class="ty">${I.book}</span><span class="tx"><b>${esc(w.title)}</b><span><em>Read in Folio</em>${esc(w.authors)} · ${yearStr(w.year)}</span></span><span class="go">${I.right}</span></button>`).join('')}</section>` : ''}
+    ${(c.furtherReading || []).length ? `<section class="further"><h2>Further reading</h2><p class="further-lead">Major works that stay outside the app, with a link to the original.</p>${c.furtherReading.map(r => `<a class="ref" href="${esc(r.url)}" target="_blank" rel="noopener"><span class="ty">${refIcon(r)}</span><span class="tx"><b>${esc(r.title)}</b><span>${esc(r.author)} · ${yearStr(r.year)}</span>${r.note ? `<span class="why">${esc(r.note)}</span>` : ''}</span><span class="go">${I.ext}</span></a>`).join('')}</section>` : ''}
   </div></article>`;
 }
 let drag = null;
@@ -508,12 +509,66 @@ function closeReader() {
   refresh();
 }
 
+function cleanWorkHtml(raw) {
+  const doc = new DOMParser().parseFromString(raw, 'text/html');
+  doc.querySelectorAll('script,style,iframe,object,embed,link,meta').forEach(n => n.remove());
+  doc.querySelectorAll('*').forEach(el => {
+    [...el.attributes].forEach(a => {
+      if (a.name.startsWith('on') || a.name === 'srcdoc') el.removeAttribute(a.name);
+      if ((a.name === 'href' || a.name === 'src') && /^\s*javascript:/i.test(a.value)) el.removeAttribute(a.name);
+    });
+  });
+  const article = doc.querySelector('.work-doc');
+  return article ? article.outerHTML : '';
+}
+async function openWork(cardId, workId) {
+  const card = byId[cardId];
+  const w = card && (card.goDeeper || []).find(x => x.id === workId);
+  if (!w) return;
+  const el = $('#work');
+  el.innerHTML = `<div class="reader-top"><button class="icon-btn" data-act="closeWork" aria-label="Close">${I.x}</button><div class="count">Opening</div><div class="progress" id="wprog-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Reading progress"><i id="wprog"></i></div></div><div class="work-scroll" id="work-scroll"><div class="page-in work-in"><p class="work-by">Loading the text…</p></div></div>`;
+  el.setAttribute('aria-hidden', 'false');
+  syncInert();
+  requestAnimationFrame(() => el.classList.add('open'));
+  pushHist('work');
+  const sc = $('#work-scroll');
+  const update = () => {
+    const max = sc.scrollHeight - sc.clientHeight;
+    const p = max <= 1 ? 1 : Math.min(1, Math.max(0, sc.scrollTop / max));
+    const bar = $('#wprog');
+    if (bar) bar.style.width = (p * 100).toFixed(2) + '%';
+    const track = $('#wprog-track');
+    if (track) track.setAttribute('aria-valuenow', String(Math.round(p * 100)));
+  };
+  sc.addEventListener('scroll', () => requestAnimationFrame(update), { passive: true });
+  try {
+    const res = await fetch(w.file);
+    if (!res.ok) throw new Error('status');
+    const body = cleanWorkHtml(await res.text());
+    if (!body) throw new Error('empty');
+    const count = el.querySelector('.count');
+    if (count) count.textContent = w.licenseName;
+    sc.innerHTML = `<div class="page-in work-in"><div class="kicker"><i></i>${esc(w.licenseName)}</div><h1>${esc(w.title)}</h1><p class="work-by">${esc(w.authors)} · ${yearStr(w.year)}${w.venue ? ' · ' + esc(w.venue) : ''}</p><div class="prose work-prose">${body}</div><footer class="work-attrib"><p>${esc(w.attribution)}</p><p><a href="${esc(w.sourceUrl)}" target="_blank" rel="noopener">Original source</a> · <a href="${esc(w.licenseUrl)}" target="_blank" rel="noopener">${esc(w.licenseName)}</a></p></footer></div>`;
+    sc.scrollTop = 0;
+    requestAnimationFrame(update);
+  } catch (e) {
+    sc.innerHTML = '<div class="page-in work-in"><p class="work-by">Couldn’t open this text. Check your connection and try again.</p></div>';
+  }
+}
+function closeWork() {
+  const el = $('#work');
+  el.classList.remove('open');
+  el.setAttribute('aria-hidden', 'true');
+  syncInert();
+  setTimeout(() => { if (!el.classList.contains('open')) el.innerHTML = ''; }, 480);
+}
+
 /* ---------- History (back button) ---------- */
 const stack = [];
 function pushHist(kind) { stack.push(kind); history.pushState({ k: kind, n: stack.length }, ''); }
 function closeTop(fromPop) {
   const k = stack.pop(); if (!k) return;
-  if (k === 'reader') closeReader(); else if (k === 'search') closeSearch(); else if (k === 'path') closePath();
+  if (k === 'work') closeWork(); else if (k === 'reader') closeReader(); else if (k === 'search') closeSearch(); else if (k === 'path') closePath();
   if (!fromPop) history.back();
 }
 window.addEventListener('popstate', () => { if (stack.length) closeTop(true); });
@@ -544,8 +599,9 @@ function applyTheme() {
 
 /* ---------- Events ---------- */
 document.addEventListener('click', e => {
-  const t = e.target.closest('[data-open],[data-tab],[data-filter],[data-path],[data-act],[data-goal],[data-theme-set],[data-sq]');
+  const t = e.target.closest('[data-open],[data-tab],[data-filter],[data-path],[data-act],[data-goal],[data-theme-set],[data-sq],[data-work]');
   if (!t) return;
+  if (t.dataset.work) { openWork(t.dataset.card, t.dataset.work); haptic(6); return; }
   if (t.dataset.open) { openReader(SEQS[t.dataset.seq] || [t.dataset.open], t.dataset.open); haptic(6); return; }
   if (t.dataset.tab) { if (stack.length) while (stack.length) closeTop(); setTab(t.dataset.tab); return; }
   if (t.dataset.filter) { S.filter = t.dataset.filter; save(); haptic(5); const sc = $('#s-discover'); const y = sc.scrollTop; renderDiscover(); sc.scrollTop = y; return; }
@@ -555,7 +611,7 @@ document.addEventListener('click', e => {
   if (t.dataset.sq) { const inp = $('#search input'); inp.value = t.dataset.sq; runSearch(inp.value); return; }
   const a = t.dataset.act;
   if (a === 'search') openSearch();
-  else if (a === 'closeSearch' || a === 'pop' || a === 'closeReader') closeTop();
+  else if (a === 'closeSearch' || a === 'pop' || a === 'closeReader' || a === 'closeWork') closeTop();
   else if (a === 'deep') { const d = t.parentElement; const open = d.classList.toggle('open'); t.setAttribute('aria-expanded', open); haptic(5); }
   else if (a === 'rsave') { const on = toggleSave(R.ids[R.idx]); syncReader(); if (on) toast(I.bookmarkFill, 'Saved to your library'); }
   else if (a === 'rread') { const id = R.ids[R.idx]; setRead(id, !S.read[id]); syncReader(); }
@@ -564,6 +620,7 @@ document.addEventListener('click', e => {
   else if (a === 'reset') { if (confirm('Reset reading progress, streaks and saved ideas on this device?')) { S = { ...defaults, theme: S.theme, seed: S.seed }; save(); refresh(); toast(I.check, 'Progress reset'); } }
 });
 document.addEventListener('keydown', e => {
+  if ($('#work').classList.contains('open')) { if (e.key === 'Escape') closeTop(); return; }
   if (!$('#reader').classList.contains('open')) return;
   if (e.key === 'ArrowRight') readerGo(1); else if (e.key === 'ArrowLeft') readerGo(-1); else if (e.key === 'Escape') closeTop();
 });
