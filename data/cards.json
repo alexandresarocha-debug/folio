@@ -115,33 +115,31 @@
    ],
    "goDeeper": [
     {
-     "id": "gibbon-v1",
-     "title": "The History of the Decline and Fall of the Roman Empire, Volume 1",
+     "id": "the-history-of-the-decline-and-fall-of-the-roman-e-1776",
+     "title": "The History of the Decline and Fall of the Roman Empire",
      "authors": "Edward Gibbon",
      "year": 1776,
-     "venue": "London: W. Strahan and T. Cadell",
-     "license": "public-domain",
-     "licenseName": "Public domain",
-     "licenseUrl": "https://www.gutenberg.org/policy/license.html",
-     "attribution": "Edward Gibbon. The History of the Decline and Fall of the Roman Empire, Volume 1. Project Gutenberg ebook 731. The Project Gutenberg license in the text permits copying.",
-     "sourceUrl": "https://www.gutenberg.org/ebooks/731",
-     "file": "texts/gibbon-v1.html"
-    }
-   ],
-   "furtherReading": [
-    {
-     "title": "The World of Late Antiquity",
-     "author": "Peter Brown",
-     "year": 1971,
-     "note": "Peter Brown's account of late antiquity, the transformation story set beside Gibbon's verdict of decline.",
-     "url": "https://en.wikipedia.org/wiki/Peter_Brown_(historian)"
+     "type": "book",
+     "file": "summaries/the-history-of-the-decline-and-fall-of-the-roman-e-1776.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/The_History_of_the_Decline_and_Fall_of_the_Roman_Empire"
     },
     {
+     "id": "the-world-of-late-antiquity-1971",
+     "title": "The World of Late Antiquity",
+     "authors": "Peter Brown",
+     "year": 1971,
+     "type": "book",
+     "file": "summaries/the-world-of-late-antiquity-1971.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Peter_Brown_(historian)"
+    },
+    {
+     "id": "the-fall-of-rome-and-the-end-of-civilization-2005",
      "title": "The Fall of Rome and the End of Civilization",
-     "author": "Bryan Ward-Perkins",
+     "authors": "Bryan Ward-Perkins",
      "year": 2005,
-     "note": "The case, from pots, coins and buildings, that the western collapse was a real fall in material life.",
-     "url": "https://en.wikipedia.org/wiki/Bryan_Ward-Perkins"
+     "type": "book",
+     "file": "summaries/the-fall-of-rome-and-the-end-of-civilization-2005.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Bryan_Ward-Perkins"
     }
    ]
   },
@@ -162,47 +160,40 @@
    ],
    "goDeeper": [
     {
-     "id": "augustine-confessions",
-     "title": "The Confessions of St. Augustine",
-     "authors": "Augustine of Hippo, translated by E. B. Pusey",
-     "year": 397,
-     "venue": "Translation by E. B. Pusey",
-     "license": "public-domain",
-     "licenseName": "Public domain",
-     "licenseUrl": "https://www.gutenberg.org/policy/license.html",
-     "attribution": "Augustine of Hippo, translated by E. B. Pusey. The Confessions of St. Augustine. Project Gutenberg ebook 3296. The Project Gutenberg license in the text permits copying.",
-     "sourceUrl": "https://www.gutenberg.org/ebooks/3296",
-     "file": "texts/augustine-confessions.html"
-    }
-   ],
-   "furtherReading": [
-    {
+     "id": "the-world-of-late-antiquity-1971",
      "title": "The World of Late Antiquity",
-     "author": "Peter Brown",
+     "authors": "Peter Brown",
      "year": 1971,
-     "note": "In 1971 Peter Brown published The World of Late Antiquity, a short, richly illustrated book that changed how historians talk about the period from roughly 150 to 750 AD.",
-     "url": "https://en.wikipedia.org/wiki/Late_antiquity"
+     "type": "book",
+     "file": "summaries/the-world-of-late-antiquity-1971.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Late_antiquity"
     },
     {
+     "id": "the-rise-of-western-christendom-1996",
      "title": "The Rise of Western Christendom",
-     "author": "Peter Brown",
+     "authors": "Peter Brown",
      "year": 1996,
-     "note": "In 1971 Peter Brown published The World of Late Antiquity, a short, richly illustrated book that changed how historians talk about the period from roughly 150 to 750 AD.",
-     "url": "https://en.wikipedia.org/wiki/Peter_Brown_(historian)"
+     "type": "book",
+     "file": "summaries/the-rise-of-western-christendom-1996.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Peter_Brown_(historian)"
     },
     {
+     "id": "barbarian-migrations-and-the-roman-west-376-568-2007",
      "title": "Barbarian Migrations and the Roman West, 376-568",
-     "author": "Guy Halsall",
+     "authors": "Guy Halsall",
      "year": 2007,
-     "note": "A detailed narrative of the barbarian migrations from 376 to 568, read alongside Brown's late antiquity.",
-     "url": "https://en.wikipedia.org/wiki/Guy_Halsall"
+     "type": "book",
+     "file": "summaries/barbarian-migrations-and-the-roman-west-376-568-2007.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Guy_Halsall"
     },
     {
+     "id": "the-fall-of-rome-and-the-end-of-civilization-2005",
      "title": "The Fall of Rome and the End of Civilization",
-     "author": "Bryan Ward-Perkins",
+     "authors": "Bryan Ward-Perkins",
      "year": 2005,
-     "note": "That counterattack, led by archaeologists such as Bryan Ward-Perkins, is covered in another card.",
-     "url": "https://en.wikipedia.org/wiki/Bryan_Ward-Perkins"
+     "type": "book",
+     "file": "summaries/the-fall-of-rome-and-the-end-of-civilization-2005.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Bryan_Ward-Perkins"
     }
    ]
   },
@@ -221,35 +212,33 @@
    "paths": [
     "rome"
    ],
-   "goDeeper": [],
-   "furtherReading": [
+   "goDeeper": [
     {
+     "id": "the-fall-of-rome-and-the-end-of-civilization-2005",
      "title": "The Fall of Rome and the End of Civilization",
-     "author": "Bryan Ward-Perkins",
+     "authors": "Bryan Ward-Perkins",
      "year": 2005,
-     "note": "Bryan Ward-Perkins, an Oxford archaeologist and historian, wrote The Fall of Rome and the End of Civilization (2005) as a deliberate challenge to the idea that the end of the western empire was a gentle transformation.",
-     "url": "https://en.wikipedia.org/wiki/Bryan_Ward-Perkins"
+     "type": "book",
+     "file": "summaries/the-fall-of-rome-and-the-end-of-civilization-2005.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Bryan_Ward-Perkins"
     },
     {
+     "id": "lead-pollution-recorded-in-greenland-ice-indicates-2018",
      "title": "Lead pollution recorded in Greenland ice indicates European emissions tracked plagues, wars, and imperial expansion during antiquity",
-     "author": "McConnell et al.",
+     "authors": "McConnell et al.",
      "year": 2018,
-     "note": "The Greenland ice-core record this card cites as a year-by-year proxy for the Roman economy.",
-     "url": "https://doi.org/10.1073/pnas.1721818115"
+     "type": "paper",
+     "file": "summaries/lead-pollution-recorded-in-greenland-ice-indicates-2018.html",
+     "sourceUrl": "https://doi.org/10.1073/pnas.1721818115"
     },
     {
+     "id": "the-fall-of-the-roman-empire-a-new-history-2005",
      "title": "The Fall of the Roman Empire: A New History",
-     "author": "Peter Heather",
+     "authors": "Peter Heather",
      "year": 2005,
-     "note": "Heather's narrative of the fall, which puts more weight on outside military shock than on pottery alone.",
-     "url": "https://en.wikipedia.org/wiki/Peter_Heather"
-    },
-    {
-     "title": "Framing the Early Middle Ages",
-     "author": "Chris Wickham",
-     "year": 2005,
-     "note": "A broad economic history of the early Middle Ages, useful next to Ward-Perkins's sharper collapse.",
-     "url": "https://en.wikipedia.org/wiki/Chris_Wickham"
+     "type": "book",
+     "file": "summaries/the-fall-of-the-roman-empire-a-new-history-2005.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Peter_Heather"
     }
    ]
   },
@@ -269,35 +258,42 @@
     "rome",
     "collapse"
    ],
-   "goDeeper": [],
-   "furtherReading": [
+   "goDeeper": [
     {
+     "id": "the-fate-of-rome-climate-disease-and-the-end-of-an-2017",
      "title": "The Fate of Rome: Climate, Disease, and the End of an Empire",
-     "author": "Kyle Harper",
+     "authors": "Kyle Harper",
      "year": 2017,
-     "note": "Kyle Harper's The Fate of Rome (2017) adds two actors that older histories barely mentioned: the climate and microbes.",
-     "url": "https://en.wikipedia.org/wiki/Kyle_Harper"
+     "type": "book",
+     "file": "summaries/the-fate-of-rome-climate-disease-and-the-end-of-an-2017.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Kyle_Harper"
     },
     {
+     "id": "cooling-and-societal-change-during-the-late-antiqu-2016",
      "title": "Cooling and societal change during the Late Antique Little Ice Age from 536 to around 660 AD",
-     "author": "Büntgen et al.",
+     "authors": "Büntgen et al.",
      "year": 2016,
-     "note": "The tree-ring study this card cites for a cold period from 536 to about 660.",
-     "url": "https://doi.org/10.1038/ngeo2652"
+     "type": "paper",
+     "file": "summaries/cooling-and-societal-change-during-the-late-antiqu-2016.html",
+     "sourceUrl": "https://doi.org/10.1038/ngeo2652"
     },
     {
+     "id": "yersinia-pestis-and-the-plague-of-justinian-541-54-2014",
      "title": "Yersinia pestis and the Plague of Justinian 541-543 AD: a genomic analysis",
-     "author": "Wagner et al.",
+     "authors": "Wagner et al.",
      "year": 2014,
-     "note": "Genomic evidence this card cites for Yersinia pestis in the sixth-century plague.",
-     "url": "https://doi.org/10.1016/S1473-3099(13)70323-2"
+     "type": "paper",
+     "file": "summaries/yersinia-pestis-and-the-plague-of-justinian-541-54-2014.html",
+     "sourceUrl": "https://doi.org/10.1016/S1473-3099(13)70323-2"
     },
     {
+     "id": "the-justinianic-plague-an-inconsequential-pandemic-2019",
      "title": "The Justinianic Plague: An inconsequential pandemic?",
-     "author": "Mordechai et al.",
+     "authors": "Mordechai et al.",
      "year": 2019,
-     "note": "A 2019 paper in PNAS by Mordechai and colleagues argued the Justinianic plague had a smaller impact than often claimed, which shows how lively the debate still is.",
-     "url": "https://doi.org/10.1073/pnas.1903797116"
+     "type": "paper",
+     "file": "summaries/the-justinianic-plague-an-inconsequential-pandemic-2019.html",
+     "sourceUrl": "https://doi.org/10.1073/pnas.1903797116"
     }
    ]
   },
@@ -316,35 +312,24 @@
    "paths": [
     "rome"
    ],
-   "goDeeper": [],
-   "furtherReading": [
+   "goDeeper": [
     {
+     "id": "how-rome-fell-death-of-a-superpower-2009",
      "title": "How Rome Fell: Death of a Superpower",
-     "author": "Adrian Goldsworthy",
+     "authors": "Adrian Goldsworthy",
      "year": 2009,
-     "note": "Between the murder of the emperor Severus Alexander in 235 and the accession of Diocletian in 284, the Roman Empire almost disintegrated.",
-     "url": "https://en.wikipedia.org/wiki/Adrian_Goldsworthy"
+     "type": "book",
+     "file": "summaries/how-rome-fell-death-of-a-superpower-2009.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Adrian_Goldsworthy"
     },
     {
-     "title": "Crisis of the Third Century",
-     "author": "Wikipedia",
-     "year": 2024,
-     "note": "A short public overview of Crisis of the Third Century, with the main dates and further references.",
-     "url": "https://en.wikipedia.org/wiki/Crisis_of_the_Third_Century"
-    },
-    {
+     "id": "diocletian-and-the-roman-recovery-1985",
      "title": "Diocletian and the Roman Recovery",
-     "author": "Stephen Williams",
+     "authors": "Stephen Williams",
      "year": 1985,
-     "note": "A political narrative of Diocletian and the recovery that ended the third-century crisis.",
-     "url": "https://www.routledge.com/Diocletian-and-the-Roman-Recovery/Williams/p/book/9780415918275"
-    },
-    {
-     "title": "Edict on Maximum Prices",
-     "author": "Wikipedia",
-     "year": 2024,
-     "note": "A short public overview of Edict on Maximum Prices, with the main dates and further references.",
-     "url": "https://en.wikipedia.org/wiki/Edict_on_Maximum_Prices"
+     "type": "book",
+     "file": "summaries/diocletian-and-the-roman-recovery-1985.html",
+     "sourceUrl": "https://www.routledge.com/Diocletian-and-the-Roman-Recovery/Williams/p/book/9780415918275"
     }
    ]
   },
@@ -365,40 +350,22 @@
    ],
    "goDeeper": [
     {
-     "id": "ammianus",
-     "title": "The Roman History of Ammianus Marcellinus",
-     "authors": "Ammianus Marcellinus, translated by C. D. Yonge",
-     "year": 390,
-     "venue": "Translation by Charles Duke Yonge",
-     "license": "public-domain",
-     "licenseName": "Public domain",
-     "licenseUrl": "https://www.gutenberg.org/policy/license.html",
-     "attribution": "Ammianus Marcellinus, translated by C. D. Yonge. The Roman History of Ammianus Marcellinus. Project Gutenberg ebook 28587. The Project Gutenberg license in the text permits copying.",
-     "sourceUrl": "https://www.gutenberg.org/ebooks/28587",
-     "file": "texts/ammianus.html"
-    }
-   ],
-   "furtherReading": [
-    {
+     "id": "the-fall-of-the-roman-empire-a-new-history-2005",
      "title": "The Fall of the Roman Empire: A New History",
-     "author": "Peter Heather",
+     "authors": "Peter Heather",
      "year": 2005,
-     "note": "Peter Heather's The Fall of the Roman Empire: A New History (2005) pushes back against both Gibbon's internal rot and the gentle transformation school.",
-     "url": "https://en.wikipedia.org/wiki/Peter_Heather"
+     "type": "book",
+     "file": "summaries/the-fall-of-the-roman-empire-a-new-history-2005.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Peter_Heather"
     },
     {
-     "title": "Battle of Adrianople",
-     "author": "Wikipedia",
-     "year": 2024,
-     "note": "A short public overview of Battle of Adrianople, with the main dates and further references.",
-     "url": "https://en.wikipedia.org/wiki/Battle_of_Adrianople"
-    },
-    {
+     "id": "barbarian-migrations-and-the-roman-west-376-568-2007",
      "title": "Barbarian Migrations and the Roman West, 376-568",
-     "author": "Guy Halsall",
+     "authors": "Guy Halsall",
      "year": 2007,
-     "note": "Halsall's account of the migrations, a counterweight to Heather's emphasis on the Hunnic shock.",
-     "url": "https://en.wikipedia.org/wiki/Guy_Halsall"
+     "type": "book",
+     "file": "summaries/barbarian-migrations-and-the-roman-west-376-568-2007.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Guy_Halsall"
     }
    ]
   },
@@ -417,35 +384,24 @@
    "paths": [
     "rome"
    ],
-   "goDeeper": [],
-   "furtherReading": [
+   "goDeeper": [
     {
+     "id": "byzantium-the-surprising-life-of-a-medieval-empire-2007",
      "title": "Byzantium: The Surprising Life of a Medieval Empire",
-     "author": "Judith Herrin",
+     "authors": "Judith Herrin",
      "year": 2007,
-     "note": "Judith Herrin's Byzantium: The Surprising Life of a Medieval Empire (2007) argues that this state was not a decadent, scheming oriental footnote, as Enlightenment writers portrayed it, but one of the most durable and innovative polities in history.",
-     "url": "https://en.wikipedia.org/wiki/Judith_Herrin"
+     "type": "book",
+     "file": "summaries/byzantium-the-surprising-life-of-a-medieval-empire-2007.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Judith_Herrin"
     },
     {
+     "id": "romanland-ethnicity-and-empire-in-byzantium-2019",
      "title": "Romanland: Ethnicity and Empire in Byzantium",
-     "author": "Anthony Kaldellis",
+     "authors": "Anthony Kaldellis",
      "year": 2019,
-     "note": "Anthony Kaldellis has argued, in Romanland (2019), that historians should take Byzantine Roman identity at face value and call the state what its people did: the Roman empire.",
-     "url": "https://www.hup.harvard.edu/books/9780674986510"
-    },
-    {
-     "title": "Corpus Juris Civilis",
-     "author": "Wikipedia",
-     "year": 2024,
-     "note": "A short public overview of Corpus Juris Civilis, with the main dates and further references.",
-     "url": "https://en.wikipedia.org/wiki/Corpus_Juris_Civilis"
-    },
-    {
-     "title": "Fall of Constantinople",
-     "author": "Wikipedia",
-     "year": 2024,
-     "note": "A short public overview of Fall of Constantinople, with the main dates and further references.",
-     "url": "https://en.wikipedia.org/wiki/Fall_of_Constantinople"
+     "type": "book",
+     "file": "summaries/romanland-ethnicity-and-empire-in-byzantium-2019.html",
+     "sourceUrl": "https://www.hup.harvard.edu/books/9780674986510"
     }
    ]
   },
@@ -465,35 +421,24 @@
     "collapse",
     "rome"
    ],
-   "goDeeper": [],
-   "furtherReading": [
+   "goDeeper": [
     {
+     "id": "the-collapse-of-complex-societies-1988",
      "title": "The Collapse of Complex Societies",
-     "author": "Joseph Tainter",
+     "authors": "Joseph Tainter",
      "year": 1988,
-     "note": "Joseph Tainter, an anthropologist, offered a general theory in The Collapse of Complex Societies (1988).",
-     "url": "https://en.wikipedia.org/wiki/Joseph_Tainter"
+     "type": "book",
+     "file": "summaries/the-collapse-of-complex-societies-1988.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Joseph_Tainter"
     },
     {
+     "id": "collapse-how-societies-choose-to-fail-or-succeed-2005",
      "title": "Collapse: How Societies Choose to Fail or Succeed",
-     "author": "Jared Diamond",
+     "authors": "Jared Diamond",
      "year": 2005,
-     "note": "Tainter is often read alongside Jared Diamond's Collapse (2005), which emphasises environmental damage.",
-     "url": "https://en.wikipedia.org/wiki/Collapse:_How_Societies_Choose_to_Fail_or_Succeed"
-    },
-    {
-     "title": "Questioning Collapse",
-     "author": "Patricia McAnany & Norman Yoffee (eds.)",
-     "year": 2010,
-     "note": "Anthropologists arguing that popular collapse stories often miss how societies adapted and went on.",
-     "url": "https://en.wikipedia.org/wiki/Questioning_Collapse"
-    },
-    {
-     "title": "Societal collapse",
-     "author": "Wikipedia",
-     "year": 2024,
-     "note": "A short public overview of Societal collapse, with the main dates and further references.",
-     "url": "https://en.wikipedia.org/wiki/Societal_collapse"
+     "type": "book",
+     "file": "summaries/collapse-how-societies-choose-to-fail-or-succeed-2005.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Collapse:_How_Societies_Choose_to_Fail_or_Succeed"
     }
    ]
   },
@@ -514,40 +459,22 @@
    ],
    "goDeeper": [
     {
-     "id": "kaniewski-2013",
+     "id": "1177-b-c-the-year-civilization-collapsed-2014",
+     "title": "1177 B.C.: The Year Civilization Collapsed",
+     "authors": "Eric H. Cline",
+     "year": 2014,
+     "type": "book",
+     "file": "summaries/1177-b-c-the-year-civilization-collapsed-2014.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/1177_B.C.:_The_Year_Civilization_Collapsed"
+    },
+    {
+     "id": "environmental-roots-of-the-late-bronze-age-crisis-2013",
      "title": "Environmental Roots of the Late Bronze Age Crisis",
      "authors": "David Kaniewski, Elise Van Campo, Joël Guiot, Sabine Le Burel, Thierry Otto, Cecile Baeteman et al.",
      "year": 2013,
-     "venue": "PLoS ONE",
-     "license": "cc-by",
-     "licenseName": "Creative Commons Attribution 4.0",
-     "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
-     "attribution": "David Kaniewski, Elise Van Campo, Joël Guiot, Sabine Le Burel, Thierry Otto, Cecile Baeteman et al. (2013). Environmental Roots of the Late Bronze Age Crisis. PLoS ONE. Creative Commons Attribution 4.0.",
-     "sourceUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3743901/",
-     "file": "texts/kaniewski-2013.html"
-    }
-   ],
-   "furtherReading": [
-    {
-     "title": "1177 B.C.: The Year Civilization Collapsed",
-     "author": "Eric H. Cline",
-     "year": 2014,
-     "note": "Cline argues that no single cause is sufficient.",
-     "url": "https://en.wikipedia.org/wiki/1177_B.C.:_The_Year_Civilization_Collapsed"
-    },
-    {
-     "title": "Late Bronze Age collapse",
-     "author": "Wikipedia",
-     "year": 2024,
-     "note": "A short public overview of Late Bronze Age collapse, with the main dates and further references.",
-     "url": "https://en.wikipedia.org/wiki/Late_Bronze_Age_collapse"
-    },
-    {
-     "title": "After 1177 B.C.: The Survival of Civilizations",
-     "author": "Eric H. Cline",
-     "year": 2024,
-     "note": "Cline argues that no single cause is sufficient.",
-     "url": "https://en.wikipedia.org/wiki/Eric_H._Cline"
+     "type": "paper",
+     "file": "summaries/environmental-roots-of-the-late-bronze-age-crisis-2013.html",
+     "sourceUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3743901/"
     }
    ]
   },
@@ -566,35 +493,42 @@
    "paths": [
     "divergence"
    ],
-   "goDeeper": [],
-   "furtherReading": [
+   "goDeeper": [
     {
+     "id": "guns-germs-and-steel-1997",
      "title": "Guns, Germs, and Steel",
-     "author": "Jared Diamond",
+     "authors": "Jared Diamond",
      "year": 1997,
-     "note": "Jared Diamond's Guns, Germs, and Steel (1997) asks why Eurasian societies, rather than those of the Americas, Africa or Australia, ended up conquering much of the world.",
-     "url": "https://en.wikipedia.org/wiki/Guns,_Germs,_and_Steel"
+     "type": "book",
+     "file": "summaries/guns-germs-and-steel-1997.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Guns,_Germs,_and_Steel"
     },
     {
+     "id": "the-colonial-origins-of-comparative-development-an-2001",
      "title": "The Colonial Origins of Comparative Development: An Empirical Investigation",
-     "author": "Acemoglu, Johnson & Robinson",
+     "authors": "Acemoglu, Johnson & Robinson",
      "year": 2001,
-     "note": "Acemoglu, Johnson and Robinson argued in 2001 that colonial institutions, not geography, explain modern income gaps, using European settler mortality as a natural experiment.",
-     "url": "https://doi.org/10.1257/aer.91.5.1369"
+     "type": "paper",
+     "file": "summaries/the-colonial-origins-of-comparative-development-an-2001.html",
+     "sourceUrl": "https://doi.org/10.1257/aer.91.5.1369"
     },
     {
+     "id": "why-nations-fail-2012",
      "title": "Why Nations Fail",
-     "author": "Daron Acemoglu & James A. Robinson",
+     "authors": "Daron Acemoglu & James A. Robinson",
      "year": 2012,
-     "note": "Acemoglu, Johnson and Robinson argued in 2001 that colonial institutions, not geography, explain modern income gaps, using European settler mortality as a natural experiment.",
-     "url": "https://en.wikipedia.org/wiki/Why_Nations_Fail"
+     "type": "book",
+     "file": "summaries/why-nations-fail-2012.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Why_Nations_Fail"
     },
     {
+     "id": "the-dawn-of-everything-2021",
      "title": "The Dawn of Everything",
-     "author": "David Graeber & David Wengrow",
+     "authors": "David Graeber & David Wengrow",
      "year": 2021,
-     "note": "A recent challenge to single-cause stories of why some societies pulled ahead.",
-     "url": "https://en.wikipedia.org/wiki/The_Dawn_of_Everything"
+     "type": "book",
+     "file": "summaries/the-dawn-of-everything-2021.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/The_Dawn_of_Everything"
     }
    ]
   },
@@ -615,47 +549,40 @@
    ],
    "goDeeper": [
     {
-     "id": "smith-wealth",
-     "title": "An Inquiry into the Nature and Causes of the Wealth of Nations",
-     "authors": "Adam Smith",
-     "year": 1776,
-     "venue": "London: W. Strahan and T. Cadell",
-     "license": "public-domain",
-     "licenseName": "Public domain",
-     "licenseUrl": "https://www.gutenberg.org/policy/license.html",
-     "attribution": "Adam Smith. An Inquiry into the Nature and Causes of the Wealth of Nations. Project Gutenberg ebook 3300. The Project Gutenberg license in the text permits copying.",
-     "sourceUrl": "https://www.gutenberg.org/ebooks/3300",
-     "file": "texts/smith-wealth.html"
-    }
-   ],
-   "furtherReading": [
-    {
+     "id": "why-nations-fail-2012",
      "title": "Why Nations Fail",
-     "author": "Daron Acemoglu & James A. Robinson",
+     "authors": "Daron Acemoglu & James A. Robinson",
      "year": 2012,
-     "note": "In Why Nations Fail (2012), the economists Daron Acemoglu and James Robinson argue that prosperity depends mainly on institutions, the rules that structure economic and political life.",
-     "url": "https://en.wikipedia.org/wiki/Why_Nations_Fail"
+     "type": "book",
+     "file": "summaries/why-nations-fail-2012.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Why_Nations_Fail"
     },
     {
-     "title": "The Colonial Origins of Comparative Development",
-     "author": "Acemoglu, Johnson & Robinson",
+     "id": "the-colonial-origins-of-comparative-development-an-2001",
+     "title": "The Colonial Origins of Comparative Development: An Empirical Investigation",
+     "authors": "Acemoglu, Johnson & Robinson",
      "year": 2001,
-     "note": "In Why Nations Fail (2012), the economists Daron Acemoglu and James Robinson argue that prosperity depends mainly on institutions, the rules that structure economic and political life.",
-     "url": "https://doi.org/10.1257/aer.91.5.1369"
+     "type": "paper",
+     "file": "summaries/the-colonial-origins-of-comparative-development-an-2001.html",
+     "sourceUrl": "https://doi.org/10.1257/aer.91.5.1369"
     },
     {
+     "id": "the-colonial-origins-of-comparative-development-an-2012",
      "title": "The Colonial Origins of Comparative Development: An Empirical Investigation: Comment",
-     "author": "David Albouy",
+     "authors": "David Albouy",
      "year": 2012,
-     "note": "That paper has been challenged on the quality of the mortality data, most prominently by David Albouy, and the authors replied.",
-     "url": "https://doi.org/10.1257/aer.102.6.3059"
+     "type": "paper",
+     "file": "summaries/the-colonial-origins-of-comparative-development-an-2012.html",
+     "sourceUrl": "https://doi.org/10.1257/aer.102.6.3059"
     },
     {
+     "id": "the-narrow-corridor-2019",
      "title": "The Narrow Corridor",
-     "author": "Daron Acemoglu & James A. Robinson",
+     "authors": "Daron Acemoglu & James A. Robinson",
      "year": 2019,
-     "note": "In Why Nations Fail (2012), the economists Daron Acemoglu and James Robinson argue that prosperity depends mainly on institutions, the rules that structure economic and political life.",
-     "url": "https://en.wikipedia.org/wiki/Daron_Acemoglu"
+     "type": "book",
+     "file": "summaries/the-narrow-corridor-2019.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Daron_Acemoglu"
     }
    ]
   },
@@ -676,47 +603,31 @@
    ],
    "goDeeper": [
     {
-     "id": "smith-wealth",
-     "title": "An Inquiry into the Nature and Causes of the Wealth of Nations",
-     "authors": "Adam Smith",
-     "year": 1776,
-     "venue": "London: W. Strahan and T. Cadell",
-     "license": "public-domain",
-     "licenseName": "Public domain",
-     "licenseUrl": "https://www.gutenberg.org/policy/license.html",
-     "attribution": "Adam Smith. An Inquiry into the Nature and Causes of the Wealth of Nations. Project Gutenberg ebook 3300. The Project Gutenberg license in the text permits copying.",
-     "sourceUrl": "https://www.gutenberg.org/ebooks/3300",
-     "file": "texts/smith-wealth.html"
-    }
-   ],
-   "furtherReading": [
-    {
+     "id": "the-great-divergence-2000",
      "title": "The Great Divergence",
-     "author": "Kenneth Pomeranz",
+     "authors": "Kenneth Pomeranz",
      "year": 2000,
-     "note": "In The Great Divergence (2000), Kenneth Pomeranz challenged the long-standing assumption that Europe was already far ahead before 1800.",
-     "url": "https://en.wikipedia.org/wiki/The_Great_Divergence_(book)"
+     "type": "book",
+     "file": "summaries/the-great-divergence-2000.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/The_Great_Divergence_(book)"
     },
     {
+     "id": "the-british-industrial-revolution-in-global-perspe-2009",
      "title": "The British Industrial Revolution in Global Perspective",
-     "author": "Robert C. Allen",
+     "authors": "Robert C. Allen",
      "year": 2009,
-     "note": "Later quantitative work on real wages and GDP, by scholars such as Robert Allen and Stephen Broadberry, suggests that north-west Europe had pulled ahead earlier than Pomeranz claimed, but his emphasis on energy and resources has proved enduring.",
-     "url": "https://en.wikipedia.org/wiki/Bob_Allen_(economic_historian)"
+     "type": "book",
+     "file": "summaries/the-british-industrial-revolution-in-global-perspe-2009.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Bob_Allen_(economic_historian)"
     },
     {
+     "id": "a-culture-of-growth-2016",
      "title": "A Culture of Growth",
-     "author": "Joel Mokyr",
+     "authors": "Joel Mokyr",
      "year": 2016,
-     "note": "Joel Mokyr, by contrast, emphasises an Enlightenment culture of useful knowledge.",
-     "url": "https://en.wikipedia.org/wiki/Joel_Mokyr"
-    },
-    {
-     "title": "Great Divergence",
-     "author": "Wikipedia",
-     "year": 2024,
-     "note": "A short public overview of Great Divergence, with the main dates and further references.",
-     "url": "https://en.wikipedia.org/wiki/Great_Divergence"
+     "type": "book",
+     "file": "summaries/a-culture-of-growth-2016.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Joel_Mokyr"
     }
    ]
   },
@@ -737,47 +648,40 @@
    ],
    "goDeeper": [
     {
-     "id": "columbus-letters",
-     "title": "Select Letters of Christopher Columbus",
-     "authors": "Christopher Columbus, edited by R. H. Major",
-     "year": 1493,
-     "venue": "Hakluyt Society edition, edited by Richard Henry Major",
-     "license": "public-domain",
-     "licenseName": "Public domain",
-     "licenseUrl": "https://www.gutenberg.org/policy/license.html",
-     "attribution": "Christopher Columbus, edited by R. H. Major. Select Letters of Christopher Columbus. Project Gutenberg ebook 77820. The Project Gutenberg license in the text permits copying.",
-     "sourceUrl": "https://www.gutenberg.org/ebooks/77820",
-     "file": "texts/columbus-letters.html"
-    }
-   ],
-   "furtherReading": [
-    {
+     "id": "the-columbian-exchange-biological-and-cultural-con-1972",
      "title": "The Columbian Exchange: Biological and Cultural Consequences of 1492",
-     "author": "Alfred W. Crosby",
+     "authors": "Alfred W. Crosby",
      "year": 1972,
-     "note": "In 1972 the historian Alfred Crosby published The Columbian Exchange, coining a term for the massive transfer of plants, animals, people and pathogens between the Old and New Worlds after 1492.",
-     "url": "https://en.wikipedia.org/wiki/Alfred_W._Crosby"
+     "type": "book",
+     "file": "summaries/the-columbian-exchange-biological-and-cultural-con-1972.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Alfred_W._Crosby"
     },
     {
+     "id": "the-columbian-exchange-a-history-of-disease-food-a-2010",
      "title": "The Columbian Exchange: A History of Disease, Food, and Ideas",
-     "author": "Nunn & Qian",
+     "authors": "Nunn & Qian",
      "year": 2010,
-     "note": "Economists Nathan Nunn and Nancy Qian estimated in a 2011 paper that the introduction of the potato alone accounted for about a quarter of the growth in Old World population and urbanisation between 1700 and 1900.",
-     "url": "https://doi.org/10.1257/jep.24.2.163"
+     "type": "paper",
+     "file": "summaries/the-columbian-exchange-a-history-of-disease-food-a-2010.html",
+     "sourceUrl": "https://doi.org/10.1257/jep.24.2.163"
     },
     {
+     "id": "the-potato-s-contribution-to-population-and-urbani-2011",
      "title": "The Potato's Contribution to Population and Urbanization: Evidence from a Historical Experiment",
-     "author": "Nunn & Qian",
+     "authors": "Nunn & Qian",
      "year": 2011,
-     "note": "Economists Nathan Nunn and Nancy Qian estimated in a 2011 paper that the introduction of the potato alone accounted for about a quarter of the growth in Old World population and urbanisation between 1700 and 1900.",
-     "url": "https://doi.org/10.1093/qje/qjr009"
+     "type": "paper",
+     "file": "summaries/the-potato-s-contribution-to-population-and-urbani-2011.html",
+     "sourceUrl": "https://doi.org/10.1093/qje/qjr009"
     },
     {
+     "id": "1493-uncovering-the-new-world-columbus-created-2011",
      "title": "1493: Uncovering the New World Columbus Created",
-     "author": "Charles C. Mann",
+     "authors": "Charles C. Mann",
      "year": 2011,
-     "note": "Mann's 1493 (2011) is a lively popular update of Crosby's argument, covering silver flows to China, malaria and rubber.",
-     "url": "https://en.wikipedia.org/wiki/1493_(book)"
+     "type": "book",
+     "file": "summaries/1493-uncovering-the-new-world-columbus-created-2011.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/1493_(book)"
     }
    ]
   },
@@ -798,60 +702,22 @@
    ],
    "goDeeper": [
     {
-     "id": "rousseau-inequality",
-     "title": "A Discourse Upon the Origin and the Foundation of the Inequality Among Mankind",
-     "authors": "Jean-Jacques Rousseau",
-     "year": 1755,
-     "venue": "Eighteenth-century English translation",
-     "license": "public-domain",
-     "licenseName": "Public domain",
-     "licenseUrl": "https://www.gutenberg.org/policy/license.html",
-     "attribution": "Jean-Jacques Rousseau. A Discourse Upon the Origin and the Foundation of the Inequality Among Mankind. Project Gutenberg ebook 11136. The Project Gutenberg license in the text permits copying.",
-     "sourceUrl": "https://www.gutenberg.org/ebooks/11136",
-     "file": "texts/rousseau-inequality.html"
-    },
-    {
-     "id": "decameron",
-     "title": "The Decameron",
-     "authors": "Giovanni Boccaccio, translated by John Payne",
-     "year": 1353,
-     "venue": "Translation by John Payne",
-     "license": "public-domain",
-     "licenseName": "Public domain",
-     "licenseUrl": "https://www.gutenberg.org/policy/license.html",
-     "attribution": "Giovanni Boccaccio, translated by John Payne. The Decameron. Project Gutenberg ebook 23700. The Project Gutenberg license in the text permits copying.",
-     "sourceUrl": "https://www.gutenberg.org/ebooks/23700",
-     "file": "texts/decameron.html"
-    }
-   ],
-   "furtherReading": [
-    {
+     "id": "the-great-leveler-violence-and-the-history-of-ineq-2017",
      "title": "The Great Leveler: Violence and the History of Inequality",
-     "author": "Walter Scheidel",
+     "authors": "Walter Scheidel",
      "year": 2017,
-     "note": "In The Great Leveler (2017), the Stanford historian Walter Scheidel makes a bleak argument about thousands of years of economic history.",
-     "url": "https://en.wikipedia.org/wiki/Walter_Scheidel"
+     "type": "book",
+     "file": "summaries/the-great-leveler-violence-and-the-history-of-ineq-2017.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Walter_Scheidel"
     },
     {
+     "id": "capital-in-the-twenty-first-century-2013",
      "title": "Capital in the Twenty-First Century",
-     "author": "Thomas Piketty",
+     "authors": "Thomas Piketty",
      "year": 2013,
-     "note": "Thomas Piketty's Capital in the Twenty-First Century (2013) reaches a related conclusion about the twentieth century: the wars and the policies they enabled, not the normal workings of capitalism, caused the great compression of wealth from 1914 to 1945.",
-     "url": "https://en.wikipedia.org/wiki/Capital_in_the_Twenty-First_Century"
-    },
-    {
-     "title": "Consequences of the Black Death",
-     "author": "Wikipedia",
-     "year": 2024,
-     "note": "A short public overview of Consequences of the Black Death, with the main dates and further references.",
-     "url": "https://en.wikipedia.org/wiki/Consequences_of_the_Black_Death"
-    },
-    {
-     "title": "Black Death",
-     "author": "Wikipedia",
-     "year": 2024,
-     "note": "A short public overview of Black Death, with the main dates and further references.",
-     "url": "https://en.wikipedia.org/wiki/Black_Death"
+     "type": "book",
+     "file": "summaries/capital-in-the-twenty-first-century-2013.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Capital_in_the_Twenty-First_Century"
     }
    ]
   },
@@ -870,35 +736,42 @@
    "paths": [
     "revolutions"
    ],
-   "goDeeper": [],
-   "furtherReading": [
+   "goDeeper": [
     {
+     "id": "imagined-communities-1983",
      "title": "Imagined Communities",
-     "author": "Benedict Anderson",
+     "authors": "Benedict Anderson",
      "year": 1983,
-     "note": "Benedict Anderson's Imagined Communities (1983) offered one of the most influential explanations of nationalism.",
-     "url": "https://en.wikipedia.org/wiki/Imagined_Communities"
+     "type": "book",
+     "file": "summaries/imagined-communities-1983.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Imagined_Communities"
     },
     {
+     "id": "nations-and-nationalism-1983",
      "title": "Nations and Nationalism",
-     "author": "Ernest Gellner",
+     "authors": "Ernest Gellner",
      "year": 1983,
-     "note": "Anderson's book pairs naturally with Ernest Gellner's Nations and Nationalism (1983), published the same year, which links nationalism to industrialisation and mass education, and with Eric Hobsbawm and Terence Ranger's The Invention of Tradition (1983), which shows how many supposedly ancient rituals, such as Highland tartans, were relatively recent creations.",
-     "url": "https://en.wikipedia.org/wiki/Ernest_Gellner"
+     "type": "book",
+     "file": "summaries/nations-and-nationalism-1983.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Ernest_Gellner"
     },
     {
+     "id": "the-invention-of-tradition-1983",
      "title": "The Invention of Tradition",
-     "author": "Eric Hobsbawm & Terence Ranger (eds.)",
+     "authors": "Eric Hobsbawm & Terence Ranger (eds.)",
      "year": 1983,
-     "note": "Anderson's book pairs naturally with Ernest Gellner's Nations and Nationalism (1983), published the same year, which links nationalism to industrialisation and mass education, and with Eric Hobsbawm and Terence Ranger's The Invention of Tradition (1983), which shows how many supposedly ancient rituals, such as Highland tartans, were relatively recent creations.",
-     "url": "https://en.wikipedia.org/wiki/The_Invention_of_Tradition"
+     "type": "book",
+     "file": "summaries/the-invention-of-tradition-1983.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/The_Invention_of_Tradition"
     },
     {
+     "id": "the-printing-press-as-an-agent-of-change-1979",
      "title": "The Printing Press as an Agent of Change",
-     "author": "Elizabeth Eisenstein",
+     "authors": "Elizabeth Eisenstein",
      "year": 1979,
-     "note": "Eisenstein's case that print changed how large communities could imagine themselves.",
-     "url": "https://en.wikipedia.org/wiki/Elizabeth_Eisenstein"
+     "type": "book",
+     "file": "summaries/the-printing-press-as-an-agent-of-change-1979.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Elizabeth_Eisenstein"
     }
    ]
   },
@@ -919,47 +792,31 @@
    ],
    "goDeeper": [
     {
-     "id": "tocqueville-democracy-1",
-     "title": "Democracy in America, Volume 1",
-     "authors": "Alexis de Tocqueville, translated by Henry Reeve",
-     "year": 1835,
-     "venue": "Translation by Henry Reeve",
-     "license": "public-domain",
-     "licenseName": "Public domain",
-     "licenseUrl": "https://www.gutenberg.org/policy/license.html",
-     "attribution": "Alexis de Tocqueville, translated by Henry Reeve. Democracy in America, Volume 1. Project Gutenberg ebook 815. The Project Gutenberg license in the text permits copying.",
-     "sourceUrl": "https://www.gutenberg.org/ebooks/815",
-     "file": "texts/tocqueville-democracy-1.html"
-    }
-   ],
-   "furtherReading": [
-    {
+     "id": "the-old-regime-and-the-revolution-1856",
      "title": "The Old Regime and the Revolution",
-     "author": "Alexis de Tocqueville",
+     "authors": "Alexis de Tocqueville",
      "year": 1856,
-     "note": "In The Old Regime and the Revolution (1856), Alexis de Tocqueville noticed something counterintuitive about France before 1789.",
-     "url": "https://en.wikipedia.org/wiki/The_Old_Regime_and_the_Revolution"
+     "type": "book",
+     "file": "summaries/the-old-regime-and-the-revolution-1856.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/The_Old_Regime_and_the_Revolution"
     },
     {
+     "id": "toward-a-theory-of-revolution-1962",
      "title": "Toward a Theory of Revolution",
-     "author": "James C. Davies",
+     "authors": "James C. Davies",
      "year": 1962,
-     "note": "Davies proposed the J-curve in 1962: revolutions are most likely when a long period of rising expectations and gratifications is followed by a short, sharp reversal, opening a gap between what people expect and what they get.",
-     "url": "https://doi.org/10.2307/2089714"
+     "type": "paper",
+     "file": "summaries/toward-a-theory-of-revolution-1962.html",
+     "sourceUrl": "https://doi.org/10.2307/2089714"
     },
     {
+     "id": "states-and-social-revolutions-1979",
      "title": "States and Social Revolutions",
-     "author": "Theda Skocpol",
+     "authors": "Theda Skocpol",
      "year": 1979,
-     "note": "Empirical support for relative-deprivation theory is mixed, and political scientists now put more weight on state capacity and the organisation of opposition, as in Theda Skocpol's States and Social Revolutions (1979).",
-     "url": "https://en.wikipedia.org/wiki/States_and_Social_Revolutions"
-    },
-    {
-     "title": "Tocqueville effect",
-     "author": "Wikipedia",
-     "year": 2024,
-     "note": "A short public overview of Tocqueville effect, with the main dates and further references.",
-     "url": "https://en.wikipedia.org/wiki/Tocqueville_effect"
+     "type": "book",
+     "file": "summaries/states-and-social-revolutions-1979.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/States_and_Social_Revolutions"
     }
    ]
   },
@@ -978,35 +835,33 @@
    "paths": [
     "revolutions"
    ],
-   "goDeeper": [],
-   "furtherReading": [
+   "goDeeper": [
     {
+     "id": "the-printing-press-as-an-agent-of-change-1979",
      "title": "The Printing Press as an Agent of Change",
-     "author": "Elizabeth L. Eisenstein",
+     "authors": "Elizabeth L. Eisenstein",
      "year": 1979,
-     "note": "Elizabeth Eisenstein's two-volume The Printing Press as an Agent of Change (1979) gave this intuition a scholarly form.",
-     "url": "https://en.wikipedia.org/wiki/Elizabeth_Eisenstein"
+     "type": "book",
+     "file": "summaries/the-printing-press-as-an-agent-of-change-1979.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Elizabeth_Eisenstein"
     },
     {
+     "id": "information-technology-and-economic-change-the-imp-2011",
      "title": "Information Technology and Economic Change: The Impact of the Printing Press",
-     "author": "Jeremiah E. Dittmar",
+     "authors": "Jeremiah E. Dittmar",
      "year": 2011,
-     "note": "Jeremiah Dittmar's 2011 study in the Quarterly Journal of Economics found that European cities that adopted printing in the fifteenth century grew between 1500 and 1600 substantially faster than similar cities that did not.",
-     "url": "https://doi.org/10.1093/qje/qjr035"
+     "type": "paper",
+     "file": "summaries/information-technology-and-economic-change-the-imp-2011.html",
+     "sourceUrl": "https://doi.org/10.1093/qje/qjr035"
     },
     {
+     "id": "the-nature-of-the-book-1998",
      "title": "The Nature of the Book",
-     "author": "Adrian Johns",
+     "authors": "Adrian Johns",
      "year": 1998,
-     "note": "Critics such as Adrian Johns argued that early print was much less fixed and reliable than Eisenstein claimed, with piracy and error widespread, and that trust in print had to be socially constructed.",
-     "url": "https://en.wikipedia.org/wiki/Adrian_Johns"
-    },
-    {
-     "title": "Printing press",
-     "author": "Wikipedia",
-     "year": 2024,
-     "note": "A short public overview of Printing press, with the main dates and further references.",
-     "url": "https://en.wikipedia.org/wiki/Printing_press"
+     "type": "book",
+     "file": "summaries/the-nature-of-the-book-1998.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Adrian_Johns"
     }
    ]
   },
@@ -1026,35 +881,33 @@
     "collapse",
     "divergence"
    ],
-   "goDeeper": [],
-   "furtherReading": [
+   "goDeeper": [
     {
+     "id": "against-the-grain-a-deep-history-of-the-earliest-s-2017",
      "title": "Against the Grain: A Deep History of the Earliest States",
-     "author": "James C. Scott",
+     "authors": "James C. Scott",
      "year": 2017,
-     "note": "Scott, a political scientist and anthropologist at Yale, argues in Against the Grain (2017) that the standard story of civilisation has the order and the moral wrong.",
-     "url": "https://en.wikipedia.org/wiki/Against_the_Grain:_A_Deep_History_of_the_Earliest_States"
+     "type": "book",
+     "file": "summaries/against-the-grain-a-deep-history-of-the-earliest-s-2017.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Against_the_Grain:_A_Deep_History_of_the_Earliest_States"
     },
     {
+     "id": "seeing-like-a-state-1998",
      "title": "Seeing Like a State",
-     "author": "James C. Scott",
+     "authors": "James C. Scott",
      "year": 1998,
-     "note": "Scott, a political scientist and anthropologist at Yale, argues in Against the Grain (2017) that the standard story of civilisation has the order and the moral wrong.",
-     "url": "https://en.wikipedia.org/wiki/Seeing_Like_a_State"
+     "type": "book",
+     "file": "summaries/seeing-like-a-state-1998.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Seeing_Like_a_State"
     },
     {
+     "id": "the-dawn-of-everything-2021",
      "title": "The Dawn of Everything",
-     "author": "David Graeber & David Wengrow",
+     "authors": "David Graeber & David Wengrow",
      "year": 2021,
-     "note": "Graeber and Wengrow's The Dawn of Everything (2021) extends the argument that early humans experimented widely with political forms.",
-     "url": "https://en.wikipedia.org/wiki/The_Dawn_of_Everything"
-    },
-    {
-     "title": "Neolithic Revolution",
-     "author": "Wikipedia",
-     "year": 2024,
-     "note": "A short public overview of Neolithic Revolution, with the main dates and further references.",
-     "url": "https://en.wikipedia.org/wiki/Neolithic_Revolution"
+     "type": "book",
+     "file": "summaries/the-dawn-of-everything-2021.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/The_Dawn_of_Everything"
     }
    ]
   },
@@ -1073,35 +926,33 @@
    "paths": [
     "revolutions"
    ],
-   "goDeeper": [],
-   "furtherReading": [
+   "goDeeper": [
     {
+     "id": "the-sleepwalkers-how-europe-went-to-war-in-1914-2012",
      "title": "The Sleepwalkers: How Europe Went to War in 1914",
-     "author": "Christopher Clark",
+     "authors": "Christopher Clark",
      "year": 2012,
-     "note": "Christopher Clark's The Sleepwalkers (2012) shifted the question from why to how.",
-     "url": "https://en.wikipedia.org/wiki/The_Sleepwalkers_(Clark_book)"
+     "type": "book",
+     "file": "summaries/the-sleepwalkers-how-europe-went-to-war-in-1914-2012.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/The_Sleepwalkers_(Clark_book)"
     },
     {
+     "id": "the-guns-of-august-1962",
      "title": "The Guns of August",
-     "author": "Barbara W. Tuchman",
+     "authors": "Barbara W. Tuchman",
      "year": 1962,
-     "note": "Barbara Tuchman's The Guns of August (1962), a Pulitzer winner, covers the first month of the war and reportedly influenced John F.",
-     "url": "https://en.wikipedia.org/wiki/The_Guns_of_August"
+     "type": "book",
+     "file": "summaries/the-guns-of-august-1962.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/The_Guns_of_August"
     },
     {
+     "id": "the-war-that-ended-peace-2013",
      "title": "The War That Ended Peace",
-     "author": "Margaret MacMillan",
+     "authors": "Margaret MacMillan",
      "year": 2013,
-     "note": "Margaret MacMillan's The War That Ended Peace (2013) offers another excellent, balanced account of the road to war.",
-     "url": "https://en.wikipedia.org/wiki/Margaret_MacMillan"
-    },
-    {
-     "title": "Causes of World War I",
-     "author": "Wikipedia",
-     "year": 2024,
-     "note": "A short public overview of Causes of World War I, with the main dates and further references.",
-     "url": "https://en.wikipedia.org/wiki/Causes_of_World_War_I"
+     "type": "book",
+     "file": "summaries/the-war-that-ended-peace-2013.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Margaret_MacMillan"
     }
    ]
   },
@@ -1120,35 +971,24 @@
    "paths": [
     "collapse"
    ],
-   "goDeeper": [],
-   "furtherReading": [
+   "goDeeper": [
     {
+     "id": "the-mediterranean-and-the-mediterranean-world-in-t-1949",
      "title": "The Mediterranean and the Mediterranean World in the Age of Philip II",
-     "author": "Fernand Braudel",
+     "authors": "Fernand Braudel",
      "year": 1949,
-     "note": "Fernand Braudel's The Mediterranean and the Mediterranean World in the Age of Philip II, first published in 1949 and largely drafted while he was a prisoner of war in Germany, is one of the most ambitious history books ever written.",
-     "url": "https://en.wikipedia.org/wiki/Fernand_Braudel"
+     "type": "book",
+     "file": "summaries/the-mediterranean-and-the-mediterranean-world-in-t-1949.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Fernand_Braudel"
     },
     {
-     "title": "Longue durée",
-     "author": "Wikipedia",
-     "year": 2024,
-     "note": "A short public overview of Longue durée, with the main dates and further references.",
-     "url": "https://en.wikipedia.org/wiki/Longue_dur%C3%A9e"
-    },
-    {
+     "id": "the-corrupting-sea-2000",
      "title": "The Corrupting Sea",
-     "author": "Peregrine Horden & Nicholas Purcell",
+     "authors": "Peregrine Horden & Nicholas Purcell",
      "year": 2000,
-     "note": "A modern successor to his Mediterranean is The Corrupting Sea (2000) by Peregrine Horden and Nicholas Purcell, which emphasises the Mediterranean's fragmented micro-regions and their connectivity.",
-     "url": "https://en.wikipedia.org/wiki/The_Corrupting_Sea"
-    },
-    {
-     "title": "Annales school",
-     "author": "Wikipedia",
-     "year": 2024,
-     "note": "A short public overview of Annales school, with the main dates and further references.",
-     "url": "https://en.wikipedia.org/wiki/Annales_school"
+     "type": "book",
+     "file": "summaries/the-corrupting-sea-2000.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/The_Corrupting_Sea"
     }
    ]
   },
@@ -1168,35 +1008,42 @@
     "biases"
    ],
    "caution": "The priming studies cited in the book (e.g. elderly-word priming slowing walking speed) have largely failed to replicate; Kahneman publicly acknowledged this.",
-   "goDeeper": [],
-   "furtherReading": [
+   "goDeeper": [
     {
+     "id": "thinking-fast-and-slow-2011",
      "title": "Thinking, Fast and Slow",
-     "author": "Daniel Kahneman",
+     "authors": "Daniel Kahneman",
      "year": 2011,
-     "note": "Daniel Kahneman's Thinking, Fast and Slow (2011) popularised a framework that psychologists call dual-process theory.",
-     "url": "https://en.wikipedia.org/wiki/Thinking,_Fast_and_Slow"
+     "type": "book",
+     "file": "summaries/thinking-fast-and-slow-2011.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Thinking,_Fast_and_Slow"
     },
     {
+     "id": "judgment-under-uncertainty-heuristics-and-biases-1974",
      "title": "Judgment under Uncertainty: Heuristics and Biases",
-     "author": "Tversky & Kahneman",
+     "authors": "Tversky & Kahneman",
      "year": 1974,
-     "note": "Daniel Kahneman's Thinking, Fast and Slow (2011) popularised a framework that psychologists call dual-process theory.",
-     "url": "https://doi.org/10.1126/science.185.4157.1124"
+     "type": "paper",
+     "file": "summaries/judgment-under-uncertainty-heuristics-and-biases-1974.html",
+     "sourceUrl": "https://doi.org/10.1126/science.185.4157.1124"
     },
     {
+     "id": "cognitive-reflection-and-decision-making-2005",
      "title": "Cognitive Reflection and Decision Making",
-     "author": "Shane Frederick",
+     "authors": "Shane Frederick",
      "year": 2005,
-     "note": "Frederick's Cognitive Reflection Test, a short measure of the slow, deliberative system.",
-     "url": "https://doi.org/10.1257/089533005775196732"
+     "type": "paper",
+     "file": "summaries/cognitive-reflection-and-decision-making-2005.html",
+     "sourceUrl": "https://doi.org/10.1257/089533005775196732"
     },
     {
+     "id": "dual-process-theories-of-higher-cognition-advancin-2013",
      "title": "Dual-Process Theories of Higher Cognition: Advancing the Debate",
-     "author": "Evans & Stanovich",
+     "authors": "Evans & Stanovich",
      "year": 2013,
-     "note": "The broader dual-process framework is better supported, though Evans and Stanovich's 2013 review discusses the many variants and the criticisms.",
-     "url": "https://doi.org/10.1177/1745691612460685"
+     "type": "paper",
+     "file": "summaries/dual-process-theories-of-higher-cognition-advancin-2013.html",
+     "sourceUrl": "https://doi.org/10.1177/1745691612460685"
     }
    ]
   },
@@ -1217,47 +1064,40 @@
    ],
    "goDeeper": [
     {
-     "id": "saposnik-2016",
-     "title": "Cognitive biases associated with medical decisions: a systematic review",
-     "authors": "Gustavo Saposnik, Donald Redelmeier, Christian C Ruff, Philippe N Tobler",
-     "year": 2016,
-     "venue": "BMC Medical Informatics and Decision Making",
-     "license": "cc-by",
-     "licenseName": "Creative Commons Attribution 4.0",
-     "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-     "attribution": "Gustavo Saposnik, Donald Redelmeier, Christian C Ruff, Philippe N Tobler (2016). Cognitive biases associated with medical decisions: a systematic review. BMC Medical Informatics and Decision Making. Creative Commons Attribution 4.0.",
-     "sourceUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5093937/",
-     "file": "texts/saposnik-2016.html"
-    }
-   ],
-   "furtherReading": [
-    {
+     "id": "judgment-under-uncertainty-heuristics-and-biases-1974",
      "title": "Judgment under Uncertainty: Heuristics and Biases",
-     "author": "Amos Tversky & Daniel Kahneman",
+     "authors": "Amos Tversky & Daniel Kahneman",
      "year": 1974,
-     "note": "In their 1974 Science paper, Amos Tversky and Daniel Kahneman described an experiment in which a wheel of fortune, rigged to stop at either 10 or 65, was spun in front of participants.",
-     "url": "https://doi.org/10.1126/science.185.4157.1124"
+     "type": "paper",
+     "file": "summaries/judgment-under-uncertainty-heuristics-and-biases-1974.html",
+     "sourceUrl": "https://doi.org/10.1126/science.185.4157.1124"
     },
     {
+     "id": "a-literature-review-of-the-anchoring-effect-2011",
      "title": "A literature review of the anchoring effect",
-     "author": "Furnham & Boo",
+     "authors": "Furnham & Boo",
      "year": 2011,
-     "note": "Furnham and Boo's 2011 review summarises decades of work across domains, including expertise: experts are generally susceptible, not immune.",
-     "url": "https://doi.org/10.1016/j.socec.2010.10.008"
+     "type": "paper",
+     "file": "summaries/a-literature-review-of-the-anchoring-effect-2011.html",
+     "sourceUrl": "https://doi.org/10.1016/j.socec.2010.10.008"
     },
     {
+     "id": "investigating-variation-in-replicability-a-many-la-2014",
      "title": "Investigating Variation in Replicability: A Many Labs Replication Project",
-     "author": "Klein et al.",
+     "authors": "Klein et al.",
      "year": 2014,
-     "note": "The Many Labs 1 project, which this card says replicated anchoring and found it among the more robust effects.",
-     "url": "https://doi.org/10.1027/1864-9335/a000178"
+     "type": "paper",
+     "file": "summaries/investigating-variation-in-replicability-a-many-la-2014.html",
+     "sourceUrl": "https://doi.org/10.1027/1864-9335/a000178"
     },
     {
+     "id": "playing-dice-with-criminal-sentences-the-influence-2006",
      "title": "Playing Dice With Criminal Sentences: The Influence of Irrelevant Anchors on Experts' Judicial Decision Making",
-     "author": "Englich, Mussweiler & Strack",
+     "authors": "Englich, Mussweiler & Strack",
      "year": 2006,
-     "note": "An experiment on irrelevant anchors and criminal sentences, the judicial case this card mentions.",
-     "url": "https://doi.org/10.1177/0146167205282152"
+     "type": "paper",
+     "file": "summaries/playing-dice-with-criminal-sentences-the-influence-2006.html",
+     "sourceUrl": "https://doi.org/10.1177/0146167205282152"
     }
    ]
   },
@@ -1278,47 +1118,40 @@
    ],
    "goDeeper": [
     {
-     "id": "saposnik-2016",
-     "title": "Cognitive biases associated with medical decisions: a systematic review",
-     "authors": "Gustavo Saposnik, Donald Redelmeier, Christian C Ruff, Philippe N Tobler",
-     "year": 2016,
-     "venue": "BMC Medical Informatics and Decision Making",
-     "license": "cc-by",
-     "licenseName": "Creative Commons Attribution 4.0",
-     "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-     "attribution": "Gustavo Saposnik, Donald Redelmeier, Christian C Ruff, Philippe N Tobler (2016). Cognitive biases associated with medical decisions: a systematic review. BMC Medical Informatics and Decision Making. Creative Commons Attribution 4.0.",
-     "sourceUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5093937/",
-     "file": "texts/saposnik-2016.html"
-    }
-   ],
-   "furtherReading": [
-    {
+     "id": "availability-a-heuristic-for-judging-frequency-and-1973",
      "title": "Availability: A heuristic for judging frequency and probability",
-     "author": "Amos Tversky & Daniel Kahneman",
+     "authors": "Amos Tversky & Daniel Kahneman",
      "year": 1973,
-     "note": "The availability heuristic, described by Amos Tversky and Daniel Kahneman in 1973, is the tendency to judge how frequent or likely something is by how easily examples come to mind.",
-     "url": "https://doi.org/10.1016/0010-0285(73)90033-9"
+     "type": "paper",
+     "file": "summaries/availability-a-heuristic-for-judging-frequency-and-1973.html",
+     "sourceUrl": "https://doi.org/10.1016/0010-0285(73)90033-9"
     },
     {
+     "id": "ease-of-retrieval-as-information-another-look-at-t-1991",
      "title": "Ease of retrieval as information: Another look at the availability heuristic",
-     "author": "Schwarz et al.",
+     "authors": "Schwarz et al.",
      "year": 1991,
-     "note": "Norbert Schwarz and colleagues refined the idea in 1991 with a clever twist: people asked to recall twelve examples of their own assertive behaviour rated themselves as less assertive than people asked to recall six, because recalling twelve felt hard.",
-     "url": "https://doi.org/10.1037/0022-3514.61.2.195"
+     "type": "paper",
+     "file": "summaries/ease-of-retrieval-as-information-another-look-at-t-1991.html",
+     "sourceUrl": "https://doi.org/10.1037/0022-3514.61.2.195"
     },
     {
+     "id": "availability-cascades-and-risk-regulation-1999",
      "title": "Availability Cascades and Risk Regulation",
-     "author": "Kuran & Sunstein",
+     "authors": "Kuran & Sunstein",
      "year": 1999,
-     "note": "Cass Sunstein and Timur Kuran later described availability cascades, in which media attention and public concern reinforce each other.",
-     "url": "https://doi.org/10.2307/1229439"
+     "type": "paper",
+     "file": "summaries/availability-cascades-and-risk-regulation-1999.html",
+     "sourceUrl": "https://doi.org/10.2307/1229439"
     },
     {
+     "id": "perception-of-risk-1987",
      "title": "Perception of risk",
-     "author": "Paul Slovic",
+     "authors": "Paul Slovic",
      "year": 1987,
-     "note": "Paul Slovic and colleagues documented these risk misperceptions in classic studies.",
-     "url": "https://doi.org/10.1126/science.3563507"
+     "type": "paper",
+     "file": "summaries/perception-of-risk-1987.html",
+     "sourceUrl": "https://doi.org/10.1126/science.3563507"
     }
    ]
   },
@@ -1338,35 +1171,42 @@
     "biases"
    ],
    "caution": "The size and generality of loss aversion is contested (see Gal & Rucker, 2018); reference dependence itself is well supported.",
-   "goDeeper": [],
-   "furtherReading": [
+   "goDeeper": [
     {
+     "id": "prospect-theory-an-analysis-of-decision-under-risk-1979",
      "title": "Prospect Theory: An Analysis of Decision under Risk",
-     "author": "Daniel Kahneman & Amos Tversky",
+     "authors": "Daniel Kahneman & Amos Tversky",
      "year": 1979,
-     "note": "In 1979 Daniel Kahneman and Amos Tversky published Prospect Theory: An Analysis of Decision under Risk in Econometrica, one of the most cited papers in economics.",
-     "url": "https://doi.org/10.2307/1914185"
+     "type": "paper",
+     "file": "summaries/prospect-theory-an-analysis-of-decision-under-risk-1979.html",
+     "sourceUrl": "https://doi.org/10.2307/1914185"
     },
     {
+     "id": "the-loss-of-loss-aversion-will-it-loom-larger-than-2018",
      "title": "The Loss of Loss Aversion: Will It Loom Larger Than Its Gain?",
-     "author": "Gal & Rucker",
+     "authors": "Gal & Rucker",
      "year": 2018,
-     "note": "Gal and Rucker argued in 2018 that many classic demonstrations can be explained by status quo bias or inertia rather than losses truly looming larger than gains, and that loss aversion appears mainly for large stakes.",
-     "url": "https://doi.org/10.1002/jcpy.1047"
+     "type": "paper",
+     "file": "summaries/the-loss-of-loss-aversion-will-it-loom-larger-than-2018.html",
+     "sourceUrl": "https://doi.org/10.1002/jcpy.1047"
     },
     {
+     "id": "experimental-tests-of-the-endowment-effect-and-the-1990",
      "title": "Experimental Tests of the Endowment Effect and the Coase Theorem",
-     "author": "Kahneman, Knetsch & Thaler",
+     "authors": "Kahneman, Knetsch & Thaler",
      "year": 1990,
-     "note": "In 1979 Daniel Kahneman and Amos Tversky published Prospect Theory: An Analysis of Decision under Risk in Econometrica, one of the most cited papers in economics.",
-     "url": "https://doi.org/10.1086/261737"
+     "type": "paper",
+     "file": "summaries/experimental-tests-of-the-endowment-effect-and-the-1990.html",
+     "sourceUrl": "https://doi.org/10.1086/261737"
     },
     {
+     "id": "misbehaving-the-making-of-behavioral-economics-2015",
      "title": "Misbehaving: The Making of Behavioral Economics",
-     "author": "Richard H. Thaler",
+     "authors": "Richard H. Thaler",
      "year": 2015,
-     "note": "Thaler's account of how prospect theory and the endowment effect entered economics.",
-     "url": "https://en.wikipedia.org/wiki/Misbehaving_(book)"
+     "type": "book",
+     "file": "summaries/misbehaving-the-making-of-behavioral-economics-2015.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Misbehaving_(book)"
     }
    ]
   },
@@ -1385,35 +1225,42 @@
    "paths": [
     "biases"
    ],
-   "goDeeper": [],
-   "furtherReading": [
+   "goDeeper": [
     {
+     "id": "the-framing-of-decisions-and-the-psychology-of-cho-1981",
      "title": "The Framing of Decisions and the Psychology of Choice",
-     "author": "Amos Tversky & Daniel Kahneman",
+     "authors": "Amos Tversky & Daniel Kahneman",
      "year": 1981,
-     "note": "In a 1981 Science paper, Amos Tversky and Daniel Kahneman presented what became known as the Asian disease problem.",
-     "url": "https://doi.org/10.1126/science.7455683"
+     "type": "paper",
+     "file": "summaries/the-framing-of-decisions-and-the-psychology-of-cho-1981.html",
+     "sourceUrl": "https://doi.org/10.1126/science.7455683"
     },
     {
+     "id": "on-the-elicitation-of-preferences-for-alternative-1982",
      "title": "On the elicitation of preferences for alternative therapies",
-     "author": "McNeil, Pauker, Sox & Tversky",
+     "authors": "McNeil, Pauker, Sox & Tversky",
      "year": 1982,
-     "note": "In a 1981 Science paper, Amos Tversky and Daniel Kahneman presented what became known as the Asian disease problem.",
-     "url": "https://doi.org/10.1056/NEJM198205273062103"
+     "type": "paper",
+     "file": "summaries/on-the-elicitation-of-preferences-for-alternative-1982.html",
+     "sourceUrl": "https://doi.org/10.1056/NEJM198205273062103"
     },
     {
+     "id": "the-influence-of-framing-on-risky-decisions-a-meta-1998",
      "title": "The Influence of Framing on Risky Decisions: A Meta-analysis",
-     "author": "Anton Kühberger",
+     "authors": "Anton Kühberger",
      "year": 1998,
-     "note": "A 1998 meta-analysis by Kühberger found framing effects reliable but sensitive to task details, and the Asian disease effect replicated in the Many Labs projects.",
-     "url": "https://doi.org/10.1006/obhd.1998.2781"
+     "type": "paper",
+     "file": "summaries/the-influence-of-framing-on-risky-decisions-a-meta-1998.html",
+     "sourceUrl": "https://doi.org/10.1006/obhd.1998.2781"
     },
     {
+     "id": "thinking-fast-and-slow-2011",
      "title": "Thinking, Fast and Slow",
-     "author": "Daniel Kahneman",
+     "authors": "Daniel Kahneman",
      "year": 2011,
-     "note": "In a 1981 Science paper, Amos Tversky and Daniel Kahneman presented what became known as the Asian disease problem.",
-     "url": "https://en.wikipedia.org/wiki/Thinking,_Fast_and_Slow"
+     "type": "book",
+     "file": "summaries/thinking-fast-and-slow-2011.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Thinking,_Fast_and_Slow"
     }
    ]
   },
@@ -1432,35 +1279,42 @@
    "paths": [
     "biases"
    ],
-   "goDeeper": [],
-   "furtherReading": [
+   "goDeeper": [
     {
+     "id": "confirmation-bias-a-ubiquitous-phenomenon-in-many-1998",
      "title": "Confirmation bias: A ubiquitous phenomenon in many guises",
-     "author": "Raymond S. Nickerson",
+     "authors": "Raymond S. Nickerson",
      "year": 1998,
-     "note": "Raymond Nickerson's 1998 review documented confirmation bias across science, law, medicine and everyday reasoning.",
-     "url": "https://doi.org/10.1037/1089-2680.2.2.175"
+     "type": "paper",
+     "file": "summaries/confirmation-bias-a-ubiquitous-phenomenon-in-many-1998.html",
+     "sourceUrl": "https://doi.org/10.1037/1089-2680.2.2.175"
     },
     {
+     "id": "on-the-failure-to-eliminate-hypotheses-in-a-concep-1960",
      "title": "On the failure to eliminate hypotheses in a conceptual task",
-     "author": "P. C. Wason",
+     "authors": "P. C. Wason",
      "year": 1960,
-     "note": "Peter Wason's 2-4-6 task from 1960 is a classic demonstration.",
-     "url": "https://doi.org/10.1080/17470216008416717"
+     "type": "paper",
+     "file": "summaries/on-the-failure-to-eliminate-hypotheses-in-a-concep-1960.html",
+     "sourceUrl": "https://doi.org/10.1080/17470216008416717"
     },
     {
+     "id": "why-do-humans-reason-arguments-for-an-argumentativ-2011",
      "title": "Why do humans reason? Arguments for an argumentative theory",
-     "author": "Mercier & Sperber",
+     "authors": "Mercier & Sperber",
      "year": 2011,
-     "note": "Hugo Mercier and Dan Sperber offered a provocative explanation in The Enigma of Reason (2017): human reasoning did not evolve to find truth in isolation but to produce arguments that persuade others and to evaluate others' arguments.",
-     "url": "https://doi.org/10.1017/S0140525X10000968"
+     "type": "paper",
+     "file": "summaries/why-do-humans-reason-arguments-for-an-argumentativ-2011.html",
+     "sourceUrl": "https://doi.org/10.1017/S0140525X10000968"
     },
     {
+     "id": "the-enigma-of-reason-2017",
      "title": "The Enigma of Reason",
-     "author": "Hugo Mercier & Dan Sperber",
+     "authors": "Hugo Mercier & Dan Sperber",
      "year": 2017,
-     "note": "Hugo Mercier and Dan Sperber offered a provocative explanation in The Enigma of Reason (2017): human reasoning did not evolve to find truth in isolation but to produce arguments that persuade others and to evaluate others' arguments.",
-     "url": "https://www.hup.harvard.edu/books/9780674237827"
+     "type": "book",
+     "file": "summaries/the-enigma-of-reason-2017.html",
+     "sourceUrl": "https://www.hup.harvard.edu/books/9780674237827"
     }
    ]
   },
@@ -1481,35 +1335,15 @@
     "replication"
    ],
    "caution": "Part of the classic pattern can be produced by regression to the mean and measurement noise; the popular 'Mount Stupid' curve is not in the original paper.",
-   "goDeeper": [],
-   "furtherReading": [
+   "goDeeper": [
     {
+     "id": "unskilled-and-unaware-of-it-1999",
      "title": "Unskilled and unaware of it",
-     "author": "Justin Kruger & David Dunning",
+     "authors": "Justin Kruger & David Dunning",
      "year": 1999,
-     "note": "In 1999 Justin Kruger and David Dunning published Unskilled and Unaware of It in the Journal of Personality and Social Psychology.",
-     "url": "https://doi.org/10.1037/0022-3514.77.6.1121"
-    },
-    {
-     "title": "Random Number Simulations Reveal How Random Noise Affects the Measurements and Graphical Portrayals of Self-Assessed Competency",
-     "author": "Nuhfer et al.",
-     "year": 2016,
-     "note": "Nuhfer and colleagues showed in 2016 that random data can reproduce the classic Dunning-Kruger graph, and in 2017 that self-assessments of well-measured competence were reasonably accurate.",
-     "url": "https://doi.org/10.5038/1936-4660.9.1.4"
-    },
-    {
-     "title": "The Dunning-Kruger effect is (mostly) a statistical artefact",
-     "author": "Gignac & Zajenkowski",
-     "year": 2020,
-     "note": "Gignac and Zajenkowski in 2020 used more appropriate statistical tests on intelligence data and found only weak evidence for the effect.",
-     "url": "https://doi.org/10.1016/j.intell.2020.101449"
-    },
-    {
-     "title": "Dunning–Kruger effect",
-     "author": "Wikipedia",
-     "year": 2024,
-     "note": "A short public overview of Dunning–Kruger effect, with the main dates and further references.",
-     "url": "https://en.wikipedia.org/wiki/Dunning%E2%80%93Kruger_effect"
+     "type": "paper",
+     "file": "summaries/unskilled-and-unaware-of-it-1999.html",
+     "sourceUrl": "https://doi.org/10.1037/0022-3514.77.6.1121"
     }
    ]
   },
@@ -1528,35 +1362,33 @@
    "paths": [
     "biases"
    ],
-   "goDeeper": [],
-   "furtherReading": [
+   "goDeeper": [
     {
+     "id": "exploring-the-planning-fallacy-1994",
      "title": "Exploring the planning fallacy",
-     "author": "Buehler, Griffin & Ross",
+     "authors": "Buehler, Griffin & Ross",
      "year": 1994,
-     "note": "In a 1994 study, Roger Buehler, Dale Griffin and Michael Ross asked psychology students to estimate when they would finish their honours theses.",
-     "url": "https://doi.org/10.1037/0022-3514.67.3.366"
+     "type": "paper",
+     "file": "summaries/exploring-the-planning-fallacy-1994.html",
+     "sourceUrl": "https://doi.org/10.1037/0022-3514.67.3.366"
     },
     {
+     "id": "from-nobel-prize-to-project-management-getting-ris-2006",
      "title": "From Nobel Prize to Project Management: Getting Risks Right",
-     "author": "Bent Flyvbjerg",
+     "authors": "Bent Flyvbjerg",
      "year": 2006,
-     "note": "The Danish planning scholar Bent Flyvbjerg has applied this to megaprojects such as bridges, rail lines, Olympic Games and IT systems, finding that the great majority run over budget or schedule, often dramatically.",
-     "url": "https://doi.org/10.1177/875697280603700302"
+     "type": "paper",
+     "file": "summaries/from-nobel-prize-to-project-management-getting-ris-2006.html",
+     "sourceUrl": "https://doi.org/10.1177/875697280603700302"
     },
     {
+     "id": "how-big-things-get-done-2023",
      "title": "How Big Things Get Done",
-     "author": "Bent Flyvbjerg & Dan Gardner",
+     "authors": "Bent Flyvbjerg & Dan Gardner",
      "year": 2023,
-     "note": "The Danish planning scholar Bent Flyvbjerg has applied this to megaprojects such as bridges, rail lines, Olympic Games and IT systems, finding that the great majority run over budget or schedule, often dramatically.",
-     "url": "https://en.wikipedia.org/wiki/Bent_Flyvbjerg"
-    },
-    {
-     "title": "Planning fallacy",
-     "author": "Wikipedia",
-     "year": 2024,
-     "note": "A short public overview of Planning fallacy, with the main dates and further references.",
-     "url": "https://en.wikipedia.org/wiki/Planning_fallacy"
+     "type": "book",
+     "file": "summaries/how-big-things-get-done-2023.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Bent_Flyvbjerg"
     }
    ]
   },
@@ -1578,60 +1410,49 @@
    "caution": "Large preregistered multi-lab replications (2016, 2021) found effects near zero. Treat ego depletion as unproven.",
    "goDeeper": [
     {
-     "id": "ml3-ego-2018",
+     "id": "ego-depletion-is-the-active-self-a-limited-resourc-1998",
+     "title": "Ego depletion: Is the active self a limited resource?",
+     "authors": "Baumeister, Bratslavsky, Muraven & Tice",
+     "year": 1998,
+     "type": "paper",
+     "file": "summaries/ego-depletion-is-the-active-self-a-limited-resourc-1998.html",
+     "sourceUrl": "https://doi.org/10.1037/0022-3514.74.5.1252"
+    },
+    {
+     "id": "a-multilab-preregistered-replication-of-the-ego-de-2016",
+     "title": "A Multilab Preregistered Replication of the Ego-Depletion Effect",
+     "authors": "Hagger et al.",
+     "year": 2016,
+     "type": "paper",
+     "file": "summaries/a-multilab-preregistered-replication-of-the-ego-de-2016.html",
+     "sourceUrl": "https://doi.org/10.1177/1745691616652873"
+    },
+    {
+     "id": "a-multisite-preregistered-paradigmatic-test-of-the-2021",
+     "title": "A Multisite Preregistered Paradigmatic Test of the Ego-Depletion Effect",
+     "authors": "Vohs et al.",
+     "year": 2021,
+     "type": "paper",
+     "file": "summaries/a-multisite-preregistered-paradigmatic-test-of-the-2021.html",
+     "sourceUrl": "https://doi.org/10.1177/0956797621989733"
+    },
+    {
+     "id": "ego-depletion-is-it-all-in-your-head-2010",
+     "title": "Ego depletion—Is it all in your head?",
+     "authors": "Job, Dweck & Walton",
+     "year": 2010,
+     "type": "paper",
+     "file": "summaries/ego-depletion-is-it-all-in-your-head-2010.html",
+     "sourceUrl": "https://doi.org/10.1177/0956797610384745"
+    },
+    {
+     "id": "searching-for-the-bottom-of-the-ego-well-failure-t-2018",
      "title": "Searching for the bottom of the ego well: failure to uncover ego depletion in Many Labs 3",
      "authors": "Miguel A Vadillo, Natalie Gold, Magda Osman",
      "year": 2018,
-     "venue": "Royal Society Open Science",
-     "license": "cc-by",
-     "licenseName": "Creative Commons Attribution 4.0",
-     "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-     "attribution": "Miguel A Vadillo, Natalie Gold, Magda Osman (2018). Searching for the bottom of the ego well: failure to uncover ego depletion in Many Labs 3. Royal Society Open Science. Creative Commons Attribution 4.0.",
-     "sourceUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6124090/",
-     "file": "texts/ml3-ego-2018.html"
-    },
-    {
-     "id": "plos-ego-2016",
-     "title": "No Evidence of the Ego-Depletion Effect across Task Characteristics and Individual Differences: A Pre-Registered Study",
-     "authors": "John H Lurquin, Laura E Michaelson, Jane E Barker, Daniel E Gustavson, Claudia C von Bastian, Nicholas P Carruth et al.",
-     "year": 2016,
-     "venue": "PLoS ONE",
-     "license": "cc-by",
-     "licenseName": "Creative Commons Attribution 4.0",
-     "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
-     "attribution": "John H Lurquin, Laura E Michaelson, Jane E Barker, Daniel E Gustavson, Claudia C von Bastian, Nicholas P Carruth et al. (2016). No Evidence of the Ego-Depletion Effect across Task Characteristics and Individual Differences: A Pre-Registered Study. PLoS ONE. Creative Commons Attribution 4.0.",
-     "sourceUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4749338/",
-     "file": "texts/plos-ego-2016.html"
-    }
-   ],
-   "furtherReading": [
-    {
-     "title": "Ego depletion: Is the active self a limited resource?",
-     "author": "Baumeister, Bratslavsky, Muraven & Tice",
-     "year": 1998,
-     "note": "In 1998 Roy Baumeister and colleagues published a study that launched a huge research programme.",
-     "url": "https://doi.org/10.1037/0022-3514.74.5.1252"
-    },
-    {
-     "title": "A Multilab Preregistered Replication of the Ego-Depletion Effect",
-     "author": "Hagger et al.",
-     "year": 2016,
-     "note": "The preregistered multilab replication of ego depletion that this card treats as a failed effect.",
-     "url": "https://doi.org/10.1177/1745691616652873"
-    },
-    {
-     "title": "A Multisite Preregistered Paradigmatic Test of the Ego-Depletion Effect",
-     "author": "Vohs et al.",
-     "year": 2021,
-     "note": "A later multisite preregistered test of ego depletion, part of the same replication debate.",
-     "url": "https://doi.org/10.1177/0956797621989733"
-    },
-    {
-     "title": "Ego depletion—Is it all in your head?",
-     "author": "Job, Dweck & Walton",
-     "year": 2010,
-     "note": "An alternative theory from Veronika Job, Carol Dweck and Gregory Walton suggests that depletion effects appear mainly in people who believe willpower is limited.",
-     "url": "https://doi.org/10.1177/0956797610384745"
+     "type": "paper",
+     "file": "summaries/searching-for-the-bottom-of-the-ego-well-failure-t-2018.html",
+     "sourceUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6124090/"
     }
    ]
   },
@@ -1651,35 +1472,42 @@
     "replication"
    ],
    "caution": "Hormonal and behavioural effects did not replicate; the original first author disavowed the effect in 2016. A small effect on feeling powerful may exist.",
-   "goDeeper": [],
-   "furtherReading": [
+   "goDeeper": [
     {
+     "id": "power-posing-brief-nonverbal-displays-affect-neuro-2010",
      "title": "Power Posing: Brief Nonverbal Displays Affect Neuroendocrine Levels and Risk Tolerance",
-     "author": "Carney, Cuddy & Yap",
+     "authors": "Carney, Cuddy & Yap",
      "year": 2010,
-     "note": "In 2010 Dana Carney, Amy Cuddy and Andy Yap published a study in Psychological Science claiming that holding expansive, high-power poses for two minutes, such as standing with hands on hips or leaning back with feet on a desk, increased feelings of power and risk taking, raised testosterone and lowered the stress hormone cortisol.",
-     "url": "https://doi.org/10.1177/0956797610383437"
+     "type": "paper",
+     "file": "summaries/power-posing-brief-nonverbal-displays-affect-neuro-2010.html",
+     "sourceUrl": "https://doi.org/10.1177/0956797610383437"
     },
     {
+     "id": "assessing-the-robustness-of-power-posing-no-effect-2015",
      "title": "Assessing the Robustness of Power Posing: No Effect on Hormones and Risk Tolerance in a Large Sample of Men and Women",
-     "author": "Ranehill et al.",
+     "authors": "Ranehill et al.",
      "year": 2015,
-     "note": "In 2015 Eva Ranehill and colleagues ran a replication with around 200 participants and found no effect on hormones or risk taking, though people did report feeling slightly more powerful.",
-     "url": "https://doi.org/10.1177/0956797614553946"
+     "type": "paper",
+     "file": "summaries/assessing-the-robustness-of-power-posing-no-effect-2015.html",
+     "sourceUrl": "https://doi.org/10.1177/0956797614553946"
     },
     {
+     "id": "power-posing-p-curving-the-evidence-2017",
      "title": "Power Posing: P-Curving the Evidence",
-     "author": "Simmons & Simonsohn",
+     "authors": "Simmons & Simonsohn",
      "year": 2017,
-     "note": "Simmons and Simonsohn's 2017 p-curve analysis and Cuddy, Schultz and Fosse's 2018 response are a good pair to read for both sides.",
-     "url": "https://doi.org/10.1177/0956797616658563"
+     "type": "paper",
+     "file": "summaries/power-posing-p-curving-the-evidence-2017.html",
+     "sourceUrl": "https://doi.org/10.1177/0956797616658563"
     },
     {
+     "id": "p-curving-a-more-comprehensive-body-of-research-on-2018",
      "title": "P-Curving a More Comprehensive Body of Research on Postural Feedback Reveals Clear Evidential Value for Power-Posing Effects",
-     "author": "Cuddy, Schultz & Fosse",
+     "authors": "Cuddy, Schultz & Fosse",
      "year": 2018,
-     "note": "In 2010 Dana Carney, Amy Cuddy and Andy Yap published a study in Psychological Science claiming that holding expansive, high-power poses for two minutes, such as standing with hands on hips or leaning back with feet on a desk, increased feelings of power and risk taking, raised testosterone and lowered the stress hormone cortisol.",
-     "url": "https://doi.org/10.1177/0956797617746749"
+     "type": "paper",
+     "file": "summaries/p-curving-a-more-comprehensive-body-of-research-on-2018.html",
+     "sourceUrl": "https://doi.org/10.1177/0956797617746749"
     }
    ]
   },
@@ -1700,40 +1528,40 @@
    ],
    "goDeeper": [
     {
-     "id": "ioannidis-2005",
+     "id": "estimating-the-reproducibility-of-psychological-sc-2015",
+     "title": "Estimating the reproducibility of psychological science",
+     "authors": "Open Science Collaboration",
+     "year": 2015,
+     "type": "paper",
+     "file": "summaries/estimating-the-reproducibility-of-psychological-sc-2015.html",
+     "sourceUrl": "https://doi.org/10.1126/science.aac4716"
+    },
+    {
+     "id": "false-positive-psychology-2011",
+     "title": "False-Positive Psychology",
+     "authors": "Simmons, Nelson & Simonsohn",
+     "year": 2011,
+     "type": "paper",
+     "file": "summaries/false-positive-psychology-2011.html",
+     "sourceUrl": "https://doi.org/10.1177/0956797611417632"
+    },
+    {
+     "id": "evaluating-the-replicability-of-social-science-exp-2018",
+     "title": "Evaluating the replicability of social science experiments in Nature and Science between 2010 and 2015",
+     "authors": "Camerer et al.",
+     "year": 2018,
+     "type": "paper",
+     "file": "summaries/evaluating-the-replicability-of-social-science-exp-2018.html",
+     "sourceUrl": "https://doi.org/10.1038/s41562-018-0399-z"
+    },
+    {
+     "id": "why-most-published-research-findings-are-false-2005",
      "title": "Why Most Published Research Findings Are False",
      "authors": "John P A Ioannidis",
      "year": 2005,
-     "venue": "PLoS Medicine",
-     "license": "cc-by",
-     "licenseName": "Creative Commons Attribution 4.0",
-     "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
-     "attribution": "John P A Ioannidis (2005). Why Most Published Research Findings Are False. PLoS Medicine. Creative Commons Attribution 4.0.",
-     "sourceUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1182327/",
-     "file": "texts/ioannidis-2005.html"
-    }
-   ],
-   "furtherReading": [
-    {
-     "title": "Estimating the reproducibility of psychological science",
-     "author": "Open Science Collaboration",
-     "year": 2015,
-     "note": "In 2015 the Open Science Collaboration, a group of 270 researchers led by Brian Nosek, published the results of an attempt to replicate 100 studies from three leading psychology journals.",
-     "url": "https://doi.org/10.1126/science.aac4716"
-    },
-    {
-     "title": "False-Positive Psychology",
-     "author": "Simmons, Nelson & Simonsohn",
-     "year": 2011,
-     "note": "In 2011 Joseph Simmons, Leif Nelson and Uri Simonsohn showed that common practices, such as testing several outcomes, adding participants until results became significant, or dropping conditions, which they later called p-hacking, could make almost any hypothesis look supported; they even demonstrated that listening to a Beatles song made participants younger.",
-     "url": "https://doi.org/10.1177/0956797611417632"
-    },
-    {
-     "title": "Evaluating the replicability of social science experiments in Nature and Science between 2010 and 2015",
-     "author": "Camerer et al.",
-     "year": 2018,
-     "note": "Camerer and colleagues found in 2018 that replications of social science experiments published in Nature and Science succeeded about 62 per cent of the time, and that prediction markets of researchers could forecast which ones would replicate.",
-     "url": "https://doi.org/10.1038/s41562-018-0399-z"
+     "type": "paper",
+     "file": "summaries/why-most-published-research-findings-are-false-2005.html",
+     "sourceUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1182327/"
     }
    ]
   },
@@ -1754,35 +1582,33 @@
     "social"
    ],
    "caution": "Archival evidence shows guards were coached and participants felt demand to perform; the classic 'situations make people cruel' lesson is not supported as taught.",
-   "goDeeper": [],
-   "furtherReading": [
+   "goDeeper": [
     {
+     "id": "debunking-the-stanford-prison-experiment-2019",
      "title": "Debunking the Stanford Prison Experiment",
-     "author": "Thibault Le Texier",
+     "authors": "Thibault Le Texier",
      "year": 2019,
-     "note": "In 2018 the French researcher Thibault Le Texier published Histoire d'un mensonge, based on archival recordings and documents, and a 2019 article in American Psychologist.",
-     "url": "https://doi.org/10.1037/amp0000401"
+     "type": "paper",
+     "file": "summaries/debunking-the-stanford-prison-experiment-2019.html",
+     "sourceUrl": "https://doi.org/10.1037/amp0000401"
     },
     {
+     "id": "rethinking-the-psychology-of-tyranny-the-bbc-priso-2006",
      "title": "Rethinking the psychology of tyranny: The BBC prison study",
-     "author": "Reicher & Haslam",
+     "authors": "Reicher & Haslam",
      "year": 2006,
-     "note": "Earlier, the BBC Prison Study by Alex Haslam and Stephen Reicher in 2002 found that guards did not automatically become tyrannical.",
-     "url": "https://doi.org/10.1348/014466605X48998"
+     "type": "paper",
+     "file": "summaries/rethinking-the-psychology-of-tyranny-the-bbc-priso-2006.html",
+     "sourceUrl": "https://doi.org/10.1348/014466605X48998"
     },
     {
+     "id": "the-lucifer-effect-2007",
      "title": "The Lucifer Effect",
-     "author": "Philip Zimbardo",
+     "authors": "Philip Zimbardo",
      "year": 2007,
-     "note": "In August 1971 the Stanford psychologist Philip Zimbardo turned a basement corridor into a mock prison and randomly assigned two dozen male student volunteers to be guards or prisoners.",
-     "url": "https://en.wikipedia.org/wiki/The_Lucifer_Effect"
-    },
-    {
-     "title": "Stanford prison experiment",
-     "author": "Wikipedia",
-     "year": 2024,
-     "note": "A short public overview of Stanford prison experiment, with the main dates and further references.",
-     "url": "https://en.wikipedia.org/wiki/Stanford_prison_experiment"
+     "type": "book",
+     "file": "summaries/the-lucifer-effect-2007.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/The_Lucifer_Effect"
     }
    ]
   },
@@ -1802,35 +1628,33 @@
     "social"
    ],
    "caution": "The headline 65% comes from one variant; archival work shows deviations from the script and participant doubts about the shocks. Interpret with care.",
-   "goDeeper": [],
-   "furtherReading": [
+   "goDeeper": [
     {
+     "id": "behavioral-study-of-obedience-1963",
      "title": "Behavioral study of obedience",
-     "author": "Stanley Milgram",
+     "authors": "Stanley Milgram",
      "year": 1963,
-     "note": "In the early 1960s at Yale, Stanley Milgram recruited ordinary men from New Haven for what they were told was a study of learning and punishment.",
-     "url": "https://doi.org/10.1037/h0040525"
+     "type": "paper",
+     "file": "summaries/behavioral-study-of-obedience-1963.html",
+     "sourceUrl": "https://doi.org/10.1037/h0040525"
     },
     {
+     "id": "replicating-milgram-would-people-still-obey-today-2009",
      "title": "Replicating Milgram: Would people still obey today?",
-     "author": "Jerry M. Burger",
+     "authors": "Jerry M. Burger",
      "year": 2009,
-     "note": "Partial replications, such as Jerry Burger's in 2009, which stopped at 150 volts for ethical reasons, found similar rates of continuing.",
-     "url": "https://doi.org/10.1037/a0010932"
+     "type": "paper",
+     "file": "summaries/replicating-milgram-would-people-still-obey-today-2009.html",
+     "sourceUrl": "https://doi.org/10.1037/a0010932"
     },
     {
+     "id": "obedience-to-authority-an-experimental-view-1974",
      "title": "Obedience to Authority: An Experimental View",
-     "author": "Stanley Milgram",
+     "authors": "Stanley Milgram",
      "year": 1974,
-     "note": "In the early 1960s at Yale, Stanley Milgram recruited ordinary men from New Haven for what they were told was a study of learning and punishment.",
-     "url": "https://en.wikipedia.org/wiki/Obedience_to_Authority:_An_Experimental_View"
-    },
-    {
-     "title": "Milgram experiment",
-     "author": "Wikipedia",
-     "year": 2024,
-     "note": "A short public overview of Milgram experiment, with the main dates and further references.",
-     "url": "https://en.wikipedia.org/wiki/Milgram_experiment"
+     "type": "book",
+     "file": "summaries/obedience-to-authority-an-experimental-view-1974.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Obedience_to_Authority:_An_Experimental_View"
     }
    ]
   },
@@ -1849,35 +1673,33 @@
    "paths": [
     "social"
    ],
-   "goDeeper": [],
-   "furtherReading": [
+   "goDeeper": [
     {
+     "id": "studies-of-independence-and-conformity-i-a-minorit-1956",
      "title": "Studies of independence and conformity: I. A minority of one against a unanimous majority",
-     "author": "Solomon E. Asch",
+     "authors": "Solomon E. Asch",
      "year": 1956,
-     "note": "In the early 1950s Solomon Asch asked groups of college students to do a simple perceptual task: look at a reference line and say which of three comparison lines matched it in length.",
-     "url": "https://doi.org/10.1037/h0093718"
+     "type": "paper",
+     "file": "summaries/studies-of-independence-and-conformity-i-a-minorit-1956.html",
+     "sourceUrl": "https://doi.org/10.1037/h0093718"
     },
     {
+     "id": "culture-and-conformity-a-meta-analysis-of-studies-1996",
      "title": "Culture and conformity: A meta-analysis of studies using Asch's line judgment task",
-     "author": "Bond & Smith",
+     "authors": "Bond & Smith",
      "year": 1996,
-     "note": "A 1996 meta-analysis by Rod Bond and Peter Smith found that conformity in the Asch paradigm had declined in the United States since the 1950s, and was higher in collectivist than individualist cultures.",
-     "url": "https://doi.org/10.1037/0033-2909.119.1.111"
+     "type": "paper",
+     "file": "summaries/culture-and-conformity-a-meta-analysis-of-studies-1996.html",
+     "sourceUrl": "https://doi.org/10.1037/0033-2909.119.1.111"
     },
     {
+     "id": "a-study-of-normative-and-informational-social-infl-1955",
      "title": "A study of normative and informational social influences upon individual judgment",
-     "author": "Deutsch & Gerard",
+     "authors": "Deutsch & Gerard",
      "year": 1955,
-     "note": "Asch distinguished between people who genuinely came to doubt their perception and people who knew the majority was wrong but went along to avoid standing out, an early version of the distinction between informational and normative influence later formalised by Deutsch and Gerard in 1955.",
-     "url": "https://doi.org/10.1037/h0046408"
-    },
-    {
-     "title": "Asch conformity experiments",
-     "author": "Wikipedia",
-     "year": 2024,
-     "note": "A short public overview of Asch conformity experiments, with the main dates and further references.",
-     "url": "https://en.wikipedia.org/wiki/Asch_conformity_experiments"
+     "type": "paper",
+     "file": "summaries/a-study-of-normative-and-informational-social-infl-1955.html",
+     "sourceUrl": "https://doi.org/10.1037/h0046408"
     }
    ]
   },
@@ -1897,35 +1719,42 @@
     "social"
    ],
    "caution": "A 2024 multi-lab registered replication of the classic induced-compliance paradigm did not find the expected attitude change.",
-   "goDeeper": [],
-   "furtherReading": [
+   "goDeeper": [
     {
+     "id": "cognitive-consequences-of-forced-compliance-1959",
      "title": "Cognitive consequences of forced compliance",
-     "author": "Leon Festinger & James M. Carlsmith",
+     "authors": "Leon Festinger & James M. Carlsmith",
      "year": 1959,
-     "note": "Leon Festinger proposed in 1957 that holding two inconsistent cognitions, such as I smoke and smoking kills, creates an uncomfortable state he called cognitive dissonance, which people are motivated to reduce.",
-     "url": "https://doi.org/10.1037/h0041593"
+     "type": "paper",
+     "file": "summaries/cognitive-consequences-of-forced-compliance-1959.html",
+     "sourceUrl": "https://doi.org/10.1037/h0041593"
     },
     {
+     "id": "when-prophecy-fails-1956",
      "title": "When Prophecy Fails",
-     "author": "Festinger, Riecken & Schachter",
+     "authors": "Festinger, Riecken & Schachter",
      "year": 1956,
-     "note": "Leon Festinger proposed in 1957 that holding two inconsistent cognitions, such as I smoke and smoking kills, creates an uncomfortable state he called cognitive dissonance, which people are motivated to reduce.",
-     "url": "https://en.wikipedia.org/wiki/When_Prophecy_Fails"
+     "type": "book",
+     "file": "summaries/when-prophecy-fails-1956.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/When_Prophecy_Fails"
     },
     {
+     "id": "a-theory-of-cognitive-dissonance-1957",
      "title": "A Theory of Cognitive Dissonance",
-     "author": "Leon Festinger",
+     "authors": "Leon Festinger",
      "year": 1957,
-     "note": "Leon Festinger proposed in 1957 that holding two inconsistent cognitions, such as I smoke and smoking kills, creates an uncomfortable state he called cognitive dissonance, which people are motivated to reduce.",
-     "url": "https://en.wikipedia.org/wiki/Cognitive_dissonance"
+     "type": "book",
+     "file": "summaries/a-theory-of-cognitive-dissonance-1957.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Cognitive_dissonance"
     },
     {
+     "id": "mistakes-were-made-but-not-by-me-2007",
      "title": "Mistakes Were Made (But Not by Me)",
-     "author": "Carol Tavris & Elliot Aronson",
+     "authors": "Carol Tavris & Elliot Aronson",
      "year": 2007,
-     "note": "Carol Tavris and Elliot Aronson's Mistakes Were Made (But Not by Me) is a readable application to politics, law and relationships.",
-     "url": "https://en.wikipedia.org/wiki/Mistakes_Were_Made_(But_Not_by_Me)"
+     "type": "book",
+     "file": "summaries/mistakes-were-made-but-not-by-me-2007.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Mistakes_Were_Made_(But_Not_by_Me)"
     }
    ]
   },
@@ -1946,35 +1775,33 @@
     "habits"
    ],
    "caution": "Larger, more diverse samples show a much weaker link between waiting and later success once family background is controlled.",
-   "goDeeper": [],
-   "furtherReading": [
+   "goDeeper": [
     {
+     "id": "revisiting-the-marshmallow-test-2018",
      "title": "Revisiting the Marshmallow Test",
-     "author": "Watts, Duncan & Quan",
+     "authors": "Watts, Duncan & Quan",
      "year": 2018,
-     "note": "In 2018 Tyler Watts, Greg Duncan and Haonan Quan conducted a conceptual replication using a larger and more diverse sample of over 900 children.",
-     "url": "https://doi.org/10.1177/0956797618761661"
+     "type": "paper",
+     "file": "summaries/revisiting-the-marshmallow-test-2018.html",
+     "sourceUrl": "https://doi.org/10.1177/0956797618761661"
     },
     {
+     "id": "predicting-adolescent-cognitive-and-self-regulator-1990",
      "title": "Predicting adolescent cognitive and self-regulatory competencies from preschool delay of gratification",
-     "author": "Shoda, Mischel & Peake",
+     "authors": "Shoda, Mischel & Peake",
      "year": 1990,
-     "note": "In the late 1960s and early 1970s Walter Mischel and colleagues at Stanford's Bing Nursery School offered young children a choice: one treat now, or two if they could wait while the experimenter left the room, often for up to 15 or 20 minutes.",
-     "url": "https://doi.org/10.1037/0012-1649.26.6.978"
+     "type": "paper",
+     "file": "summaries/predicting-adolescent-cognitive-and-self-regulator-1990.html",
+     "sourceUrl": "https://doi.org/10.1037/0012-1649.26.6.978"
     },
     {
+     "id": "rational-snacking-young-children-s-decision-making-2013",
      "title": "Rational snacking: Young children's decision-making on the marshmallow task is moderated by beliefs about environmental reliability",
-     "author": "Kidd, Palmeri & Aslin",
+     "authors": "Kidd, Palmeri & Aslin",
      "year": 2013,
-     "note": "A 2013 study by Celeste Kidd, Holly Palmeri and Richard Aslin showed that children who first experienced an unreliable experimenter, who broke promises about art supplies, waited much less than children who experienced a reliable one.",
-     "url": "https://doi.org/10.1016/j.cognition.2012.08.004"
-    },
-    {
-     "title": "Stanford marshmallow experiment",
-     "author": "Wikipedia",
-     "year": 2024,
-     "note": "A short public overview of Stanford marshmallow experiment, with the main dates and further references.",
-     "url": "https://en.wikipedia.org/wiki/Stanford_marshmallow_experiment"
+     "type": "paper",
+     "file": "summaries/rational-snacking-young-children-s-decision-making-2013.html",
+     "sourceUrl": "https://doi.org/10.1016/j.cognition.2012.08.004"
     }
    ]
   },
@@ -1993,35 +1820,33 @@
    "paths": [
     "habits"
    ],
-   "goDeeper": [],
-   "furtherReading": [
+   "goDeeper": [
     {
+     "id": "learned-helplessness-at-fifty-insights-from-neuros-2016",
      "title": "Learned helplessness at fifty: Insights from neuroscience",
-     "author": "Steven F. Maier & Martin E. P. Seligman",
+     "authors": "Steven F. Maier & Martin E. P. Seligman",
      "year": 2016,
-     "note": "In 1967 Martin Seligman and Steven Maier reported experiments in which dogs that had received inescapable shocks later failed to escape shocks they could easily avoid by jumping over a low barrier, while dogs that had received escapable shocks learned quickly.",
-     "url": "https://doi.org/10.1037/rev0000033"
+     "type": "paper",
+     "file": "summaries/learned-helplessness-at-fifty-insights-from-neuros-2016.html",
+     "sourceUrl": "https://doi.org/10.1037/rev0000033"
     },
     {
+     "id": "failure-to-escape-traumatic-shock-1967",
      "title": "Failure to escape traumatic shock",
-     "author": "Seligman & Maier",
+     "authors": "Seligman & Maier",
      "year": 1967,
-     "note": "In 1967 Martin Seligman and Steven Maier reported experiments in which dogs that had received inescapable shocks later failed to escape shocks they could easily avoid by jumping over a low barrier, while dogs that had received escapable shocks learned quickly.",
-     "url": "https://doi.org/10.1037/h0024514"
+     "type": "paper",
+     "file": "summaries/failure-to-escape-traumatic-shock-1967.html",
+     "sourceUrl": "https://doi.org/10.1037/h0024514"
     },
     {
+     "id": "learned-optimism-1990",
      "title": "Learned Optimism",
-     "author": "Martin E. P. Seligman",
+     "authors": "Martin E. P. Seligman",
      "year": 1990,
-     "note": "In 1967 Martin Seligman and Steven Maier reported experiments in which dogs that had received inescapable shocks later failed to escape shocks they could easily avoid by jumping over a low barrier, while dogs that had received escapable shocks learned quickly.",
-     "url": "https://en.wikipedia.org/wiki/Martin_Seligman"
-    },
-    {
-     "title": "Learned helplessness",
-     "author": "Wikipedia",
-     "year": 2024,
-     "note": "A short public overview of Learned helplessness, with the main dates and further references.",
-     "url": "https://en.wikipedia.org/wiki/Learned_helplessness"
+     "type": "book",
+     "file": "summaries/learned-optimism-1990.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Martin_Seligman"
     }
    ]
   },
@@ -2040,35 +1865,42 @@
    "paths": [
     "habits"
    ],
-   "goDeeper": [],
-   "furtherReading": [
+   "goDeeper": [
     {
+     "id": "a-new-look-at-habits-and-the-habit-goal-interface-2007",
      "title": "A new look at habits and the habit-goal interface",
-     "author": "Wendy Wood & David T. Neal",
+     "authors": "Wendy Wood & David T. Neal",
      "year": 2007,
-     "note": "Wendy Wood, a psychologist at the University of Southern California, has spent decades studying habits.",
-     "url": "https://doi.org/10.1037/0033-295X.114.4.843"
+     "type": "paper",
+     "file": "summaries/a-new-look-at-habits-and-the-habit-goal-interface-2007.html",
+     "sourceUrl": "https://doi.org/10.1037/0033-295X.114.4.843"
     },
     {
+     "id": "how-are-habits-formed-modelling-habit-formation-in-2010",
      "title": "How are habits formed: Modelling habit formation in the real world",
-     "author": "Lally, van Jaarsveld, Potts & Wardle",
+     "authors": "Lally, van Jaarsveld, Potts & Wardle",
      "year": 2010,
-     "note": "A 2010 study by Phillippa Lally and colleagues, tracking 96 volunteers who tried to adopt new daily behaviours, found a median of 66 days for the behaviour to reach a plateau of automaticity, with a huge range from 18 to 254 days.",
-     "url": "https://doi.org/10.1002/ejsp.674"
+     "type": "paper",
+     "file": "summaries/how-are-habits-formed-modelling-habit-formation-in-2010.html",
+     "sourceUrl": "https://doi.org/10.1002/ejsp.674"
     },
     {
+     "id": "more-than-resisting-temptation-beneficial-habits-m-2015",
      "title": "More than resisting temptation: Beneficial habits mediate the relationship between self-control and positive life outcomes",
-     "author": "Galla & Duckworth",
+     "authors": "Galla & Duckworth",
      "year": 2015,
-     "note": "Galla and Duckworth's 2015 study supports this idea.",
-     "url": "https://doi.org/10.1037/pspp0000026"
+     "type": "paper",
+     "file": "summaries/more-than-resisting-temptation-beneficial-habits-m-2015.html",
+     "sourceUrl": "https://doi.org/10.1037/pspp0000026"
     },
     {
+     "id": "good-habits-bad-habits-2019",
      "title": "Good Habits, Bad Habits",
-     "author": "Wendy Wood",
+     "authors": "Wendy Wood",
      "year": 2019,
-     "note": "Wendy Wood, a psychologist at the University of Southern California, has spent decades studying habits.",
-     "url": "https://us.macmillan.com/books/9781250159076/goodhabitsbadhabits"
+     "type": "book",
+     "file": "summaries/good-habits-bad-habits-2019.html",
+     "sourceUrl": "https://us.macmillan.com/books/9781250159076/goodhabitsbadhabits"
     }
    ]
   },
@@ -2087,35 +1919,33 @@
    "paths": [
     "habits"
    ],
-   "goDeeper": [],
-   "furtherReading": [
+   "goDeeper": [
     {
+     "id": "self-determination-theory-and-the-facilitation-of-2000",
      "title": "Self-determination theory and the facilitation of intrinsic motivation, social development, and well-being",
-     "author": "Richard M. Ryan & Edward L. Deci",
+     "authors": "Richard M. Ryan & Edward L. Deci",
      "year": 2000,
-     "note": "Self-determination theory, developed by Edward Deci and Richard Ryan from the 1970s onward, is one of the most widely tested theories of human motivation.",
-     "url": "https://doi.org/10.1037/0003-066X.55.1.68"
+     "type": "paper",
+     "file": "summaries/self-determination-theory-and-the-facilitation-of-2000.html",
+     "sourceUrl": "https://doi.org/10.1037/0003-066X.55.1.68"
     },
     {
+     "id": "a-meta-analytic-review-of-experiments-examining-th-1999",
      "title": "A meta-analytic review of experiments examining the effects of extrinsic rewards on intrinsic motivation",
-     "author": "Deci, Koestner & Ryan",
+     "authors": "Deci, Koestner & Ryan",
      "year": 1999,
-     "note": "Self-determination theory, developed by Edward Deci and Richard Ryan from the 1970s onward, is one of the most widely tested theories of human motivation.",
-     "url": "https://doi.org/10.1037/0033-2909.125.6.627"
+     "type": "paper",
+     "file": "summaries/a-meta-analytic-review-of-experiments-examining-th-1999.html",
+     "sourceUrl": "https://doi.org/10.1037/0033-2909.125.6.627"
     },
     {
+     "id": "undermining-children-s-intrinsic-interest-with-ext-1973",
      "title": "Undermining children's intrinsic interest with extrinsic reward",
-     "author": "Lepper, Greene & Nisbett",
+     "authors": "Lepper, Greene & Nisbett",
      "year": 1973,
-     "note": "In a classic study by Mark Lepper, David Greene and Richard Nisbett in 1973, preschoolers who expected a certificate for drawing later drew less in free time than those who had not been promised a reward.",
-     "url": "https://doi.org/10.1037/h0035519"
-    },
-    {
-     "title": "Self-determination theory",
-     "author": "Wikipedia",
-     "year": 2024,
-     "note": "A short public overview of Self-determination theory, with the main dates and further references.",
-     "url": "https://en.wikipedia.org/wiki/Self-determination_theory"
+     "type": "paper",
+     "file": "summaries/undermining-children-s-intrinsic-interest-with-ext-1973.html",
+     "sourceUrl": "https://doi.org/10.1037/h0035519"
     }
    ]
   },
@@ -2134,35 +1964,33 @@
    "paths": [
     "biases"
    ],
-   "goDeeper": [],
-   "furtherReading": [
+   "goDeeper": [
     {
+     "id": "when-more-pain-is-preferred-to-less-adding-a-bette-1993",
      "title": "When more pain is preferred to less: Adding a better end",
-     "author": "Kahneman, Fredrickson, Schreiber & Redelmeier",
+     "authors": "Kahneman, Fredrickson, Schreiber & Redelmeier",
      "year": 1993,
-     "note": "Daniel Kahneman distinguished between the experiencing self, which lives through moments, and the remembering self, which keeps score and makes decisions.",
-     "url": "https://doi.org/10.1111/j.1467-9280.1993.tb00589.x"
+     "type": "paper",
+     "file": "summaries/when-more-pain-is-preferred-to-less-adding-a-bette-1993.html",
+     "sourceUrl": "https://doi.org/10.1111/j.1467-9280.1993.tb00589.x"
     },
     {
+     "id": "patients-memories-of-painful-medical-treatments-re-1996",
      "title": "Patients' memories of painful medical treatments: real-time and retrospective evaluations of two minimally invasive procedures",
-     "author": "Redelmeier & Kahneman",
+     "authors": "Redelmeier & Kahneman",
      "year": 1996,
-     "note": "Daniel Kahneman distinguished between the experiencing self, which lives through moments, and the remembering self, which keeps score and makes decisions.",
-     "url": "https://doi.org/10.1016/0304-3959(96)02994-6"
+     "type": "paper",
+     "file": "summaries/patients-memories-of-painful-medical-treatments-re-1996.html",
+     "sourceUrl": "https://doi.org/10.1016/0304-3959(96)02994-6"
     },
     {
+     "id": "memories-of-colonoscopy-a-randomized-trial-2003",
      "title": "Memories of colonoscopy: a randomized trial",
-     "author": "Redelmeier, Katz & Kahneman",
+     "authors": "Redelmeier, Katz & Kahneman",
      "year": 2003,
-     "note": "Daniel Kahneman distinguished between the experiencing self, which lives through moments, and the remembering self, which keeps score and makes decisions.",
-     "url": "https://doi.org/10.1016/S0304-3959(03)00003-4"
-    },
-    {
-     "title": "Peak–end rule",
-     "author": "Wikipedia",
-     "year": 2024,
-     "note": "A short public overview of Peak–end rule, with the main dates and further references.",
-     "url": "https://en.wikipedia.org/wiki/Peak%E2%80%93end_rule"
+     "type": "paper",
+     "file": "summaries/memories-of-colonoscopy-a-randomized-trial-2003.html",
+     "sourceUrl": "https://doi.org/10.1016/S0304-3959(03)00003-4"
     }
    ]
   },
@@ -2185,40 +2013,40 @@
    "caution": "Average effects of mindset interventions are small; benefits appear concentrated among lower-achieving students in supportive contexts.",
    "goDeeper": [
     {
-     "id": "yeager-2019",
+     "id": "mindset-the-new-psychology-of-success-2006",
+     "title": "Mindset: The New Psychology of Success",
+     "authors": "Carol S. Dweck",
+     "year": 2006,
+     "type": "book",
+     "file": "summaries/mindset-the-new-psychology-of-success-2006.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Mindset_(book)"
+    },
+    {
+     "id": "to-what-extent-and-under-which-circumstances-are-g-2018",
+     "title": "To What Extent and Under Which Circumstances Are Growth Mind-Sets Important to Academic Achievement? Two Meta-Analyses",
+     "authors": "Sisk et al.",
+     "year": 2018,
+     "type": "paper",
+     "file": "summaries/to-what-extent-and-under-which-circumstances-are-g-2018.html",
+     "sourceUrl": "https://doi.org/10.1177/0956797617739704"
+    },
+    {
+     "id": "praise-for-intelligence-can-undermine-children-s-m-1998",
+     "title": "Praise for intelligence can undermine children's motivation and performance",
+     "authors": "Mueller & Dweck",
+     "year": 1998,
+     "type": "paper",
+     "file": "summaries/praise-for-intelligence-can-undermine-children-s-m-1998.html",
+     "sourceUrl": "https://doi.org/10.1037/0022-3514.75.1.33"
+    },
+    {
+     "id": "a-national-experiment-reveals-where-a-growth-minds-2019",
      "title": "A national experiment reveals where a growth mindset improves achievement",
      "authors": "David S Yeager, Paul Hanselman, Gregory M Walton, Jared S Murray, Robert Crosnoe, Chandra Muller et al.",
      "year": 2019,
-     "venue": "Nature",
-     "license": "cc-by",
-     "licenseName": "Creative Commons Attribution 4.0",
-     "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-     "attribution": "David S Yeager, Paul Hanselman, Gregory M Walton, Jared S Murray, Robert Crosnoe, Chandra Muller et al. (2019). A national experiment reveals where a growth mindset improves achievement. Nature. Creative Commons Attribution 4.0.",
-     "sourceUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6786290/",
-     "file": "texts/yeager-2019.html"
-    }
-   ],
-   "furtherReading": [
-    {
-     "title": "Mindset: The New Psychology of Success",
-     "author": "Carol S. Dweck",
-     "year": 2006,
-     "note": "Stanford psychologist Carol Dweck proposed that people hold implicit theories about ability.",
-     "url": "https://en.wikipedia.org/wiki/Mindset_(book)"
-    },
-    {
-     "title": "To What Extent and Under Which Circumstances Are Growth Mind-Sets Important to Academic Achievement? Two Meta-Analyses",
-     "author": "Sisk et al.",
-     "year": 2018,
-     "note": "A 2018 pair of meta-analyses by Victoria Sisk, Brooke Macnamara and colleagues found that the overall relationship between mindsets and academic achievement was weak, and that mindset interventions had very small average effects on academic performance, though possibly larger effects for students at risk of failing.",
-     "url": "https://doi.org/10.1177/0956797617739704"
-    },
-    {
-     "title": "Praise for intelligence can undermine children's motivation and performance",
-     "author": "Mueller & Dweck",
-     "year": 1998,
-     "note": "Stanford psychologist Carol Dweck proposed that people hold implicit theories about ability.",
-     "url": "https://doi.org/10.1037/0022-3514.75.1.33"
+     "type": "paper",
+     "file": "summaries/a-national-experiment-reveals-where-a-growth-minds-2019.html",
+     "sourceUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6786290/"
     }
    ]
   },
@@ -2237,35 +2065,33 @@
    "paths": [
     "social"
    ],
-   "goDeeper": [],
-   "furtherReading": [
+   "goDeeper": [
     {
+     "id": "the-emotional-dog-and-its-rational-tail-a-social-i-2001",
      "title": "The emotional dog and its rational tail: A social intuitionist approach to moral judgment",
-     "author": "Jonathan Haidt",
+     "authors": "Jonathan Haidt",
      "year": 2001,
-     "note": "Jonathan Haidt's social intuitionist model, introduced in a 2001 Psychological Review paper titled The Emotional Dog and Its Rational Tail, challenged the view that moral judgements are mainly the product of reasoning.",
-     "url": "https://doi.org/10.1037/0033-295X.108.4.814"
+     "type": "paper",
+     "file": "summaries/the-emotional-dog-and-its-rational-tail-a-social-i-2001.html",
+     "sourceUrl": "https://doi.org/10.1037/0033-295X.108.4.814"
     },
     {
+     "id": "the-righteous-mind-2012",
      "title": "The Righteous Mind",
-     "author": "Jonathan Haidt",
+     "authors": "Jonathan Haidt",
      "year": 2012,
-     "note": "Jonathan Haidt's social intuitionist model, introduced in a 2001 Psychological Review paper titled The Emotional Dog and Its Rational Tail, challenged the view that moral judgements are mainly the product of reasoning.",
-     "url": "https://en.wikipedia.org/wiki/The_Righteous_Mind"
+     "type": "book",
+     "file": "summaries/the-righteous-mind-2012.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/The_Righteous_Mind"
     },
     {
+     "id": "liberals-and-conservatives-rely-on-different-sets-2009",
      "title": "Liberals and conservatives rely on different sets of moral foundations",
-     "author": "Graham, Haidt & Nosek",
+     "authors": "Graham, Haidt & Nosek",
      "year": 2009,
-     "note": "Jonathan Haidt's social intuitionist model, introduced in a 2001 Psychological Review paper titled The Emotional Dog and Its Rational Tail, challenged the view that moral judgements are mainly the product of reasoning.",
-     "url": "https://doi.org/10.1037/a0015141"
-    },
-    {
-     "title": "Moral foundations theory",
-     "author": "Wikipedia",
-     "year": 2024,
-     "note": "A short public overview of Moral foundations theory, with the main dates and further references.",
-     "url": "https://en.wikipedia.org/wiki/Moral_foundations_theory"
+     "type": "paper",
+     "file": "summaries/liberals-and-conservatives-rely-on-different-sets-2009.html",
+     "sourceUrl": "https://doi.org/10.1037/a0015141"
     }
    ]
   },
@@ -2286,33 +2112,13 @@
    ],
    "goDeeper": [
     {
-     "id": "aristotle-poetics",
-     "title": "The Poetics",
-     "authors": "Aristotle, translated by S. H. Butcher",
+     "id": "poetics--335",
+     "title": "Poetics",
+     "authors": "Aristotle",
      "year": -335,
-     "venue": "Translation by S. H. Butcher",
-     "license": "public-domain",
-     "licenseName": "Public domain",
-     "licenseUrl": "https://www.gutenberg.org/policy/license.html",
-     "attribution": "Aristotle, translated by S. H. Butcher. The Poetics. Project Gutenberg ebook 1974. The Project Gutenberg license in the text permits copying.",
-     "sourceUrl": "https://www.gutenberg.org/ebooks/1974",
-     "file": "texts/aristotle-poetics.html"
-    }
-   ],
-   "furtherReading": [
-    {
-     "title": "Peripeteia",
-     "author": "Wikipedia",
-     "year": 2024,
-     "note": "A short public overview of Peripeteia, with the main dates and further references.",
-     "url": "https://en.wikipedia.org/wiki/Peripeteia"
-    },
-    {
-     "title": "The Name of the Rose",
-     "author": "Umberto Eco",
-     "year": 1980,
-     "note": "A lost second book of the Poetics, on comedy, is famously the MacGuffin of Umberto Eco's novel The Name of the Rose (1980).",
-     "url": "https://en.wikipedia.org/wiki/The_Name_of_the_Rose"
+     "type": "book",
+     "file": "summaries/poetics--335.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Poetics_(Aristotle)"
     }
    ]
   },
@@ -2333,40 +2139,22 @@
    ],
    "goDeeper": [
     {
-     "id": "freytag-technik",
+     "id": "die-technik-des-dramas-1863",
      "title": "Die Technik des Dramas",
      "authors": "Gustav Freytag",
      "year": 1863,
-     "venue": "German original",
-     "license": "public-domain",
-     "licenseName": "Public domain",
-     "licenseUrl": "https://www.gutenberg.org/policy/license.html",
-     "attribution": "Gustav Freytag. Die Technik des Dramas. Project Gutenberg ebook 50616. The Project Gutenberg license in the text permits copying.",
-     "sourceUrl": "https://www.gutenberg.org/ebooks/50616",
-     "file": "texts/freytag-technik.html"
-    }
-   ],
-   "furtherReading": [
+     "type": "book",
+     "file": "summaries/die-technik-des-dramas-1863.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Gustav_Freytag"
+    },
     {
+     "id": "the-emotional-arcs-of-stories-are-dominated-by-six-2016",
      "title": "The emotional arcs of stories are dominated by six basic shapes",
-     "author": "Reagan et al.",
+     "authors": "Reagan et al.",
      "year": 2016,
-     "note": "In 2016 a team at the University of Vermont, led by Andrew Reagan, tested a version of this idea using sentiment analysis on more than 1,300 works of fiction from Project Gutenberg.",
-     "url": "https://doi.org/10.1140/epjds/s13688-016-0093-1"
-    },
-    {
-     "title": "Palm Sunday: An Autobiographical Collage",
-     "author": "Kurt Vonnegut",
-     "year": 1981,
-     "note": "A century later, Kurt Vonnegut proposed a more playful approach.",
-     "url": "https://en.wikipedia.org/wiki/Palm_Sunday_(book)"
-    },
-    {
-     "title": "Dramatic structure",
-     "author": "Wikipedia",
-     "year": 2024,
-     "note": "A short public overview of Dramatic structure, with the main dates and further references.",
-     "url": "https://en.wikipedia.org/wiki/Dramatic_structure"
+     "type": "paper",
+     "file": "summaries/the-emotional-arcs-of-stories-are-dominated-by-six-2016.html",
+     "sourceUrl": "https://doi.org/10.1140/epjds/s13688-016-0093-1"
     }
    ]
   },
@@ -2387,47 +2175,31 @@
    ],
    "goDeeper": [
     {
-     "id": "homer-odyssey",
-     "title": "The Odyssey",
-     "authors": "Homer, translated by Samuel Butler",
-     "year": -700,
-     "venue": "Translation by Samuel Butler",
-     "license": "public-domain",
-     "licenseName": "Public domain",
-     "licenseUrl": "https://www.gutenberg.org/policy/license.html",
-     "attribution": "Homer, translated by Samuel Butler. The Odyssey. Project Gutenberg ebook 1727. The Project Gutenberg license in the text permits copying.",
-     "sourceUrl": "https://www.gutenberg.org/ebooks/1727",
-     "file": "texts/homer-odyssey.html"
-    }
-   ],
-   "furtherReading": [
-    {
+     "id": "the-hero-with-a-thousand-faces-1949",
      "title": "The Hero with a Thousand Faces",
-     "author": "Joseph Campbell",
+     "authors": "Joseph Campbell",
      "year": 1949,
-     "note": "Joseph Campbell's The Hero with a Thousand Faces (1949) argued that myths from around the world share a common pattern, which he called the monomyth.",
-     "url": "https://en.wikipedia.org/wiki/The_Hero_with_a_Thousand_Faces"
+     "type": "book",
+     "file": "summaries/the-hero-with-a-thousand-faces-1949.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/The_Hero_with_a_Thousand_Faces"
     },
     {
+     "id": "the-writer-s-journey-mythic-structure-for-writers-1992",
      "title": "The Writer's Journey: Mythic Structure for Writers",
-     "author": "Christopher Vogler",
+     "authors": "Christopher Vogler",
      "year": 1992,
-     "note": "George Lucas said Campbell's work influenced Star Wars, and in the 1980s Christopher Vogler, a Hollywood story analyst, wrote a memo for Disney adapting Campbell into a twelve-stage template later published as The Writer's Journey.",
-     "url": "https://en.wikipedia.org/wiki/The_Writer's_Journey:_Mythic_Structure_for_Writers"
+     "type": "book",
+     "file": "summaries/the-writer-s-journey-mythic-structure-for-writers-1992.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/The_Writer's_Journey:_Mythic_Structure_for_Writers"
     },
     {
-     "title": "Hero's journey",
-     "author": "Wikipedia",
-     "year": 2024,
-     "note": "A short public overview of Hero's journey, with the main dates and further references.",
-     "url": "https://en.wikipedia.org/wiki/Hero's_journey"
-    },
-    {
+     "id": "morphology-of-the-folktale-1928",
      "title": "Morphology of the Folktale",
-     "author": "Vladimir Propp",
+     "authors": "Vladimir Propp",
      "year": 1928,
-     "note": "A more rigorous precursor is Vladimir Propp's Morphology of the Folktale (1928), which analysed a defined corpus of Russian fairy tales rather than all world myth.",
-     "url": "https://en.wikipedia.org/wiki/Morphology_of_the_Folktale"
+     "type": "book",
+     "file": "summaries/morphology-of-the-folktale-1928.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Morphology_of_the_Folktale"
     }
    ]
   },
@@ -2449,47 +2221,22 @@
    ],
    "goDeeper": [
     {
-     "id": "grimm-tales",
-     "title": "Grimms' Fairy Tales",
-     "authors": "Jacob Grimm and Wilhelm Grimm, translated by Edgar Taylor and Marian Edwardes",
-     "year": 1812,
-     "venue": "Translations by Edgar Taylor and Marian Edwardes",
-     "license": "public-domain",
-     "licenseName": "Public domain",
-     "licenseUrl": "https://www.gutenberg.org/policy/license.html",
-     "attribution": "Jacob Grimm and Wilhelm Grimm, translated by Edgar Taylor and Marian Edwardes. Grimms' Fairy Tales. Project Gutenberg ebook 2591. The Project Gutenberg license in the text permits copying.",
-     "sourceUrl": "https://www.gutenberg.org/ebooks/2591",
-     "file": "texts/grimm-tales.html"
-    }
-   ],
-   "furtherReading": [
-    {
+     "id": "morphology-of-the-folktale-1928",
      "title": "Morphology of the Folktale",
-     "author": "Vladimir Propp",
+     "authors": "Vladimir Propp",
      "year": 1928,
-     "note": "In Morphology of the Folktale, published in Russian in 1928 and translated into English in 1958, the Soviet folklorist Vladimir Propp analysed 100 Russian wonder tales from Alexander Afanasyev's collection.",
-     "url": "https://en.wikipedia.org/wiki/Morphology_of_the_Folktale"
+     "type": "book",
+     "file": "summaries/morphology-of-the-folktale-1928.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Morphology_of_the_Folktale"
     },
     {
-     "title": "Vladimir Propp",
-     "author": "Wikipedia",
-     "year": 2024,
-     "note": "A short public overview of Vladimir Propp, with the main dates and further references.",
-     "url": "https://en.wikipedia.org/wiki/Vladimir_Propp"
-    },
-    {
-     "title": "Actantial model",
-     "author": "Wikipedia",
-     "year": 2024,
-     "note": "A short public overview of Actantial model, with the main dates and further references.",
-     "url": "https://en.wikipedia.org/wiki/Actantial_model"
-    },
-    {
+     "id": "the-hero-with-a-thousand-faces-1949",
      "title": "The Hero with a Thousand Faces",
-     "author": "Joseph Campbell",
+     "authors": "Joseph Campbell",
      "year": 1949,
-     "note": "Campbell's myth pattern, often set beside Propp's functions as another grammar of stories.",
-     "url": "https://en.wikipedia.org/wiki/The_Hero_with_a_Thousand_Faces"
+     "type": "book",
+     "file": "summaries/the-hero-with-a-thousand-faces-1949.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/The_Hero_with_a_Thousand_Faces"
     }
    ]
   },
@@ -2511,40 +2258,22 @@
    ],
    "goDeeper": [
     {
-     "id": "austen-emma",
-     "title": "Emma",
-     "authors": "Jane Austen",
-     "year": 1815,
-     "venue": "London: John Murray",
-     "license": "public-domain",
-     "licenseName": "Public domain",
-     "licenseUrl": "https://www.gutenberg.org/policy/license.html",
-     "attribution": "Jane Austen. Emma. Project Gutenberg ebook 158. The Project Gutenberg license in the text permits copying.",
-     "sourceUrl": "https://www.gutenberg.org/ebooks/158",
-     "file": "texts/austen-emma.html"
-    }
-   ],
-   "furtherReading": [
-    {
+     "id": "how-fiction-works-2008",
      "title": "How Fiction Works",
-     "author": "James Wood",
+     "authors": "James Wood",
      "year": 2008,
-     "note": "In How Fiction Works (2008), the critic James Wood argues that free indirect style is the novel's defining technique, because it allows a story to be told simultaneously through a character's eyes and language and through an author's eyes and language.",
-     "url": "https://en.wikipedia.org/wiki/James_Wood_(critic)"
+     "type": "book",
+     "file": "summaries/how-fiction-works-2008.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/James_Wood_(critic)"
     },
     {
-     "title": "Free indirect speech",
-     "author": "Wikipedia",
-     "year": 2024,
-     "note": "A short public overview of Free indirect speech, with the main dates and further references.",
-     "url": "https://en.wikipedia.org/wiki/Free_indirect_speech"
-    },
-    {
+     "id": "transparent-minds-1978",
      "title": "Transparent Minds",
-     "author": "Dorrit Cohn",
+     "authors": "Dorrit Cohn",
      "year": 1978,
-     "note": "Dorrit Cohn's Transparent Minds (1978) is the classic survey of how fiction presents consciousness, including psycho-narration, quoted monologue and narrated monologue, her term for free indirect style.",
-     "url": "https://en.wikipedia.org/wiki/Dorrit_Cohn"
+     "type": "book",
+     "file": "summaries/transparent-minds-1978.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Dorrit_Cohn"
     }
    ]
   },
@@ -2565,47 +2294,22 @@
    ],
    "goDeeper": [
     {
-     "id": "chekhov-seagull",
-     "title": "The Sea-Gull",
+     "id": "letters-and-recorded-conversations-1889",
+     "title": "Letters and recorded conversations",
+     "authors": "Anton Chekhov",
+     "year": 1889,
+     "type": "book",
+     "file": "summaries/letters-and-recorded-conversations-1889.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Chekhov's_gun"
+    },
+    {
+     "id": "the-seagull-1896",
+     "title": "The Seagull",
      "authors": "Anton Chekhov",
      "year": 1896,
-     "venue": "English translation, Project Gutenberg ebook 1754",
-     "license": "public-domain",
-     "licenseName": "Public domain",
-     "licenseUrl": "https://www.gutenberg.org/policy/license.html",
-     "attribution": "Anton Chekhov. The Sea-Gull. Project Gutenberg ebook 1754. The Project Gutenberg license in the text permits copying.",
-     "sourceUrl": "https://www.gutenberg.org/ebooks/1754",
-     "file": "texts/chekhov-seagull.html"
-    }
-   ],
-   "furtherReading": [
-    {
-     "title": "Letters and recorded conversations",
-     "author": "Anton Chekhov",
-     "year": 1889,
-     "note": "Chekhov's gun is the dramatic principle that every element introduced into a story should be necessary, and that details which are emphasised should eventually pay off.",
-     "url": "https://en.wikipedia.org/wiki/Chekhov's_gun"
-    },
-    {
-     "title": "The Seagull",
-     "author": "Anton Chekhov",
-     "year": 1896,
-     "note": "Chekhov's gun is the dramatic principle that every element introduced into a story should be necessary, and that details which are emphasised should eventually pay off.",
-     "url": "https://en.wikipedia.org/wiki/The_Seagull"
-    },
-    {
-     "title": "Roland Barthes",
-     "author": "Wikipedia",
-     "year": 2024,
-     "note": "A short public overview of Roland Barthes, with the main dates and further references.",
-     "url": "https://en.wikipedia.org/wiki/Roland_Barthes"
-    },
-    {
-     "title": "Foreshadowing",
-     "author": "Wikipedia",
-     "year": 2024,
-     "note": "A short public overview of Foreshadowing, with the main dates and further references.",
-     "url": "https://en.wikipedia.org/wiki/Foreshadowing"
+     "type": "book",
+     "file": "summaries/the-seagull-1896.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/The_Seagull"
     }
    ]
   },
@@ -2624,35 +2328,33 @@
    "paths": [
     "craft"
    ],
-   "goDeeper": [],
-   "furtherReading": [
+   "goDeeper": [
     {
+     "id": "the-rhetoric-of-fiction-1961",
      "title": "The Rhetoric of Fiction",
-     "author": "Wayne C. Booth",
+     "authors": "Wayne C. Booth",
      "year": 1961,
-     "note": "Booth's The Rhetoric of Fiction challenged this orthodoxy.",
-     "url": "https://en.wikipedia.org/wiki/The_Rhetoric_of_Fiction"
+     "type": "book",
+     "file": "summaries/the-rhetoric-of-fiction-1961.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/The_Rhetoric_of_Fiction"
     },
     {
-     "title": "The Craft of Fiction (free e-text)",
-     "author": "Percy Lubbock",
+     "id": "the-craft-of-fiction-1921",
+     "title": "The Craft of Fiction",
+     "authors": "Percy Lubbock",
      "year": 1921,
-     "note": "The distinction was popularised by Percy Lubbock in The Craft of Fiction (1921), which praised Henry James's scenic method and argued that the art of fiction begins when the novelist treats the story as something to be shown.",
-     "url": "https://www.gutenberg.org/ebooks/18961"
+     "type": "book",
+     "file": "summaries/the-craft-of-fiction-1921.html",
+     "sourceUrl": "https://www.gutenberg.org/ebooks/18961"
     },
     {
-     "title": "Show, don't tell",
-     "author": "Wikipedia",
-     "year": 2024,
-     "note": "A short public overview of Show, don't tell, with the main dates and further references.",
-     "url": "https://en.wikipedia.org/wiki/Show,_don't_tell"
-    },
-    {
+     "id": "steering-the-craft-1998",
      "title": "Steering the Craft",
-     "author": "Ursula K. Le Guin",
+     "authors": "Ursula K. Le Guin",
      "year": 1998,
-     "note": "Le Guin's Steering the Craft (1998) offers practical exercises that mix showing and telling and pushes back against rigid rules.",
-     "url": "https://en.wikipedia.org/wiki/Steering_the_Craft"
+     "type": "book",
+     "file": "summaries/steering-the-craft-1998.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Steering_the_Craft"
     }
    ]
   },
@@ -2674,47 +2376,31 @@
    ],
    "goDeeper": [
     {
-     "id": "james-screw",
-     "title": "The Turn of the Screw",
-     "authors": "Henry James",
-     "year": 1898,
-     "venue": "London: William Heinemann",
-     "license": "public-domain",
-     "licenseName": "Public domain",
-     "licenseUrl": "https://www.gutenberg.org/policy/license.html",
-     "attribution": "Henry James. The Turn of the Screw. Project Gutenberg ebook 209. The Project Gutenberg license in the text permits copying.",
-     "sourceUrl": "https://www.gutenberg.org/ebooks/209",
-     "file": "texts/james-screw.html"
-    }
-   ],
-   "furtherReading": [
-    {
+     "id": "the-rhetoric-of-fiction-1961",
      "title": "The Rhetoric of Fiction",
-     "author": "Wayne C. Booth",
+     "authors": "Wayne C. Booth",
      "year": 1961,
-     "note": "Booth in The Rhetoric of Fiction (1961), where he described a narrator as reliable when he or she speaks for or acts in accordance with the norms of the work, and unreliable when not.",
-     "url": "https://en.wikipedia.org/wiki/The_Rhetoric_of_Fiction"
+     "type": "book",
+     "file": "summaries/the-rhetoric-of-fiction-1961.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/The_Rhetoric_of_Fiction"
     },
     {
-     "title": "Unreliable narrator",
-     "author": "Wikipedia",
-     "year": 2024,
-     "note": "A short public overview of Unreliable narrator, with the main dates and further references.",
-     "url": "https://en.wikipedia.org/wiki/Unreliable_narrator"
-    },
-    {
+     "id": "the-remains-of-the-day-1989",
      "title": "The Remains of the Day",
-     "author": "Kazuo Ishiguro",
+     "authors": "Kazuo Ishiguro",
      "year": 1989,
-     "note": "A narrator may be self-deceiving, like Stevens the butler in Kazuo Ishiguro's The Remains of the Day (1989), whose formal, restrained language reveals by omission the love and moral failures he cannot admit.",
-     "url": "https://en.wikipedia.org/wiki/The_Remains_of_the_Day"
+     "type": "book",
+     "file": "summaries/the-remains-of-the-day-1989.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/The_Remains_of_the_Day"
     },
     {
+     "id": "the-murder-of-roger-ackroyd-1926",
      "title": "The Murder of Roger Ackroyd",
-     "author": "Agatha Christie",
+     "authors": "Agatha Christie",
      "year": 1926,
-     "note": "A narrator may be lying, as in Agatha Christie's The Murder of Roger Ackroyd (1926), whose twist provoked controversy about fair play.",
-     "url": "https://en.wikipedia.org/wiki/The_Murder_of_Roger_Ackroyd"
+     "type": "book",
+     "file": "summaries/the-murder-of-roger-ackroyd-1926.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/The_Murder_of_Roger_Ackroyd"
     }
    ]
   },
@@ -2734,35 +2420,15 @@
     "theory",
     "craft"
    ],
-   "goDeeper": [],
-   "furtherReading": [
+   "goDeeper": [
     {
+     "id": "art-as-device-1917",
      "title": "Art as Device",
-     "author": "Viktor Shklovsky",
+     "authors": "Viktor Shklovsky",
      "year": 1917,
-     "note": "In his 1917 essay Art as Device, sometimes translated as Art as Technique, the Russian critic Viktor Shklovsky argued that habit dulls perception.",
-     "url": "https://en.wikipedia.org/wiki/Defamiliarization"
-    },
-    {
-     "title": "Viktor Shklovsky",
-     "author": "Wikipedia",
-     "year": 2024,
-     "note": "A short public overview of Viktor Shklovsky, with the main dates and further references.",
-     "url": "https://en.wikipedia.org/wiki/Viktor_Shklovsky"
-    },
-    {
-     "title": "Russian formalism",
-     "author": "Wikipedia",
-     "year": 2024,
-     "note": "A short public overview of Russian formalism, with the main dates and further references.",
-     "url": "https://en.wikipedia.org/wiki/Russian_formalism"
-    },
-    {
-     "title": "Distancing effect",
-     "author": "Wikipedia",
-     "year": 2024,
-     "note": "A short public overview of Distancing effect, with the main dates and further references.",
-     "url": "https://en.wikipedia.org/wiki/Distancing_effect"
+     "type": "book",
+     "file": "summaries/art-as-device-1917.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Defamiliarization"
     }
    ]
   },
@@ -2781,35 +2447,33 @@
    "paths": [
     "theory"
    ],
-   "goDeeper": [],
-   "furtherReading": [
+   "goDeeper": [
     {
+     "id": "the-death-of-the-author-1967",
      "title": "The Death of the Author",
-     "author": "Roland Barthes",
+     "authors": "Roland Barthes",
      "year": 1967,
-     "note": "Roland Barthes's short essay The Death of the Author, published in English in 1967 in the American magazine Aspen and in French in 1968, attacked a dominant habit of criticism: explaining a work by referring to the author's life, intentions and psychology.",
-     "url": "https://en.wikipedia.org/wiki/The_Death_of_the_Author"
+     "type": "book",
+     "file": "summaries/the-death-of-the-author-1967.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/The_Death_of_the_Author"
     },
     {
+     "id": "what-is-an-author-1969",
      "title": "What Is an Author?",
-     "author": "Michel Foucault",
+     "authors": "Michel Foucault",
      "year": 1969,
-     "note": "Foucault's essay on the author as a function of discourse, the usual pair to Barthes.",
-     "url": "https://en.wikipedia.org/wiki/What_Is_an_Author%3F"
+     "type": "book",
+     "file": "summaries/what-is-an-author-1969.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/What_Is_an_Author%3F"
     },
     {
-     "title": "Intentional fallacy",
-     "author": "Wikipedia",
-     "year": 2024,
-     "note": "A short public overview of Intentional fallacy, with the main dates and further references.",
-     "url": "https://en.wikipedia.org/wiki/Intentional_fallacy"
-    },
-    {
+     "id": "validity-in-interpretation-1967",
      "title": "Validity in Interpretation",
-     "author": "E. D. Hirsch",
+     "authors": "E. D. Hirsch",
      "year": 1967,
-     "note": "Hirsch defended authorial intention as the standard of valid interpretation.",
-     "url": "https://en.wikipedia.org/wiki/E._D._Hirsch"
+     "type": "book",
+     "file": "summaries/validity-in-interpretation-1967.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/E._D._Hirsch"
     }
    ]
   },
@@ -2831,40 +2495,22 @@
    ],
    "goDeeper": [
     {
-     "id": "dostoevsky-underground",
-     "title": "Notes from the Underground",
-     "authors": "Fyodor Dostoevsky",
-     "year": 1864,
-     "venue": "English translation, Project Gutenberg ebook 600",
-     "license": "public-domain",
-     "licenseName": "Public domain",
-     "licenseUrl": "https://www.gutenberg.org/policy/license.html",
-     "attribution": "Fyodor Dostoevsky. Notes from the Underground. Project Gutenberg ebook 600. The Project Gutenberg license in the text permits copying.",
-     "sourceUrl": "https://www.gutenberg.org/ebooks/600",
-     "file": "texts/dostoevsky-underground.html"
-    }
-   ],
-   "furtherReading": [
-    {
+     "id": "problems-of-dostoevsky-s-poetics-1963",
      "title": "Problems of Dostoevsky's Poetics",
-     "author": "Mikhail Bakhtin",
+     "authors": "Mikhail Bakhtin",
      "year": 1963,
-     "note": "The Russian thinker Mikhail Bakhtin argued in Problems of Dostoevsky's Art (1929), revised and expanded in 1963 as Problems of Dostoevsky's Poetics, that Fyodor Dostoevsky had invented a new kind of novel: the polyphonic novel.",
-     "url": "https://en.wikipedia.org/wiki/Problems_of_Dostoevsky's_Poetics"
+     "type": "book",
+     "file": "summaries/problems-of-dostoevsky-s-poetics-1963.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Problems_of_Dostoevsky's_Poetics"
     },
     {
+     "id": "the-dialogic-imagination-1981",
      "title": "The Dialogic Imagination",
-     "author": "Mikhail Bakhtin",
+     "authors": "Mikhail Bakhtin",
      "year": 1981,
-     "note": "The Russian thinker Mikhail Bakhtin argued in Problems of Dostoevsky's Art (1929), revised and expanded in 1963 as Problems of Dostoevsky's Poetics, that Fyodor Dostoevsky had invented a new kind of novel: the polyphonic novel.",
-     "url": "https://en.wikipedia.org/wiki/The_Dialogic_Imagination"
-    },
-    {
-     "title": "Polyphony (literature)",
-     "author": "Wikipedia",
-     "year": 2024,
-     "note": "A short public overview of Polyphony (literature), with the main dates and further references.",
-     "url": "https://en.wikipedia.org/wiki/Polyphony_(literature)"
+     "type": "book",
+     "file": "summaries/the-dialogic-imagination-1981.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/The_Dialogic_Imagination"
     }
    ]
   },
@@ -2883,35 +2529,33 @@
    "paths": [
     "craft"
    ],
-   "goDeeper": [],
-   "furtherReading": [
+   "goDeeper": [
     {
+     "id": "death-in-the-afternoon-1932",
      "title": "Death in the Afternoon",
-     "author": "Ernest Hemingway",
+     "authors": "Ernest Hemingway",
      "year": 1932,
-     "note": "Ernest Hemingway's theory of omission, often called the iceberg theory, holds that a writer can leave out important things and the story will be stronger for it, provided the writer knows what is being omitted.",
-     "url": "https://en.wikipedia.org/wiki/Death_in_the_Afternoon"
+     "type": "book",
+     "file": "summaries/death-in-the-afternoon-1932.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Death_in_the_Afternoon"
     },
     {
-     "title": "Iceberg theory",
-     "author": "Wikipedia",
-     "year": 2024,
-     "note": "A short public overview of Iceberg theory, with the main dates and further references.",
-     "url": "https://en.wikipedia.org/wiki/Iceberg_theory"
-    },
-    {
+     "id": "ernest-hemingway-the-art-of-fiction-no-21-paris-re-1958",
      "title": "Ernest Hemingway, The Art of Fiction No. 21 (Paris Review interview)",
-     "author": "George Plimpton",
+     "authors": "George Plimpton",
      "year": 1958,
-     "note": "Hemingway's Paris Review interview, where he talks about how omission works in his fiction.",
-     "url": "https://www.theparisreview.org/interviews/4825/the-art-of-fiction-no-21-ernest-hemingway"
+     "type": "book",
+     "file": "summaries/ernest-hemingway-the-art-of-fiction-no-21-paris-re-1958.html",
+     "sourceUrl": "https://www.theparisreview.org/interviews/4825/the-art-of-fiction-no-21-ernest-hemingway"
     },
     {
+     "id": "what-we-talk-about-when-we-talk-about-love-1981",
      "title": "What We Talk About When We Talk About Love",
-     "author": "Raymond Carver",
+     "authors": "Raymond Carver",
      "year": 1981,
-     "note": "It has influenced minimalists like Raymond Carver.",
-     "url": "https://en.wikipedia.org/wiki/What_We_Talk_About_When_We_Talk_About_Love"
+     "type": "book",
+     "file": "summaries/what-we-talk-about-when-we-talk-about-love-1981.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/What_We_Talk_About_When_We_Talk_About_Love"
     }
    ]
   },
@@ -2933,40 +2577,22 @@
    ],
    "goDeeper": [
     {
-     "id": "dickens-copperfield",
-     "title": "David Copperfield",
-     "authors": "Charles Dickens",
-     "year": 1850,
-     "venue": "London: Bradbury & Evans",
-     "license": "public-domain",
-     "licenseName": "Public domain",
-     "licenseUrl": "https://www.gutenberg.org/policy/license.html",
-     "attribution": "Charles Dickens. David Copperfield. Project Gutenberg ebook 766. The Project Gutenberg license in the text permits copying.",
-     "sourceUrl": "https://www.gutenberg.org/ebooks/766",
-     "file": "texts/dickens-copperfield.html"
-    }
-   ],
-   "furtherReading": [
-    {
+     "id": "aspects-of-the-novel-1927",
      "title": "Aspects of the Novel",
-     "author": "E. M. Forster",
+     "authors": "E. M. Forster",
      "year": 1927,
-     "note": "Forster offered one of the most useful distinctions in criticism: flat and round characters.",
-     "url": "https://en.wikipedia.org/wiki/Aspects_of_the_Novel"
+     "type": "book",
+     "file": "summaries/aspects-of-the-novel-1927.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Aspects_of_the_Novel"
     },
     {
-     "title": "Character (arts)",
-     "author": "Wikipedia",
-     "year": 2024,
-     "note": "A short public overview of Character (arts), with the main dates and further references.",
-     "url": "https://en.wikipedia.org/wiki/Character_(arts)"
-    },
-    {
+     "id": "how-fiction-works-2008",
      "title": "How Fiction Works",
-     "author": "James Wood",
+     "authors": "James Wood",
      "year": 2008,
-     "note": "Critics have since complicated his binary; James Wood argues that flatness can be a powerful technique in its own right, and that some flat characters are more alive than round ones.",
-     "url": "https://en.wikipedia.org/wiki/James_Wood_(critic)"
+     "type": "book",
+     "file": "summaries/how-fiction-works-2008.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/James_Wood_(critic)"
     }
    ]
   },
@@ -2987,40 +2613,22 @@
    ],
    "goDeeper": [
     {
-     "id": "defoe-crusoe",
-     "title": "The Life and Adventures of Robinson Crusoe",
-     "authors": "Daniel Defoe",
-     "year": 1719,
-     "venue": "London: W. Taylor",
-     "license": "public-domain",
-     "licenseName": "Public domain",
-     "licenseUrl": "https://www.gutenberg.org/policy/license.html",
-     "attribution": "Daniel Defoe. The Life and Adventures of Robinson Crusoe. Project Gutenberg ebook 521. The Project Gutenberg license in the text permits copying.",
-     "sourceUrl": "https://www.gutenberg.org/ebooks/521",
-     "file": "texts/defoe-crusoe.html"
-    }
-   ],
-   "furtherReading": [
-    {
+     "id": "the-rise-of-the-novel-1957",
      "title": "The Rise of the Novel",
-     "author": "Ian Watt",
+     "authors": "Ian Watt",
      "year": 1957,
-     "note": "Ian Watt's The Rise of the Novel (1957) offered an influential answer focused on three writers: Daniel Defoe, Samuel Richardson and Henry Fielding.",
-     "url": "https://en.wikipedia.org/wiki/The_Rise_of_the_Novel"
+     "type": "book",
+     "file": "summaries/the-rise-of-the-novel-1957.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/The_Rise_of_the_Novel"
     },
     {
-     "title": "Novel",
-     "author": "Wikipedia",
-     "year": 2024,
-     "note": "A short public overview of Novel, with the main dates and further references.",
-     "url": "https://en.wikipedia.org/wiki/Novel"
-    },
-    {
+     "id": "the-tale-of-genji-1010",
      "title": "The Tale of Genji",
-     "author": "Murasaki Shikibu",
+     "authors": "Murasaki Shikibu",
      "year": 1010,
-     "note": "The eleventh-century Japanese tale often named when the history of the novel is not only an English story.",
-     "url": "https://en.wikipedia.org/wiki/The_Tale_of_Genji"
+     "type": "book",
+     "file": "summaries/the-tale-of-genji-1010.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/The_Tale_of_Genji"
     }
    ]
   },
@@ -3040,35 +2648,42 @@
     "mind"
    ],
    "caution": "The headline 2013 one-session effect did not replicate in a 2016 multi-lab study; meta-analyses suggest small effects at best.",
-   "goDeeper": [],
-   "furtherReading": [
+   "goDeeper": [
     {
+     "id": "reading-literary-fiction-improves-theory-of-mind-2013",
      "title": "Reading Literary Fiction Improves Theory of Mind",
-     "author": "David Comer Kidd & Emanuele Castano",
+     "authors": "David Comer Kidd & Emanuele Castano",
      "year": 2013,
-     "note": "In 2013, David Kidd and Emanuele Castano published a widely reported experiment in Science.",
-     "url": "https://doi.org/10.1126/science.1239918"
+     "type": "paper",
+     "file": "summaries/reading-literary-fiction-improves-theory-of-mind-2013.html",
+     "sourceUrl": "https://doi.org/10.1126/science.1239918"
     },
     {
+     "id": "does-reading-a-single-passage-of-literary-fiction-2016",
      "title": "Does reading a single passage of literary fiction really improve theory of mind? An attempt at replication",
-     "author": "Panero et al.",
+     "authors": "Panero et al.",
      "year": 2016,
-     "note": "However, a 2016 replication attempt by Maria Eugenia Panero and colleagues, involving several labs and a larger sample, did not reproduce the effect of a single brief reading session.",
-     "url": "https://doi.org/10.1037/pspa0000064"
+     "type": "paper",
+     "file": "summaries/does-reading-a-single-passage-of-literary-fiction-2016.html",
+     "sourceUrl": "https://doi.org/10.1037/pspa0000064"
     },
     {
+     "id": "fiction-reading-has-a-small-positive-impact-on-soc-2018",
      "title": "Fiction reading has a small positive impact on social cognition: A meta-analysis",
-     "author": "Dodell-Feder & Tamir",
+     "authors": "Dodell-Feder & Tamir",
      "year": 2018,
-     "note": "Dodell-Feder and Tamir's 2018 meta-analysis found a small but statistically significant effect of fiction reading on social cognition across experiments, while warning of publication bias.",
-     "url": "https://doi.org/10.1037/xge0000395"
+     "type": "paper",
+     "file": "summaries/fiction-reading-has-a-small-positive-impact-on-soc-2018.html",
+     "sourceUrl": "https://doi.org/10.1037/xge0000395"
     },
     {
+     "id": "the-function-of-fiction-is-the-abstraction-and-sim-2008",
      "title": "The Function of Fiction is the Abstraction and Simulation of Social Experience",
-     "author": "Mar & Oatley",
+     "authors": "Mar & Oatley",
      "year": 2008,
-     "note": "Keith Oatley and Raymond Mar argued that fiction works as a simulation of social experience: just as flight simulators train pilots, stories let readers practise understanding other minds.",
-     "url": "https://doi.org/10.1111/j.1745-6924.2008.00073.x"
+     "type": "paper",
+     "file": "summaries/the-function-of-fiction-is-the-abstraction-and-sim-2008.html",
+     "sourceUrl": "https://doi.org/10.1111/j.1745-6924.2008.00073.x"
     }
    ]
   },
@@ -3087,35 +2702,33 @@
    "paths": [
     "mind"
    ],
-   "goDeeper": [],
-   "furtherReading": [
+   "goDeeper": [
     {
+     "id": "the-role-of-transportation-in-the-persuasiveness-o-2000",
      "title": "The role of transportation in the persuasiveness of public narratives",
-     "author": "Melanie C. Green & Timothy C. Brock",
+     "authors": "Melanie C. Green & Timothy C. Brock",
      "year": 2000,
-     "note": "In 2000, Melanie Green and Timothy Brock introduced the concept of narrative transportation in the Journal of Personality and Social Psychology.",
-     "url": "https://doi.org/10.1037/0022-3514.79.5.701"
+     "type": "paper",
+     "file": "summaries/the-role-of-transportation-in-the-persuasiveness-o-2000.html",
+     "sourceUrl": "https://doi.org/10.1037/0022-3514.79.5.701"
     },
     {
+     "id": "the-extended-transportation-imagery-model-a-meta-a-2014",
      "title": "The Extended Transportation-Imagery Model: A Meta-Analysis of the Antecedents and Consequences of Consumers' Narrative Transportation",
-     "author": "van Laer et al.",
+     "authors": "van Laer et al.",
      "year": 2014,
-     "note": "A 2014 meta-analysis by Tom van Laer and colleagues confirmed that transportation predicts changes in attitudes and intentions across studies.",
-     "url": "https://doi.org/10.1086/673383"
+     "type": "paper",
+     "file": "summaries/the-extended-transportation-imagery-model-a-meta-a-2014.html",
+     "sourceUrl": "https://doi.org/10.1086/673383"
     },
     {
+     "id": "experiencing-narrative-worlds-1993",
      "title": "Experiencing Narrative Worlds",
-     "author": "Richard J. Gerrig",
+     "authors": "Richard J. Gerrig",
      "year": 1993,
-     "note": "Green and Brock's transportation-imagery model connects to earlier work by Richard Gerrig, whose Experiencing Narrative Worlds (1993) used the metaphor of travel to describe reading.",
-     "url": "https://yalebooks.yale.edu/book/9780300054347/experiencing-narrative-worlds/"
-    },
-    {
-     "title": "Transportation theory (psychology)",
-     "author": "Wikipedia",
-     "year": 2024,
-     "note": "A short public overview of Transportation theory (psychology), with the main dates and further references.",
-     "url": "https://en.wikipedia.org/wiki/Transportation_theory_(psychology)"
+     "type": "book",
+     "file": "summaries/experiencing-narrative-worlds-1993.html",
+     "sourceUrl": "https://yalebooks.yale.edu/book/9780300054347/experiencing-narrative-worlds/"
     }
    ]
   },
@@ -3134,35 +2747,24 @@
    "paths": [
     "craft"
    ],
-   "goDeeper": [],
-   "furtherReading": [
+   "goDeeper": [
     {
+     "id": "politics-and-the-english-language-1946",
      "title": "Politics and the English Language",
-     "author": "George Orwell",
+     "authors": "George Orwell",
      "year": 1946,
-     "note": "George Orwell's essay Politics and the English Language, published in the magazine Horizon in 1946, argues that the decline of a language has political and economic causes, but that bad language also enables bad thinking.",
-     "url": "https://en.wikipedia.org/wiki/Politics_and_the_English_Language"
+     "type": "paper",
+     "file": "summaries/politics-and-the-english-language-1946.html",
+     "sourceUrl": "https://www.orwellfoundation.com/the-orwell-foundation/orwell/essays-and-other-works/politics-and-the-english-language/"
     },
     {
-     "title": "Politics and the English Language (full text, The Orwell Foundation)",
-     "author": "George Orwell",
-     "year": 1946,
-     "note": "George Orwell's essay Politics and the English Language, published in the magazine Horizon in 1946, argues that the decline of a language has political and economic causes, but that bad language also enables bad thinking.",
-     "url": "https://www.orwellfoundation.com/the-orwell-foundation/orwell/essays-and-other-works/politics-and-the-english-language/"
-    },
-    {
+     "id": "nineteen-eighty-four-1949",
      "title": "Nineteen Eighty-Four",
-     "author": "George Orwell",
+     "authors": "George Orwell",
      "year": 1949,
-     "note": "George Orwell's essay Politics and the English Language, published in the magazine Horizon in 1946, argues that the decline of a language has political and economic causes, but that bad language also enables bad thinking.",
-     "url": "https://en.wikipedia.org/wiki/Nineteen_Eighty-Four"
-    },
-    {
-     "title": "Newspeak",
-     "author": "Wikipedia",
-     "year": 2024,
-     "note": "A short public overview of Newspeak, with the main dates and further references.",
-     "url": "https://en.wikipedia.org/wiki/Newspeak"
+     "type": "book",
+     "file": "summaries/nineteen-eighty-four-1949.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Nineteen_Eighty-Four"
     }
    ]
   },
@@ -3182,35 +2784,33 @@
     "craft",
     "mind"
    ],
-   "goDeeper": [],
-   "furtherReading": [
+   "goDeeper": [
     {
+     "id": "the-sense-of-style-2014",
      "title": "The Sense of Style",
-     "author": "Steven Pinker",
+     "authors": "Steven Pinker",
      "year": 2014,
-     "note": "In The Sense of Style (2014), the cognitive psychologist Steven Pinker argues that the single best explanation of why good people write bad prose is the curse of knowledge: once you know something, it is very hard to imagine what it is like not to know it.",
-     "url": "https://en.wikipedia.org/wiki/The_Sense_of_Style"
+     "type": "book",
+     "file": "summaries/the-sense-of-style-2014.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/The_Sense_of_Style"
     },
     {
+     "id": "the-curse-of-knowledge-in-economic-settings-an-exp-1989",
      "title": "The Curse of Knowledge in Economic Settings: An Experimental Analysis",
-     "author": "Camerer, Loewenstein & Weber",
+     "authors": "Camerer, Loewenstein & Weber",
      "year": 1989,
-     "note": "The term comes from economics: in 1989 Colin Camerer, George Loewenstein and Martin Weber showed that better-informed traders could not ignore their private knowledge when predicting the judgements of less-informed traders, even when it would have paid them to do so.",
-     "url": "https://doi.org/10.1086/261651"
+     "type": "paper",
+     "file": "summaries/the-curse-of-knowledge-in-economic-settings-an-exp-1989.html",
+     "sourceUrl": "https://doi.org/10.1086/261651"
     },
     {
+     "id": "clear-and-simple-as-the-truth-writing-classic-pros-1994",
      "title": "Clear and Simple as the Truth: Writing Classic Prose",
-     "author": "Francis-Noël Thomas & Mark Turner",
+     "authors": "Francis-Noël Thomas & Mark Turner",
      "year": 1994,
-     "note": "Pinker's remedy is classic style, a concept he borrows from Francis-Noël Thomas and Mark Turner's Clear and Simple as the Truth (1994).",
-     "url": "https://en.wikipedia.org/wiki/Mark_Turner_(cognitive_scientist)"
-    },
-    {
-     "title": "Curse of knowledge",
-     "author": "Wikipedia",
-     "year": 2024,
-     "note": "A short public overview of Curse of knowledge, with the main dates and further references.",
-     "url": "https://en.wikipedia.org/wiki/Curse_of_knowledge"
+     "type": "book",
+     "file": "summaries/clear-and-simple-as-the-truth-writing-classic-pros-1994.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Mark_Turner_(cognitive_scientist)"
     }
    ]
   },
@@ -3232,52 +2832,31 @@
    ],
    "goDeeper": [
     {
-     "id": "james-principles",
-     "title": "The Principles of Psychology, Volume 1",
+     "id": "the-principles-of-psychology-1890",
+     "title": "The Principles of Psychology",
      "authors": "William James",
      "year": 1890,
-     "venue": "New York: Henry Holt",
-     "license": "public-domain",
-     "licenseName": "Public domain",
-     "licenseUrl": "https://www.gutenberg.org/policy/license.html",
-     "attribution": "William James. The Principles of Psychology, Volume 1. Project Gutenberg ebook 57628. The Project Gutenberg license in the text permits copying.",
-     "sourceUrl": "https://www.gutenberg.org/ebooks/57628",
-     "file": "texts/james-principles.html"
+     "type": "book",
+     "file": "summaries/the-principles-of-psychology-1890.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/The_Principles_of_Psychology"
     },
     {
-     "id": "woolf-dalloway",
-     "title": "Mrs. Dalloway",
+     "id": "mrs-dalloway-1925",
+     "title": "Mrs Dalloway",
      "authors": "Virginia Woolf",
      "year": 1925,
-     "venue": "London: Hogarth Press",
-     "license": "public-domain",
-     "licenseName": "Public domain",
-     "licenseUrl": "https://www.gutenberg.org/policy/license.html",
-     "attribution": "Virginia Woolf. Mrs. Dalloway. Project Gutenberg ebook 71865. The Project Gutenberg license in the text permits copying.",
-     "sourceUrl": "https://www.gutenberg.org/ebooks/71865",
-     "file": "texts/woolf-dalloway.html"
+     "type": "book",
+     "file": "summaries/mrs-dalloway-1925.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Mrs_Dalloway"
     },
     {
-     "id": "joyce-ulysses",
+     "id": "ulysses-1922",
      "title": "Ulysses",
      "authors": "James Joyce",
      "year": 1922,
-     "venue": "Paris: Shakespeare and Company",
-     "license": "public-domain",
-     "licenseName": "Public domain",
-     "licenseUrl": "https://www.gutenberg.org/policy/license.html",
-     "attribution": "James Joyce. Ulysses. Project Gutenberg ebook 4300. The Project Gutenberg license in the text permits copying.",
-     "sourceUrl": "https://www.gutenberg.org/ebooks/4300",
-     "file": "texts/joyce-ulysses.html"
-    }
-   ],
-   "furtherReading": [
-    {
-     "title": "Stream of consciousness (narrative mode)",
-     "author": "Wikipedia",
-     "year": 2024,
-     "note": "A short public overview of Stream of consciousness (narrative mode), with the main dates and further references.",
-     "url": "https://en.wikipedia.org/wiki/Stream_of_consciousness"
+     "type": "book",
+     "file": "summaries/ulysses-1922.html",
+     "sourceUrl": "https://www.gutenberg.org/ebooks/4300"
     }
    ]
   },
@@ -3299,33 +2878,13 @@
    ],
    "goDeeper": [
     {
-     "id": "shakespeare-hamlet",
-     "title": "Hamlet",
-     "authors": "William Shakespeare",
-     "year": 1603,
-     "venue": "First Quarto era text, Project Gutenberg ebook 1524",
-     "license": "public-domain",
-     "licenseName": "Public domain",
-     "licenseUrl": "https://www.gutenberg.org/policy/license.html",
-     "attribution": "William Shakespeare. Hamlet. Project Gutenberg ebook 1524. The Project Gutenberg license in the text permits copying.",
-     "sourceUrl": "https://www.gutenberg.org/ebooks/1524",
-     "file": "texts/shakespeare-hamlet.html"
-    }
-   ],
-   "furtherReading": [
-    {
-     "title": "The Sacred Wood (free e-text)",
-     "author": "T. S. Eliot",
-     "year": 1920,
-     "note": "Eliot made a provocative claim: Shakespeare's Hamlet, far from being a masterpiece, was most certainly an artistic failure.",
-     "url": "https://www.gutenberg.org/ebooks/57795"
-    },
-    {
-     "title": "The Love Song of J. Alfred Prufrock",
-     "author": "Wikipedia",
-     "year": 2024,
-     "note": "A short public overview of The Love Song of J. Alfred Prufrock, with the main dates and further references.",
-     "url": "https://en.wikipedia.org/wiki/The_Love_Song_of_J._Alfred_Prufrock"
+     "id": "hamlet-and-his-problems-1919",
+     "title": "Hamlet and His Problems",
+     "authors": "T. S. Eliot",
+     "year": 1919,
+     "type": "book",
+     "file": "summaries/hamlet-and-his-problems-1919.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Objective_correlative"
     }
    ]
   }

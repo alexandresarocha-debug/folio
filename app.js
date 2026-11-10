@@ -316,8 +316,7 @@ function runSearch(q) {
   const terms = q.toLowerCase().split(/\s+/);
   const scored = D.cards.map(c => {
     const deeper = (c.goDeeper || []).map(w => w.authors + ' ' + w.title).join(' ');
-    const further = (c.furtherReading || []).map(r => r.author + ' ' + r.title).join(' ');
-    const hay = { t: c.title.toLowerCase(), a: (c.source.author + ' ' + c.source.title + ' ' + deeper + ' ' + further).toLowerCase(), b: (c.summary + ' ' + c.deepDive + ' ' + topicById[c.topic].name).toLowerCase() };
+    const hay = { t: c.title.toLowerCase(), a: (c.source.author + ' ' + c.source.title + ' ' + deeper).toLowerCase(), b: (c.summary + ' ' + c.deepDive + ' ' + topicById[c.topic].name).toLowerCase() };
     let s = 0;
     for (const w of terms) { const ts = hay.t.includes(w) ? 5 : 0, as = hay.a.includes(w) ? 3 : 0, bs = hay.b.includes(w) ? 1 : 0; if (!ts && !as && !bs) return [0, c]; s += ts + as + bs; }
     return [s, c];
@@ -351,8 +350,7 @@ function pageHTML(c) {
     ${c.caution ? `<div class="caution">${I.warn}<div><b>Replication note</b>${esc(c.caution)}</div></div>` : ''}
     <div class="prose">${para(c.summary)}</div>
     <div class="deep"><button data-act="deep" aria-expanded="false"><span class="ic">${I.dive}</span><b>Deep dive<small>Nuance, debates and what to watch for</small></b><span class="chev">${I.close}</span></button><div class="body"><div class="prose deep-prose">${para(c.deepDive)}</div></div></div>
-    ${(c.goDeeper || []).length ? `<section class="further"><h2>Go deeper</h2><p class="further-lead">Full texts you can read here. Each one is in the public domain or under a license that allows it.</p>${c.goDeeper.map(w => `<button class="ref work-ref" type="button" data-work="${esc(w.id)}" data-card="${esc(c.id)}"><span class="ty">${I.book}</span><span class="tx"><b>${esc(w.title)}</b><span><em>Read in Folio</em>${esc(w.authors)} · ${yearStr(w.year)}</span></span><span class="go">${I.right}</span></button>`).join('')}</section>` : ''}
-    ${(c.furtherReading || []).length ? `<section class="further"><h2>Further reading</h2><p class="further-lead">Major works that stay outside the app, with a link to the original.</p>${c.furtherReading.map(r => `<a class="ref" href="${esc(r.url)}" target="_blank" rel="noopener"><span class="ty">${refIcon(r)}</span><span class="tx"><b>${esc(r.title)}</b><span>${esc(r.author)} · ${yearStr(r.year)}</span>${r.note ? `<span class="why">${esc(r.note)}</span>` : ''}</span><span class="go">${I.ext}</span></a>`).join('')}</section>` : ''}
+    ${(c.goDeeper || []).length ? `<section class="further"><h2>Go deeper</h2><p class="further-lead">The main works around this idea. Open one for a guided walkthrough, then the link to the original.</p>${c.goDeeper.map(w => `<button class="ref work-ref" type="button" data-work="${esc(w.id)}" data-card="${esc(c.id)}"><span class="ty">${w.type === 'paper' ? I.paper : I.book}</span><span class="tx"><b>${esc(w.title)}</b><span><em>${w.type === 'paper' ? 'Paper' : 'Book'}</em>${esc(w.authors)} · ${yearStr(w.year)}</span></span><span class="go">${I.right}</span></button>`).join('')}</section>` : ''}
   </div></article>`;
 }
 let drag = null;
@@ -526,7 +524,7 @@ async function openWork(cardId, workId) {
   const w = card && (card.goDeeper || []).find(x => x.id === workId);
   if (!w) return;
   const el = $('#work');
-  el.innerHTML = `<div class="reader-top"><button class="icon-btn" data-act="closeWork" aria-label="Close">${I.x}</button><div class="count">Opening</div><div class="progress" id="wprog-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Reading progress"><i id="wprog"></i></div></div><div class="work-scroll" id="work-scroll"><div class="page-in work-in"><p class="work-by">Loading the text…</p></div></div>`;
+  el.innerHTML = `<div class="reader-top"><button class="icon-btn" data-act="closeWork" aria-label="Close">${I.x}</button><div class="count">Summary</div><div class="progress" id="wprog-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Reading progress"><i id="wprog"></i></div></div><div class="work-scroll" id="work-scroll"><div class="page-in work-in"><p class="work-by">Loading the summary…</p></div></div>`;
   el.setAttribute('aria-hidden', 'false');
   syncInert();
   requestAnimationFrame(() => el.classList.add('open'));
@@ -546,9 +544,8 @@ async function openWork(cardId, workId) {
     if (!res.ok) throw new Error('status');
     const body = cleanWorkHtml(await res.text());
     if (!body) throw new Error('empty');
-    const count = el.querySelector('.count');
-    if (count) count.textContent = w.licenseName;
-    sc.innerHTML = `<div class="page-in work-in"><div class="kicker"><i></i>${esc(w.licenseName)}</div><h1>${esc(w.title)}</h1><p class="work-by">${esc(w.authors)} · ${yearStr(w.year)}${w.venue ? ' · ' + esc(w.venue) : ''}</p><div class="prose work-prose">${body}</div><footer class="work-attrib"><p>${esc(w.attribution)}</p><p><a href="${esc(w.sourceUrl)}" target="_blank" rel="noopener">Original source</a> · <a href="${esc(w.licenseUrl)}" target="_blank" rel="noopener">${esc(w.licenseName)}</a></p></footer></div>`;
+    const kind = w.type === 'paper' ? 'Paper' : 'Book';
+    sc.innerHTML = `<div class="page-in work-in"><div class="kicker"><i></i>${kind}</div><h1>${esc(w.title)}</h1><p class="work-by">${esc(w.authors)} · ${yearStr(w.year)}</p><div class="prose work-prose">${body}</div><footer class="work-attrib"><p><a href="${esc(w.sourceUrl)}" target="_blank" rel="noopener">Read the original</a></p></footer></div>`;
     sc.scrollTop = 0;
     requestAnimationFrame(update);
   } catch (e) {
