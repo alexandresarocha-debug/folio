@@ -315,7 +315,7 @@ svg{shape-rendering:geometricPrecision}
 .card,.feature,.path,.ref{transition:transform .16s var(--ease),background .16s var(--ease),border-color .16s var(--ease)}
 .card:active,.feature:active,.path:active,.ref:active,.step:active{transform:scale(.982);transition-duration:.08s}
 @media (hover:hover) and (pointer:fine){
-  .card:hover,.feature:hover,.path:hover,.ref:hover{border-color:var(--line-strong)}
+  .card:hover,.feature:hover,.path:hover,.ref:hover,.narration-card:hover{border-color:var(--line-strong)}
 }
 .reader{transform:translate3d(0,104%,0);transition:transform .46s var(--ease-out)}
 .reader.open{transform:translate3d(0,0,0)}
@@ -349,3 +349,33 @@ svg{shape-rendering:geometricPrecision}
 .work-prose .work-license h2{font-family:var(--sans);font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:650}
 .work-attrib{margin-top:28px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:13.5px;line-height:1.5}
 .work-attrib a{text-decoration:underline;text-underline-offset:2px}
+.work .kicker{display:flex;align-items:center;gap:8px;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:650;color:var(--c,var(--muted))}
+.work .kicker i{width:6px;height:6px;border-radius:50%;background:currentColor}
+.work h1{font-family:var(--serif);font-weight:500;font-size:31px;line-height:1.12;letter-spacing:-.022em;margin:14px 0 14px;text-wrap:balance}
+.narration{margin:0 0 22px}
+.narration-card{text-align:left;border-radius:16px;background:var(--surface);border:1px solid var(--line);padding:4px 6px 12px}
+.narration-toggle{display:flex;width:100%;text-align:left;gap:14px;align-items:center;padding:10px;border-radius:12px}
+.narration-toggle:active{background:var(--surface-2)}
+.narration-toggle .ty{flex:none;width:36px;height:36px;border-radius:10px;display:grid;place-items:center;background:var(--surface-2);color:var(--text)}
+.narration-toggle .ty svg{width:18px;height:18px}
+.narration-toggle .tx{flex:1;min-width:0;text-align:left}
+.narration-toggle .tx b{display:block;text-align:left;font-family:var(--serif);font-weight:500;font-size:16.5px;line-height:1.28}
+.narration-toggle .tx span{display:block;text-align:left;font-size:12.5px;color:var(--muted);margin-top:4px}
+.narration-seekrow{display:flex;align-items:center;gap:8px;margin-top:4px;padding:0 10px}
+.narration-seekrow span{flex:none;min-width:44px;font-size:12px;font-weight:600;font-variant-numeric:tabular-nums;color:var(--muted)}
+.narration-seekrow span[data-total]{text-align:right}
+.narration-seek{flex:1;min-width:0;height:28px;margin:0;background:transparent;touch-action:manipulation;-webkit-appearance:none;appearance:none;--p:0%}
+.narration-seek:disabled{opacity:.4}
+.narration-seek::-webkit-slider-runnable-track{height:4px;border-radius:999px;background:linear-gradient(90deg,var(--text) var(--p,0%),var(--surface-3) var(--p,0%))}
+.narration-seek::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:16px;height:16px;margin-top:-6px;border:0;border-radius:50%;background:var(--text);box-shadow:0 1px 3px rgba(0,0,0,.35)}
+.narration-seek::-moz-range-track{height:4px;border:0;border-radius:999px;background:var(--surface-3)}
+.narration-seek::-moz-range-progress{height:4px;border-radius:999px;background:var(--text)}
+.narration-seek::-moz-range-thumb{width:16px;height:16px;border:0;border-radius:50%;background:var(--text)}
+.narration-transport,.narration-rates{display:flex;justify-content:flex-start;align-items:center;gap:6px;padding:0 10px}
+.narration-transport{flex-wrap:wrap;margin-top:2px}
+.narration-rates{flex-wrap:nowrap;gap:4px;margin-top:8px;overflow-x:auto;scrollbar-width:none}
+.narration-rates::-webkit-scrollbar{display:none}
+.narration-transport button,.narration-rates button{height:32px;padding:0 8px;border-radius:999px;background:var(--surface-2);color:var(--muted);font-size:12.5px;font-weight:650;font-variant-numeric:tabular-nums}
+.narration-transport button{color:var(--text)}
+.narration-rates button.on{background:var(--text);color:var(--bg)}
+.narration-transport button:active,.narration-rates button:active{transform:scale(.96)}
