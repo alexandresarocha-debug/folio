@@ -1,4 +1,4 @@
-const VERSION = 'folio-v1.5.0';
+const VERSION = 'folio-v1.6.0';
 const AUDIO_CACHE = 'folio-audio';
 const SHELL = ['./', 'index.html', 'styles.css', 'app.js', 'manifest.webmanifest', 'data/cards.json', 'data/audio.json',
   'fonts/inter.woff2', 'fonts/newsreader.woff2', 'fonts/newsreader-italic.woff2',
