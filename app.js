@@ -24,6 +24,8 @@ const I = {
   arrowR: P('<path d="M5 12h14M13 6l6 6-6 6"/>', 'stroke-width="2"'),
   swipe: P('<path d="M7 12h12M15 8l4 4-4 4M5 8v8"/>'),
   sparkle: P('<path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M5.6 18.4l2.8-2.8M15.6 8.4l2.8-2.8"/>'),
+  play: P('<path d="M8 5.5v13l11-6.5-11-6.5Z" fill="currentColor" stroke="none"/>'),
+  pause: P('<path d="M6.5 5h3.2v14H6.5Zm8 0H17.7v14h-3.2Z" fill="currentColor" stroke="none"/>'),
 };
 
 /* ---------- Utils ---------- */
@@ -507,6 +509,437 @@ function closeReader() {
   refresh();
 }
 
+/* ---------- Narration ---------- */
+const AUDIO_BASE = 'https://cdn.jsdelivr.net/gh/alexandresarocha-debug/folio-audio@main/';
+const AUDIO_FALLBACK_BASE = 'https://raw.githubusercontent.com/alexandresarocha-debug/folio-audio/main/';
+const AUDIO_RATES = ['0.75', '1', '1.25', '1.5', '1.75', '2'];
+const AUDIO_RATE_KEY = 'folio.audio.rate';
+const AUDIO_POS_KEY = 'folio.audio.pos';
+let audioCatalog = null;
+let narration = null;
+let workGen = 0;
+
+function workSlug(w) {
+  const base = String(w && w.file || '').split('/').pop() || '';
+  if (base.endsWith('.html')) return base.slice(0, -5);
+  return String(w && w.id || '');
+}
+function audioInfo(w) {
+  if (!audioCatalog) return null;
+  const slug = workSlug(w);
+  if (!/^[a-z0-9][a-z0-9-]*$/.test(slug)) return null;
+  if (!Object.prototype.hasOwnProperty.call(audioCatalog, slug)) return null;
+  const duration = Number(audioCatalog[slug]);
+  return { slug, duration: Number.isFinite(duration) ? duration : 0 };
+}
+function fmtClock(s) {
+  if (!Number.isFinite(s) || s < 0) s = 0;
+  s = Math.round(s);
+  const h = Math.floor(s / 3600);
+  const m = Math.floor((s % 3600) / 60);
+  const sec = s % 60;
+  return h ? `${h}:${pad(m)}:${pad(sec)}` : `${m}:${pad(sec)}`;
+}
+function rateLabel(v) { return `${v}\u00d7`; }
+function audioRate() {
+  try {
+    const v = localStorage.getItem(AUDIO_RATE_KEY);
+    if (AUDIO_RATES.includes(v)) return Number(v);
+  } catch (e) {}
+  return 1;
+}
+function setAudioRate(v) {
+  try { localStorage.setItem(AUDIO_RATE_KEY, v); } catch (e) {}
+}
+function audioPositions() {
+  try {
+    const v = JSON.parse(localStorage.getItem(AUDIO_POS_KEY) || '{}');
+    return v && typeof v === 'object' ? v : {};
+  } catch (e) { return {}; }
+}
+function saveAudioPos(slug, t, dur) {
+  if (!slug || !/^[a-z0-9][a-z0-9-]*$/.test(slug)) return;
+  const all = audioPositions();
+  if (!Number.isFinite(t) || t < 1 || (Number.isFinite(dur) && dur > 0 && t > dur - 3)) delete all[slug];
+  else all[slug] = Math.round(t * 10) / 10;
+  try { localStorage.setItem(AUDIO_POS_KEY, JSON.stringify(all)); } catch (e) {}
+}
+function audioUrl(slug, fallback) {
+  return (fallback ? AUDIO_FALLBACK_BASE : AUDIO_BASE) + slug + '.mp3';
+}
+function catalogDuration(slug) {
+  const n = audioCatalog ? Number(audioCatalog[slug]) : NaN;
+  return Number.isFinite(n) ? n : 0;
+}
+function narrationDuration() {
+  const audio = narration && narration.audio;
+  if (audio && Number.isFinite(audio.duration) && audio.duration > 0 && audio.duration !== Infinity) return audio.duration;
+  return narration ? catalogDuration(narration.slug) : 0;
+}
+function folioArtwork() {
+  const item = (path, sizes, type) => {
+    try { return { src: new URL(path, document.baseURI).href, sizes, type }; }
+    catch (e) { return null; }
+  };
+  return [item('icons/icon-192.png', '192x192', 'image/png'), item('icons/icon-512.png', '512x512', 'image/png')].filter(Boolean);
+}
+function applyRate(audio) {
+  const r = audioRate();
+  try { audio.defaultPlaybackRate = r; audio.playbackRate = r; } catch (e) {}
+}
+function updatePositionState() {
+  if (!narration || !('mediaSession' in navigator) || !navigator.mediaSession.setPositionState) return;
+  const audio = narration.audio;
+  if (!audio || !Number.isFinite(audio.duration) || audio.duration <= 0 || audio.duration === Infinity) return;
+  const position = Math.min(audio.duration, Math.max(0, audio.currentTime || 0));
+  const playbackRate = audio.playbackRate > 0 ? audio.playbackRate : 1;
+  try { navigator.mediaSession.setPositionState({ duration: audio.duration, playbackRate, position }); } catch (e) {}
+}
+function clearMediaSession() {
+  if (!('mediaSession' in navigator)) return;
+  try { navigator.mediaSession.metadata = null; } catch (e) {}
+  try { navigator.mediaSession.playbackState = 'none'; } catch (e) {}
+  ['play', 'pause', 'seekbackward', 'seekforward', 'seekto'].forEach(action => {
+    try { navigator.mediaSession.setActionHandler(action, null); } catch (e) {}
+  });
+  try { navigator.mediaSession.setPositionState(null); } catch (e) {}
+}
+function ensureMediaSession() {
+  if (!narration || !('mediaSession' in navigator)) return;
+  const n = narration;
+  try { navigator.mediaSession.playbackState = n.audio && !n.audio.paused ? 'playing' : 'paused'; } catch (e) {}
+  if (n.sessionReady) { updatePositionState(); return; }
+  n.sessionReady = true;
+  try {
+    navigator.mediaSession.metadata = new MediaMetadata({ title: n.title, artist: 'Folio', artwork: folioArtwork() });
+  } catch (e) {}
+  const bind = (action, fn) => { try { navigator.mediaSession.setActionHandler(action, fn); } catch (e) {} };
+  bind('play', () => { if (narration) narrationResume(); });
+  bind('pause', () => { if (narration) narrationPause(); });
+  bind('seekbackward', d => narrationSkip(-((d && d.seekOffset) || 15)));
+  bind('seekforward', d => narrationSkip((d && d.seekOffset) || 30));
+  bind('seekto', d => { if (d && typeof d.seekTime === 'number') narrationSeek(d.seekTime, !!d.fastSeek); });
+  updatePositionState();
+}
+function requestAudioCache(url) {
+  if (!url || !('serviceWorker' in navigator)) return;
+  const msg = { type: 'cache-audio', url };
+  const send = sw => { try { sw.postMessage(msg); } catch (e) {} };
+  if (navigator.serviceWorker.controller) send(navigator.serviceWorker.controller);
+  navigator.serviceWorker.ready.then(reg => { if (reg.active) send(reg.active); }).catch(() => {});
+}
+function syncNarrationUI() {
+  const n = narration;
+  if (!n || !n.root || !n.root.isConnected) return;
+  const audio = n.audio;
+  const paused = !audio || audio.paused || audio.ended;
+  const dur = narrationDuration();
+  const hasSrc = !!(audio && audio.getAttribute('src'));
+  const savedPos = Number(audioPositions()[n.slug]);
+  const liveT = audio && Number.isFinite(audio.currentTime) ? audio.currentTime : 0;
+  const t = !hasSrc && savedPos > 1 ? savedPos : liveT;
+  if (n.root.dataset.paused !== (paused ? '1' : '0')) {
+    n.root.dataset.paused = paused ? '1' : '0';
+    const icon = n.root.querySelector('[data-icon]');
+    if (icon) icon.innerHTML = paused ? I.play : I.pause;
+    const toggle = n.root.querySelector('.narration-toggle');
+    if (toggle) {
+      toggle.setAttribute('aria-label', (paused ? 'Play narration: ' : 'Pause narration: ') + n.title);
+      toggle.setAttribute('aria-pressed', paused ? 'false' : 'true');
+    }
+  }
+  const sub = n.root.querySelector('[data-sub]');
+  if (sub) {
+    if (n.failed) sub.textContent = 'Couldn\u2019t load this narration.';
+    else if (hasSrc && !paused) sub.textContent = 'Narrated summary';
+    else if (n.loading) sub.textContent = 'Loading\u2026';
+    else if (!hasSrc && savedPos > 1) sub.textContent = `Resume from ${fmtClock(savedPos)}`;
+    else sub.textContent = dur ? `Narrated summary \u00b7 ${fmtClock(dur)}` : 'Narrated summary';
+  }
+  const elapsed = n.root.querySelector('[data-elapsed]');
+  const total = n.root.querySelector('[data-total]');
+  if (!n.seekHold && elapsed) elapsed.textContent = fmtClock(t);
+  if (total) total.textContent = fmtClock(dur || 0);
+  const input = n.root.querySelector('.narration-seek');
+  if (input) {
+    const canSeek = !!(audio && Number.isFinite(audio.duration) && audio.duration > 0 && audio.duration !== Infinity);
+    input.disabled = !canSeek;
+    if (!n.seekHold && dur) {
+      const v = String(Math.max(0, Math.min(1000, Math.round((t / dur) * 1000))));
+      if (input.value !== v) input.value = v;
+      input.style.setProperty('--p', (Number(v) / 10) + '%');
+      input.setAttribute('aria-valuenow', v);
+      input.setAttribute('aria-valuetext', `${fmtClock(t)} of ${fmtClock(dur)}`);
+    }
+  }
+  const rate = audioRate();
+  n.root.querySelectorAll('[data-rate]').forEach(btn => {
+    const on = Number(btn.dataset.rate) === rate;
+    btn.classList.toggle('on', on);
+    btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+  });
+}
+function narrationBlock(w) {
+  const info = audioInfo(w);
+  if (!info) return '';
+  const rate = audioRate();
+  const saved = Number(audioPositions()[info.slug]);
+  const sub = saved > 1 ? `Resume from ${fmtClock(saved)}` : (info.duration ? `Narrated summary \u00b7 ${fmtClock(info.duration)}` : 'Narrated summary');
+  const rates = AUDIO_RATES.map(r => {
+    const on = Number(r) === rate;
+    return `<button type="button" data-act="audio-rate" data-rate="${r}" class="${on ? 'on' : ''}" aria-pressed="${on ? 'true' : 'false'}">${rateLabel(r)}</button>`;
+  }).join('');
+  return `<section class="narration" data-slug="${esc(info.slug)}">
+    <div class="narration-card">
+      <button type="button" class="narration-toggle" data-act="audio-toggle" aria-label="Play narration: ${esc(w.title)}">
+        <span class="ty" data-icon>${I.play}</span>
+        <span class="tx"><b>Listen</b><span data-sub>${esc(sub)}</span></span>
+      </button>
+      <div class="narration-seekrow">
+        <span data-elapsed>0:00</span>
+        <input class="narration-seek" type="range" min="0" max="1000" value="0" step="1" disabled aria-label="Seek narration" aria-valuemin="0" aria-valuemax="1000" aria-valuenow="0">
+        <span data-total>${esc(info.duration ? fmtClock(info.duration) : '0:00')}</span>
+      </div>
+      <div class="narration-transport">
+        <button type="button" data-act="audio-back" aria-label="Back 15 seconds">-15s</button>
+        <button type="button" data-act="audio-fwd" aria-label="Forward 30 seconds">+30s</button>
+      </div>
+      <div class="narration-rates" role="group" aria-label="Playback speed">${rates}</div>
+    </div>
+    <audio preload="none" playsinline webkit-playsinline crossorigin="anonymous"></audio>
+  </section>`;
+}
+function bindNarrationAudio(n) {
+  const audio = n.audio;
+  const alive = () => narration && narration.audio === audio && !n.closing;
+  audio.addEventListener('play', () => {
+    if (!alive()) return;
+    try { navigator.mediaSession.playbackState = 'playing'; } catch (e) {}
+    syncNarrationUI();
+  });
+  audio.addEventListener('playing', () => {
+    if (!alive()) return;
+    n.loading = false;
+    applyRate(audio);
+    ensureMediaSession();
+    if (!n.cacheSent) {
+      n.cacheSent = true;
+      requestAudioCache(audio.currentSrc || audio.src);
+    }
+    syncNarrationUI();
+    updatePositionState();
+  });
+  audio.addEventListener('pause', () => {
+    if (!alive()) return;
+    try { navigator.mediaSession.playbackState = 'paused'; } catch (e) {}
+    saveAudioPos(n.slug, audio.currentTime, audio.duration);
+    syncNarrationUI();
+    updatePositionState();
+  });
+  audio.addEventListener('timeupdate', () => {
+    if (!alive()) return;
+    syncNarrationUI();
+    updatePositionState();
+    const now = Date.now();
+    if (now - n.saveAt > 5000) {
+      n.saveAt = now;
+      saveAudioPos(n.slug, audio.currentTime, audio.duration);
+    }
+  });
+  audio.addEventListener('seeked', () => { if (alive()) updatePositionState(); });
+  audio.addEventListener('ended', () => {
+    if (!alive()) return;
+    saveAudioPos(n.slug, audio.duration, audio.duration);
+    try { audio.currentTime = 0; } catch (e) {}
+    try { navigator.mediaSession.playbackState = 'paused'; } catch (e) {}
+    syncNarrationUI();
+  });
+  audio.addEventListener('loadedmetadata', () => { if (alive()) syncNarrationUI(); });
+  audio.addEventListener('durationchange', () => { if (alive()) { syncNarrationUI(); updatePositionState(); } });
+  audio.addEventListener('ratechange', () => { if (alive()) updatePositionState(); });
+  audio.addEventListener('waiting', () => {
+    if (!alive() || !audio.getAttribute('src') || n.failed) return;
+    n.loading = true;
+    const sub = n.root.querySelector('[data-sub]');
+    if (sub) sub.textContent = 'Loading\u2026';
+  });
+  audio.addEventListener('canplay', () => { if (!alive()) return; n.loading = false; syncNarrationUI(); });
+}
+function startNarrationSrc(n, url, resumeAt) {
+  const audio = n.audio;
+  if (n.onErr) audio.removeEventListener('error', n.onErr);
+  const token = ++n.loadToken;
+  const onErr = () => {
+    if (!narration || narration !== n || n.loadToken !== token || n.closing) return;
+    if (!n.fallback) {
+      n.fallback = true;
+      n.cacheSent = false;
+      n.failed = false;
+      startNarrationSrc(n, audioUrl(n.slug, true), audio.currentTime || resumeAt || 0);
+      return;
+    }
+    n.failed = true;
+    n.loading = false;
+    syncNarrationUI();
+  };
+  n.onErr = onErr;
+  audio.addEventListener('error', onErr);
+  n.loading = true;
+  audio.src = url;
+  applyRate(audio);
+  audio.addEventListener('loadedmetadata', () => {
+    if (!narration || narration !== n || n.loadToken !== token) return;
+    if (resumeAt > 1 && Number.isFinite(audio.duration) && resumeAt < audio.duration - 2) {
+      try { audio.currentTime = resumeAt; } catch (e) {}
+    }
+    syncNarrationUI();
+  }, { once: true });
+  const played = audio.play();
+  if (played) played.catch(err => {
+    if (!narration || n.loadToken !== token) return;
+    n.loading = false;
+    if (!err || err.name === 'NotAllowedError' || err.name === 'AbortError') { syncNarrationUI(); return; }
+    onErr();
+  });
+  syncNarrationUI();
+}
+function mountNarration(section, title) {
+  if (!section) { narration = null; return; }
+  const audio = section.querySelector('audio');
+  if (!audio) return;
+  audio.playsInline = true;
+  narration = {
+    slug: section.dataset.slug,
+    title: title || 'Summary',
+    root: section,
+    audio,
+    fallback: false,
+    failed: false,
+    loading: false,
+    cacheSent: false,
+    seekHold: false,
+    saveAt: 0,
+    closing: false,
+    loadToken: 0,
+    sessionReady: false,
+    onErr: null,
+  };
+  bindNarrationAudio(narration);
+  syncNarrationUI();
+}
+function stopNarration() {
+  const n = narration;
+  if (!n) { clearMediaSession(); return; }
+  n.closing = true;
+  n.loadToken += 1;
+  narration = null;
+  try { if (n.audio && !n.failed) saveAudioPos(n.slug, n.audio.currentTime, n.audio.duration); } catch (e) {}
+  try { n.audio && n.audio.pause(); } catch (e) {}
+  clearMediaSession();
+}
+function persistNarration() {
+  const n = narration;
+  if (!n || !n.audio || n.closing) return;
+  saveAudioPos(n.slug, n.audio.currentTime, n.audio.duration);
+}
+function narrationToggle() {
+  const n = narration;
+  if (!n || !n.audio) return;
+  const audio = n.audio;
+  if (n.failed || !audio.getAttribute('src')) {
+    n.failed = false;
+    n.fallback = false;
+    n.cacheSent = false;
+    const saved = Number(audioPositions()[n.slug]);
+    startNarrationSrc(n, audioUrl(n.slug, false), saved > 1 ? saved : 0);
+    haptic(6);
+    return;
+  }
+  if (audio.paused || audio.ended) {
+    applyRate(audio);
+    if (audio.ended || (audio.duration && audio.currentTime >= audio.duration - 0.25)) {
+      try { audio.currentTime = 0; } catch (e) {}
+    }
+    const played = audio.play();
+    if (played) played.catch(() => {});
+  } else {
+    audio.pause();
+    saveAudioPos(n.slug, audio.currentTime, audio.duration);
+  }
+  haptic(6);
+}
+function narrationResume() {
+  const n = narration;
+  if (!n || !n.audio) return;
+  if (!n.audio.getAttribute('src') || n.failed) narrationToggle();
+  else if (n.audio.paused) { applyRate(n.audio); n.audio.play().catch(() => {}); }
+}
+function narrationPause() {
+  const n = narration;
+  if (!n || !n.audio || n.audio.paused) return;
+  n.audio.pause();
+  saveAudioPos(n.slug, n.audio.currentTime, n.audio.duration);
+}
+function narrationSeek(t, fast) {
+  const n = narration;
+  if (!n || !n.audio) return;
+  const dur = Number.isFinite(n.audio.duration) && n.audio.duration > 0 ? n.audio.duration : 0;
+  if (!dur) return;
+  const next = Math.min(dur, Math.max(0, t));
+  try {
+    if (fast && typeof n.audio.fastSeek === 'function') n.audio.fastSeek(next);
+    else n.audio.currentTime = next;
+  } catch (e) {
+    try { n.audio.currentTime = next; } catch (err) {}
+  }
+  saveAudioPos(n.slug, next, dur);
+  syncNarrationUI();
+  updatePositionState();
+}
+function narrationSkip(delta) {
+  const n = narration;
+  if (!n || !n.audio || !Number.isFinite(n.audio.duration)) return;
+  narrationSeek((n.audio.currentTime || 0) + delta, false);
+}
+function narrationSetRate(v) {
+  if (!AUDIO_RATES.includes(v)) return;
+  setAudioRate(v);
+  if (narration && narration.audio) applyRate(narration.audio);
+  syncNarrationUI();
+  updatePositionState();
+  haptic(6);
+}
+function seekRatio(input) {
+  const dur = narrationDuration();
+  if (!dur || !input) return 0;
+  return (Number(input.value) / 1000) * dur;
+}
+function onSeekInput(input) {
+  if (!narration || !narration.root) return;
+  narration.seekHold = true;
+  const t = seekRatio(input);
+  const elapsed = narration.root.querySelector('[data-elapsed]');
+  if (elapsed) elapsed.textContent = fmtClock(t);
+  input.style.setProperty('--p', (Number(input.value) / 10) + '%');
+  input.setAttribute('aria-valuenow', input.value);
+  input.setAttribute('aria-valuetext', fmtClock(t));
+}
+function commitSeek(input) {
+  if (!narration || !input) return;
+  narration.seekHold = false;
+  const audio = narration.audio;
+  if (!audio || !Number.isFinite(audio.duration) || audio.duration <= 0) return;
+  narrationSeek((Number(input.value) / 1000) * audio.duration, false);
+}
+async function loadAudioCatalog() {
+  try {
+    const res = await fetch('data/audio.json', { cache: 'no-cache' });
+    if (!res.ok) return;
+    const data = await res.json();
+    if (data && typeof data === 'object') audioCatalog = data;
+  } catch (e) {}
+}
+
 function cleanWorkHtml(raw) {
   const doc = new DOMParser().parseFromString(raw, 'text/html');
   doc.querySelectorAll('script,style,iframe,object,embed,link,meta').forEach(n => n.remove());
@@ -523,7 +956,10 @@ async function openWork(cardId, workId) {
   const card = byId[cardId];
   const w = card && (card.goDeeper || []).find(x => x.id === workId);
   if (!w) return;
+  stopNarration();
+  const gen = ++workGen;
   const el = $('#work');
+  el.style.setProperty('--c', color(card.topic));
   el.innerHTML = `<div class="reader-top"><button class="icon-btn" data-act="closeWork" aria-label="Close">${I.x}</button><div class="count">Summary</div><div class="progress" id="wprog-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Reading progress"><i id="wprog"></i></div></div><div class="work-scroll" id="work-scroll"><div class="page-in work-in"><p class="work-by">Loading the summary…</p></div></div>`;
   el.setAttribute('aria-hidden', 'false');
   syncInert();
@@ -544,15 +980,20 @@ async function openWork(cardId, workId) {
     if (!res.ok) throw new Error('status');
     const body = cleanWorkHtml(await res.text());
     if (!body) throw new Error('empty');
+    if (gen !== workGen) return;
     const kind = w.type === 'paper' ? 'Paper' : 'Book';
-    sc.innerHTML = `<div class="page-in work-in"><div class="kicker"><i></i>${kind}</div><h1>${esc(w.title)}</h1><p class="work-by">${esc(w.authors)} · ${yearStr(w.year)}</p><div class="prose work-prose">${body}</div><footer class="work-attrib"><p><a href="${esc(w.sourceUrl)}" target="_blank" rel="noopener">Read the original</a></p></footer></div>`;
+    sc.innerHTML = `<div class="page-in work-in"><div class="kicker"><i></i>${kind}</div><h1>${esc(w.title)}</h1><p class="work-by">${esc(w.authors)} · ${yearStr(w.year)}</p>${narrationBlock(w)}<div class="prose work-prose">${body}</div><footer class="work-attrib"><p><a href="${esc(w.sourceUrl)}" target="_blank" rel="noopener">Read the original</a></p></footer></div>`;
+    mountNarration($('.narration', sc), w.title);
     sc.scrollTop = 0;
     requestAnimationFrame(update);
   } catch (e) {
+    if (gen !== workGen) return;
     sc.innerHTML = '<div class="page-in work-in"><p class="work-by">Couldn’t open this text. Check your connection and try again.</p></div>';
   }
 }
 function closeWork() {
+  workGen++;
+  stopNarration();
   const el = $('#work');
   el.classList.remove('open');
   el.setAttribute('aria-hidden', 'true');
@@ -607,6 +1048,10 @@ document.addEventListener('click', e => {
   if (t.dataset.themeSet) { S.theme = t.dataset.themeSet; save(); applyTheme(); haptic(6); renderProgress(); return; }
   if (t.dataset.sq) { const inp = $('#search input'); inp.value = t.dataset.sq; runSearch(inp.value); return; }
   const a = t.dataset.act;
+  if (a === 'audio-toggle') { narrationToggle(); return; }
+  if (a === 'audio-back') { narrationSkip(-15); haptic(6); return; }
+  if (a === 'audio-fwd') { narrationSkip(30); haptic(6); return; }
+  if (a === 'audio-rate') { narrationSetRate(t.dataset.rate); return; }
   if (a === 'search') openSearch();
   else if (a === 'closeSearch' || a === 'pop' || a === 'closeReader' || a === 'closeWork') closeTop();
   else if (a === 'deep') { const d = t.parentElement; const open = d.classList.toggle('open'); t.setAttribute('aria-expanded', open); haptic(5); }
@@ -622,7 +1067,23 @@ document.addEventListener('keydown', e => {
   if (e.key === 'ArrowRight') readerGo(1); else if (e.key === 'ArrowLeft') readerGo(-1); else if (e.key === 'Escape') closeTop();
 });
 let rz; window.addEventListener('resize', () => { clearTimeout(rz); rz = setTimeout(() => { if ($('#reader').classList.contains('open') && !drag) layoutTrack(); }, 80); });
-document.addEventListener('visibilitychange', () => { if (!document.hidden && D) refresh(); });
+document.addEventListener('input', e => {
+  if (e.target.classList && e.target.classList.contains('narration-seek')) onSeekInput(e.target);
+});
+document.addEventListener('change', e => {
+  if (e.target.classList && e.target.classList.contains('narration-seek')) commitSeek(e.target);
+});
+document.addEventListener('pointerup', e => {
+  if (!narration || !narration.seekHold) return;
+  const input = e.target.classList && e.target.classList.contains('narration-seek') ? e.target : narration.root.querySelector('.narration-seek');
+  commitSeek(input);
+});
+document.addEventListener('pointercancel', () => { if (narration) narration.seekHold = false; });
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden) persistNarration();
+  else if (D) refresh();
+});
+window.addEventListener('pagehide', persistNarration);
 
 /* ---------- Boot ---------- */
 async function warmFonts() {
@@ -643,7 +1104,10 @@ async function boot() {
   applyTheme();
   const started = performance.now();
   try {
-    const res = await fetch('data/cards.json', { cache: 'no-cache' });
+    const res = await Promise.all([
+      fetch('data/cards.json', { cache: 'no-cache' }),
+      loadAudioCatalog(),
+    ]).then(parts => parts[0]);
     if (!res.ok) throw new Error('status');
     D = await res.json();
     await warmFonts();
