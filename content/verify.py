@@ -74,8 +74,8 @@ def main() -> None:
     sw = SW.read_text(encoding="utf-8")
     if "const KEY = 'folio.v1'" not in app:
         errors.append("localStorage key folio.v1 changed")
-    if "folio-v1.3.0" not in sw:
-        errors.append("service worker is not folio-v1.3.0")
+    if "folio-v1.4.0" not in sw:
+        errors.append("service worker is not folio-v1.4.0")
     if "summaries/" in sw.split("SHELL", 1)[-1].split("];", 1)[0]:
         errors.append("summaries must be lazy-loaded, not precached")
 

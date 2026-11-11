@@ -1,4 +1,4 @@
-const VERSION = 'folio-v1.3.0';
+const VERSION = 'folio-v1.4.0';
 const SHELL = ['./', 'index.html', 'styles.css', 'app.js', 'manifest.webmanifest', 'data/cards.json',
   'fonts/inter.woff2', 'fonts/newsreader.woff2', 'fonts/newsreader-italic.woff2',
   'icons/icon.svg', 'icons/icon-192.png', 'icons/icon-512.png', 'icons/maskable-512.png', 'icons/apple-touch-icon.png'];
