@@ -521,8 +521,9 @@ const AUDIO_RATES = ['0.75', '0.8', '0.85', '0.9', '0.95', '1', '1.1', '1.25'];
 // New recording, committed in this repo because folio-audio is not writable from here.
 // Same-origin so GitHub Pages can play it without the old MP3s. Do not point this
 // slug at judgment-under-uncertainty-….mp3; that file is the previous narration.
+// Narration omits the written "Source." citation. The page keeps it.
 const AUDIO_FILES = {
-  'judgment-under-uncertainty-heuristics-and-biases-1974': 'audio/anchoring-v3.mp3',
+  'judgment-under-uncertainty-heuristics-and-biases-1974': 'audio/anchoring-v4.mp3',
 };
 const AUDIO_RATE_KEY = 'folio.audio.rate';
 const AUDIO_POS_KEY = 'folio.audio.pos';
