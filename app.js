@@ -352,7 +352,7 @@ function pageHTML(c) {
     ${c.caution ? `<div class="caution">${I.warn}<div><b>Replication note</b>${esc(c.caution)}</div></div>` : ''}
     <div class="prose">${para(c.summary)}</div>
     <div class="deep"><button data-act="deep" aria-expanded="false"><span class="ic">${I.dive}</span><b>Deep dive<small>Nuance, debates and what to watch for</small></b><span class="chev">${I.close}</span></button><div class="body"><div class="prose deep-prose">${para(c.deepDive)}</div></div></div>
-    ${(c.goDeeper || []).length ? `<section class="further"><h2>Go deeper</h2><p class="further-lead">The main works around this idea. Open one for a guided walkthrough, then the link to the original.</p>${c.goDeeper.map(w => `<button class="ref work-ref" type="button" data-work="${esc(w.id)}" data-card="${esc(c.id)}"><span class="ty">${w.type === 'paper' ? I.paper : I.book}</span><span class="tx"><b>${esc(w.title)}</b><span><em>${w.type === 'paper' ? 'Paper' : 'Book'}</em>${esc(w.authors)} · ${yearStr(w.year)}</span></span><span class="go">${I.right}</span></button>`).join('')}</section>` : ''}
+    ${(c.goDeeper || []).length ? `<section class="further"><h2>Go deeper</h2><p class="further-lead">The main works around this idea. Open one for the concrete evidence, then the link to the original.</p>${c.goDeeper.map(w => `<button class="ref work-ref" type="button" data-work="${esc(w.id)}" data-card="${esc(c.id)}"><span class="ty">${w.type === 'paper' ? I.paper : I.book}</span><span class="tx"><b>${esc(w.title)}</b><span><em>${w.type === 'paper' ? 'Paper' : 'Book'}</em>${esc(w.authors)} · ${yearStr(w.year)}</span></span><span class="go">${I.right}</span></button>`).join('')}</section>` : ''}
   </div></article>`;
 }
 let drag = null;
@@ -510,9 +510,21 @@ function closeReader() {
 }
 
 /* ---------- Narration ---------- */
+// The player only appears for works listed in data/audio.json. That file currently
+// names the rewritten Tversky & Kahneman anchoring summary alone. Older MP3s do not
+// match the new texts, so they are not listed. Set NARRATION_ENABLED to false to hide
+// the player everywhere. Playback, catalog, and cache code stay in place.
+const NARRATION_ENABLED = true;
 const AUDIO_BASE = 'https://cdn.jsdelivr.net/gh/alexandresarocha-debug/folio-audio@main/';
 const AUDIO_FALLBACK_BASE = 'https://raw.githubusercontent.com/alexandresarocha-debug/folio-audio/main/';
-const AUDIO_RATES = ['0.75', '1', '1.25', '1.5', '1.75', '2'];
+const AUDIO_RATES = ['0.75', '0.8', '0.85', '0.9', '0.95', '1', '1.1', '1.25'];
+// New recording, committed in this repo because folio-audio is not writable from here.
+// Same-origin so GitHub Pages can play it without the old MP3s. Do not point this
+// slug at judgment-under-uncertainty-….mp3; that file is the previous narration.
+// Narration omits the written "Source." citation. The page keeps it.
+const AUDIO_FILES = {
+  'judgment-under-uncertainty-heuristics-and-biases-1974': 'audio/anchoring-v4.mp3',
+};
 const AUDIO_RATE_KEY = 'folio.audio.rate';
 const AUDIO_POS_KEY = 'folio.audio.pos';
 let audioCatalog = null;
@@ -565,6 +577,8 @@ function saveAudioPos(slug, t, dur) {
   try { localStorage.setItem(AUDIO_POS_KEY, JSON.stringify(all)); } catch (e) {}
 }
 function audioUrl(slug, fallback) {
+  const mapped = AUDIO_FILES[slug];
+  if (mapped) return mapped;
   return (fallback ? AUDIO_FALLBACK_BASE : AUDIO_BASE) + slug + '.mp3';
 }
 function catalogDuration(slug) {
@@ -680,6 +694,7 @@ function syncNarrationUI() {
   });
 }
 function narrationBlock(w) {
+  if (!NARRATION_ENABLED) return '';
   const info = audioInfo(w);
   if (!info) return '';
   const rate = audioRate();
@@ -1106,7 +1121,7 @@ async function boot() {
   try {
     const res = await Promise.all([
       fetch('data/cards.json', { cache: 'no-cache' }),
-      loadAudioCatalog(),
+      NARRATION_ENABLED ? loadAudioCatalog() : Promise.resolve(),
     ]).then(parts => parts[0]);
     if (!res.ok) throw new Error('status');
     D = await res.json();

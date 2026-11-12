@@ -373,9 +373,9 @@ svg{shape-rendering:geometricPrecision}
 .narration-seek::-moz-range-thumb{width:16px;height:16px;border:0;border-radius:50%;background:var(--text)}
 .narration-transport,.narration-rates{display:flex;justify-content:flex-start;align-items:center;gap:6px;padding:0 10px}
 .narration-transport{flex-wrap:wrap;margin-top:2px}
-.narration-rates{flex-wrap:nowrap;gap:4px;margin-top:8px;overflow-x:auto;scrollbar-width:none}
+.narration-rates{flex-wrap:wrap;gap:4px;margin-top:8px}
 .narration-rates::-webkit-scrollbar{display:none}
-.narration-transport button,.narration-rates button{height:32px;padding:0 8px;border-radius:999px;background:var(--surface-2);color:var(--muted);font-size:12.5px;font-weight:650;font-variant-numeric:tabular-nums}
+.narration-transport button,.narration-rates button{height:32px;padding:0 7px;border-radius:999px;background:var(--surface-2);color:var(--muted);font-size:12px;font-weight:650;font-variant-numeric:tabular-nums}
 .narration-transport button{color:var(--text)}
 .narration-rates button.on{background:var(--text);color:var(--bg)}
 .narration-transport button:active,.narration-rates button:active{transform:scale(.96)}
