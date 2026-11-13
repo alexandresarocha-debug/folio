@@ -21,6 +21,13 @@
    "short": "Literature",
    "color": "#D17A8C",
    "icon": "feather"
+  },
+  {
+   "id": "biology",
+   "name": "Biology",
+   "short": "Biology",
+   "color": "#8FBF6A",
+   "icon": "leaf"
   }
  ],
  "paths": [
@@ -95,6 +102,12 @@
    "topic": "literature",
    "title": "Stories & the Mind",
    "blurb": "What reading does to us, according to the evidence."
+  },
+  {
+   "id": "animal-culture",
+   "topic": "biology",
+   "title": "Animal Culture",
+   "blurb": "How a new habit moves through a troop, one animal at a time."
   }
  ],
  "cards": [
@@ -2885,6 +2898,55 @@
      "type": "book",
      "file": "summaries/hamlet-and-his-problems-1919.html",
      "sourceUrl": "https://en.wikipedia.org/wiki/Objective_correlative"
+    }
+   ]
+  },
+  {
+   "id": "koshima-potato-washing",
+   "topic": "biology",
+   "topics": [
+    "biology",
+    "psychology"
+   ],
+   "title": "Imo's sweet potatoes: a habit spreads one monkey at a time",
+   "summary": "In September 1953, on the Japanese island of Koshima, a year-and-a-half-old female macaque named Imo began washing sandy sweet potatoes in a freshwater brook. Researchers had been leaving potatoes on the beach since 1952 so the troop would stop raiding farms and would stay where it could be watched. The habit spread through playmates and through kin, usually from the younger animal to the older one, and by the late 1950s many of the washers had moved the job into the sea because the brook dries up. Masao Kawai's 1965 count is blunt about who learned it. From 1953 through March 1958, 15 of 19 monkeys aged two to seven washed potatoes, and only 2 of 11 adults did. By August 1962, 36 of 49 monkeys older than two had the habit, but of the 11 born before 1950 only two females, Eba and Nami, still did. Males older than about four almost never picked it up. At that age they move to the edge of the troop and stop sitting with the juveniles who already wash. A later story, the hundredth monkey, claimed that in 1958 the habit suddenly jumped through the rest of the troop and across the sea to other islands. The tables show the opposite: a slow, copy-by-copy spread, in a troop that numbered 20 animals in 1952 and 59 in 1962.",
+   "deepDive": "Kawai calls the years up to 1958 individual propagation, and the years after that pre-cultural propagation, because infants such as Imo's son Ika, born in 1957, grew up treating washing as ordinary feeding. Syunzo Kawamura had already mapped the same routes in 1959: a new food habit moves through close family and through other juveniles, and adult males at the edge of the troop are the ones most likely to miss it. Lyall Watson's Lifetide (1979) turned Kawai's line about before and after 1958 into a psychic threshold, and wrote that he was forced to improvise the details. Ken Keyes's The Hundredth Monkey (1982) repeated the leap to other islands. Ron Amundson, in the Skeptical Inquirer in 1985, counted the table: only two monkeys, the young females Zabon and Nogi, learned the habit in 1958. The part worth keeping is the slow part. A new trick spreads along the people who can watch it being done. It does not arrive because a secret number was crossed.",
+   "source": {
+    "title": "Newly-acquired pre-cultural behavior of the natural troop of Japanese monkeys on Koshima Islet",
+    "author": "Masao Kawai",
+    "year": 1965,
+    "url": "https://doi.org/10.1007/BF01794457"
+   },
+   "paths": [
+    "animal-culture"
+   ],
+   "goDeeper": [
+    {
+     "id": "newly-acquired-pre-cultural-behavior-of-the-natural-1965",
+     "title": "Newly-acquired pre-cultural behavior of the natural troop of Japanese monkeys on Koshima Islet",
+     "authors": "Masao Kawai",
+     "year": 1965,
+     "type": "paper",
+     "file": "summaries/newly-acquired-pre-cultural-behavior-of-the-natural-1965.html",
+     "sourceUrl": "https://doi.org/10.1007/BF01794457"
+    },
+    {
+     "id": "the-process-of-sub-culture-propagation-among-japane-1959",
+     "title": "The process of sub-culture propagation among Japanese macaques",
+     "authors": "Syunzo Kawamura",
+     "year": 1959,
+     "type": "paper",
+     "file": "summaries/the-process-of-sub-culture-propagation-among-japane-1959.html",
+     "sourceUrl": "https://doi.org/10.1007/BF01666110"
+    },
+    {
+     "id": "the-hundredth-monkey-phenomenon-1985",
+     "title": "The Hundredth Monkey Phenomenon",
+     "authors": "Ron Amundson",
+     "year": 1985,
+     "type": "paper",
+     "file": "summaries/the-hundredth-monkey-phenomenon-1985.html",
+     "sourceUrl": "https://skepticalinquirer.org/1985/07/the-hundredth-monkey-phenomenon/"
     }
    ]
   }

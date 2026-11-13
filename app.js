@@ -70,6 +70,20 @@ save();
 
 let D = null, byId = {}, topicById = {}, pathById = {};
 const color = t => `var(--${t})`;
+/* A card may list several topics. Older cards have only `topic`. */
+function cardTopics(c) {
+  const raw = Array.isArray(c.topics) && c.topics.length ? c.topics : (c.topic ? [c.topic] : []);
+  const ids = raw.filter(id => topicById[id]);
+  return ids.length ? ids : (c.topic && topicById[c.topic] ? [c.topic] : []);
+}
+function primaryTopic(c) { return cardTopics(c)[0] || c.topic; }
+function hasTopic(c, id) { return id === 'all' || cardTopics(c).includes(id); }
+function topicLine(c, full) {
+  return cardTopics(c).map(id => full ? topicById[id].name : topicById[id].short).join(' · ');
+}
+function topicTags(c, full) {
+  return cardTopics(c).map(id => `<span class="tag" style="color:${color(id)}">${esc(full ? topicById[id].name : topicById[id].short)}</span>`).join('<span class="sep">·</span>');
+}
 
 function streak() {
   const met = k => (S.days[k] || 0) >= S.goal;
@@ -128,6 +142,11 @@ function pathArt(p) {
     s += `<circle cx="${100 + r()*30}" cy="${40 + r()*20}" r="18" fill="${c}" fill-opacity=".35"/>`;
   } else if (p.topic === 'psychology') {
     for (let i = 0; i < 4; i++) s += `<circle cx="${70 + r()*50}" cy="${60 + r()*50}" r="${26 + r()*34}" stroke="${c}" stroke-opacity="${.2 + r()*.35}" fill="${c}" fill-opacity="${r()*.08}" stroke-width="2"/>`;
+  } else if (p.topic === 'biology') {
+    for (let i = 0; i < 6; i++) {
+      const cx = 36 + r() * 98, cy = 36 + r() * 98, rx = 16 + r() * 18;
+      s += `<ellipse cx="${cx.toFixed(1)}" cy="${cy.toFixed(1)}" rx="${rx.toFixed(1)}" ry="${(rx * 0.62).toFixed(1)}" transform="rotate(${(r()*70-20).toFixed(0)} ${cx.toFixed(1)} ${cy.toFixed(1)})" stroke="${c}" stroke-opacity="${.25 + r()*.4}" fill="${c}" fill-opacity="${r()*.1}" stroke-width="2"/>`;
+    }
   } else {
     for (let i = 0; i < 7; i++) { const w = 40 + r()*90; s += `<rect x="${40}" y="${30 + i*17}" width="${w}" height="5" rx="2.5" fill="${c}" fill-opacity="${.15 + r()*.3}"/>`; }
     s += `<path d="M150 20 C110 60 100 110 60 160" stroke="${c}" stroke-opacity=".55" stroke-width="2" fill="none"/>`;
@@ -144,8 +163,8 @@ function cardMeta(c) {
   return `<div class="meta">${bits.join('')}<span class="grow"></span>${S.saved[c.id] ? `<span class="badge sv">${I.bookmarkFill}</span>` : ''}${S.read[c.id] ? `<span class="badge ok">${I.check}</span>` : ''}</div>`;
 }
 function ideaCard(c, i, seq) {
-  return `<button class="card${S.read[c.id] ? ' read' : ''}" style="--c:${color(c.topic)};--i:${Math.min(i,10)}" data-open="${c.id}" data-seq="${seq}">
-    <div class="kicker">${esc(topicById[c.topic].short)}</div>
+  return `<button class="card${S.read[c.id] ? ' read' : ''}" style="--c:${color(primaryTopic(c))};--i:${Math.min(i,10)}" data-open="${c.id}" data-seq="${seq}">
+    <div class="kicker topic-tags">${topicTags(c)}</div>
     <h4>${esc(c.title)}</h4>
     <p>${esc(c.summary)}</p>
     ${cardMeta(c)}
@@ -165,7 +184,7 @@ function renderDiscover() {
   const el = $('#s-discover');
   beginScreen(el);
   const f = S.filter;
-  let list = feedOrder().filter(c => f === 'all' || c.topic === f);
+  let list = feedOrder().filter(c => hasTopic(c, f));
   const unread = list.filter(c => !S.read[c.id]);
   const ordered = [...unread, ...list.filter(c => S.read[c.id])];
   const pickPool = unread.length ? unread : list;
@@ -196,9 +215,9 @@ function renderDiscover() {
     <div class="chips" role="tablist">
       ${[{id:'all', short:'All ideas'}, ...D.topics].map(t => `<button class="chip${f === t.id ? ' on' : ''}" data-filter="${t.id}" role="tab" aria-selected="${f === t.id}" ${t.id !== 'all' ? `style="${f === t.id ? '' : `color:${color(t.id)}`}"` : ''}>${t.id !== 'all' ? '<i></i>' : ''}${esc(t.short)}</button>`).join('')}
     </div>
-    <button class="feature" style="--c:${color(pick.topic)};--i:1" data-open="${pick.id}" data-seq="${seq}">
+    <button class="feature" style="--c:${color(primaryTopic(pick))};--i:1" data-open="${pick.id}" data-seq="${seq}">
       <span class="glow"></span>
-      <div class="kicker">${I.sparkle.replace('<svg', '<svg width="14" height="14"')} Today\u2019s pick · ${esc(topicById[pick.topic].short)}</div>
+      <div class="kicker">${I.sparkle.replace('<svg', '<svg width="14" height="14"')} Today\u2019s pick · ${esc(topicLine(pick))}</div>
       <h3>${esc(pick.title)}</h3>
       <p>${esc(pick.summary)}</p>
       ${cardMeta(pick)}
@@ -217,9 +236,12 @@ function renderPaths() {
   el.innerHTML = `
     <header class="topbar"><div><div class="eyebrow">Curated collections</div><h1 class="h-title">Paths</h1></div></header>
     <p class="intro">Read a handful of linked ideas in order and see how the arguments talk to each other.</p>
-    ${D.topics.map(t => `
+    ${D.topics.map(t => {
+      const paths = D.paths.filter(p => p.topic === t.id);
+      if (!paths.length) return '';
+      return `
       <div class="section-h"><h2 style="color:${color(t.id)}">${esc(t.name)}</h2></div>
-      <div class="paths">${D.paths.filter(p => p.topic === t.id).map(p => {
+      <div class="paths">${paths.map(p => {
         const cs = pathCards(p), done = cs.filter(c => S.read[c.id]).length;
         return `<button class="path" style="--c:${color(p.topic)};--i:${i++}" data-path="${p.id}">
           <span class="tint"></span>${pathArt(p)}
@@ -227,7 +249,7 @@ function renderPaths() {
           <h3>${esc(p.title)}</h3><p>${esc(p.blurb)}</p>
           <div class="bar"><i style="width:${cs.length ? done / cs.length * 100 : 0}%"></i></div>
           <div class="foot"><span>${done === cs.length ? 'Completed' : done ? 'In progress' : 'Not started'}</span><span>${done}/${cs.length}</span></div>
-        </button>`; }).join('')}</div>`).join('')}`;
+        </button>`; }).join('')}</div>`; }).join('')}`;
   endScreen(el);
 }
 function openPath(id, push=true) {
@@ -246,7 +268,7 @@ function openPath(id, push=true) {
       <div class="row" style="justify-content:space-between;margin:10px 0 18px;font-size:13px;color:var(--muted)"><span>${done} of ${cs.length} read</span><span>~${cs.reduce((a,c) => a + minutes(c), 0)} min total</span></div>
       <button class="btn block" data-open="${next.id}" data-seq="${seq}">${done === 0 ? 'Start path' : done === cs.length ? 'Read again' : 'Continue path'} ${I.arrowR}</button>
     </div>
-    <ol class="steps">${cs.map((c, i) => `<li><button class="step${S.read[c.id] ? ' done' : ''}" style="--c:${color(c.topic)}" data-open="${c.id}" data-seq="${seq}">
+    <ol class="steps">${cs.map((c, i) => `<li><button class="step${S.read[c.id] ? ' done' : ''}" style="--c:${color(primaryTopic(c))}" data-open="${c.id}" data-seq="${seq}">
       <span class="n">${S.read[c.id] ? I.check : i + 1}</span>
       <span><h4>${esc(c.title)}</h4><p>${esc(c.source.author)} · ${yearStr(c.source.year)} · ${minutes(c)} min</p></span></button></li>`).join('')}</ol>`;
   el.setAttribute('aria-hidden', 'false');
@@ -284,8 +306,9 @@ function renderProgress() {
       <div class="stat"><b>${savedN}</b><span>saved</span></div>
     </div>
     <div class="section-h"><h2>By topic</h2></div>
-    <div class="group">${D.topics.map(t => { const cs = D.cards.filter(c => c.topic === t.id); const n = cs.filter(c => S.read[c.id]).length;
-      return `<div class="tp" style="--c:${color(t.id)}"><div class="row"><b style="font-weight:600">${esc(t.name)}</b><span>${n}/${cs.length}</span></div><div class="bar"><i style="width:${n / cs.length * 100}%"></i></div></div>`; }).join('')}</div>
+    <div class="group">${D.topics.map(t => { const cs = D.cards.filter(c => hasTopic(c, t.id)); const n = cs.filter(c => S.read[c.id]).length;
+      const pct = cs.length ? n / cs.length * 100 : 0;
+      return `<div class="tp" style="--c:${color(t.id)}"><div class="row"><b style="font-weight:600">${esc(t.name)}</b><span>${n}/${cs.length}</span></div><div class="bar"><i style="width:${pct}%"></i></div></div>`; }).join('')}</div>
     <div class="section-h"><h2>Settings</h2></div>
     <div class="group">
       <div class="item"><span class="lbl">Daily goal<small>Ideas per day to keep a streak</small></span><div class="seg" data-seg="goal">${[1,3,5,10].map(g => `<button class="${S.goal === g ? 'on' : ''}" data-goal="${g}">${g}</button>`).join('')}</div></div>
@@ -318,7 +341,7 @@ function runSearch(q) {
   const terms = q.toLowerCase().split(/\s+/);
   const scored = D.cards.map(c => {
     const deeper = (c.goDeeper || []).map(w => w.authors + ' ' + w.title).join(' ');
-    const hay = { t: c.title.toLowerCase(), a: (c.source.author + ' ' + c.source.title + ' ' + deeper).toLowerCase(), b: (c.summary + ' ' + c.deepDive + ' ' + topicById[c.topic].name).toLowerCase() };
+    const hay = { t: c.title.toLowerCase(), a: (c.source.author + ' ' + c.source.title + ' ' + deeper).toLowerCase(), b: (c.summary + ' ' + c.deepDive + ' ' + topicLine(c, true)).toLowerCase() };
     let s = 0;
     for (const w of terms) { const ts = hay.t.includes(w) ? 5 : 0, as = hay.a.includes(w) ? 3 : 0, bs = hay.b.includes(w) ? 1 : 0; if (!ts && !as && !bs) return [0, c]; s += ts + as + bs; }
     return [s, c];
@@ -326,7 +349,7 @@ function runSearch(q) {
   const seq = regSeq(scored.map(c => c.id));
   const re = new RegExp('(' + terms.map(t => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|') + ')', 'gi');
   const hl = s => esc(s).replace(re, '<mark>$1</mark>');
-  box.innerHTML = scored.length ? `<div class="section-h" style="margin-top:2px"><h2>${scored.length} result${scored.length > 1 ? 's' : ''}</h2></div><div class="cards">${scored.map((c,i) => `<button class="card" style="--c:${color(c.topic)};--i:${Math.min(i,8)}" data-open="${c.id}" data-seq="${seq}"><div class="kicker">${esc(topicById[c.topic].short)}</div><h4>${hl(c.title)}</h4><p>${hl(c.source.author)} · ${esc(c.source.title)}</p></button>`).join('')}</div>`
+  box.innerHTML = scored.length ? `<div class="section-h" style="margin-top:2px"><h2>${scored.length} result${scored.length > 1 ? 's' : ''}</h2></div><div class="cards">${scored.map((c,i) => `<button class="card" style="--c:${color(primaryTopic(c))};--i:${Math.min(i,8)}" data-open="${c.id}" data-seq="${seq}"><div class="kicker topic-tags">${topicTags(c)}</div><h4>${hl(c.title)}</h4><p>${hl(c.source.author)} · ${esc(c.source.title)}</p></button>`).join('')}</div>`
     : `<div class="empty">${emptyArt('search')}<h3>No matches</h3><p>Nothing for \u201c${esc(q)}\u201d yet. Try an author, a book or a broader word.</p></div>`;
   bindChips(box);
 }
@@ -344,9 +367,8 @@ function para(text) {
 function refIcon(r) { const url = r.url || ''; if (/doi\.org/.test(url)) return I.paper; if (r.kind === 'paper') return I.paper; if (/wikipedia\.org/.test(url)) return I.globe; return I.book; }
 function refKind(r) { return r.kind === 'book' ? 'Book' : /wikipedia\.org/.test(r.url) ? 'Overview' : /doi\.org/.test(r.url) ? 'Paper' : 'Read'; }
 function pageHTML(c) {
-  const t = topicById[c.topic];
-  return `<article class="page" style="--c:${color(c.topic)}" data-id="${c.id}"><div class="page-in">
-    <div class="kicker"><i></i>${esc(t.name)}</div>
+  return `<article class="page" style="--c:${color(primaryTopic(c))}" data-id="${c.id}"><div class="page-in">
+    <div class="kicker topic-tags">${topicTags(c, true)}</div>
     <h1>${esc(c.title)}</h1>
     <a class="byline" href="${esc(c.source.url)}" target="_blank" rel="noopener"><span class="bk">${/doi\.org/.test(c.source.url) ? I.paper : I.book}</span><span><b>${esc(c.source.title)}</b><span>${esc(c.source.author)} · ${yearStr(c.source.year)}</span></span></a>
     ${c.caution ? `<div class="caution">${I.warn}<div><b>Replication note</b>${esc(c.caution)}</div></div>` : ''}
@@ -480,9 +502,9 @@ function openReader(ids, startId) {
 function syncReader() {
   const c = byId[R.ids[R.idx]]; if (!c) return;
   const el = $('#reader');
-  el.style.setProperty('--c', color(c.topic));
+  el.style.setProperty('--c', color(primaryTopic(c)));
   const count = $('#rcount');
-  if (count) count.textContent = R.ids.length > 1 ? `${R.idx + 1} of ${R.ids.length}` : topicById[c.topic].short;
+  if (count) count.textContent = R.ids.length > 1 ? `${R.idx + 1} of ${R.ids.length}` : topicLine(c);
   const sv = $('#rsave');
   if (sv) { sv.classList.toggle('on', !!S.saved[c.id]); sv.innerHTML = S.saved[c.id] ? I.bookmarkFill : I.bookmark; sv.setAttribute('aria-pressed', String(!!S.saved[c.id])); }
   const rb = $('#rread');
@@ -974,7 +996,7 @@ async function openWork(cardId, workId) {
   stopNarration();
   const gen = ++workGen;
   const el = $('#work');
-  el.style.setProperty('--c', color(card.topic));
+  el.style.setProperty('--c', color(primaryTopic(card)));
   el.innerHTML = `<div class="reader-top"><button class="icon-btn" data-act="closeWork" aria-label="Close">${I.x}</button><div class="count">Summary</div><div class="progress" id="wprog-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Reading progress"><i id="wprog"></i></div></div><div class="work-scroll" id="work-scroll"><div class="page-in work-in"><p class="work-by">Loading the summary…</p></div></div>`;
   el.setAttribute('aria-hidden', 'false');
   syncInert();
@@ -1129,7 +1151,12 @@ async function boot() {
   } catch (e) {
     $('#splash').innerHTML = '<p style="color:var(--muted);padding:30px;text-align:center">Couldn\u2019t load ideas. Check your connection and reopen Folio.</p>'; return;
   }
-  D.cards.forEach(c => byId[c.id] = c); D.topics.forEach(t => topicById[t.id] = t); D.paths.forEach(p => pathById[p.id] = p);
+  D.topics.forEach(t => topicById[t.id] = t); D.paths.forEach(p => pathById[p.id] = p);
+  D.cards.forEach(c => {
+    if (!Array.isArray(c.topics) || !c.topics.length) c.topics = c.topic ? [c.topic] : [];
+    if (!c.topic && c.topics.length) c.topic = c.topics[0];
+    byId[c.id] = c;
+  });
   if (S.filter !== 'all' && !topicById[S.filter]) S.filter = 'all';
   renderTabs(); renderDiscover();
   const delay = Math.max(0, 280 - (performance.now() - started));
