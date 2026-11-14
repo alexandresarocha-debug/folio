@@ -1169,6 +1169,51 @@
    ]
   },
   {
+   "id": "probability-neglect",
+   "topic": "psychology",
+   "title": "Probability neglect: vivid harm drowns out the odds",
+   "summary": "When a harm is easy to picture, people often price the harm and skip the odds. Cass Sunstein called this probability neglect. In a 2001 study, Yuval Rottenstreich and Christopher Hsee asked students what they would pay to avoid a short, painful, but not dangerous electric shock. The median was $7 to avoid a 1 percent chance and $10 to avoid a 99 percent chance. For a $20 cash penalty the medians were $1 and $18. The money price tracked the probability. The shock price barely moved. Sunstein's own survey of 83 law students, about paying to remove arsenic from drinking water, pointed the same way. When the cancer was described as gruesome, the median willingness to pay stayed at $100 whether the risk was 1 in 1,000,000 or ten times higher. This is not the availability heuristic. That is the separate card about judging how common something is by how easily an example comes to mind. Availability answers how often. Probability neglect starts after the picture is already vivid: the odds stop mattering. A real-world version is travel after September 11, 2001. Gerd Gigerenzer estimated about 353 extra U.S. road deaths in the next three months, more than the 266 passengers and crew on the four planes, as people avoided flying. That estimate is national totals, not a list of former flyers, and later work has questioned whether the extra deaths were a switch from planes to cars.",
+   "deepDive": "The shock prices are the cleanest exhibit, and they were hypothetical. Nobody was wired to a machine. In the arsenic study the difference between the plain and the gruesome descriptions did not reach statistical significance, so that part of Sunstein's own test is suggestive rather than settled. The road-death number is easy to overstate. The 2004 paper's figure is about 353 deaths in three months, not 1,500. The larger figure is a later twelve-month estimate. A comment on the 2004 paper noted that national crash totals cannot show whether the extra deaths were people who would have flown. Peter Ayton and colleagues, writing in 2019, report that another analysis found no significant national rise in miles driven or in traffic deaths, with the increase concentrated in the Northeast alongside more alcohol and drug citations. Before you pay a lot to erase a tiny, vivid risk, write the probability down next to the picture. If the picture still dominates, you are looking at probability neglect, not at a missing fact.",
+   "source": {
+    "title": "Probability Neglect: Emotions, Worst Cases, and Law",
+    "author": "Cass R. Sunstein",
+    "year": 2002,
+    "url": "https://yalelawjournal.org/essay/probability-neglect-emotions-worst-cases-and-law"
+   },
+   "paths": [
+    "biases"
+   ],
+   "goDeeper": [
+    {
+     "id": "probability-neglect-emotions-worst-cases-and-la-2002",
+     "title": "Probability Neglect: Emotions, Worst Cases, and Law",
+     "authors": "Cass R. Sunstein",
+     "year": 2002,
+     "type": "paper",
+     "file": "summaries/probability-neglect-emotions-worst-cases-and-la-2002.html",
+     "sourceUrl": "https://yalelawjournal.org/essay/probability-neglect-emotions-worst-cases-and-law"
+    },
+    {
+     "id": "money-kisses-and-electric-shocks-on-the-affectiv-2001",
+     "title": "Money, Kisses, and Electric Shocks: On the Affective Psychology of Risk",
+     "authors": "Yuval Rottenstreich & Christopher K. Hsee",
+     "year": 2001,
+     "type": "paper",
+     "file": "summaries/money-kisses-and-electric-shocks-on-the-affectiv-2001.html",
+     "sourceUrl": "https://doi.org/10.1111/1467-9280.00334"
+    },
+    {
+     "id": "dread-risk-september-11-and-fatal-traffic-accid-2004",
+     "title": "Dread Risk, September 11, and Fatal Traffic Accidents",
+     "authors": "Gerd Gigerenzer",
+     "year": 2004,
+     "type": "paper",
+     "file": "summaries/dread-risk-september-11-and-fatal-traffic-accid-2004.html",
+     "sourceUrl": "https://doi.org/10.1111/j.0956-7976.2004.00668.x"
+    }
+   ]
+  },
+  {
    "id": "prospect-theory",
    "topic": "psychology",
    "title": "Prospect theory: losses loom larger than gains",
