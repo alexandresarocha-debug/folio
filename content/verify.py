@@ -65,6 +65,14 @@ def check_link(url: str) -> str | None:
         return type(e).__name__
 
 
+def check_tier(value, where: str, errors: list[str]) -> None:
+    """Optional tier: absent or null is fine. A present value must be 1, 2 or 3."""
+    if value is None:
+        return
+    if type(value) is not int or value not in (1, 2, 3):
+        errors.append(f"{where}: tier must be 1, 2 or 3")
+
+
 def main() -> None:
     errors: list[str] = []
     data = json.loads(CARDS.read_text(encoding="utf-8"))
@@ -74,6 +82,27 @@ def main() -> None:
         errors.append("duplicate card ids")
     topic_ids = {t["id"] for t in data["topics"]}
     path_ids = {p["id"] for p in data["paths"]}
+    by_card = {c["id"]: c for c in cards}
+    for p in data["paths"]:
+        if "order" not in p or p.get("order") is None:
+            continue
+        order = p["order"]
+        if not isinstance(order, list):
+            errors.append(f"{p['id']}: order must be a list")
+            continue
+        for i, item in enumerate(order):
+            where = f"{p['id']} order[{i}]"
+            if not isinstance(item, dict) or not item.get("id"):
+                errors.append(f"{where}: expected an object with an id")
+                continue
+            cid = item["id"]
+            card = by_card.get(cid)
+            if card is None:
+                errors.append(f"{where}: unknown card {cid}")
+            elif p["id"] not in (card.get("paths") or []):
+                errors.append(f"{where}: {cid} is not on this path")
+            if "tier" in item:
+                check_tier(item.get("tier"), where, errors)
     for c in cards:
         for t in c.get("topics") or [c["topic"]]:
             if t not in topic_ids:
@@ -83,6 +112,11 @@ def main() -> None:
         for p in c.get("paths", []):
             if p not in path_ids:
                 errors.append(f"{c['id']}: unknown path {p}")
+        if "tier" in c:
+            check_tier(c.get("tier"), c["id"], errors)
+        for w in c.get("goDeeper") or []:
+            if isinstance(w, dict) and "tier" in w:
+                check_tier(w.get("tier"), f"{c['id']}/{w.get('id')}", errors)
     app = APP.read_text(encoding="utf-8")
     sw = SW.read_text(encoding="utf-8")
     if "const KEY = 'folio.v1'" not in app:

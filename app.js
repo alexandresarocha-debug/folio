@@ -14,6 +14,7 @@ const I = {
   ext: P('<path d="M7 17 17 7M8 7h9v9"/>'),
   flame: P('<path d="M12 2.5c.5 3.5 4.5 5.5 4.5 10a4.5 4.5 0 0 1-9 0c0-2 1-3.5 2-4.5 0 1.5.8 2.6 1.8 3C10.8 8.5 11 5 12 2.5Z" fill="currentColor" stroke="none"/>'),
   compass: P('<circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5z"/>'),
+  home: P('<path d="M4 10.5 12 4l8 6.5"/><path d="M6.5 9.8V20h11V9.8"/>'),
   layers: P('<path d="m12 3 9 5-9 5-9-5z"/><path d="m3 13 9 5 9-5"/>'),
   chart: P('<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>'),
   book: P('<path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M4 20.5A2.5 2.5 0 0 0 6.5 23H20v-5"/>'),
@@ -164,7 +165,7 @@ function cardMeta(c) {
 }
 function ideaCard(c, i, seq) {
   return `<button class="card${S.read[c.id] ? ' read' : ''}" style="--c:${color(primaryTopic(c))};--i:${Math.min(i,10)}" data-open="${c.id}" data-seq="${seq}">
-    <div class="kicker topic-tags">${topicTags(c)}</div>
+    <div class="kicker topic-tags">${topicTags(c)}${tierLabel(c.tier)}</div>
     <h4>${esc(c.title)}</h4>
     <p>${esc(c.summary)}</p>
     ${cardMeta(c)}
@@ -173,107 +174,203 @@ function ideaCard(c, i, seq) {
 const SEQS = {}; let seqN = 0;
 const regSeq = ids => { const k = 's' + (++seqN); SEQS[k] = ids; return k; };
 
-/* ---------- Discover ---------- */
+/* ---------- Paths as courses ----------
+   A path's `order` array ({id, tier}) is the sequence. Without it, cards stay in
+   cards.json order. Tier on the path entry wins over the card's own tier. No tier
+   anywhere means one ungrouped list. A path is "being built" when it has fewer
+   than 3 cards, or when it has some tiers but not all of 1, 2 and 3. Completion
+   is derived from read marks, not stored separately. */
+function validTier(v) { return v === 1 || v === 2 || v === 3 ? v : null; }
+function tierLabel(tier) {
+  const t = validTier(tier);
+  return t ? `<span class="tier-with"><span class="sep">·</span><span class="tier-tag">Tier ${t}</span></span>` : '';
+}
+const TIER_LEAD = { 1: 'The basic idea', 2: 'How it works', 3: 'Open questions' };
+function pathEntries(p) {
+  if (!p) return [];
+  if (Array.isArray(p.order) && p.order.length) {
+    const seen = new Set();
+    const out = [];
+    for (const item of p.order) {
+      if (!item || typeof item.id !== 'string' || seen.has(item.id)) continue;
+      const card = byId[item.id];
+      if (!card || !(card.paths || []).includes(p.id)) continue;
+      seen.add(item.id);
+      out.push({ card, tier: validTier(item.tier) || validTier(card.tier) });
+    }
+    return out;
+  }
+  return D.cards.filter(c => (c.paths || []).includes(p.id)).map(card => ({ card, tier: validTier(card.tier) }));
+}
+function entriesGrouped(entries) { return entries.some(e => e.tier); }
+function courseEntries(entries) {
+  if (!entriesGrouped(entries)) return entries;
+  const out = [];
+  for (const t of [1, 2, 3]) out.push(...entries.filter(e => e.tier === t));
+  out.push(...entries.filter(e => !e.tier));
+  return out;
+}
+function pathIsThin(entries) {
+  if (entries.length < 3) return true;
+  if (!entriesGrouped(entries)) return false;
+  const have = new Set(entries.map(e => e.tier).filter(Boolean));
+  return have.size < 3;
+}
+function pathProgress(p) {
+  const entries = pathEntries(p);
+  const done = entries.filter(e => S.read[e.card.id]).length;
+  const thin = pathIsThin(entries);
+  const allDone = entries.length > 0 && done === entries.length;
+  const status = thin ? 'Being built' : allDone ? 'Finished' : done ? 'In progress' : 'Not started';
+  return { entries, done, total: entries.length, thin, allDone, status };
+}
+function tierFor(card, pathId) {
+  if (pathId && pathById[pathId]) {
+    const hit = pathEntries(pathById[pathId]).find(e => e.card.id === card.id);
+    if (hit && hit.tier) return hit.tier;
+  }
+  return validTier(card.tier);
+}
+function resumePath() {
+  if (S.lastPath && pathById[S.lastPath]) return pathById[S.lastPath];
+  let best = null, bestDone = 0;
+  for (const p of D.paths) {
+    const prog = pathProgress(p);
+    if (prog.done > 0 && !prog.allDone && prog.done >= bestDone) { best = p; bestDone = prog.done; }
+  }
+  return best;
+}
+function relatedPath(p) {
+  const others = D.paths.filter(x => x.id !== p.id);
+  const score = x => {
+    const prog = pathProgress(x);
+    let s = x.topic === p.topic ? 4 : 0;
+    if (!prog.thin && !prog.allDone) s += 2;
+    else if (!prog.allDone) s += 1;
+    return s;
+  };
+  others.sort((a, b) => score(b) - score(a) || D.paths.indexOf(a) - D.paths.indexOf(b));
+  return others[0] || null;
+}
+function stepButton(e, i, seq, pathId) {
+  const c = e.card;
+  return `<li><button class="step${S.read[c.id] ? ' done' : ''}" style="--c:${color(primaryTopic(c))}" data-open="${c.id}" data-seq="${seq}" data-path-read="${pathId}">
+    <span class="n">${S.read[c.id] ? I.check : i + 1}</span>
+    <span><h4>${esc(c.title)}</h4><p>${esc(c.source.author)} · ${yearStr(c.source.year)} · ${minutes(c)} min</p></span></button></li>`;
+}
+function stepsHTML(entries, seq, pathId, grouped) {
+  if (!grouped) return `<ol class="steps">${entries.map((e, i) => stepButton(e, i, seq, pathId)).join('')}</ol>`;
+  let html = '', n = 0;
+  for (const t of [1, 2, 3]) {
+    const group = entries.filter(e => e.tier === t);
+    if (!group.length) continue;
+    html += `<div class="tier-h"><h2>Tier ${t}</h2><span>${TIER_LEAD[t]}</span></div><ol class="steps">${group.map(e => stepButton(e, n++, seq, pathId)).join('')}</ol>`;
+  }
+  const rest = entries.filter(e => !e.tier);
+  if (rest.length) html += `<div class="tier-h"><h2>Also on this path</h2></div><ol class="steps">${rest.map(e => stepButton(e, n++, seq, pathId)).join('')}</ol>`;
+  return html;
+}
+function pathCard(p, i) {
+  const prog = pathProgress(p);
+  return `<button class="path" style="--c:${color(p.topic)};--i:${i}" data-path="${p.id}">
+    <span class="tint"></span>${pathArt(p)}
+    <div class="kicker${prog.thin ? ' built' : ''}">${esc(prog.status)}</div>
+    <h3>${esc(p.title)}</h3><p>${esc(p.blurb)}</p>
+    <div class="bar"><i style="width:${prog.total ? prog.done / prog.total * 100 : 0}%"></i></div>
+    <div class="foot"><span>${prog.done} of ${prog.total}</span></div>
+  </button>`;
+}
+
+/* ---------- Home ---------- */
+function renderHome() {
+  const el = $('#s-home');
+  beginScreen(el);
+  const st = streak();
+  const resume = resumePath();
+  const resumeProg = resume ? pathProgress(resume) : null;
+  const now = new Date();
+  const dateStr = now.toLocaleDateString('en-GB', { weekday:'long', day:'numeric', month:'long' });
+  let i = 0;
+  el.innerHTML = `
+    <header class="topbar">
+      <div><div class="eyebrow">${esc(dateStr)}</div><h1 class="h-title">Paths</h1></div>
+      <div class="row">
+        <button class="pill${st ? ' hot' : ''}" data-tab="progress" aria-label="${st} day streak">${I.flame}${st}</button>
+        <button class="icon-btn" data-act="search" aria-label="Search">${I.search}</button>
+      </div>
+    </header>
+    ${resume ? `<button class="resume" style="--c:${color(resume.topic)}" data-path="${resume.id}">
+      <span class="resume-copy"><div class="kicker">Continue</div><h3>${esc(resume.title)}</h3><p>${resumeProg.done} of ${resumeProg.total} · ${esc(resumeProg.status)}</p></span>
+      <span class="go">${I.right}</span>
+    </button>` : ''}
+    <p class="intro">Read a handful of linked ideas in order and see how the arguments talk to each other.</p>
+    ${D.topics.map(t => {
+      const paths = D.paths.filter(p => p.topic === t.id);
+      if (!paths.length) return '';
+      return `<div class="section-h"><h2 style="color:${color(t.id)}">${esc(t.name)}</h2></div>
+        <div class="paths">${paths.map(p => pathCard(p, i++)).join('')}</div>`;
+    }).join('')}`;
+  endScreen(el);
+}
+
+/* ---------- All cards (the old Discover deck) ---------- */
 function feedOrder() {
   const r = rng(S.seed); const arr = D.cards.map(c => [r(), c]);
   arr.sort((a,b) => a[0]-b[0]);
   return arr.map(x => x[1]);
 }
-function greeting() { const h = new Date().getHours(); return h < 5 ? 'Up late' : h < 12 ? 'Good morning' : h < 18 ? 'Good afternoon' : 'Good evening'; }
-function renderDiscover() {
-  const el = $('#s-discover');
+function renderCards() {
+  const el = $('#s-cards');
   beginScreen(el);
   const f = S.filter;
-  let list = feedOrder().filter(c => hasTopic(c, f));
+  const list = feedOrder().filter(c => hasTopic(c, f));
   const unread = list.filter(c => !S.read[c.id]);
   const ordered = [...unread, ...list.filter(c => S.read[c.id])];
-  const pickPool = unread.length ? unread : list;
-  const pick = pickPool[hash(dayKey() + f) % pickPool.length];
-  const rest = ordered.filter(c => c !== pick);
-  const seq = regSeq([pick.id, ...rest.map(c => c.id)]);
-  const tc = todayCount(), goal = S.goal, pct = Math.min(1, tc / goal), st = streak();
-  const C = 2 * Math.PI * 27;
-  const now = new Date();
-  const dateStr = now.toLocaleDateString('en-GB', { weekday:'long', day:'numeric', month:'long' });
-  const goalMsg = tc >= goal ? `Goal done. ${tc > goal ? `${tc} ideas today.` : 'Anything more is a bonus.'}` : `${goal - tc} more to keep your streak${st ? ` of ${st}` : ''} going.`;
+  const seq = regSeq(ordered.map(c => c.id));
   el.innerHTML = `
     <header class="topbar">
-      <div><div class="eyebrow">${esc(dateStr)}</div><h1 class="h-title">${greeting()}</h1></div>
-      <div class="row">
-        ${st ? `<span class="pill hot" aria-label="${st} day streak">${I.flame}${st}</span>` : ''}
-        <button class="icon-btn" data-act="search" aria-label="Search">${I.search}</button>
-      </div>
+      <div><div class="eyebrow">The library</div><h1 class="h-title">All cards</h1></div>
+      <button class="icon-btn" data-act="search" aria-label="Search">${I.search}</button>
     </header>
-    <div class="goal" style="--i:0">
-      <div class="ring"><svg viewBox="0 0 64 64"><circle class="trk" cx="32" cy="32" r="27" fill="none" stroke-width="5"/><circle class="val" cx="32" cy="32" r="27" fill="none" stroke-width="5" stroke-linecap="round" stroke-dasharray="${C}" stroke-dashoffset="${C * (1 - pct)}"/></svg><b>${Math.min(tc, 99)}/${goal}</b></div>
-      <div class="goal-copy">
-        <h3>${tc >= goal ? 'Daily goal complete' : 'Today\u2019s reading'}</h3>
-        <p>${esc(goalMsg)}</p>
-        ${unread.length ? `<button class="btn" data-open="${unread[0] === pick ? pick.id : unread[0].id}" data-seq="${seq}">${tc ? 'Continue' : 'Start reading'} ${I.arrowR}</button>` : `<button class="btn ghost" data-tab="paths">Explore paths ${I.arrowR}</button>`}
-      </div>
-    </div>
     <div class="chips" role="tablist">
       ${[{id:'all', short:'All ideas'}, ...D.topics].map(t => `<button class="chip${f === t.id ? ' on' : ''}" data-filter="${t.id}" role="tab" aria-selected="${f === t.id}" ${t.id !== 'all' ? `style="${f === t.id ? '' : `color:${color(t.id)}`}"` : ''}>${t.id !== 'all' ? '<i></i>' : ''}${esc(t.short)}</button>`).join('')}
     </div>
-    <button class="feature" style="--c:${color(primaryTopic(pick))};--i:1" data-open="${pick.id}" data-seq="${seq}">
-      <span class="glow"></span>
-      <div class="kicker">${I.sparkle.replace('<svg', '<svg width="14" height="14"')} Today\u2019s pick · ${esc(topicLine(pick))}</div>
-      <h3>${esc(pick.title)}</h3>
-      <p>${esc(pick.summary)}</p>
-      ${cardMeta(pick)}
-    </button>
-    <div class="section-h"><h2>${f === 'all' ? 'Your feed' : esc(topicById[f].name)}</h2><span>${list.length - unread.length} of ${list.length} read</span></div>
-    <div class="cards">${rest.map((c,i) => ideaCard(c, i, seq)).join('')}</div>
+    <div class="section-h"><h2>${f === 'all' ? 'All ideas' : esc(topicById[f].name)}</h2><span>${list.length - unread.length} of ${list.length} read</span></div>
+    <div class="cards">${ordered.map((c, i) => ideaCard(c, i, seq)).join('')}</div>
     <p class="foot-note">${D.cards.length} ideas · every source links to the real book or paper.<br>More are added to the library over time.</p>`;
   endScreen(el);
 }
 
-/* ---------- Paths ---------- */
-function pathCards(p) { return D.cards.filter(c => c.paths.includes(p.id)); }
-function renderPaths() {
-  const el = $('#s-paths'); let i = 0;
-  beginScreen(el);
-  el.innerHTML = `
-    <header class="topbar"><div><div class="eyebrow">Curated collections</div><h1 class="h-title">Paths</h1></div></header>
-    <p class="intro">Read a handful of linked ideas in order and see how the arguments talk to each other.</p>
-    ${D.topics.map(t => {
-      const paths = D.paths.filter(p => p.topic === t.id);
-      if (!paths.length) return '';
-      return `
-      <div class="section-h"><h2 style="color:${color(t.id)}">${esc(t.name)}</h2></div>
-      <div class="paths">${paths.map(p => {
-        const cs = pathCards(p), done = cs.filter(c => S.read[c.id]).length;
-        return `<button class="path" style="--c:${color(p.topic)};--i:${i++}" data-path="${p.id}">
-          <span class="tint"></span>${pathArt(p)}
-          <div class="kicker">${cs.length} ideas</div>
-          <h3>${esc(p.title)}</h3><p>${esc(p.blurb)}</p>
-          <div class="bar"><i style="width:${cs.length ? done / cs.length * 100 : 0}%"></i></div>
-          <div class="foot"><span>${done === cs.length ? 'Completed' : done ? 'In progress' : 'Not started'}</span><span>${done}/${cs.length}</span></div>
-        </button>`; }).join('')}</div>`; }).join('')}`;
-  endScreen(el);
-}
+/* ---------- Path detail ---------- */
 function openPath(id, push=true) {
-  const p = pathById[id]; const cs = pathCards(p); const done = cs.filter(c => S.read[c.id]).length;
-  const seq = regSeq(cs.map(c => c.id));
-  const next = cs.find(c => !S.read[c.id]) || cs[0];
+  const p = pathById[id];
+  if (!p) return;
+  const prog = pathProgress(p);
+  const entries = courseEntries(prog.entries);
+  const seq = regSeq(entries.map(e => e.card.id));
+  const next = entries.find(e => !S.read[e.card.id]) || entries[0];
+  const grouped = entriesGrouped(entries);
+  const mins = entries.reduce((a, e) => a + minutes(e.card), 0);
+  const action = prog.done === 0 ? 'Start' : prog.allDone ? 'Read again' : 'Continue';
+  if (S.lastPath !== id) { S.lastPath = id; save(); }
   const el = $('#push');
   el.dataset.path = id;
   el.innerHTML = `
     <button class="icon-btn back" data-act="pop" aria-label="Back">${I.back}</button>
     <div class="hero" style="--c:${color(p.topic)}"><span class="tint"></span>
-      <div class="eyebrow" style="color:${color(p.topic)}">${esc(topicById[p.topic].name)} · Path</div>
+      <div class="eyebrow" style="color:${color(p.topic)}">${esc(topicById[p.topic].name)}</div>
       <h1>${esc(p.title)}</h1>
       <p class="lede">${esc(p.blurb)}</p>
-      <div class="bar" style="--c:${color(p.topic)}"><i style="width:${cs.length ? done / cs.length * 100 : 0}%"></i></div>
-      <div class="row" style="justify-content:space-between;margin:10px 0 18px;font-size:13px;color:var(--muted)"><span>${done} of ${cs.length} read</span><span>~${cs.reduce((a,c) => a + minutes(c), 0)} min total</span></div>
-      <button class="btn block" data-open="${next.id}" data-seq="${seq}">${done === 0 ? 'Start path' : done === cs.length ? 'Read again' : 'Continue path'} ${I.arrowR}</button>
+      ${prog.thin ? '<p class="built-note">Still being built. Every idea that\u2019s here is open.</p>' : ''}
+      <div class="bar" style="--c:${color(p.topic)}"><i style="width:${prog.total ? prog.done / prog.total * 100 : 0}%"></i></div>
+      <div class="row path-stat"><span>${prog.done} of ${prog.total}</span><span>${esc(prog.status)}</span><span>~${mins} min</span></div>
+      ${next ? `<button class="btn block" data-open="${next.card.id}" data-seq="${seq}" data-path-read="${p.id}">${action} ${I.arrowR}</button>` : ''}
     </div>
-    <ol class="steps">${cs.map((c, i) => `<li><button class="step${S.read[c.id] ? ' done' : ''}" style="--c:${color(primaryTopic(c))}" data-open="${c.id}" data-seq="${seq}">
-      <span class="n">${S.read[c.id] ? I.check : i + 1}</span>
-      <span><h4>${esc(c.title)}</h4><p>${esc(c.source.author)} · ${yearStr(c.source.year)} · ${minutes(c)} min</p></span></button></li>`).join('')}</ol>`;
+    ${stepsHTML(entries, seq, p.id, grouped)}`;
   el.setAttribute('aria-hidden', 'false');
   syncInert();
   if (push) { el.scrollTop = 0; requestAnimationFrame(() => el.classList.add('open')); pushHist('path'); }
+  else if (!el.classList.contains('open')) { el.scrollTop = 0; requestAnimationFrame(() => el.classList.add('open')); }
 }
 function closePath() { const el = $('#push'); el.classList.remove('open'); el.setAttribute('aria-hidden','true'); delete el.dataset.path; syncInert(); }
 
@@ -286,7 +383,7 @@ function renderSaved() {
   el.innerHTML = `
     <header class="topbar"><div><div class="eyebrow">Your library</div><h1 class="h-title">Saved</h1></div>${ids.length ? `<span class="pill">${I.bookmarkFill.replace('<svg','<svg style="color:var(--warn)"')}${ids.length}</span>` : ''}</header>
     ${ids.length ? `<div class="cards" style="margin-top:14px">${ids.map((id,i) => ideaCard(byId[id], i, seq)).join('')}</div>`
-    : `<div class="empty">${emptyArt('saved')}<h3>Nothing saved yet</h3><p>Tap the bookmark on any idea and it will wait for you here, even offline.</p><button class="btn" data-tab="discover">Browse ideas ${I.arrowR}</button></div>`}`;
+    : `<div class="empty">${emptyArt('saved')}<h3>Nothing saved yet</h3><p>Tap the bookmark on any idea and it will wait for you here, even offline.</p><button class="btn" data-tab="cards">Browse ideas ${I.arrowR}</button></div>`}`;
   endScreen(el);
 }
 
@@ -349,14 +446,14 @@ function runSearch(q) {
   const seq = regSeq(scored.map(c => c.id));
   const re = new RegExp('(' + terms.map(t => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|') + ')', 'gi');
   const hl = s => esc(s).replace(re, '<mark>$1</mark>');
-  box.innerHTML = scored.length ? `<div class="section-h" style="margin-top:2px"><h2>${scored.length} result${scored.length > 1 ? 's' : ''}</h2></div><div class="cards">${scored.map((c,i) => `<button class="card" style="--c:${color(primaryTopic(c))};--i:${Math.min(i,8)}" data-open="${c.id}" data-seq="${seq}"><div class="kicker topic-tags">${topicTags(c)}</div><h4>${hl(c.title)}</h4><p>${hl(c.source.author)} · ${esc(c.source.title)}</p></button>`).join('')}</div>`
+  box.innerHTML = scored.length ? `<div class="section-h" style="margin-top:2px"><h2>${scored.length} result${scored.length > 1 ? 's' : ''}</h2></div><div class="cards">${scored.map((c,i) => `<button class="card" style="--c:${color(primaryTopic(c))};--i:${Math.min(i,8)}" data-open="${c.id}" data-seq="${seq}"><div class="kicker topic-tags">${topicTags(c)}${tierLabel(c.tier)}</div><h4>${hl(c.title)}</h4><p>${hl(c.source.author)} · ${esc(c.source.title)}</p></button>`).join('')}</div>`
     : `<div class="empty">${emptyArt('search')}<h3>No matches</h3><p>Nothing for \u201c${esc(q)}\u201d yet. Try an author, a book or a broader word.</p></div>`;
   bindChips(box);
 }
 function closeSearch() { const el = $('#search'); el.classList.remove('open'); el.setAttribute('aria-hidden','true'); syncInert(); document.activeElement && document.activeElement.blur(); }
 
 /* ---------- Reader ---------- */
-let R = { ids: [], idx: 0 };
+let R = { ids: [], idx: 0, pathId: null, mode: 'card' };
 function para(text) {
   // split long summary into 2–3 paragraphs at sentence boundaries
   const sents = text.match(/[^.!?]+[.!?]+(\s|$)/g) || [text];
@@ -366,15 +463,35 @@ function para(text) {
 }
 function refIcon(r) { const url = r.url || ''; if (/doi\.org/.test(url)) return I.paper; if (r.kind === 'paper') return I.paper; if (/wikipedia\.org/.test(url)) return I.globe; return I.book; }
 function refKind(r) { return r.kind === 'book' ? 'Book' : /wikipedia\.org/.test(r.url) ? 'Overview' : /doi\.org/.test(r.url) ? 'Paper' : 'Read'; }
+const DEEP_TIER = { 1: 'An overview', 2: 'The key studies', 3: 'Methods and critiques' };
+function workRef(c, w) {
+  return `<button class="ref work-ref" type="button" data-work="${esc(w.id)}" data-card="${esc(c.id)}"><span class="ty">${w.type === 'paper' ? I.paper : I.book}</span><span class="tx"><b>${esc(w.title)}</b><span><em>${w.type === 'paper' ? 'Paper' : 'Book'}</em>${esc(w.authors)} · ${yearStr(w.year)}</span></span><span class="go">${I.right}</span></button>`;
+}
+function goDeeperHTML(c) {
+  const works = c.goDeeper || [];
+  if (!works.length) return '';
+  const lead = `<section class="further"><h2>Go deeper</h2><p class="further-lead">The main works around this idea. Open one for the concrete evidence, then the link to the original.</p>`;
+  if (!works.some(w => validTier(w.tier))) return `${lead}${works.map(w => workRef(c, w)).join('')}</section>`;
+  let body = '';
+  for (const t of [1, 2, 3]) {
+    const group = works.filter(w => validTier(w.tier) === t);
+    if (!group.length) continue;
+    body += `<h3 class="further-tier">Tier ${t}<span>${DEEP_TIER[t]}</span></h3>${group.map(w => workRef(c, w)).join('')}`;
+  }
+  const rest = works.filter(w => !validTier(w.tier));
+  if (rest.length) body += rest.map(w => workRef(c, w)).join('');
+  return `${lead}${body}</section>`;
+}
 function pageHTML(c) {
+  const tier = tierFor(c, R.pathId);
   return `<article class="page" style="--c:${color(primaryTopic(c))}" data-id="${c.id}"><div class="page-in">
-    <div class="kicker topic-tags">${topicTags(c, true)}</div>
+    <div class="kicker topic-tags">${topicTags(c, !tier)}${tierLabel(tier)}</div>
     <h1>${esc(c.title)}</h1>
     <a class="byline" href="${esc(c.source.url)}" target="_blank" rel="noopener"><span class="bk">${/doi\.org/.test(c.source.url) ? I.paper : I.book}</span><span><b>${esc(c.source.title)}</b><span>${esc(c.source.author)} · ${yearStr(c.source.year)}</span></span></a>
     ${c.caution ? `<div class="caution">${I.warn}<div><b>Replication note</b>${esc(c.caution)}</div></div>` : ''}
     <div class="prose">${para(c.summary)}</div>
     <div class="deep"><button data-act="deep" aria-expanded="false"><span class="ic">${I.dive}</span><b>Deep dive<small>Nuance, debates and what to watch for</small></b><span class="chev">${I.close}</span></button><div class="body"><div class="prose deep-prose">${para(c.deepDive)}</div></div></div>
-    ${(c.goDeeper || []).length ? `<section class="further"><h2>Go deeper</h2><p class="further-lead">The main works around this idea. Open one for the concrete evidence, then the link to the original.</p>${c.goDeeper.map(w => `<button class="ref work-ref" type="button" data-work="${esc(w.id)}" data-card="${esc(c.id)}"><span class="ty">${w.type === 'paper' ? I.paper : I.book}</span><span class="tx"><b>${esc(w.title)}</b><span><em>${w.type === 'paper' ? 'Paper' : 'Book'}</em>${esc(w.authors)} · ${yearStr(w.year)}</span></span><span class="go">${I.right}</span></button>`).join('')}</section>` : ''}
+    ${goDeeperHTML(c)}
   </div></article>`;
 }
 let drag = null;
@@ -397,6 +514,7 @@ function updateReadingProgress() {
   if (trackBar) trackBar.setAttribute('aria-valuenow', String(Math.round(p * 100)));
 }
 function layoutTrack(attempt) {
+  if (R.mode === 'finish') return;
   const pager = $('#pager');
   const track = $('#track');
   if (!pager || !track) return;
@@ -436,6 +554,7 @@ function commitSwipe(dir, d) {
 }
 function bindPager(pager) {
   const down = e => {
+    if (R.mode === 'finish') return;
     if (e.button != null && e.button !== 0) return;
     const w = Math.round(pager.clientWidth);
     drag = { x: e.clientX, y: e.clientY, dx: 0, dy: 0, lock: null, w, pointerId: e.pointerId, base: R.idx > 0 ? -w : 0 };
@@ -482,8 +601,11 @@ function bindPager(pager) {
   pager.addEventListener('pointercancel', up);
   pager.addEventListener('click', e => { if (!suppressClick) return; suppressClick = false; e.preventDefault(); e.stopPropagation(); }, true);
 }
-function openReader(ids, startId) {
+function openReader(ids, startId, pathId) {
   R.ids = ids; R.idx = Math.max(0, ids.indexOf(startId));
+  R.pathId = pathId && pathById[pathId] ? pathId : null;
+  R.mode = 'card';
+  if (R.pathId) { S.lastPath = R.pathId; save(); }
   const el = $('#reader');
   el.innerHTML = `
     <div class="reader-top"><button class="icon-btn" data-act="closeReader" aria-label="Close">${I.x}</button><div class="count" id="rcount"></div><button class="icon-btn" data-act="share" aria-label="Share">${P('<path d="M12 3v13M7 8l5-5 5 5"/><path d="M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/>')}</button><div class="progress" id="rprog-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Reading progress"><i id="rprog"></i></div></div>
@@ -500,20 +622,102 @@ function openReader(ids, startId) {
   pushHist('reader');
 }
 function syncReader() {
+  if (R.mode === 'finish') {
+    const p = R.pathId && pathById[R.pathId];
+    const prog = p ? pathProgress(p) : null;
+    const el = $('#reader');
+    if (p) el.style.setProperty('--c', color(p.topic));
+    const count = $('#rcount');
+    if (count) count.textContent = prog && prog.allDone && !prog.thin ? 'Finished' : 'End';
+    const sv = $('#rsave');
+    if (sv) { sv.disabled = true; sv.classList.remove('on'); sv.innerHTML = I.bookmark; }
+    const rb = $('#rread');
+    if (rb) { rb.className = 'btn'; rb.innerHTML = 'Done'; }
+    const next = $('#rnext');
+    if (next) { next.disabled = true; next.setAttribute('aria-label', 'Next idea'); }
+    return;
+  }
   const c = byId[R.ids[R.idx]]; if (!c) return;
   const el = $('#reader');
   el.style.setProperty('--c', color(primaryTopic(c)));
   const count = $('#rcount');
   if (count) count.textContent = R.ids.length > 1 ? `${R.idx + 1} of ${R.ids.length}` : topicLine(c);
   const sv = $('#rsave');
-  if (sv) { sv.classList.toggle('on', !!S.saved[c.id]); sv.innerHTML = S.saved[c.id] ? I.bookmarkFill : I.bookmark; sv.setAttribute('aria-pressed', String(!!S.saved[c.id])); }
+  if (sv) { sv.disabled = false; sv.classList.toggle('on', !!S.saved[c.id]); sv.innerHTML = S.saved[c.id] ? I.bookmarkFill : I.bookmark; sv.setAttribute('aria-pressed', String(!!S.saved[c.id])); }
   const rb = $('#rread');
   if (rb) { const isRead = !!S.read[c.id]; rb.className = 'btn' + (isRead ? ' done' : ''); rb.innerHTML = isRead ? `${I.check} Read` : 'Mark as read'; }
   const next = $('#rnext');
-  if (next) next.disabled = R.idx >= R.ids.length - 1;
+  if (next) {
+    next.disabled = R.pathId ? false : R.idx >= R.ids.length - 1;
+    next.setAttribute('aria-label', R.pathId ? 'Continue' : 'Next idea');
+  }
   updateReadingProgress();
 }
+function goToIndex(idx) {
+  if (idx === R.idx + 1) { readerGo(1); return; }
+  R.idx = idx;
+  layoutTrack();
+  syncReader();
+  haptic(4);
+}
+function showFinish() {
+  const p = pathById[R.pathId];
+  if (!p) return;
+  R.mode = 'finish';
+  const prog = pathProgress(p);
+  const related = relatedPath(p);
+  const complete = prog.allDone && !prog.thin;
+  const pager = $('#pager');
+  const rel = related ? (() => {
+    const rp = pathProgress(related);
+    return `<div class="section-h"><h2>Related path</h2></div>
+      <button class="path related" style="--c:${color(related.topic)}" data-act="open-related" data-related="${related.id}">
+        <span class="tint"></span>${pathArt(related)}
+        <div class="kicker${rp.thin ? ' built' : ''}">${esc(rp.status)}</div>
+        <h3>${esc(related.title)}</h3><p>${esc(related.blurb)}</p>
+        <div class="foot"><span>${rp.done} of ${rp.total}</span></div>
+      </button>`;
+  })() : '';
+  pager.innerHTML = `<div class="page finish-page" style="--c:${color(p.topic)}"><div class="page-in finish">
+    <div class="finish-mark" aria-hidden="true">${I.check}</div>
+    <div class="eyebrow" style="color:${color(p.topic)}">${complete ? 'Path complete' : prog.thin ? 'Still being built' : 'End of the path'}</div>
+    <h1>${esc(p.title)}</h1>
+    <p class="lede">${complete
+      ? `You read all ${prog.total} ideas. It stays finished on this device.`
+      : prog.thin
+        ? `You\u2019ve read ${prog.done} of ${prog.total}. This path is still short of a full course, so it stays marked as being built.`
+        : `${prog.done} of ${prog.total} read. It counts as finished once every idea is read.`}</p>
+    ${!prog.allDone ? `<button class="btn block" data-act="finish-resume">Continue with what\u2019s unread ${I.arrowR}</button>` : ''}
+    ${rel}
+  </div></div>`;
+  syncReader();
+  haptic(10);
+}
+function continuePath() {
+  const id = R.ids[R.idx];
+  const wasRead = !!(id && S.read[id]);
+  if (id && !wasRead) setRead(id, true);
+  if (R.pathId) { S.lastPath = R.pathId; save(); }
+  let next = -1;
+  for (let i = R.idx + 1; i < R.ids.length; i++) if (!S.read[R.ids[i]]) { next = i; break; }
+  if (next < 0) {
+    for (let i = 0; i < R.idx; i++) if (!S.read[R.ids[i]]) { next = i; break; }
+  }
+  if (next >= 0) { goToIndex(next); return; }
+  if (wasRead && R.idx < R.ids.length - 1) { goToIndex(R.idx + 1); return; }
+  showFinish();
+}
+function resumeUnread() {
+  R.mode = 'card';
+  const idx = R.ids.findIndex(id => !S.read[id]);
+  if (idx >= 0) R.idx = idx;
+  const pager = $('#pager');
+  pager.innerHTML = '<div class="track" id="track"></div>';
+  layoutTrack();
+  syncReader();
+}
 function readerGo(d) {
+  if (R.mode === 'finish') return;
   const pager = $('#pager');
   if (!pager || drag) return;
   const dest = R.idx + d;
@@ -523,6 +727,7 @@ function readerGo(d) {
 }
 function closeReader() {
   drag = null;
+  R.mode = 'card';
   const el = $('#reader');
   el.classList.remove('open', 'dragging');
   el.setAttribute('aria-hidden','true');
@@ -1040,17 +1245,21 @@ function closeWork() {
 
 /* ---------- History (back button) ---------- */
 const stack = [];
+let suppressPop = 0;
 function pushHist(kind) { stack.push(kind); history.pushState({ k: kind, n: stack.length }, ''); }
 function closeTop(fromPop) {
   const k = stack.pop(); if (!k) return;
   if (k === 'work') closeWork(); else if (k === 'reader') closeReader(); else if (k === 'search') closeSearch(); else if (k === 'path') closePath();
-  if (!fromPop) history.back();
+  if (!fromPop) { suppressPop++; history.back(); }
 }
-window.addEventListener('popstate', () => { if (stack.length) closeTop(true); });
+window.addEventListener('popstate', () => {
+  if (suppressPop) { suppressPop--; return; }
+  if (stack.length) closeTop(true);
+});
 
 /* ---------- Tabs ---------- */
-const TABS = [['discover','Discover',I.compass],['paths','Paths',I.layers],['saved','Saved',I.bookmark],['progress','Progress',I.chart]];
-let tab = 'discover';
+const TABS = [['home','Home',I.home],['cards','All cards',I.compass],['saved','Saved',I.bookmark],['progress','Progress',I.chart]];
+let tab = 'home';
 function renderTabs() { $('#tabbar').innerHTML = TABS.map(([id, l, ic]) => `<button class="tab${tab === id ? ' on' : ''}" data-tab="${id}" aria-label="${l}" aria-current="${tab === id ? 'page' : 'false'}"><span class="ico">${id === 'saved' && tab === id ? I.bookmarkFill : ic}</span><span class="tab-lbl">${l}</span></button>`).join(''); }
 function setTab(id) {
   if (id === tab) { const s = $('#s-' + id); s.scrollTo({ top: 0, behavior: reduceMotion() ? 'auto' : 'smooth' }); return; }
@@ -1062,7 +1271,7 @@ function setTab(id) {
   });
   render(id); renderTabs();
 }
-function render(id) { ({ discover: renderDiscover, paths: renderPaths, saved: renderSaved, progress: renderProgress })[id](); }
+function render(id) { ({ home: renderHome, cards: renderCards, saved: renderSaved, progress: renderProgress })[id](); }
 function refresh() {
   const sc = $('#s-' + tab), top = sc.scrollTop; render(tab); sc.scrollTop = top;
   const push = $('#push'); if (push.dataset.path) { const t = push.scrollTop; openPath(push.dataset.path, false); push.scrollTop = t; }
@@ -1077,9 +1286,9 @@ document.addEventListener('click', e => {
   const t = e.target.closest('[data-open],[data-tab],[data-filter],[data-path],[data-act],[data-goal],[data-theme-set],[data-sq],[data-work]');
   if (!t) return;
   if (t.dataset.work) { openWork(t.dataset.card, t.dataset.work); haptic(6); return; }
-  if (t.dataset.open) { openReader(SEQS[t.dataset.seq] || [t.dataset.open], t.dataset.open); haptic(6); return; }
+  if (t.dataset.open) { openReader(SEQS[t.dataset.seq] || [t.dataset.open], t.dataset.open, t.dataset.pathRead || null); haptic(6); return; }
   if (t.dataset.tab) { if (stack.length) while (stack.length) closeTop(); setTab(t.dataset.tab); return; }
-  if (t.dataset.filter) { S.filter = t.dataset.filter; save(); haptic(5); const sc = $('#s-discover'); const y = sc.scrollTop; renderDiscover(); sc.scrollTop = y; return; }
+  if (t.dataset.filter) { S.filter = t.dataset.filter; save(); haptic(5); const sc = $('#s-cards'); const y = sc.scrollTop; renderCards(); sc.scrollTop = y; return; }
   if (t.dataset.path) { openPath(t.dataset.path); haptic(6); return; }
   if (t.dataset.goal) { S.goal = +t.dataset.goal; save(); haptic(6); renderProgress(); return; }
   if (t.dataset.themeSet) { S.theme = t.dataset.themeSet; save(); applyTheme(); haptic(6); renderProgress(); return; }
@@ -1093,15 +1302,32 @@ document.addEventListener('click', e => {
   else if (a === 'closeSearch' || a === 'pop' || a === 'closeReader' || a === 'closeWork') closeTop();
   else if (a === 'deep') { const d = t.parentElement; const open = d.classList.toggle('open'); t.setAttribute('aria-expanded', open); haptic(5); }
   else if (a === 'rsave') { const on = toggleSave(R.ids[R.idx]); syncReader(); if (on) toast(I.bookmarkFill, 'Saved to your library'); }
-  else if (a === 'rread') { const id = R.ids[R.idx]; setRead(id, !S.read[id]); syncReader(); }
-  else if (a === 'rnext') { const id = R.ids[R.idx]; if (!S.read[id]) { setRead(id, true); syncReader(); } if (R.idx < R.ids.length - 1) setTimeout(() => readerGo(1), 160); else { toast(I.check, 'End of this set'); } }
-  else if (a === 'share') { const c = byId[R.ids[R.idx]]; const text = `${c.title}\n\n${c.source.title} — ${c.source.author} (${yearStr(c.source.year)})\n${c.source.url}`; if (navigator.share) navigator.share({ title: c.title, text }).catch(() => {}); else navigator.clipboard && navigator.clipboard.writeText(text).then(() => toast(I.check, 'Copied to clipboard')); }
+  else if (a === 'rread') {
+    if (R.mode === 'finish') { closeTop(); return; }
+    const id = R.ids[R.idx]; setRead(id, !S.read[id]); syncReader();
+  }
+  else if (a === 'rnext') {
+    if (R.mode === 'finish') return;
+    if (R.pathId) { setTimeout(() => continuePath(), 160); return; }
+    const id = R.ids[R.idx]; if (!S.read[id]) { setRead(id, true); syncReader(); } if (R.idx < R.ids.length - 1) setTimeout(() => readerGo(1), 160); else { toast(I.check, 'End of this set'); }
+  }
+  else if (a === 'finish-resume') resumeUnread();
+  else if (a === 'open-related') {
+    const id = t.dataset.related;
+    const pathOpen = $('#push').classList.contains('open');
+    if ($('#reader').classList.contains('open')) closeTop();
+    openPath(id, !pathOpen);
+    if (pathOpen) $('#push').scrollTop = 0;
+  }
+  else if (a === 'share') { if (R.mode === 'finish') return; const c = byId[R.ids[R.idx]]; const text = `${c.title}\n\n${c.source.title} — ${c.source.author} (${yearStr(c.source.year)})\n${c.source.url}`; if (navigator.share) navigator.share({ title: c.title, text }).catch(() => {}); else navigator.clipboard && navigator.clipboard.writeText(text).then(() => toast(I.check, 'Copied to clipboard')); }
   else if (a === 'reset') { if (confirm('Reset reading progress, streaks and saved ideas on this device?')) { S = { ...defaults, theme: S.theme, seed: S.seed }; save(); refresh(); toast(I.check, 'Progress reset'); } }
 });
 document.addEventListener('keydown', e => {
   if ($('#work').classList.contains('open')) { if (e.key === 'Escape') closeTop(); return; }
   if (!$('#reader').classList.contains('open')) return;
-  if (e.key === 'ArrowRight') readerGo(1); else if (e.key === 'ArrowLeft') readerGo(-1); else if (e.key === 'Escape') closeTop();
+  if (e.key === 'ArrowRight') { if (R.pathId && R.mode !== 'finish') continuePath(); else readerGo(1); }
+  else if (e.key === 'ArrowLeft') readerGo(-1);
+  else if (e.key === 'Escape') closeTop();
 });
 let rz; window.addEventListener('resize', () => { clearTimeout(rz); rz = setTimeout(() => { if ($('#reader').classList.contains('open') && !drag) layoutTrack(); }, 80); });
 document.addEventListener('input', e => {
@@ -1158,7 +1384,7 @@ async function boot() {
     byId[c.id] = c;
   });
   if (S.filter !== 'all' && !topicById[S.filter]) S.filter = 'all';
-  renderTabs(); renderDiscover();
+  renderTabs(); renderHome();
   const delay = Math.max(0, 280 - (performance.now() - started));
   setTimeout(() => requestAnimationFrame(() => $('#splash').classList.add('gone')), delay);
   if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});
