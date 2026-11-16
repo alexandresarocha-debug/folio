@@ -382,7 +382,7 @@ function renderSaved() {
   const seq = regSeq(ids);
   el.innerHTML = `
     <header class="topbar"><div><div class="eyebrow">Your library</div><h1 class="h-title">Saved</h1></div>${ids.length ? `<span class="pill">${I.bookmarkFill.replace('<svg','<svg style="color:var(--warn)"')}${ids.length}</span>` : ''}</header>
-    ${ids.length ? `<div class="cards" style="margin-top:14px">${ids.map((id,i) => ideaCard(byId[id], i, seq)).join('')}</div>`
+    ${ids.length ? `<div class="cards stack">${ids.map((id,i) => ideaCard(byId[id], i, seq)).join('')}</div>`
     : `<div class="empty">${emptyArt('saved')}<h3>Nothing saved yet</h3><p>Tap the bookmark on any idea and it will wait for you here, even offline.</p><button class="btn" data-tab="cards">Browse ideas ${I.arrowR}</button></div>`}`;
   endScreen(el);
 }
@@ -430,7 +430,7 @@ function openSearch() {
 function runSearch(q) {
   const box = $('#sres'); q = q.trim();
   if (!q) {
-    box.innerHTML = `<div class="section-h" style="margin-top:4px"><h2>Browse by topic</h2></div><div class="chips" style="margin:0;padding:0;flex-wrap:wrap">${D.topics.map(t => `<button class="chip" style="color:${color(t.id)}" data-sq="${esc(t.short)}"><i></i>${esc(t.short)}</button>`).join('')}</div>
+    box.innerHTML = `<div class="section-h"><h2>Browse by topic</h2></div><div class="chips" style="margin:0;padding:0;flex-wrap:wrap">${D.topics.map(t => `<button class="chip" style="color:${color(t.id)}" data-sq="${esc(t.short)}"><i></i>${esc(t.short)}</button>`).join('')}</div>
       <div class="section-h"><h2>Try</h2></div><div class="chips" style="margin:0;padding:0;flex-wrap:wrap">${['Kahneman','Rome','replication','Barthes','plague','novel','habits','Orwell'].map(s => `<button class="chip" data-sq="${s}">${s}</button>`).join('')}</div>`;
     bindChips(box);
     return;
@@ -446,7 +446,7 @@ function runSearch(q) {
   const seq = regSeq(scored.map(c => c.id));
   const re = new RegExp('(' + terms.map(t => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|') + ')', 'gi');
   const hl = s => esc(s).replace(re, '<mark>$1</mark>');
-  box.innerHTML = scored.length ? `<div class="section-h" style="margin-top:2px"><h2>${scored.length} result${scored.length > 1 ? 's' : ''}</h2></div><div class="cards">${scored.map((c,i) => `<button class="card" style="--c:${color(primaryTopic(c))};--i:${Math.min(i,8)}" data-open="${c.id}" data-seq="${seq}"><div class="kicker topic-tags">${topicTags(c)}${tierLabel(c.tier)}</div><h4>${hl(c.title)}</h4><p>${hl(c.source.author)} · ${esc(c.source.title)}</p></button>`).join('')}</div>`
+  box.innerHTML = scored.length ? `<div class="section-h"><h2>${scored.length} result${scored.length > 1 ? 's' : ''}</h2></div><div class="cards">${scored.map((c,i) => `<button class="card" style="--c:${color(primaryTopic(c))};--i:${Math.min(i,8)}" data-open="${c.id}" data-seq="${seq}"><div class="kicker topic-tags">${topicTags(c)}${tierLabel(c.tier)}</div><h4>${hl(c.title)}</h4><p>${hl(c.source.author)} · ${esc(c.source.title)}</p></button>`).join('')}</div>`
     : `<div class="empty">${emptyArt('search')}<h3>No matches</h3><p>Nothing for \u201c${esc(q)}\u201d yet. Try an author, a book or a broader word.</p></div>`;
   bindChips(box);
 }
