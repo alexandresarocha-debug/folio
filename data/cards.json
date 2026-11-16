@@ -3466,6 +3466,69 @@
    "tier": 1
   },
   {
+   "id": "non-shared-environment",
+   "topic": "biology",
+   "topics": [
+    "biology",
+    "psychology"
+   ],
+   "title": "Same home, different lives: why siblings turn out so unalike",
+   "summary": "Why are brothers and sisters so different? They share parents, a home and about half their genes. Yet in 1987 the researchers Robert Plomin and Denise Daniels pulled the evidence together and reached a startling conclusion. For personality, the family home that siblings share seems to do surprisingly little. Adopted children raised together from early in life share a family but not genes, and in personality they end up barely more alike than strangers. What matters more is the non-shared, or unique, environment: everything that makes each child's life different. A different teacher, different friends, an illness, a lucky break. Charles Darwin wrote that his whole career hung on an uncle offering him a ride and on the shape of his nose, which nearly got him turned away from the Beagle. A huge 2015 review of twin studies backed the idea: for most traits, twins' resemblance was explained by genes, with little room left for the shared home. But there are limits. The shared home does matter for some things, such as IQ in childhood, and its effect fades as children grow up. The unique share also hides plain measurement error. And when researchers measure specific differences, such as how parents treat each child, each one explains very little. Much of what makes siblings different may be chance.",
+   "deepDive": "The evidence in numbers. In a large study of high-school twins, personality correlated about .50 for identical twins and .30 for non-identical twins, which points to about 40% genetic influence and 60% environment, most of it non-shared environment plus measurement error. In four adoption studies of personality, adoptive siblings correlated on average just .04. IQ was the exception: across 11 studies, adoptive siblings living at home correlated about .30, but a study of adoptees past adolescence found -.03. A 2010 study of about 11,000 twin pairs from four countries showed the same fade: the shared environment explained 33% of differences in general cognitive ability at about age 9, 18% at 12 and 16% at 17. The 2015 review pooled 2,748 twin studies from 1958 to 2012. For 69% of traits, the twin data fit identical twins being twice as alike as non-identical twins, the pattern expected with no shared family effect. The shared environment still looked substantial for conduct disorders, religion and spirituality, and education. Then the frontier. In 2000 Eric Turkheimer and Mary Waldron reviewed 43 studies that measured specific differences in siblings' lives, such as birth order, parents' treatment, or friends and teachers. The typical one explained only about 1.6% of the differences between siblings. They argued this fits what Plomin and Daniels had called the gloomy prospect: that many small, unsystematic events, plus random chance in development itself, make siblings diverge. Because the non-shared share is simply what is left after genes and the shared home, it also includes measurement error and luck. So unique environment is real, but it is not yet a list of causes anyone can point to.",
+   "source": {
+    "title": "Why are children in the same family so different from one another?",
+    "author": "Robert Plomin & Denise Daniels",
+    "year": 1987,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3147063/"
+   },
+   "paths": [
+    "heritability"
+   ],
+   "goDeeper": [
+    {
+     "id": "why-are-children-in-the-same-family-so-different-f-1987",
+     "title": "Why are children in the same family so different from one another?",
+     "authors": "Robert Plomin & Denise Daniels",
+     "year": 1987,
+     "type": "paper",
+     "file": "summaries/why-are-children-in-the-same-family-so-different-f-1987.html",
+     "sourceUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3147063/",
+     "tier": 1
+    },
+    {
+     "id": "meta-analysis-of-the-heritability-of-human-traits-2015",
+     "title": "Meta-analysis of the heritability of human traits based on fifty years of twin studies",
+     "authors": "Tinca J. C. Polderman, Beben Benyamin, Christiaan A. de Leeuw, et al.",
+     "year": 2015,
+     "type": "paper",
+     "file": "summaries/meta-analysis-of-the-heritability-of-human-traits-2015.html",
+     "sourceUrl": "https://doi.org/10.1038/ng.3285",
+     "tier": 2
+    },
+    {
+     "id": "the-heritability-of-general-cognitive-ability-incr-2010",
+     "title": "The heritability of general cognitive ability increases linearly from childhood to young adulthood",
+     "authors": "C. M. A. Haworth, M. J. Wright, M. Luciano, et al.",
+     "year": 2010,
+     "type": "paper",
+     "file": "summaries/the-heritability-of-general-cognitive-ability-incr-2010.html",
+     "sourceUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2889158/",
+     "tier": 2
+    },
+    {
+     "id": "nonshared-environment-a-theoretical-methodological-2000",
+     "title": "Nonshared environment: a theoretical, methodological, and quantitative review",
+     "authors": "Eric Turkheimer & Mary Waldron",
+     "year": 2000,
+     "type": "paper",
+     "file": "summaries/nonshared-environment-a-theoretical-methodological-2000.html",
+     "sourceUrl": "https://doi.org/10.1037/0033-2909.126.1.78",
+     "tier": 3
+    }
+   ],
+   "tier": 2
+  },
+  {
    "id": "political-attitudes-heritability",
    "topic": "psychology",
    "topics": [
