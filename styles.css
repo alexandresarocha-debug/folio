@@ -178,6 +178,9 @@ svg{display:block}
 .caution b{color:var(--warn);display:block;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:3px}
 .prose{font-family:var(--serif);font-size:19px;line-height:1.68;color:var(--text);font-weight:430;letter-spacing:-.003em;hyphens:manual;text-wrap:pretty;max-width:62ch}
 .prose p{margin:0 0 var(--s-4)}
+.prose ul{margin:0 0 var(--s-4);padding:0 0 0 1.15em}
+.prose li{margin:0 0 var(--s-2);padding:0}
+.prose li:last-child{margin-bottom:0}
 .page-in > .prose > p:first-child::first-letter{float:left;font-size:3.25em;line-height:.84;padding:6px 10px 0 0;font-weight:500;color:var(--c)}
 .deep{margin:var(--s-2) 0 var(--s-6);border-radius:18px;background:var(--surface);border:1px solid var(--line);overflow:hidden}
 .deep > button{width:100%;display:flex;align-items:center;gap:12px;padding:16px 18px;text-align:left}
@@ -192,7 +195,8 @@ svg{display:block}
 .deep .body > div{overflow:hidden;min-height:0}
 .deep .prose{padding:0 18px;max-width:none}
 .deep.open .prose{padding:2px 18px 18px}
-.deep .prose p{margin:0 0 .85em;padding:0;font-size:17.25px;line-height:1.65;color:var(--text-2);font-weight:430}
+.deep .prose p,.deep .prose li{margin:0 0 .85em;padding:0;font-size:17.25px;line-height:1.65;color:var(--text-2);font-weight:430}
+.deep .prose ul{margin:0 0 .85em}
 .deep .prose p:last-child{margin-bottom:0}
 .deep .prose p::first-letter{initial-letter:unset;-webkit-initial-letter:unset;float:none;font-size:inherit;color:inherit;font-weight:inherit;margin:0;padding:0}
 .further h2{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:650;margin:0 0 var(--s-2)}
@@ -310,6 +314,9 @@ svg{shape-rendering:geometricPrecision}
 :focus{outline:none}
 :focus-visible{outline:2px solid color-mix(in srgb,var(--history) 75%,white);outline-offset:3px}
 .goal-copy{flex:1;min-width:0;position:relative;z-index:1}
+.today-goal{margin:var(--s-4) 0 0;color:var(--muted);font-size:13.5px;font-weight:600;letter-spacing:.01em;font-variant-numeric:tabular-nums}
+.today-goal.done{color:#8fd19e}
+:root[data-theme="light"] .today-goal.done{color:#217a3a}
 .intro{margin:var(--s-4) 0 0;color:var(--text-2);font-size:15.5px;line-height:1.5;max-width:38em}
 .chip{height:34px;padding:0 12px;font-size:13.5px;gap:var(--s-2)}
 .chips{gap:var(--s-2)}
