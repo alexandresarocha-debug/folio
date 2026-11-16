@@ -14,7 +14,8 @@ ROOT = Path(__file__).resolve().parents[1]
 CARDS = ROOT / "data" / "cards.json"
 APP = ROOT / "app.js"
 SW = ROOT / "sw.js"
-MIN_WORDS = 1000
+MIN_WORDS = 250
+MAX_WORDS = 600  # plain practical Go deeper texts since 2026-11-11
 UA = {"User-Agent": "Mozilla/5.0 (compatible; FolioVerify/1.0)"}
 
 
@@ -68,14 +69,26 @@ def main() -> None:
     errors: list[str] = []
     data = json.loads(CARDS.read_text(encoding="utf-8"))
     cards = data["cards"]
-    if len(cards) != 62:
-        errors.append(f"expected 62 cards, found {len(cards)}")
+    ids = [c["id"] for c in cards]
+    if len(ids) != len(set(ids)):
+        errors.append("duplicate card ids")
+    topic_ids = {t["id"] for t in data["topics"]}
+    path_ids = {p["id"] for p in data["paths"]}
+    for c in cards:
+        for t in c.get("topics") or [c["topic"]]:
+            if t not in topic_ids:
+                errors.append(f"{c['id']}: unknown topic {t}")
+        if c["topic"] not in (c.get("topics") or [c["topic"]]):
+            errors.append(f"{c['id']}: primary topic missing from topics")
+        for p in c.get("paths", []):
+            if p not in path_ids:
+                errors.append(f"{c['id']}: unknown path {p}")
     app = APP.read_text(encoding="utf-8")
     sw = SW.read_text(encoding="utf-8")
     if "const KEY = 'folio.v1'" not in app:
         errors.append("localStorage key folio.v1 changed")
-    if "folio-v1.4.0" not in sw:
-        errors.append("service worker is not folio-v1.4.0")
+    if not re.search(r"const VERSION = 'folio-v\d+\.\d+\.\d+'", sw):
+        errors.append("service worker VERSION missing")
     if "summaries/" in sw.split("SHELL", 1)[-1].split("];", 1)[0]:
         errors.append("summaries must be lazy-loaded, not precached")
 
@@ -109,10 +122,8 @@ def main() -> None:
             n, h2, bad = words(raw)
             if wid not in {x for x, _ in []} and path.name not in {p.name for p in []}:
                 pass
-            if n < MIN_WORDS:
-                errors.append(f"{wid}: {n} words, minimum is {MIN_WORDS}")
-            if h2 < 3:
-                errors.append(f"{wid}: needs subheadings")
+            if n < MIN_WORDS or n > MAX_WORDS:
+                errors.append(f"{wid}: {n} words, expected {MIN_WORDS}-{MAX_WORDS}")
             if bad or "<script" in raw.lower():
                 errors.append(f"{wid}: unsafe markup")
             lengths.append(n)
