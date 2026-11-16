@@ -108,6 +108,12 @@
    "topic": "biology",
    "title": "Animal Culture",
    "blurb": "How a new habit moves through a troop, one animal at a time."
+  },
+  {
+   "id": "lab-surprises",
+   "topic": "biology",
+   "title": "Lab Surprises",
+   "blurb": "Experiments where a flask of bacteria, or a swallowed culture, changed what biology knew."
   }
  ],
  "cards": [
@@ -2992,6 +2998,328 @@
      "type": "paper",
      "file": "summaries/the-hundredth-monkey-phenomenon-1985.html",
      "sourceUrl": "https://skepticalinquirer.org/1985/07/the-hundredth-monkey-phenomenon/"
+    }
+   ]
+  },
+  {
+   "id": "ginzburg-menocchio",
+   "topic": "history",
+   "title": "Cheese and worms: what one miller's trial reveals about peasant minds",
+   "summary": "Domenico Scandella, nicknamed Menocchio, was a miller from Montereale in Friuli, in northern Italy, born in 1532. In 1583 the Inquisition arrested him for heresy, and the records of his trials survive. Asked how the world began, he said that all was chaos, with earth, air, water and fire mixed together, and that out of this mass a lump formed, as cheese forms out of milk. Worms appeared in it, and these were the angels. God, he said, was one of them. In The Cheese and the Worms (1976) the Italian historian Carlo Ginzburg used this one man's testimony to ask what an ordinary sixteenth-century peasant actually thought, a question historians usually answered by reading what educated people wrote about peasants. Menocchio could read. The trials show he had a Bible in Italian, a translation of Mandeville's Travels, the Golden Legend and later Boccaccio's Decameron. He did not repeat these books. He reworked them into a cosmos of his own, and he also argued that the only real sin was harming a neighbour. Ginzburg argued that printing and the Reformation gave a peasant both books and the nerve to doubt the Church, and that Menocchio's creation story may echo a much older oral tradition. After a first trial in 1583 and 1584, a long prison term and years under house arrest, Menocchio was arrested again and burned in 1599. The book became the best-known example of microhistory: studying one small case in depth to see a larger world.",
+   "deepDive": "Ginzburg first met Menocchio in the 1960s, in an index of inquisition files he was searching for witchcraft trials, and returned to the two trials in 1970. His method is to read the transcript for what was said, what was left unsaid, and which book a phrase might come from. The hard question is where the cosmos came from. Ginzburg's own answer, an old peasant tradition passed down by word of mouth, he admitted in the book was not proven. David Levine and Zubedeh Vahed argued in 2001 that he left obvious leads unexplored and that his picture of peasant culture is only partly built. There is also a sampling problem. A man known to us only because he got himself arrested is not an average miller. Ginzburg treats him as an exception that lights up the normal. The lasting lesson is about method: one well-documented person can test a big claim about a whole class, as long as you say how far the case can be stretched.",
+   "source": {
+    "title": "The Cheese and the Worms: The Cosmos of a Sixteenth-Century Miller",
+    "author": "Carlo Ginzburg",
+    "year": 1976,
+    "url": "https://en.wikipedia.org/wiki/The_Cheese_and_the_Worms"
+   },
+   "paths": [
+    "revolutions"
+   ],
+   "goDeeper": [
+    {
+     "id": "the-cheese-and-the-worms-the-cosmos-of-a-sixteenth-1976",
+     "title": "The Cheese and the Worms: The Cosmos of a Sixteenth-Century Miller",
+     "authors": "Carlo Ginzburg",
+     "year": 1976,
+     "type": "book",
+     "file": "summaries/the-cheese-and-the-worms-the-cosmos-of-a-sixteenth-1976.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/The_Cheese_and_the_Worms"
+    },
+    {
+     "id": "ginzburg-s-menocchio-refutations-and-conjectures-2001",
+     "title": "Ginzburg's Menocchio: Refutations and Conjectures",
+     "authors": "David Levine & Zubedeh Vahed",
+     "year": 2001,
+     "type": "paper",
+     "file": "summaries/ginzburg-s-menocchio-refutations-and-conjectures-2001.html",
+     "sourceUrl": "https://hssh.journals.yorku.ca/index.php/hssh/article/view/4519"
+    }
+   ]
+  },
+  {
+   "id": "dell-mita",
+   "topic": "history",
+   "title": "The mita's long shadow: forced mining labour and poverty 400 years later",
+   "summary": "In 1545 the Spanish found more silver at Potosí, high in the Andes, than anywhere else in their empire. Refining silver needed mercury, and there was a mercury mine at Huancavelica. From 1573 the colonial state ordered some 200 communities in the Andean region to send one-seventh of their workers to these mines in rotation. The system was called the mita and it ended in 1812. In 2010 the economist Melissa Dell asked whether it still matters. She compared households on either side of the old mita boundary, looking only at districts close to the line, where geography, crops and ethnic makeup are alike. Today, households in the former mita districts consume about 25 percent less, and about 6 percentage points more children are stunted. Her explanation runs through land and roads. Mita districts had fewer large estates, called haciendas. The big landowners elsewhere had the power to lobby for roads and other public goods, while the small farmers of the mita districts did not. Today the mita districts are less connected to the road network, have lower education, and more of their people farm only to feed themselves. The finding is odd in one way: haciendas are usually blamed for Latin American inequality, yet here they went with better public investment. It is one of the clearest cases of an institution casting a measurable shadow long after it was abolished.",
+   "deepDive": "The study uses a regression discontinuity design: districts just inside and just outside an arbitrary line are compared, which strips out most other differences. That is its strength and its limit. The result describes people near one boundary in one part of Peru, not Latin America as a whole. Studies of long-run persistence face standard criticisms, which a 2025 review by James Fenske, Bishnupriya Gupta and Anwesh Mukhopadhyay lists as compressing history, spatial correlation, data quality and the reading of coefficients. Dell answers the first by tracing the chain through records from 1689, 1845, 1876, 1940 and 1994, rather than jumping from 1573 to today. The same review also notes later work finding that migration before independence eroded the mita's effects on population. So the lesson is not that history is destiny, but that a specific institution can leave a specific trace when the mechanism, here land and roads, stays in place.",
+   "source": {
+    "title": "The Persistent Effects of Peru's Mining Mita",
+    "author": "Melissa Dell",
+    "year": 2010,
+    "url": "https://www.econometricsociety.org/publications/econometrica/2010/11/01/persistent-effects-perus-mining"
+   },
+   "paths": [
+    "divergence"
+   ],
+   "goDeeper": [
+    {
+     "id": "the-persistent-effects-of-peru-s-mining-mita-2010",
+     "title": "The Persistent Effects of Peru's Mining Mita",
+     "authors": "Melissa Dell",
+     "year": 2010,
+     "type": "paper",
+     "file": "summaries/the-persistent-effects-of-peru-s-mining-mita-2010.html",
+     "sourceUrl": "https://www.econometricsociety.org/publications/econometrica/2010/11/01/persistent-effects-perus-mining"
+    },
+    {
+     "id": "colonial-persistence-2025",
+     "title": "Colonial Persistence",
+     "authors": "Fenske, Gupta & Mukhopadhyay",
+     "year": 2025,
+     "type": "paper",
+     "file": "summaries/colonial-persistence-2025.html",
+     "sourceUrl": "https://warwick.ac.uk/fac/soc/economics/research/workingpapers/2025/twerp_1557-_fenske.pdf"
+    }
+   ]
+  },
+  {
+   "id": "parkinson-triviality",
+   "topic": "psychology",
+   "title": "Parkinson's law of triviality: why the bike shed gets 45 minutes",
+   "summary": "The law of triviality began as a joke. C. Northcote Parkinson, a British naval historian, wrote Parkinson's Law and Other Studies in Administration (1957) as satire, not research, and its figures are invented. In the chapter High Finance, or the Point of Vanishing Interest, he imagines a committee with three items on its agenda: a 10 million pound atomic reactor, a 350 pound bicycle shed for the clerical staff, and 21 pounds a year for refreshments. The reactor passes in about two and a half minutes, because it is too big and technical for most members to challenge. The shed gets 45 minutes, for a possible saving of 50 pounds. Parkinson's explanation is that everyone can visualise a bicycle shed. Coffee gets an hour and a quarter, because every member knows about coffee. His rule: the time spent on an item runs opposite to the money at stake. Software engineers later renamed this bikeshedding. The joke was never backed by data, but a real finding sits close to it. In 1985 Garold Stasser and William Titus gave four-person groups profiles of three student-president candidates. When every member had all the information, 83 percent of groups picked the best candidate. When the good news about that candidate was split between members, only 24 percent did in one version and 12 percent in another. Discussion kept returning to what members already knew. A 2012 meta-analysis of 65 studies found the same thing: groups mention shared information far more than unshared information.",
+   "deepDive": "It is worth being clear about what the evidence does and does not show. Stasser and Titus did not study trivial versus important agenda items, and neither did the later hidden-profile studies. They show that groups lean toward what everyone already knows, which is one ingredient of Parkinson's joke: the shed is a topic where all members hold the same information. A separate experiment fits the other half. Descamps, Massoni and Page (2022) had people decide whether to choose now or buy more information, and found they bought too much when little was needed and too little when a lot was needed. That was individuals in a lab, not committees. The term bikeshedding spread through software after Poul-Henning Kamp used it in a 1999 FreeBSD mailing list message. The useful reading is as a hypothesis from a satirist, backed in part by group research, not as a proven law.",
+   "source": {
+    "title": "Parkinson's Law, and Other Studies in Administration",
+    "author": "C. Northcote Parkinson",
+    "year": 1957,
+    "url": "https://en.wikipedia.org/wiki/Law_of_triviality"
+   },
+   "paths": [
+    "social"
+   ],
+   "caution": "The original is satire with invented figures. The group experiments cited test how groups share information, not how they treat trivial and important agenda items, so they support part of the idea but do not prove the law.",
+   "goDeeper": [
+    {
+     "id": "parkinson-s-law-and-other-studies-in-administratio-1957",
+     "title": "Parkinson's Law, and Other Studies in Administration",
+     "authors": "C. Northcote Parkinson",
+     "year": 1957,
+     "type": "book",
+     "file": "summaries/parkinson-s-law-and-other-studies-in-administratio-1957.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Law_of_triviality"
+    },
+    {
+     "id": "pooling-of-unshared-information-in-group-decision-1985",
+     "title": "Pooling of Unshared Information in Group Decision Making: Biased Information Sampling During Discussion",
+     "authors": "Garold Stasser & William Titus",
+     "year": 1985,
+     "type": "paper",
+     "file": "summaries/pooling-of-unshared-information-in-group-decision-1985.html",
+     "sourceUrl": "https://doi.org/10.1037/0022-3514.48.6.1467"
+    },
+    {
+     "id": "twenty-five-years-of-hidden-profiles-in-group-deci-2012",
+     "title": "Twenty-Five Years of Hidden Profiles in Group Decision Making: A Meta-Analysis",
+     "authors": "Lu, Yuan & McLeod",
+     "year": 2012,
+     "type": "paper",
+     "file": "summaries/twenty-five-years-of-hidden-profiles-in-group-deci-2012.html",
+     "sourceUrl": "https://doi.org/10.1177/1088868311417243"
+    }
+   ]
+  },
+  {
+   "id": "choice-overload",
+   "topic": "psychology",
+   "title": "Choice overload: the jam study, and why the effect is conditional",
+   "summary": "In 2000 Sheena Iyengar and Mark Lepper reported that more choice can make people buy less. In an upscale grocery store they set up a tasting booth that displayed either 6 or 24 jams. Of the 242 shoppers who passed the large display, 60 percent stopped. Of the 260 who passed the small one, 40 percent did. The big display attracted more people, but it did not make them sample more jams: both groups tasted about one and a half. What differed was buying. Nearly 30 percent of those who stopped at the 6-jam booth bought a jar, and only 3 percent of those who stopped at the 24-jam booth. Two more studies in the same paper pointed the same way. Students offered 6 essay topics for extra credit were more likely to write one than students offered 30, 74 percent against 60 percent. Participants choosing a chocolate from 6 rather than 30 were more satisfied, and 48 percent took chocolate rather than cash as payment against 12 percent. The idea fed bestselling books on the paradox of choice. Later work complicated it. A 2010 meta-analysis of 50 experiments found an average effect of virtually zero, with large differences between studies. A 2015 meta-analysis of 99 observations found that choice overload does show up under four conditions: when the choice set is complex, the task is difficult, people are unsure what they want, and the aim is to finish with minimal effort.",
+   "deepDive": "The jam purchase figures are shares of the people who stopped at the booth, not of everyone who walked past, and the experiment ran in one shop. In the chocolate study, people also enjoyed choosing from 30 more than from 6, but were more dissatisfied and regretful afterwards. So the original claim was already conditional: more choice attracts, then can drain. The reanalyses show why a single headline fails. Scheibehenne, Greifeneder and Todd could find no condition that reliably produced the effect, while Chernev, Böckenholt and Goodman argued that, once the moderators are counted, the overall effect is real. These two papers disagree, and that disagreement is the finding. The practical reading is narrower than the slogan: fewer options helps when the options are hard to compare and you do not yet know what you want, and less so when you arrive with clear preferences.",
+   "source": {
+    "title": "When choice is demotivating: Can one desire too much of a good thing?",
+    "author": "Sheena S. Iyengar & Mark R. Lepper",
+    "year": 2000,
+    "url": "https://doi.org/10.1037/0022-3514.79.6.995"
+   },
+   "paths": [
+    "replication"
+   ],
+   "caution": "A 2010 meta-analysis of 63 conditions found an average effect of virtually zero. A 2015 meta-analysis found the effect appears under specific conditions. Treat 'fewer options is always better' as unproven.",
+   "goDeeper": [
+    {
+     "id": "when-choice-is-demotivating-can-one-desire-too-muc-2000",
+     "title": "When choice is demotivating: Can one desire too much of a good thing?",
+     "authors": "Sheena S. Iyengar & Mark R. Lepper",
+     "year": 2000,
+     "type": "paper",
+     "file": "summaries/when-choice-is-demotivating-can-one-desire-too-muc-2000.html",
+     "sourceUrl": "https://doi.org/10.1037/0022-3514.79.6.995"
+    },
+    {
+     "id": "can-there-ever-be-too-many-options-a-meta-analytic-2010",
+     "title": "Can There Ever Be Too Many Options? A Meta-Analytic Review of Choice Overload",
+     "authors": "Scheibehenne, Greifeneder & Todd",
+     "year": 2010,
+     "type": "paper",
+     "file": "summaries/can-there-ever-be-too-many-options-a-meta-analytic-2010.html",
+     "sourceUrl": "https://doi.org/10.1086/651235"
+    },
+    {
+     "id": "choice-overload-a-conceptual-review-and-meta-analy-2015",
+     "title": "Choice overload: A conceptual review and meta-analysis",
+     "authors": "Chernev, Böckenholt & Goodman",
+     "year": 2015,
+     "type": "paper",
+     "file": "summaries/choice-overload-a-conceptual-review-and-meta-analy-2015.html",
+     "sourceUrl": "https://doi.org/10.1016/j.jcps.2014.08.002"
+    }
+   ]
+  },
+  {
+   "id": "parry-lord-oral-formulaic",
+   "topic": "literature",
+   "title": "Singers of tales: how Homer-like poets compose without writing",
+   "summary": "For centuries scholars asked how a single poet could produce poems as long as the Iliad and the Odyssey. In the 1920s the young American classicist Milman Parry noticed that Homer repeats set phrases: rosy-fingered dawn, wine-dark sea, swift-footed Achilles. The phrases are built to fit the metre of the line, and some are interchangeable in sound, so that swift-footed Achilles and glancing-helmed Hector fill the same slot. Parry argued that these formulas were tools for composing aloud, handed down from singer to singer, and that the Homeric poems came out of such a tradition. To test the idea he went to Bosnia and Montenegro in the 1930s and recorded living singers of epic songs, later joined by his student Albert Lord. The Parry Collection from the 1930s has 3,584 twelve-inch records. The star was Avdo Međedović, a singer who never learned to read. In 1935 he heard another singer, Mumin Vlahovljak, perform a song of 2,294 lines, once. He then sang it back at 6,313 lines, nearly three times longer. A printed text of The Wedding of Meho Smailagić, about 2,160 lines, was read to him; his own version ran to about 12,300 lines in 1935 and 8,488 lines when Lord recorded him again in 1950. Lord's conclusion, in The Singer of Tales (1960), was that such singers do not memorise a fixed text. They recompose a song each time from formulas and story patterns they have absorbed. The theory transformed Homeric studies and was applied to Beowulf and other poems.",
+   "deepDive": "Parry did not start from nothing. His teacher Antoine Meillet had written in 1923 that Homeric epic is entirely composed of formulae handed down from poet to poet, and folklorists such as Friedrich Krauss and Arnold van Gennep had noticed stock phrases among Balkan singers. What Parry and Lord added was a field test. The theory has limits. It shows that a Homer-like poem can be composed without writing, not that the Iliad was. Francis Magoun claimed that formulaic verse is necessarily oral, which sparked a long argument about Old English poetry that survives only in writing. And Ruth Finnegan's Oral Poetry (1977) criticised the Parry-Lord model as a universal account, pointing out that oral composition varies between cultures and genres. The Balkan singers are a strong model for one kind of oral epic, not a law of all oral poetry.",
+   "source": {
+    "title": "The Singer of Tales",
+    "author": "Albert B. Lord",
+    "year": 1960,
+    "url": "https://chs.harvard.edu/book/lord-albert-bates-the-singer-of-tales-third-edition/"
+   },
+   "paths": [
+    "theory"
+   ],
+   "goDeeper": [
+    {
+     "id": "the-singer-of-tales-1960",
+     "title": "The Singer of Tales",
+     "authors": "Albert B. Lord",
+     "year": 1960,
+     "type": "book",
+     "file": "summaries/the-singer-of-tales-1960.html",
+     "sourceUrl": "https://chs.harvard.edu/book/lord-albert-bates-the-singer-of-tales-third-edition/"
+    },
+    {
+     "id": "the-making-of-homeric-verse-the-collected-papers-o-1971",
+     "title": "The Making of Homeric Verse: The Collected Papers of Milman Parry",
+     "authors": "Milman Parry (ed. Adam Parry)",
+     "year": 1971,
+     "type": "book",
+     "file": "summaries/the-making-of-homeric-verse-the-collected-papers-o-1971.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Milman_Parry"
+    },
+    {
+     "id": "epic-singers-and-oral-tradition-1991",
+     "title": "Epic Singers and Oral Tradition",
+     "authors": "Albert B. Lord",
+     "year": 1991,
+     "type": "book",
+     "file": "summaries/epic-singers-and-oral-tradition-1991.html",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Avdo_Me%C4%91edovi%C4%87"
+    }
+   ]
+  },
+  {
+   "id": "pennebaker-expressive-writing",
+   "topic": "literature",
+   "topics": [
+    "literature",
+    "psychology"
+   ],
+   "title": "Writing it out: Pennebaker's four-day experiment on expressive writing",
+   "summary": "In 1986 the psychologists James Pennebaker and Sandra Beall asked 46 introductory psychology students to write for about 15 minutes on each of four days in a row. Some students wrote about a personally traumatic event. Others wrote about trivial topics. The authors also tried different kinds of trauma writing: the facts of the event, the feelings about it, or both. Right after writing, the students who wrote about both the emotions and the facts of the event had higher blood pressure and worse mood. That looks like a cost. But over the following six months they made fewer visits to the student health center. The authors called their findings preliminary, and tied them to an earlier idea of Pennebaker's: holding back thoughts and feelings about an upsetting event is a form of chronic stress, and putting it into words may reduce that. The study launched a field. Many studies have since used versions of the writing task, which typically asks for three to four sessions of 15 to 20 minutes. In 2006 Joanne Frattaroli pooled 146 randomised studies and found a positive and significant average effect, but a small one, a correlation of .075. For a literature and writing reader, the interest is in the detail: it was not simply writing, but writing that joined an event to the feelings about it, that went with the benefit. According to later summaries, writing about facts alone looked more like writing about trivia.",
+   "deepDive": "Pennebaker's starting point was earlier work with Robin O'Heeron in 1984 on spouses of people who had died by suicide or accident, which suggested that those who did not talk to others about the death had more illness. Writing was a way to test confiding without needing a listener. The 1986 study has the usual limits of a first experiment: 46 students from one course, with health measured by visits to a clinic and by self-report. The meta-analysis shows the effect is real but modest, and, as the 1986 study showed, writers can feel worse right after writing. The results should not be read as a cure for trauma. They suggest that putting experience into a coherent account, with feeling attached to events, may do something that listing facts does not.",
+   "source": {
+    "title": "Confronting a traumatic event: Toward an understanding of inhibition and disease",
+    "author": "James W. Pennebaker & Sandra K. Beall",
+    "year": 1986,
+    "url": "https://doi.org/10.1037/0021-843X.95.3.274"
+   },
+   "paths": [
+    "mind"
+   ],
+   "caution": "The effect is real but small: an average correlation of .075 across 146 randomised studies. The 1986 study had 46 students and its authors called it preliminary. This is not a treatment for trauma.",
+   "goDeeper": [
+    {
+     "id": "confronting-a-traumatic-event-toward-an-understand-1986",
+     "title": "Confronting a traumatic event: Toward an understanding of inhibition and disease",
+     "authors": "James W. Pennebaker & Sandra K. Beall",
+     "year": 1986,
+     "type": "paper",
+     "file": "summaries/confronting-a-traumatic-event-toward-an-understand-1986.html",
+     "sourceUrl": "https://doi.org/10.1037/0021-843X.95.3.274"
+    },
+    {
+     "id": "experimental-disclosure-and-its-moderators-a-meta-2006",
+     "title": "Experimental disclosure and its moderators: A meta-analysis",
+     "authors": "Joanne Frattaroli",
+     "year": 2006,
+     "type": "paper",
+     "file": "summaries/experimental-disclosure-and-its-moderators-a-meta-2006.html",
+     "sourceUrl": "https://doi.org/10.1037/0033-2909.132.6.823"
+    }
+   ]
+  },
+  {
+   "id": "lenski-citrate",
+   "topic": "biology",
+   "title": "Replaying evolution: 12 flasks, 31,500 generations and one rare step",
+   "summary": "On 24 February 1988 Richard Lenski began growing twelve initially identical populations of the bacterium E. coli in separate flasks, transferring them to fresh medium day after day and freezing samples along the way. The food was glucose, but the liquid also contained citrate, which E. coli cannot use as a carbon source when oxygen is present. For more than 30,000 generations no population learned to use it, even though each tried billions of mutations. Then, by 31,500 generations, one population, labelled Ara-3, had evolved a citrate-eating variant. It grew to a bigger population with more diversity. Was this an extremely rare mutation, or an ordinary one that needed earlier changes first? In a 2008 paper Zachary Blount, Christina Borland and Lenski replayed evolution from the frozen samples. They found no citrate users among 8.4 trillion ancestral cells, and none among 9 trillion cells from 60 clones sampled in the first 15,000 generations. But later clones were significantly more likely to evolve the trait, which meant that some enabling change had arisen by 20,000 generations. The step depended on that population's particular history. A 2012 genome study traced three stages: an enabling change, then a mutation that made the transporter work in oxygen, then refinement. The result is a rare lab test of the idea, associated with Stephen Jay Gould, that history can leave a lasting mark on evolution.",
+   "deepDive": "The citrate result is easy to over-read. Evolution did not fail for 30,000 generations because it was stuck. The other eleven populations kept adapting in other ways. The citrate step is also seen in one population only, and the paper itself offers two explanations, a very rare mutation or a contingent one, and uses the replay experiments to favour the second. Others have questioned the interpretation. In 2016 John Roth, Sophie Maisnier-Patin and Thomas Silhavy published a commentary asking whether the long delay reflects historical contingency or intermittent selection. The experiment remains valuable because the frozen samples let anyone rerun history from a chosen point, which is almost never possible in nature.",
+   "source": {
+    "title": "Historical contingency and the evolution of a key innovation in an experimental population of Escherichia coli",
+    "author": "Zachary D. Blount, Christina Z. Borland & Richard E. Lenski",
+    "year": 2008,
+    "url": "https://doi.org/10.1073/pnas.0803151105"
+   },
+   "paths": [
+    "lab-surprises"
+   ],
+   "goDeeper": [
+    {
+     "id": "historical-contingency-and-the-evolution-of-a-key-2008",
+     "title": "Historical contingency and the evolution of a key innovation in an experimental population of Escherichia coli",
+     "authors": "Blount, Borland & Lenski",
+     "year": 2008,
+     "type": "paper",
+     "file": "summaries/historical-contingency-and-the-evolution-of-a-key-2008.html",
+     "sourceUrl": "https://doi.org/10.1073/pnas.0803151105"
+    },
+    {
+     "id": "genomic-analysis-of-a-key-innovation-in-an-experim-2012",
+     "title": "Genomic analysis of a key innovation in an experimental Escherichia coli population",
+     "authors": "Blount, Barrick, Davidson & Lenski",
+     "year": 2012,
+     "type": "paper",
+     "file": "summaries/genomic-analysis-of-a-key-innovation-in-an-experim-2012.html",
+     "sourceUrl": "https://doi.org/10.1038/nature11514"
+    }
+   ]
+  },
+  {
+   "id": "marshall-warren-pylori",
+   "topic": "biology",
+   "title": "Swallowing the bug: Marshall, Warren and the bacterium behind ulcers",
+   "summary": "Until the 1980s the leading view was that stomach ulcers came from stress and lifestyle. In Perth, the pathologist Robin Warren kept seeing small curved bacteria on stomach biopsies, in about half of patients, and always with inflammation nearby. A young clinical fellow, Barry Marshall, joined him. In 1984 they reported a study of 100 consecutive patients who agreed to a gastroscopy. Spiral bacteria turned up in 58. Culture worked in only 11, and it nearly failed completely. At first the plates were thrown away after two days, and no bacteria grew in the first 34 cases. A plate left in the incubator for six days over the Easter holiday finally showed growth, after which the team cultured for four days. The bacteria, later named Helicobacter pylori, were found in almost all patients with active chronic gastritis, duodenal ulcer or gastric ulcer. But the authors admitted that cause and effect cannot be proved in a study of that kind. So Marshall tested it on himself. A volunteer with a healthy stomach lining swallowed the bacteria; he developed a mild illness lasting 14 days, with gastritis proven on day 10. The volunteer was Marshall. Treatment trials then showed ulcers were cured when the bacteria were cleared. Marshall and Warren shared the 2005 Nobel Prize in Physiology or Medicine.",
+   "deepDive": "It is tempting to turn this into a story of two lone geniuses. The papers tell a quieter story: a careful blinded study, an honest admission of what it could not show, and a stubborn follow-up. The self-experiment was one person, not proof, and Marshall's paper itself was titled an attempt to fulfil Koch's postulates. Koch's postulates are a classic test of whether a germ causes a disease: find it in the sick, grow it, give it to a healthy host and see the disease. What closed the case was the later evidence the Nobel committee names: studies of human volunteers, antibiotic treatment studies in which patients were cured only when the bacteria were eradicated, and epidemiological studies. The Nobel committee also stresses that most infected people never get an ulcer, only about 10 to 15 percent do.",
+   "source": {
+    "title": "Unidentified curved bacilli in the stomach of patients with gastritis and peptic ulceration",
+    "author": "Barry J. Marshall & J. Robin Warren",
+    "year": 1984,
+    "url": "https://doi.org/10.1016/s0140-6736(84)91816-6"
+   },
+   "paths": [
+    "lab-surprises"
+   ],
+   "goDeeper": [
+    {
+     "id": "unidentified-curved-bacilli-in-the-stomach-of-pati-1984",
+     "title": "Unidentified curved bacilli in the stomach of patients with gastritis and peptic ulceration",
+     "authors": "Barry J. Marshall & J. Robin Warren",
+     "year": 1984,
+     "type": "paper",
+     "file": "summaries/unidentified-curved-bacilli-in-the-stomach-of-pati-1984.html",
+     "sourceUrl": "https://doi.org/10.1016/s0140-6736(84)91816-6"
+    },
+    {
+     "id": "attempt-to-fulfil-koch-s-postulates-for-pyloric-ca-1985",
+     "title": "Attempt to fulfil Koch's postulates for pyloric Campylobacter",
+     "authors": "Marshall, Armstrong, McGechie & Clancy",
+     "year": 1985,
+     "type": "paper",
+     "file": "summaries/attempt-to-fulfil-koch-s-postulates-for-pyloric-ca-1985.html",
+     "sourceUrl": "https://doi.org/10.5694/j.1326-5377.1985.tb113443.x"
     }
    ]
   }
