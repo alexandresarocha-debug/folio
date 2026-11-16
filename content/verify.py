@@ -43,11 +43,16 @@ class Extractor(HTMLParser):
             self.parts.append(data)
 
 
+def prose_words(text: str) -> int:
+    """Newlines and "- " bullets are layout, not errors. Count words across them."""
+    return len(re.sub(r"\s+", " ", text or "").split())
+
+
 def words(html: str) -> tuple[int, int, list[str]]:
     parser = Extractor()
     parser.feed(html)
     text = re.sub(r"\s+", " ", " ".join(parser.parts)).strip()
-    return len(text.split()), parser.h2, parser.bad
+    return prose_words(text), parser.h2, parser.bad
 
 
 def check_link(url: str) -> str | None:
@@ -104,6 +109,10 @@ def main() -> None:
             if "tier" in item:
                 check_tier(item.get("tier"), where, errors)
     for c in cards:
+        if "\n" in (c.get("summary") or "") and prose_words(c.get("summary") or "") < 1:
+            errors.append(f"{c['id']}: summary newlines dropped the word count")
+        if "\n" in (c.get("deepDive") or "") and prose_words(c.get("deepDive") or "") < 1:
+            errors.append(f"{c['id']}: deepDive newlines dropped the word count")
         for t in c.get("topics") or [c["topic"]]:
             if t not in topic_ids:
                 errors.append(f"{c['id']}: unknown topic {t}")

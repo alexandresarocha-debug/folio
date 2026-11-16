@@ -58,7 +58,12 @@ function bindChips(root) {
 }
 const hash = s => { let h = 2166136261; for (const c of s) { h ^= c.charCodeAt(0); h = Math.imul(h, 16777619); } return h >>> 0; };
 const rng = seed => () => { seed |= 0; seed = seed + 0x6D2B79F5 | 0; let t = Math.imul(seed ^ seed >>> 15, 1 | seed); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; };
-const minutes = c => Math.max(1, Math.ceil((c.summary.split(' ').length + c.deepDive.split(' ').length) / 200));
+const wordCount = s => String(s || '').trim().split(/\s+/).filter(Boolean).length;
+const minutes = c => Math.max(1, Math.ceil((wordCount(c.summary) + wordCount(c.deepDive)) / 200));
+/* List previews stay plain prose: drop paragraph breaks and "- " markers. */
+function previewText(text) {
+  return String(text || '').split('\n').map(line => line.replace(/^\s*-\s+/, '')).join(' ').replace(/\s+/g, ' ').trim();
+}
 const yearStr = y => y < 0 ? `c. ${-y} BC` : String(y);
 
 /* ---------- State ---------- */
@@ -167,7 +172,7 @@ function ideaCard(c, i, seq) {
   return `<button class="card${S.read[c.id] ? ' read' : ''}" style="--c:${color(primaryTopic(c))};--i:${Math.min(i,10)}" data-open="${c.id}" data-seq="${seq}">
     <div class="kicker topic-tags">${topicTags(c)}${tierLabel(c.tier)}</div>
     <h4>${esc(c.title)}</h4>
-    <p>${esc(c.summary)}</p>
+    <p>${esc(previewText(c.summary))}</p>
     ${cardMeta(c)}
   </button>`;
 }
@@ -291,6 +296,7 @@ function renderHome() {
   const now = new Date();
   const dateStr = now.toLocaleDateString('en-GB', { weekday:'long', day:'numeric', month:'long' });
   let i = 0;
+  const tc = todayCount(), goalN = S.goal, goalDone = tc >= goalN;
   el.innerHTML = `
     <header class="topbar">
       <div><div class="eyebrow">${esc(dateStr)}</div><h1 class="h-title">Paths</h1></div>
@@ -299,6 +305,7 @@ function renderHome() {
         <button class="icon-btn" data-act="search" aria-label="Search">${I.search}</button>
       </div>
     </header>
+    <p class="today-goal${goalDone ? ' done' : ''}">Today: ${tc} of ${goalN} ideas${goalDone ? ' \u2713' : ''}</p>
     ${resume ? `<button class="resume" style="--c:${color(resume.topic)}" data-path="${resume.id}">
       <span class="resume-copy"><div class="kicker">Continue</div><h3>${esc(resume.title)}</h3><p>${resumeProg.done} of ${resumeProg.total} · ${esc(resumeProg.status)}</p></span>
       <span class="go">${I.right}</span>
@@ -455,11 +462,31 @@ function closeSearch() { const el = $('#search'); el.classList.remove('open'); e
 /* ---------- Reader ---------- */
 let R = { ids: [], idx: 0, pathId: null, mode: 'card' };
 function para(text) {
-  // split long summary into 2–3 paragraphs at sentence boundaries
-  const sents = text.match(/[^.!?]+[.!?]+(\s|$)/g) || [text];
+  const raw = String(text || '');
+  // Explicit breaks are the layout. Sentence splitting is only for one flat paragraph.
+  if (raw.includes('\n')) return blocksHTML(raw);
+  const sents = raw.match(/[^.!?]+[.!?]+(\s|$)/g) || [raw];
   const n = sents.length, parts = n > 9 ? 3 : n > 4 ? 2 : 1, per = Math.ceil(n / parts), out = [];
   for (let i = 0; i < n; i += per) out.push(sents.slice(i, i + per).join('').trim());
   return out.map(p => `<p>${esc(p)}</p>`).join('');
+}
+function blocksHTML(raw) {
+  const blocks = raw.split(/\n\n+/);
+  return blocks.map(block => {
+    const lines = block.split('\n').map(line => line.trim()).filter(Boolean);
+    let html = '', items = [];
+    const flush = () => {
+      if (!items.length) return;
+      html += `<ul>${items.map(item => `<li>${esc(item)}</li>`).join('')}</ul>`;
+      items = [];
+    };
+    for (const line of lines) {
+      if (line.startsWith('- ')) items.push(line.slice(2));
+      else { flush(); html += `<p>${esc(line)}</p>`; }
+    }
+    flush();
+    return html;
+  }).join('');
 }
 function refIcon(r) { const url = r.url || ''; if (/doi\.org/.test(url)) return I.paper; if (r.kind === 'paper') return I.paper; if (/wikipedia\.org/.test(url)) return I.globe; return I.book; }
 function refKind(r) { return r.kind === 'book' ? 'Book' : /wikipedia\.org/.test(r.url) ? 'Overview' : /doi\.org/.test(r.url) ? 'Paper' : 'Read'; }
