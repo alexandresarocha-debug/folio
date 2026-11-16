@@ -114,6 +114,12 @@
    "topic": "biology",
    "title": "Lab Surprises",
    "blurb": "Experiments where a flask of bacteria, or a swallowed culture, changed what biology knew."
+  },
+  {
+   "id": "genes-and-behaviour",
+   "topic": "biology",
+   "title": "Genes & Behaviour",
+   "blurb": "What DNA can and can't tell you about who people are."
   }
  ],
  "cards": [
@@ -3320,6 +3326,140 @@
      "type": "paper",
      "file": "summaries/attempt-to-fulfil-koch-s-postulates-for-pyloric-ca-1985.html",
      "sourceUrl": "https://doi.org/10.5694/j.1326-5377.1985.tb113443.x"
+    }
+   ]
+  },
+  {
+   "id": "human-genetic-similarity",
+   "topic": "biology",
+   "topics": [
+    "biology",
+    "psychology"
+   ],
+   "title": "99.9% the same: how tiny DNA differences still shape personality",
+   "summary": "Is any person more than 99% genetically identical to any other? Yes, though it depends on what you count. In 2015 the 1000 Genomes Project published the genomes of 2,504 people from 26 populations. A typical genome differed from the human reference genome at 4.1 million to 5.0 million sites, out of about 3 billion letters. That is roughly 0.15 percent, the source of the familiar figure of about 99.9 percent. Most of those sites are single-letter changes. Larger structural variants, deleted, duplicated or inserted stretches, are far fewer, about 2,100 to 2,500 per genome, but they affect about 20 million bases. Counting every changed letter, the 2007 diploid genome of J. Craig Venter gave a conservative estimate of at least 0.5 percent variation, or about 99.5 percent similarity. We do not have different genes: the 2022 complete human genome lists 19,969 protein-coding genes, and almost everyone carries the same set in slightly different versions. Much of the variation sits in the switches that control genes. A typical genome has 459,000 to 565,000 variant sites in regulatory regions, against 10,000 to 12,000 that alter a protein. For comparison, humans and chimpanzees differ by 1.23 percent in single letters, the basis of the famous 98 percent, and about 3 percent more once inserted and deleted DNA is counted, so roughly 96 percent overall.",
+   "deepDive": "Why can 0.1 to 0.5 percent matter so much? It still means millions of variants, many in gene switches, and personality draws on thousands of them. A 2015 meta-analysis of 62 samples and more than 100,000 people found that about 40 percent of differences in personality were linked to genetic differences and 60 percent to the environment; twin studies gave 47 percent, family and adoption studies 22. But there is no personality gene. A 2018 study of neuroticism in 449,484 people found 136 genomic regions, each with a tiny effect, and the common variants together explained only about 10 percent, the puzzle called missing heritability. Older candidate-gene claims, such as the serotonin variant 5-HTTLPR, failed when tested in samples of hundreds of thousands. The rest is environment and chance.",
+   "source": {
+    "title": "A global reference for human genetic variation",
+    "author": "The 1000 Genomes Project Consortium",
+    "year": 2015,
+    "url": "https://doi.org/10.1038/nature15393"
+   },
+   "paths": [
+    "genes-and-behaviour"
+   ],
+   "goDeeper": [
+    {
+     "id": "a-global-reference-for-human-genetic-variation-2015",
+     "title": "A global reference for human genetic variation",
+     "authors": "The 1000 Genomes Project Consortium",
+     "year": 2015,
+     "type": "paper",
+     "file": "summaries/a-global-reference-for-human-genetic-variation-2015.html",
+     "sourceUrl": "https://doi.org/10.1038/nature15393"
+    },
+    {
+     "id": "the-diploid-genome-sequence-of-an-individual-human-2007",
+     "title": "The diploid genome sequence of an individual human",
+     "authors": "Samuel Levy, Granger Sutton, Pauline C. Ng, et al.",
+     "year": 2007,
+     "type": "paper",
+     "file": "summaries/the-diploid-genome-sequence-of-an-individual-human-2007.html",
+     "sourceUrl": "https://doi.org/10.1371/journal.pbio.0050254"
+    },
+    {
+     "id": "initial-sequence-of-the-chimpanzee-genome-and-comp-2005",
+     "title": "Initial sequence of the chimpanzee genome and comparison with the human genome",
+     "authors": "The Chimpanzee Sequencing and Analysis Consortium",
+     "year": 2005,
+     "type": "paper",
+     "file": "summaries/initial-sequence-of-the-chimpanzee-genome-and-comp-2005.html",
+     "sourceUrl": "https://doi.org/10.1038/nature04072"
+    },
+    {
+     "id": "heritability-of-personality-a-meta-analysis-of-beh-2015",
+     "title": "Heritability of personality: A meta-analysis of behavior genetic studies",
+     "authors": "Tena Vukasović & Denis Bratko",
+     "year": 2015,
+     "type": "paper",
+     "file": "summaries/heritability-of-personality-a-meta-analysis-of-beh-2015.html",
+     "sourceUrl": "https://doi.org/10.1037/bul0000017"
+    },
+    {
+     "id": "meta-analysis-of-genome-wide-association-studies-f-2018",
+     "title": "Meta-analysis of genome-wide association studies for neuroticism in 449,484 individuals identifies novel genetic loci and pathways",
+     "authors": "Mats Nagel, Philip R. Jansen, Sven Stringer, et al.",
+     "year": 2018,
+     "type": "paper",
+     "file": "summaries/meta-analysis-of-genome-wide-association-studies-f-2018.html",
+     "sourceUrl": "https://doi.org/10.1038/s41588-018-0151-7"
+    }
+   ]
+  },
+  {
+   "id": "heritability-zero-to-one",
+   "topic": "biology",
+   "topics": [
+    "biology",
+    "psychology"
+   ],
+   "title": "Heritability from 0 to 1: why height scores high and finger number scores low",
+   "summary": "Heritability is a number between 0 and 1 that answers a narrow question: in one population, at one time, what share of the differences between people in a trait goes along with genetic differences between them? It is not a measure of how genetic a trait is, and it says nothing about one person. Height sits near the top. Pooling 143,390 twin pairs born from 1886 to 1994, Aline Jelenkovic and colleagues found a heritability of adult height of 0.69 to 0.84 in men and 0.53 to 0.78 in women. Personality sits in the middle: in a 1996 twin study, extraversion came out at 0.53, and its facets ranged from 0.52 for gregariousness down to 0.29 for activity. Near the bottom is a trait the genes clearly control: the number of fingers. As the philosopher Ned Block pointed out in 1995, genes code for five fingers in almost everyone, so the rare differences mostly come from accidents or from problems in development, such as thalidomide, and heritability is low. The reverse happens too. When only women wore earrings, having an earring was highly heritable, because it tracked the XX versus XY difference. Because heritability is a ratio, it moves when the environment moves: in Block's words, with more uniform environments, the heritability goes up.",
+   "deepDive": "That is why the figure can differ between countries. In a 2001 family study of three related populations of the African diaspora, Amy Luke and colleagues estimated the heritability of height at 0.62 in Nigeria, 0.74 in Jamaica and 0.87 in Chicago, as you would expect if growing conditions vary more between Nigerian families. But it is not an automatic rule. The 2016 pooled twin analysis found no clear sign that height heritability is lower under poor living standards or rises as they improve. Intelligence gives the clearest case. In 319 pairs of 7-year-old American twins, Eric Turkheimer and colleagues found IQ heritability close to zero in the poorest families and high in affluent ones. A 2016 meta-analysis found this effect in US studies but not in Western Europe and Australia, where education and health care are more evenly available.",
+   "source": {
+    "title": "How heritability misleads about race",
+    "author": "Ned Block",
+    "year": 1995,
+    "url": "https://doi.org/10.1016/0010-0277(95)00678-R"
+   },
+   "paths": [
+    "genes-and-behaviour"
+   ],
+   "goDeeper": [
+    {
+     "id": "how-heritability-misleads-about-race-1995",
+     "title": "How heritability misleads about race",
+     "authors": "Ned Block",
+     "year": 1995,
+     "type": "paper",
+     "file": "summaries/how-heritability-misleads-about-race-1995.html",
+     "sourceUrl": "https://doi.org/10.1016/0010-0277(95)00678-R"
+    },
+    {
+     "id": "heritability-of-the-big-five-personality-dimension-1996",
+     "title": "Heritability of the Big Five personality dimensions and their facets: a twin study",
+     "authors": "Kerry L. Jang, W. John Livesley & Philip A. Vernon",
+     "year": 1996,
+     "type": "paper",
+     "file": "summaries/heritability-of-the-big-five-personality-dimension-1996.html",
+     "sourceUrl": "https://doi.org/10.1111/j.1467-6494.1996.tb00522.x"
+    },
+    {
+     "id": "heritability-of-obesity-related-traits-among-niger-2001",
+     "title": "Heritability of obesity-related traits among Nigerians, Jamaicans and US black people",
+     "authors": "Amy Luke, Xiuqing Guo, Adebowale A. Adeyemo, et al.",
+     "year": 2001,
+     "type": "paper",
+     "file": "summaries/heritability-of-obesity-related-traits-among-niger-2001.html",
+     "sourceUrl": "https://doi.org/10.1038/sj.ijo.0801650"
+    },
+    {
+     "id": "genetic-and-environmental-influences-on-adult-huma-2016",
+     "title": "Genetic and environmental influences on adult human height across birth cohorts from 1886 to 1994",
+     "authors": "Aline Jelenkovic, Yoon-Mi Hur, Reijo Sund, et al.",
+     "year": 2016,
+     "type": "paper",
+     "file": "summaries/genetic-and-environmental-influences-on-adult-huma-2016.html",
+     "sourceUrl": "https://doi.org/10.7554/eLife.20320"
+    },
+    {
+     "id": "socioeconomic-status-modifies-heritability-of-iq-i-2003",
+     "title": "Socioeconomic status modifies heritability of IQ in young children",
+     "authors": "Eric Turkheimer, Andreana Haley, Mary Waldron, Brian D'Onofrio & Irving I. Gottesman",
+     "year": 2003,
+     "type": "paper",
+     "file": "summaries/socioeconomic-status-modifies-heritability-of-iq-i-2003.html",
+     "sourceUrl": "https://doi.org/10.1046/j.0956-7976.2003.psci_1475.x"
     }
    ]
   }
