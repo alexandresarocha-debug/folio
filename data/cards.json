@@ -3643,6 +3643,68 @@
     }
    ],
    "tier": 3
+  },
+  {
+   "id": "eye-colour-heritability",
+   "topic": "biology",
+   "topics": [
+    "biology"
+   ],
+   "title": "Eye colour: a trait that is almost all genes",
+   "summary": "Eye colour is one of the most heritable human traits. A 2004 study of 502 twin families linked about 74% of the differences in eye colour to one region of DNA and another 18% to other genes, so roughly 90% in all. That puts it near 1 on the 0-to-1 heritability scale. Height is about 0.7 to 0.8. Extraversion is about 0.5. And most of eye colour comes from one small stretch of DNA on chromosome 15. It holds two neighbouring genes, OCA2 and HERC2. OCA2 helps make melanin, the brown pigment in the iris. Brown eyes have a lot of it. Blue eyes have very little. A single DNA letter inside HERC2 works like a dimmer switch for OCA2. In a 2008 study of Australian families, people with two blue copies of that letter had brown eyes only 1% of the time. People with two brown copies had brown eyes 80% of the time.",
+   "deepDive": "At school many of us learned that blue eyes are a simple recessive trait: brown beats blue, so two blue-eyed parents always have a blue-eyed child. For most of the last century, scientists thought so too. It is too simple. Eye colour runs on a scale from light blue through green and hazel to dark brown, and other genes add the shades. A second DNA letter, inside OCA2, changes the odds of green or hazel eyes. In 2021 a study of 192,986 Europeans found 61 regions of DNA linked to eye colour, 50 of them new. Some shape the structure of the iris, not just its pigment. Even two blue copies of the main switch are not a guarantee: in the 2008 study, 1% of those people still had brown eyes. And all those common DNA differences together explain only about 53% of the differences in eye colour, less than the twin figure. So even the textbook one-gene trait has a bit of missing heritability.",
+   "source": {
+    "title": "A single SNP in an evolutionary conserved region within intron 86 of the HERC2 gene determines human blue-brown eye color",
+    "author": "Richard A. Sturm et al.",
+    "year": 2008,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2427173/"
+   },
+   "paths": [
+    "heritability"
+   ],
+   "goDeeper": [
+    {
+     "id": "a-genome-scan-for-eye-color-in-502-twin-families-m-2004",
+     "title": "A genome scan for eye color in 502 twin families: most variation is due to a QTL on chromosome 15q",
+     "authors": "Gu Zhu, David M. Evans, David L. Duffy, et al.",
+     "year": 2004,
+     "type": "paper",
+     "file": "summaries/a-genome-scan-for-eye-color-in-502-twin-families-m-2004.html",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/15169604/",
+     "tier": 1
+    },
+    {
+     "id": "a-single-snp-in-an-evolutionary-conserved-region-w-2008",
+     "title": "A single SNP in an evolutionary conserved region within intron 86 of the HERC2 gene determines human blue-brown eye color",
+     "authors": "Richard A. Sturm, David L. Duffy, Zhen Zhen Zhao, et al.",
+     "year": 2008,
+     "type": "paper",
+     "file": "summaries/a-single-snp-in-an-evolutionary-conserved-region-w-2008.html",
+     "sourceUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2427173/",
+     "tier": 2
+    },
+    {
+     "id": "blue-eye-color-in-humans-may-be-caused-by-a-perfec-2008",
+     "title": "Blue eye color in humans may be caused by a perfectly associated founder mutation in a regulatory element located within the HERC2 gene inhibiting OCA2 expression",
+     "authors": "Hans Eiberg, Jesper Troelsen, Mette Nielsen, et al.",
+     "year": 2008,
+     "type": "paper",
+     "file": "summaries/blue-eye-color-in-humans-may-be-caused-by-a-perfec-2008.html",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/18172690/",
+     "tier": 2
+    },
+    {
+     "id": "genome-wide-association-study-in-almost-195-000-in-2021",
+     "title": "Genome-wide association study in almost 195,000 individuals identifies 50 previously unidentified genetic loci for eye color",
+     "authors": "Mark Simcoe, Ana Valdes, Fan Liu, et al.",
+     "year": 2021,
+     "type": "paper",
+     "file": "summaries/genome-wide-association-study-in-almost-195-000-in-2021.html",
+     "sourceUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7946369/",
+     "tier": 3
+    }
+   ],
+   "tier": 1
   }
  ]
 }
