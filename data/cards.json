@@ -3394,7 +3394,8 @@
      "file": "summaries/meta-analysis-of-genome-wide-association-studies-f-2018.html",
      "sourceUrl": "https://doi.org/10.1038/s41588-018-0151-7"
     }
-   ]
+   ],
+   "tier": 1
   },
   {
    "id": "heritability-zero-to-one",
@@ -3461,7 +3462,187 @@
      "file": "summaries/socioeconomic-status-modifies-heritability-of-iq-i-2003.html",
      "sourceUrl": "https://doi.org/10.1046/j.0956-7976.2003.psci_1475.x"
     }
-   ]
+   ],
+   "tier": 1
+  },
+  {
+   "id": "political-attitudes-heritability",
+   "topic": "psychology",
+   "topics": [
+    "psychology",
+    "biology"
+   ],
+   "title": "Liberal or conservative: about 40% of the difference is linked to genes",
+   "summary": "Are political views partly genetic? Twin studies say yes, in part. Identical twins share almost all their genes. Non-identical twins share about half, like ordinary brothers and sisters. Both grow up in the same home. So if identical twins agree on politics more often, genes are probably part of the reason. In 2005, three political scientists looked at about 3,500 pairs of American twins who answered 28 quick questions on issues like the death penalty, school prayer and immigration. On a combined liberal-to-conservative score, identical twins matched at 0.65 and non-identical twins at 0.43. That puts heritability at about 0.43. Party loyalty was different: only 0.14. Which party you back seems to come mostly from your family and surroundings. In 2014 a bigger study pooled more than 12,000 twin pairs from five countries: Australia, Denmark, Hungary, Sweden and the US. Genes explained about 0.40 of the differences in political views, the family home 0.18, and each person's own life 0.42.",
+   "deepDive": "No one has found a conservative gene. The 2014 study also scanned the DNA of 11,388 people in Australia and Sweden, and no single variant passed the bar for a real finding. Political views seem to rest instead on thousands of tiny genetic effects. One question broke the pattern: when Hungarians and Swedes were asked to place themselves on the left or the right, genes explained little or nothing, while liberal-conservative questions in the same surveys gave about 0.4. The words left and right seem to be labels people learn. Critics also question the twin method itself. It assumes identical twins are not treated more alike than non-identical twins, and in 2008 Jon Beckwith and Corey Morris argued that this assumption is untenable. Supporters reply that adding parents and ordinary siblings, as a 2010 study of about 30,000 Americans did, still puts the genetic share at 0.3 to 0.7 for most issues.",
+   "source": {
+    "title": "Are political orientations genetically transmitted?",
+    "author": "John R. Alford, Carolyn L. Funk & John R. Hibbing",
+    "year": 2005,
+    "url": "https://doi.org/10.1017/S0003055405051579"
+   },
+   "paths": [
+    "heritability"
+   ],
+   "goDeeper": [
+    {
+     "id": "are-political-orientations-genetically-transmitted-2005",
+     "title": "Are political orientations genetically transmitted?",
+     "authors": "John R. Alford, Carolyn L. Funk & John R. Hibbing",
+     "year": 2005,
+     "type": "paper",
+     "file": "summaries/are-political-orientations-genetically-transmitted-2005.html",
+     "sourceUrl": "https://doi.org/10.1017/S0003055405051579",
+     "tier": 1
+    },
+    {
+     "id": "genetic-influences-on-political-ideologies-twin-an-2014",
+     "title": "Genetic influences on political ideologies: twin analyses of 19 measures of political ideologies from five democracies and genome-wide findings from three populations",
+     "authors": "Peter K. Hatemi, Sarah E. Medland, Robert Klemmensen, et al.",
+     "year": 2014,
+     "type": "paper",
+     "file": "summaries/genetic-influences-on-political-ideologies-twin-an-2014.html",
+     "sourceUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4038932/",
+     "tier": 2
+    },
+    {
+     "id": "not-by-twins-alone-using-the-extended-family-desig-2010",
+     "title": "Not by twins alone: using the extended family design to investigate genetic influence on political beliefs",
+     "authors": "Peter K. Hatemi, John R. Hibbing, Sarah E. Medland, et al.",
+     "year": 2010,
+     "type": "paper",
+     "file": "summaries/not-by-twins-alone-using-the-extended-family-desig-2010.html",
+     "sourceUrl": "https://doi.org/10.1111/j.1540-5907.2010.00461.x",
+     "tier": 2
+    },
+    {
+     "id": "twin-studies-of-political-behavior-untenable-assum-2008",
+     "title": "Twin studies of political behavior: untenable assumptions?",
+     "authors": "Jon Beckwith & Corey A. Morris",
+     "year": 2008,
+     "type": "paper",
+     "file": "summaries/twin-studies-of-political-behavior-untenable-assum-2008.html",
+     "sourceUrl": "https://doi.org/10.1017/S1537592708081917",
+     "tier": 3
+    }
+   ],
+   "tier": 2
+  },
+  {
+   "id": "alcohol-use-disorder-heritability",
+   "topic": "biology",
+   "topics": [
+    "biology",
+    "psychology"
+   ],
+   "title": "Alcoholism: about half of the difference in risk is linked to genes",
+   "summary": "Alcohol problems run in families. But is that because of genes, or because of growing up around heavy drinking? Twins and adopted children help separate the two. In 2015, researchers combined 12 twin studies and 5 adoption studies of alcohol use disorder, the medical name for alcoholism. Their best estimate of heritability was 0.49. So about half of the differences in who develops the disorder are linked to genes. The shared family home added about 0.10. The rest came from each person's own life. The figure held for men and women, for twins and adoptees, and for interviews and hospital records. A Swedish study of 18,115 adopted children showed both routes at work. If a biological parent had the disorder, the adoptee's odds rose about 1.5 times. If the adoptive parent who raised them had it, the odds rose about 1.4 times. Genes and home each added risk.",
+   "deepDive": "The best-known gene works the other way and protects. Many people of East Asian descent carry a version of the ALDH2 gene that leaves them unable to clear acetaldehyde, a toxic by-product of alcohol, properly. Drinking then brings an unpleasant flush, which tends to cut how much they drink, and one copy of the gene is enough to cause it. In a 1996 study of 451 Japanese adults, carriers drank less and had fewer drinking problems. But the gene is no guarantee. A 1995 study of 655 Japanese patients with alcoholism found that some people with one copy still developed it. Outside such cases the DNA hunt finds only small effects. A 2020 study of 435,563 people found 29 genetic variants, but all common variants together captured only about 0.07 of the differences, far below the twin figure of about 0.5.",
+   "source": {
+    "title": "The heritability of alcohol use disorders: a meta-analysis of twin and adoption studies",
+    "author": "Bradley Verhulst, Michael C. Neale & Kenneth S. Kendler",
+    "year": 2015,
+    "url": "https://doi.org/10.1017/S0033291714002165"
+   },
+   "paths": [
+    "heritability"
+   ],
+   "goDeeper": [
+    {
+     "id": "the-heritability-of-alcohol-use-disorders-a-meta-a-2015",
+     "title": "The heritability of alcohol use disorders: a meta-analysis of twin and adoption studies",
+     "authors": "Bradley Verhulst, Michael C. Neale & Kenneth S. Kendler",
+     "year": 2015,
+     "type": "paper",
+     "file": "summaries/the-heritability-of-alcohol-use-disorders-a-meta-a-2015.html",
+     "sourceUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4345133/",
+     "tier": 1
+    },
+    {
+     "id": "an-extended-swedish-national-adoption-study-of-alc-2015",
+     "title": "An extended Swedish national adoption study of alcohol use disorder",
+     "authors": "Kenneth S. Kendler, Jianguang Ji, Alexis C. Edwards, Henrik Ohlsson, Jan Sundquist & Kristina Sundquist",
+     "year": 2015,
+     "type": "paper",
+     "file": "summaries/an-extended-swedish-national-adoption-study-of-alc-2015.html",
+     "sourceUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4351126/",
+     "tier": 2
+    },
+    {
+     "id": "genome-wide-meta-analysis-of-problematic-alcohol-u-2020",
+     "title": "Genome-wide meta-analysis of problematic alcohol use in 435,563 individuals yields insights into biology and relationships with other traits",
+     "authors": "Hang Zhou, Julia M. Sealock, Sandra Sanchez-Roige, et al.",
+     "year": 2020,
+     "type": "paper",
+     "file": "summaries/genome-wide-meta-analysis-of-problematic-alcohol-u-2020.html",
+     "sourceUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7485556/",
+     "tier": 3
+    }
+   ],
+   "tier": 2
+  },
+  {
+   "id": "gene-environment-correlation",
+   "topic": "biology",
+   "topics": [
+    "biology",
+    "psychology"
+   ],
+   "title": "Gene-environment correlation: when your genes help pick your environment",
+   "summary": "Twin studies split differences between people into genes and environment, as if the two were separate. Often they are not. Genes and environments travel together. Scientists call this gene-environment correlation. In 1977, three researchers described three kinds. Passive: parents give children both their genes and their home. Parents who love reading pass on genes linked to reading and also fill the house with books. Evocative: a child's genes shape how others react. A smiley, active baby tends to get more attention than a quiet one. Active: people choose settings that suit them. A child drawn to sport seeks out games and teams. In 1983, Sandra Scarr and Kathleen McCartney argued that the passive kind fades as children grow up and the active kind grows. Evidence backs the evocative kind. A 2014 review of 32 twin studies found that about 23% of the differences in how parents treat their children was linked to the children's own genes.",
+   "deepDive": "DNA studies now show the passive kind directly. In Iceland, a team led by Augustine Kong looked at the half of each parent's DNA that a child did not inherit. A genetic score built from those untransmitted genes still predicted how long 21,637 people stayed in education, with an effect about 30% as large as the genes they did inherit. Parents' genes shape the home. The team called this genetic nurture. A 2017 UK study of 6,710 young people found that a child's education-linked genetic score was linked to supposed environment measures such as the mother's education, household income and breastfeeding. This blurs what twin heritability means. Part of the genetic share may work through environments people provoke and choose, and some environmental measures carry genetic signals. So a high heritability does not mean the environment is unimportant. It may be the route genes take. Open questions remain: how big each kind is, how it changes with age and trait, and how to tell the kinds apart.",
+   "source": {
+    "title": "How people make their own environments: a theory of genotype → environment effects",
+    "author": "Sandra Scarr & Kathleen McCartney",
+    "year": 1983,
+    "url": "https://doi.org/10.2307/1129703"
+   },
+   "paths": [
+    "heritability"
+   ],
+   "goDeeper": [
+    {
+     "id": "how-people-make-their-own-environments-a-theory-of-1983",
+     "title": "How people make their own environments: a theory of genotype → environment effects",
+     "authors": "Sandra Scarr & Kathleen McCartney",
+     "year": 1983,
+     "type": "paper",
+     "file": "summaries/how-people-make-their-own-environments-a-theory-of-1983.html",
+     "sourceUrl": "https://doi.org/10.2307/1129703",
+     "tier": 2
+    },
+    {
+     "id": "parenting-as-a-reaction-evoked-by-children-s-genot-2014",
+     "title": "Parenting as a reaction evoked by children's genotype: a meta-analysis of children-as-twins studies",
+     "authors": "Reut Avinun & Ariel Knafo",
+     "year": 2014,
+     "type": "paper",
+     "file": "summaries/parenting-as-a-reaction-evoked-by-children-s-genot-2014.html",
+     "sourceUrl": "https://doi.org/10.1177/1088868313498308",
+     "tier": 2
+    },
+    {
+     "id": "widespread-covariation-of-early-environmental-expo-2017",
+     "title": "Widespread covariation of early environmental exposures and trait-associated polygenic variation",
+     "authors": "Eva Krapohl, Laurie J. Hannigan, Jean-Baptiste Pingault, et al.",
+     "year": 2017,
+     "type": "paper",
+     "file": "summaries/widespread-covariation-of-early-environmental-expo-2017.html",
+     "sourceUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5676894/",
+     "tier": 3
+    },
+    {
+     "id": "the-nature-of-nurture-effects-of-parental-genotype-2018",
+     "title": "The nature of nurture: effects of parental genotypes",
+     "authors": "Augustine Kong, Gudmar Thorleifsson, Michael L. Frigge, et al.",
+     "year": 2018,
+     "type": "paper",
+     "file": "summaries/the-nature-of-nurture-effects-of-parental-genotype-2018.html",
+     "sourceUrl": "https://doi.org/10.1126/science.aan6877",
+     "tier": 3
+    }
+   ],
+   "tier": 3
   }
  ]
 }
