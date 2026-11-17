@@ -62,6 +62,12 @@
    "blurb": "The predictable ways a fast mind gets things wrong."
   },
   {
+   "id": "probability",
+   "topic": "psychology",
+   "title": "Probability",
+   "blurb": "How our intuitions about chance go wrong, and what the numbers really say."
+  },
+  {
    "id": "replication",
    "topic": "psychology",
    "title": "Famous Findings, Re-examined",
@@ -3768,6 +3774,537 @@
     }
    ],
    "tier": 1
+  },
+  {
+   "id": "gamblers-fallacy",
+   "topic": "psychology",
+   "topics": [
+    "psychology"
+   ],
+   "title": "The gambler's fallacy: coins have no memory",
+   "summary": "After a coin lands heads five times in a row, tails feels due. It isn't. A fair coin has no memory, so the next toss is still a fifty-fifty bet. In 1971 Amos Tversky and Daniel Kahneman described the feeling behind the mistake: we expect even a short run of chance events to look balanced, so a streak seems to need correcting.\n\nThe mistake survives outside the lab, where real money is at stake. When Rachel Croson and James Sundali studied videotapes of casino roulette, the longer one outcome had been winning, the more players bet on the other. In Maryland's daily numbers game, Charles Clotfelter and Philip Cook found that people bet much less on a number right after it was drawn, as if it had been used up, and took months to come back to it.\n\nEven professionals do it. Asylum judges, loan officers and baseball umpires turn out to be slightly less likely to make the same call twice in a row, even though each case should be judged on its own.\n\nStreaks are normal in random sequences. They are not a sign that something has to even out.",
+   "deepDive": "The numbers behind the stories. The casino study covered 18 hours of roulette in which 139 players placed 24,131 bets. Looking at even-money bets such as red or black, the share of bets placed against a streak grew with the streak's length: after six or more of the same outcome, 85% of bets went against it. In Maryland's three-digit numbers game, Clotfelter and Cook followed 52 consecutive winning numbers drawn in March and April 1988. On the day after a number won, betting on it fell in 37 of the 52 cases, and after three days it had fallen in every case. The median amount bet, relative to before the draw, dropped from 1.00 to 0.64 after three days and had only climbed back to 0.93 after 84 days. In the study of professionals by Daniel Chen, Tobias Moskowitz and Kelly Shue, US asylum judges were up to 3.3 percentage points more likely to reject a case if they had approved the previous one, enough to reverse about 2% of decisions purely because of the order cases came in. The effect was stronger after two decisions in the same direction. The 1971 paper by Tversky and Kahneman is mainly about small samples; the Probability path's law of small numbers card covers it.",
+   "source": {
+    "title": "The gambler's fallacy and the hot hand: empirical data from casinos",
+    "author": "Rachel Croson & James Sundali",
+    "year": 2005,
+    "url": "https://www.stat.berkeley.edu/~aldous/157/Papers/croson.pdf"
+   },
+   "paths": [
+    "probability"
+   ],
+   "goDeeper": [
+    {
+     "id": "the-gambler-s-fallacy-and-the-hot-hand-empirical-d-2005",
+     "title": "The gambler's fallacy and the hot hand: empirical data from casinos",
+     "authors": "Rachel Croson & James Sundali",
+     "year": 2005,
+     "type": "paper",
+     "file": "summaries/the-gambler-s-fallacy-and-the-hot-hand-empirical-d-2005.html",
+     "sourceUrl": "https://www.stat.berkeley.edu/~aldous/157/Papers/croson.pdf",
+     "tier": 1
+    },
+    {
+     "id": "the-gambler-s-fallacy-in-lottery-play-1993",
+     "title": "The \"gambler's fallacy\" in lottery play",
+     "authors": "Charles T. Clotfelter & Philip J. Cook",
+     "year": 1993,
+     "type": "paper",
+     "file": "summaries/the-gambler-s-fallacy-in-lottery-play-1993.html",
+     "sourceUrl": "https://www.nber.org/papers/w3769",
+     "tier": 2
+    },
+    {
+     "id": "decision-making-under-the-gambler-s-fallacy-eviden-2016",
+     "title": "Decision making under the gambler's fallacy: evidence from asylum judges, loan officers, and baseball umpires",
+     "authors": "Daniel L. Chen, Tobias J. Moskowitz & Kelly Shue",
+     "year": 2016,
+     "type": "paper",
+     "file": "summaries/decision-making-under-the-gambler-s-fallacy-eviden-2016.html",
+     "sourceUrl": "https://www.nber.org/papers/w22026",
+     "tier": 3
+    }
+   ],
+   "tier": 1
+  },
+  {
+   "id": "kerrich-coin-tosses",
+   "topic": "psychology",
+   "topics": [
+    "psychology"
+   ],
+   "title": "Kerrich's 10,000 coin tosses: how the law of averages really works",
+   "summary": "John Kerrich was a mathematician who happened to be in Denmark when Germany occupied it in the Second World War. As a British subject he was interned in a camp run by the Danes, and he spent part of his time tossing a coin, again and again, writing down every result. After the war he published the experiment as a small book. After 10,000 tosses he had 5,067 heads, close to half.\n\nThe interesting part is how he got there. Many people think the \"law of averages\" works by evening things out: if heads gets ahead, tails must catch up. Kerrich's record shows something else. The share of heads swung widely at first and then settled close to one half. But the gap between the number of heads and exactly half did not shrink. Early on it was a handful of tosses either way. By the end, heads was dozens ahead, and still the proportion sat near a half.\n\nThat is the law of large numbers. It does not need streaks to be paid back. An early lead is simply swamped by thousands of new tosses that know nothing about it. The average settles, while the raw count is free to wander.",
+   "deepDive": "Kerrich's own running totals. After 10 tosses he had 4 heads, and after 100 he had 44, so heads was 6 short of half and the share was 0.44. After 1,000 tosses he had 502 heads, just 2 over half. After 5,000 he had 2,533, which is 33 over, and after 10,000 he had 5,067, which is 67 over, a share of 0.5067. So the share of heads moved from 0.44 to 0.507 while the excess of heads grew from 2 to 67. That is what probability theory predicts: the typical gap between heads and half grows roughly with the square root of the number of tosses, while the share's typical error shrinks. The book appeared in Copenhagen in 1946. Reviews in Nature and in the Journal of the Royal Statistical Society noted that Kerrich and a fellow internee also drew balls from an urn 5,000 times. Later physics work found that a coin flipped and caught in the hand lands the same way up as it started slightly more often than half the time, about 51%. Kerrich let his coin bounce, so that analysis does not apply to his data.",
+   "source": {
+    "title": "An experimental introduction to the theory of probability",
+    "author": "J. E. Kerrich",
+    "year": 1946,
+    "url": "https://archive.org/details/experimentalintr00kerr"
+   },
+   "paths": [
+    "probability"
+   ],
+   "goDeeper": [
+    {
+     "id": "an-experimental-introduction-to-the-theory-of-prob-1946",
+     "title": "An experimental introduction to the theory of probability",
+     "authors": "J. E. Kerrich",
+     "year": 1946,
+     "type": "book",
+     "file": "summaries/an-experimental-introduction-to-the-theory-of-prob-1946.html",
+     "sourceUrl": "https://archive.org/details/experimentalintr00kerr",
+     "tier": 1
+    },
+    {
+     "id": "dynamical-bias-in-the-coin-toss-2007",
+     "title": "Dynamical bias in the coin toss",
+     "authors": "Persi Diaconis, Susan Holmes & Richard Montgomery",
+     "year": 2007,
+     "type": "paper",
+     "file": "summaries/dynamical-bias-in-the-coin-toss-2007.html",
+     "sourceUrl": "https://people.ucsc.edu/~rmont/papers/coinSIAM.pdf",
+     "tier": 2
+    },
+    {
+     "id": "fair-coins-tend-to-land-on-the-same-side-they-star-2023",
+     "title": "Fair coins tend to land on the same side they started: evidence from 350,757 flips",
+     "authors": "František Bartoš, Alexandra Sarafoglou, Henrik R. Godmann, et al.",
+     "year": 2023,
+     "type": "paper",
+     "file": "summaries/fair-coins-tend-to-land-on-the-same-side-they-star-2023.html",
+     "sourceUrl": "https://arxiv.org/abs/2310.04153",
+     "tier": 3
+    }
+   ],
+   "tier": 1
+  },
+  {
+   "id": "law-of-small-numbers",
+   "topic": "psychology",
+   "topics": [
+    "psychology"
+   ],
+   "title": "The law of small numbers: why small samples swing to extremes",
+   "summary": "A town has two hospitals. About 45 babies are born each day in the big one and about 15 in the small one. Over a year, which hospital records more days when over 60% of the babies are boys? When Daniel Kahneman and Amos Tversky put this to Israeli high-school students, most said about the same. The right answer is the small hospital. A few babies can tip a small day far from half, while the big hospital's days stay close to the average.\n\nTversky and Kahneman called the mistake a belief in the law of small numbers: we treat a small sample as if it were as trustworthy as a big one. Trained researchers did it too. In a questionnaire for psychologists, most expected a small follow-up study to repeat a result far more reliably than it could.\n\nThe statistician Howard Wainer showed what this does in real life. The American counties with the lowest kidney-cancer rates are mostly small and rural. So are the counties with the highest rates. Nothing about country life causes both. Small places have fewer people, so their rates bounce around more. The same trap caught school reformers: small schools were over-represented among the best scorers, but also among the worst.",
+   "deepDive": "In the hospital problem the students answered in two versions, asking about days with more than 60% boys or with fewer than 60% boys. In the first version, 12 chose the larger hospital, 10 the smaller one and 28 said about the same. In the second, where the larger hospital is the right answer, 9 chose it, 11 the smaller one and 25 said about the same. In Tversky and Kahneman's 1971 questionnaire, psychologists were told a study of 20 people had given a significant result and asked the chance that a further 10 people would also give one. The typical answer was about .85. A more reasonable estimate is about .48, and only 9 of the 84 respondents answered between .40 and .60. Wainer's school example came from Pennsylvania. Of the 50 top-scoring schools on a 5th-grade reading test, six were among the smallest 3% of schools, four times more than expected. Of the 50 lowest-scoring schools, nine were among the 50 smallest. By 2001 the Bill and Melinda Gates Foundation had given about $1.7 billion to education projects, many promoting smaller schools. The rule behind all this is de Moivre's: the variation in an average shrinks with the square root of the sample size.",
+   "source": {
+    "title": "Belief in the law of small numbers",
+    "author": "Amos Tversky & Daniel Kahneman",
+    "year": 1971,
+    "url": "https://doi.org/10.1037/h0031322"
+   },
+   "paths": [
+    "probability"
+   ],
+   "goDeeper": [
+    {
+     "id": "subjective-probability-a-judgment-of-representativ-1972",
+     "title": "Subjective probability: a judgment of representativeness",
+     "authors": "Daniel Kahneman & Amos Tversky",
+     "year": 1972,
+     "type": "paper",
+     "file": "summaries/subjective-probability-a-judgment-of-representativ-1972.html",
+     "sourceUrl": "https://doi.org/10.1016/0010-0285(72)90016-3",
+     "tier": 1
+    },
+    {
+     "id": "belief-in-the-law-of-small-numbers-1971",
+     "title": "Belief in the law of small numbers",
+     "authors": "Amos Tversky & Daniel Kahneman",
+     "year": 1971,
+     "type": "paper",
+     "file": "summaries/belief-in-the-law-of-small-numbers-1971.html",
+     "sourceUrl": "https://doi.org/10.1037/h0031322",
+     "tier": 2
+    },
+    {
+     "id": "the-most-dangerous-equation-2007",
+     "title": "The most dangerous equation",
+     "authors": "Howard Wainer",
+     "year": 2007,
+     "type": "paper",
+     "file": "summaries/the-most-dangerous-equation-2007.html",
+     "sourceUrl": "https://sites.stat.washington.edu/people/peter/498.Sp16/Equation.pdf",
+     "tier": 2
+    }
+   ],
+   "tier": 1
+  },
+  {
+   "id": "survivorship-bias",
+   "topic": "psychology",
+   "topics": [
+    "psychology"
+   ],
+   "title": "Survivorship bias: Abraham Wald and the planes that didn't come back",
+   "summary": "During the Second World War, the mathematician Abraham Wald worked for the Statistical Research Group, a team of statisticians helping the American war effort. One question was how to protect aircraft. Planes came back from combat with hits in some places and not others. Where should extra protection go?\n\nThe tempting answer is where the holes are. Wald saw the catch. The data came only from planes that survived. A plane hit in a spot that brings it down never comes home to be counted, so parts that rarely show hits on returning planes may be the most dangerous places to be hit. In a series of memos written in 1943, he worked out how to estimate how vulnerable each part of a plane was, using only the damage on survivors and the number of planes lost.\n\nThe famous picture of a bomber covered in red dots, with advice to armour the clean spots, is a later illustration. Wald's actual memos are pages of equations, and they don't record how commanders used them. But the idea is real and still useful: whenever your data contain only the winners, such as successful companies or funds that are still open, ask what happened to the ones that vanished.",
+   "deepDive": "Wald's memos were reprinted in 1980 by the Center for Naval Analyses as A Method of Estimating Plane Vulnerability Based on Damage of Survivors. One worked example imagines 400 planes on a mission: 320 come back with no hits, 32 with one hit, 20 with two and a few with more, and the rest are lost. From numbers like these, plus the assumption that a hit's chance of downing a plane does not depend on earlier harmless hits, Wald derived the chance that a plane survives a given number of hits. He then extended the method to separate parts, such as engines, fuselage and fuel system, using their share of the plane's area. In 1984 Marc Mangel and Francisco Samaniego wrote that the memos, eight in all and over 100 pages long, were used in the war and later by the Navy and Air Force in Korea and Vietnam. The same bias appears in finance. When Edwin Elton, Martin Gruber and Christopher Blake tracked every US mutual fund that existed at the end of 1976, including those that later closed or merged, they found that studying only survivors overstated performance, by about 0.4% a year over 10 years and nearly 1% a year over 20 years in one model.",
+   "source": {
+    "title": "A reprint of 'A method of estimating plane vulnerability based on damage of survivors'",
+    "author": "Abraham Wald",
+    "year": 1980,
+    "url": "https://www.cna.org/reports/1980/0204320000.pdf"
+   },
+   "paths": [
+    "probability"
+   ],
+   "goDeeper": [
+    {
+     "id": "a-method-of-estimating-plane-vulnerability-based-o-1943",
+     "title": "A method of estimating plane vulnerability based on damage of survivors",
+     "authors": "Abraham Wald",
+     "year": 1943,
+     "type": "paper",
+     "file": "summaries/a-method-of-estimating-plane-vulnerability-based-o-1943.html",
+     "sourceUrl": "https://www.cna.org/reports/1980/0204320000.pdf",
+     "tier": 1
+    },
+    {
+     "id": "abraham-wald-s-work-on-aircraft-survivability-1984",
+     "title": "Abraham Wald's work on aircraft survivability",
+     "authors": "Marc Mangel & Francisco J. Samaniego",
+     "year": 1984,
+     "type": "paper",
+     "file": "summaries/abraham-wald-s-work-on-aircraft-survivability-1984.html",
+     "sourceUrl": "https://people.ucsc.edu/~msmangel/Wald.pdf",
+     "tier": 2
+    },
+    {
+     "id": "survivorship-bias-and-mutual-fund-performance-1996",
+     "title": "Survivorship bias and mutual fund performance",
+     "authors": "Edwin J. Elton, Martin J. Gruber & Christopher R. Blake",
+     "year": 1996,
+     "type": "paper",
+     "file": "summaries/survivorship-bias-and-mutual-fund-performance-1996.html",
+     "sourceUrl": "https://doi.org/10.1093/rfs/9.4.1097",
+     "tier": 2
+    }
+   ],
+   "tier": 1
+  },
+  {
+   "id": "correlation-causation",
+   "topic": "psychology",
+   "topics": [
+    "psychology"
+   ],
+   "title": "Correlation is not causation: Nicolas Cage and the drowning statistics",
+   "summary": "Do Nicolas Cage films cause drownings? On Tyler Vigen's website, Spurious Correlations, the number of films Cage appeared in each year rises and falls with the number of drowning deaths in the United States. Over more than three decades the match gives a correlation of 0.56, and a standard test says a match that strong would rarely happen by chance. It is still nonsense.\n\nVigen's site, which he also turned into a book in 2015, works by brute force. A computer compares thousands of yearly statistics with each other. Test enough pairs and some will line up by luck alone, and those are the ones that get shown. Vigen points this out himself: dredge through enough random variables and a match this strong is expected.\n\nScientists can fall for a dressed-up version. In 2012 the cardiologist Franz Messerli reported in a leading medical journal that countries that eat more chocolate have more Nobel prize winners per person. The paper was half a joke, and it named the real options itself: X may cause Y, Y may cause X, or something else may drive both. A teaching paper made the same point with storks: European countries with more storks had more babies, and bigger countries simply have more of both.\n\nA correlation tells you two things move together. It never tells you why on its own.",
+   "deepDive": "The Cage chart compares the yearly count of films Nicolas Cage appeared in with US drowning deaths for the 34 years from 1980 to 2013. The site reports r = 0.559 and a p-value of 0.00059. It also notes that if you correlated about 1,702 random variables over the same years, you would expect to find one this strong by chance, and that neighbouring years are not independent, which makes the p-value look better than it should. The site went online in 2014, and in January 2024 Vigen added 25,000 new variables. In Messerli's analysis, published online on 10 October 2012, chocolate eaten per person correlated with Nobel laureates per 10 million people at r = 0.791 across 23 countries, rising to 0.862 without Sweden. Switzerland led on both. He estimated that an extra 0.4 kg of chocolate per person per year would go with one more laureate per 10 million people. He disclosed that he eats chocolate daily. In Robert Matthews's stork paper, the number of breeding stork pairs in 17 European countries correlated with the yearly number of births at r = 0.62, p = 0.008. He suggested land area as a possible common cause.",
+   "source": {
+    "title": "Spurious Correlations",
+    "author": "Tyler Vigen",
+    "year": 2015,
+    "url": "https://www.tylervigen.com/spurious-correlations"
+   },
+   "paths": [
+    "probability"
+   ],
+   "goDeeper": [
+    {
+     "id": "spurious-correlations-2015",
+     "title": "Spurious Correlations",
+     "authors": "Tyler Vigen",
+     "year": 2015,
+     "type": "book",
+     "file": "summaries/spurious-correlations-2015.html",
+     "sourceUrl": "https://www.tylervigen.com/spurious-correlations",
+     "tier": 1
+    },
+    {
+     "id": "chocolate-consumption-cognitive-function-and-nobel-2012",
+     "title": "Chocolate consumption, cognitive function, and Nobel laureates",
+     "authors": "Franz H. Messerli",
+     "year": 2012,
+     "type": "paper",
+     "file": "summaries/chocolate-consumption-cognitive-function-and-nobel-2012.html",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/23050509/",
+     "tier": 2
+    },
+    {
+     "id": "storks-deliver-babies-p-0-008-2000",
+     "title": "Storks deliver babies (p = 0.008)",
+     "authors": "Robert Matthews",
+     "year": 2000,
+     "type": "paper",
+     "file": "summaries/storks-deliver-babies-p-0-008-2000.html",
+     "sourceUrl": "https://doi.org/10.1111/1467-9639.00013",
+     "tier": 2
+    }
+   ],
+   "tier": 1
+  },
+  {
+   "id": "monty-hall",
+   "topic": "psychology",
+   "topics": [
+    "psychology"
+   ],
+   "title": "The Monty Hall problem: why switching wins two times in three",
+   "summary": "You are on a game show with three doors. Behind one is a car, behind the others are goats. You pick a door. The host, who knows where the car is, opens another door and shows a goat. Should you switch?\n\nIn a 1990 column in Parade magazine, Marilyn vos Savant said yes: switching wins two times in three. Thousands of readers wrote in to say she was wrong, including mathematicians and scientists. One mathematician wrote simply, \"You blew it!\"\n\nShe was right. Your first pick is the car only one time in three. The host's move doesn't change that, because whatever you chose, he can always open a door with a goat. So the other two-thirds of the chance now sits on the one door left closed. Picture a million doors: you pick one, and the host opens every other door except one. You would switch.\n\nThe puzzle was not new. The statistician Steve Selvin had set it out in letters to a statistics journal in 1975, and Monty Hall, the host of the show it was named after, wrote to him agreeing that the first pick stays at one in three. In a 2010 study, pigeons playing a version of the game learned to switch almost every time. People given the same practice did not.",
+   "deepDive": "Vos Savant later wrote that of the letters she received from the general public, 92% said she was wrong, and of letters from universities, 65%. She asked school maths classes to test it with three paper cups and a penny, playing 200 games each way, and classes across the country wrote back that switching won. Selvin's second letter, in August 1975, gave the Bayes calculation: given the host's behaviour, the first box keeps a one-in-three chance and the other unopened box has two in three. It depends on the host always opening an empty box, and choosing at random when he has two to pick from. In Walter Herbranson and Julia Schroeder's 2010 study, six pigeons switched on about 36% of trials on day one and about 96% by day 30. When the researchers reversed the payoffs so that staying paid more, the pigeons learned to stay. Six students given the same odds and 200 rounds switched on about 57% of the first 50 trials and 66% of the last 50, far from the best strategy. An earlier study by Donald Granberg and Thad Brown, in 1995, found that people given repeated rounds settled at switching about half the time.",
+   "source": {
+    "title": "Game Show Problem",
+    "author": "Marilyn vos Savant",
+    "year": 1990,
+    "url": "https://web.archive.org/web/20130121183432/http://marilynvossavant.com/game-show-problem/"
+   },
+   "paths": [
+    "probability"
+   ],
+   "goDeeper": [
+    {
+     "id": "game-show-problem-1990",
+     "title": "Game show problem",
+     "authors": "Marilyn vos Savant",
+     "year": 1990,
+     "type": "paper",
+     "file": "summaries/game-show-problem-1990.html",
+     "sourceUrl": "https://web.archive.org/web/20130121183432/http://marilynvossavant.com/game-show-problem/",
+     "tier": 1
+    },
+    {
+     "id": "on-the-monty-hall-problem-1975",
+     "title": "On the Monty Hall problem",
+     "authors": "Steve Selvin",
+     "year": 1975,
+     "type": "paper",
+     "file": "summaries/on-the-monty-hall-problem-1975.html",
+     "sourceUrl": "https://www.montyhallproblem.com/as.html",
+     "tier": 1
+    },
+    {
+     "id": "are-birds-smarter-than-mathematicians-pigeons-colu-2010",
+     "title": "Are birds smarter than mathematicians? Pigeons (Columba livia) perform optimally on a version of the Monty Hall Dilemma",
+     "authors": "Walter T. Herbranson & Julia Schroeder",
+     "year": 2010,
+     "type": "paper",
+     "file": "summaries/are-birds-smarter-than-mathematicians-pigeons-colu-2010.html",
+     "sourceUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3086893/",
+     "tier": 2
+    }
+   ],
+   "tier": 2
+  },
+  {
+   "id": "sally-clark",
+   "topic": "psychology",
+   "topics": [
+    "psychology"
+   ],
+   "title": "Sally Clark and the number that helped convict her",
+   "summary": "Sally Clark was a solicitor in England whose two baby sons died suddenly, Christopher and then, just over a year later, Harry. She was charged with their murder. At her trial the paediatrician Sir Roy Meadow told the jury that the chance of two cot deaths in a family like hers was about 1 in 73 million. She was convicted in 1999.\n\nThe figure was badly wrong. Meadow took the odds of one cot death in such a family and multiplied them by themselves, as if the two deaths were unrelated coin tosses. But cot deaths may run in families, through genes or shared surroundings, so a second death can be more likely after a first.\n\nThe number also invited a worse mistake, known as the prosecutor's fallacy: hearing \"two natural deaths are very unlikely\" as \"she is very unlikely to be innocent\". A mother killing two babies is also extremely rare. What matters is which explanation is more likely, given that two babies had died. The Royal Statistical Society made exactly this point in a public statement, saying the figure had no statistical basis.\n\nHer convictions were overturned on a second appeal, after it emerged that test results suggesting Harry had a serious infection had never been put before the court. She was freed, but her family said she never recovered. She died a few years later. Other cases that relied on Meadow's evidence were reviewed.",
+   "deepDive": "The dates. Christopher died in December 1996 and Harry in January 1998. Sally Clark was convicted at Chester Crown Court on 9 November 1999, by a jury majority of 10 to 2, and her first appeal was dismissed on 2 October 2000. The Royal Statistical Society issued its statement on 23 October 2001. On 2 July 2002 the Criminal Cases Review Commission referred her case back to the Court of Appeal, which heard it on 28 and 29 January 2003, quashed the convictions and gave its full reasons on 11 April 2003. The key new evidence was microbiology results from Harry's post mortem, which had found Staphylococcus aureus in several sites, including the fluid around the brain and spinal cord. None of the lawyers on either side had known about them. The court also said the 1 in 73 million figure very likely grossly overstated the chance of two natural sudden deaths in one family. Meadow had reached it by squaring 1 in 8,543, a figure for a family like the Clarks from a government-funded study of sudden infant deaths. Sally Clark died in March 2007, aged 42; an inquest ruled that she died accidentally of acute alcohol intoxication. In July 2005 the General Medical Council struck Meadow off the medical register. The High Court overturned that in 2006, and in October 2006 the Court of Appeal agreed that his conduct had not been serious professional misconduct.",
+   "source": {
+    "title": "R v Clark [2003] EWCA Crim 1020",
+    "author": "Court of Appeal (Criminal Division): Kay LJ, Holland J, Hallett J",
+    "year": 2003,
+    "url": "https://www.bailii.org/ew/cases/EWCA/Crim/2003/1020.html"
+   },
+   "paths": [
+    "probability"
+   ],
+   "goDeeper": [
+    {
+     "id": "royal-statistical-society-concerned-by-issues-rais-2001",
+     "title": "Royal Statistical Society concerned by issues raised in Sally Clark case",
+     "authors": "Royal Statistical Society",
+     "year": 2001,
+     "type": "paper",
+     "file": "summaries/royal-statistical-society-concerned-by-issues-rais-2001.html",
+     "sourceUrl": "https://rss.org.uk/RSS/media/File-library/Membership/Sections/2020/Sally-Clark-RSS-statement-2001.pdf",
+     "tier": 1
+    },
+    {
+     "id": "r-v-clark-2003-ewca-crim-1020-2003",
+     "title": "R v Clark [2003] EWCA Crim 1020",
+     "authors": "Court of Appeal (Criminal Division): Kay LJ, Holland J & Hallett J",
+     "year": 2003,
+     "type": "paper",
+     "file": "summaries/r-v-clark-2003-ewca-crim-1020-2003.html",
+     "sourceUrl": "https://www.bailii.org/ew/cases/EWCA/Crim/2003/1020.html",
+     "tier": 2
+    },
+    {
+     "id": "bayes-s-theorem-and-weighing-evidence-by-juries-2002",
+     "title": "Bayes's theorem and weighing evidence by juries",
+     "authors": "A. Philip Dawid",
+     "year": 2002,
+     "type": "paper",
+     "file": "summaries/bayes-s-theorem-and-weighing-evidence-by-juries-2002.html",
+     "sourceUrl": "https://joelvelasco.net/teaching/3865/dawid%20weighing%20evidence%20by%20juries.pdf",
+     "tier": 3
+    }
+   ],
+   "tier": 2
+  },
+  {
+   "id": "superstitious-pigeons",
+   "topic": "psychology",
+   "topics": [
+    "psychology",
+    "biology"
+   ],
+   "title": "Skinner's superstitious pigeons: how chance turns into ritual",
+   "summary": "In 1948 the psychologist B. F. Skinner put hungry pigeons in a box and gave them food at regular intervals, no matter what they did. Nothing a bird did could make the food come. Yet most of the birds developed odd routines. One turned in circles before each feeding. Another kept thrusting its head into an upper corner of the cage. Two swung their heads from side to side like a pendulum.\n\nSkinner's explanation was simple. Whatever a bird happened to be doing when the food arrived got rewarded, so it did more of it, which made it more likely to be doing it when food came again. Coincidence alone could build a habit. He called the result superstition, and compared it to a card player's rituals for changing luck, or a bowler twisting his arm after the ball has left his hand.\n\nLater work complicated the story. In 1971 John Staddon and Virginia Simmelhag repeated the experiment and watched more closely. As feeding time approached, their pigeons settled into pecking, which looked more like the bird's built-in food-seeking than an accident that had been rewarded. Tests with people found something similar: a few volunteers built lasting rituals around random rewards, but most did not.\n\nThe core lesson survives: when good things arrive at random, an animal that looks for causes will sometimes find ones that aren't there.",
+   "deepDive": "Skinner kept the birds at 75% of their normal weight and gave five seconds of food each time. Six of the eight birds developed responses so clear that two observers could agree perfectly in counting them. Food every 15 seconds worked well; once a habit was set up, the interval could be stretched to two minutes. One bird's habit drifted over hours of one-minute feeding: a sharp head movement grew into a turn and a step or two. Another's hopping was extinguished when food stopped, and when free food returned the bird picked up a different habit, walking about the cage. Staddon and Simmelhag fed six pigeons every 12 seconds, or at varying intervals averaging 8 seconds, regardless of behaviour, and recorded what each bird did second by second. Two kinds of behaviour appeared: interim activities just after food, and a terminal response, usually pecking, from about halfway through the interval until food. No bird switched to a different terminal response once it began pecking. In a 1987 study by Koichi Ono, 3 of 20 university students developed persistent superstitious behaviour when points were given on a timer, such as pulling a lever in a fixed pattern.",
+   "source": {
+    "title": "'Superstition' in the pigeon",
+    "author": "B. F. Skinner",
+    "year": 1948,
+    "url": "https://psychclassics.yorku.ca/Skinner/Pigeon/"
+   },
+   "paths": [
+    "probability"
+   ],
+   "goDeeper": [
+    {
+     "id": "superstition-in-the-pigeon-1948",
+     "title": "'Superstition' in the pigeon",
+     "authors": "B. F. Skinner",
+     "year": 1948,
+     "type": "paper",
+     "file": "summaries/superstition-in-the-pigeon-1948.html",
+     "sourceUrl": "https://psychclassics.yorku.ca/Skinner/Pigeon/",
+     "tier": 1
+    },
+    {
+     "id": "the-superstition-experiment-a-reexamination-of-its-1971",
+     "title": "The \"superstition\" experiment: a reexamination of its implications for the principles of adaptive behavior",
+     "authors": "J. E. R. Staddon & Virginia L. Simmelhag",
+     "year": 1971,
+     "type": "paper",
+     "file": "summaries/the-superstition-experiment-a-reexamination-of-its-1971.html",
+     "sourceUrl": "https://doi.org/10.1037/h0030305",
+     "tier": 2
+    },
+    {
+     "id": "superstitious-behavior-in-humans-1987",
+     "title": "Superstitious behavior in humans",
+     "authors": "Koichi Ono",
+     "year": 1987,
+     "type": "paper",
+     "file": "summaries/superstitious-behavior-in-humans-1987.html",
+     "sourceUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1348309/",
+     "tier": 2
+    }
+   ],
+   "tier": 2
+  },
+  {
+   "id": "lottery-jackpot-odds",
+   "topic": "psychology",
+   "topics": [
+    "psychology"
+   ],
+   "title": "Why the lottery is a losing bet: big jackpots hide tiny odds",
+   "summary": "A lottery ticket is a strange thing to buy. State lotteries in the United States have typically paid back only about half of what players spend, so every dollar spent returns about fifty cents in expected prizes. The top prize is extraordinarily unlikely. For Powerball, the chance of winning the jackpot with one play is 1 in 292,201,338.\n\nSo why play? Partly because the jackpot is easy to see and the odds are not. The economists Philip Cook and Charles Clotfelter noticed that lotto games sell more tickets per person in bigger states, even though more players mean longer odds. Their explanation: players judge their chances by how often they hear of someone winning, not by the stated odds. A bigger state can offer a much less likely prize that feels just as winnable, with a bigger jackpot on top.\n\nPlayers are not completely blind to value. In one study, sales rose when a ticket's expected value improved. But the same study found that lottery spending came out of other household spending, more so in poorer households.\n\nThere are rare exceptions: after many rollovers, a ticket's expected value can briefly exceed its price. As an investment, a ticket almost never makes sense. Buying one for the fun of imagining is fine, as long as you know that's what you are paying for.",
+   "deepDive": "Clotfelter and Cook's 1990 review gave a standard payout of about 50% for US lotteries, compared with much higher rates in commercial gambling such as slot machines at 89%. In a three-digit numbers game the chance of a straight win is 1 in 1,000 and most states paid 500 to 1, so each dollar of expected prizes cost $2. Their 1993 lotto paper notes that lotto was offered by 29 of 33 state lotteries and made up 40% of lottery sales in 1989. Maryland's lotto, choosing six numbers from 49, had 13,983,816 possible combinations, and the chance of a jackpot on a single dollar bet ranged from about 1 in 574,000 in Delaware to 1 in 23 million in California. Half the money bet went to the prize pool. On Powerball today, the overall chance of winning any prize on a $2 play is 1 in 24.87, but most of those prizes are small: matching only the Powerball pays $4. Melissa Kearney's study estimated that household lottery spending crowds out about $38 a month, or 2%, of other household spending, and that lottery spending does not mainly replace other gambling.",
+   "source": {
+    "title": "On the economics of state lotteries",
+    "author": "Charles T. Clotfelter & Philip J. Cook",
+    "year": 1990,
+    "url": "https://doi.org/10.1257/jep.4.4.105"
+   },
+   "paths": [
+    "probability"
+   ],
+   "goDeeper": [
+    {
+     "id": "on-the-economics-of-state-lotteries-1990",
+     "title": "On the economics of state lotteries",
+     "authors": "Charles T. Clotfelter & Philip J. Cook",
+     "year": 1990,
+     "type": "paper",
+     "file": "summaries/on-the-economics-of-state-lotteries-1990.html",
+     "sourceUrl": "https://doi.org/10.1257/jep.4.4.105",
+     "tier": 1
+    },
+    {
+     "id": "the-peculiar-scale-economies-of-lotto-1993",
+     "title": "The peculiar scale economies of lotto",
+     "authors": "Philip J. Cook & Charles T. Clotfelter",
+     "year": 1993,
+     "type": "paper",
+     "file": "summaries/the-peculiar-scale-economies-of-lotto-1993.html",
+     "sourceUrl": "https://www.nber.org/papers/w3766",
+     "tier": 2
+    },
+    {
+     "id": "state-lotteries-and-consumer-behavior-2005",
+     "title": "State lotteries and consumer behavior",
+     "authors": "Melissa Schettini Kearney",
+     "year": 2005,
+     "type": "paper",
+     "file": "summaries/state-lotteries-and-consumer-behavior-2005.html",
+     "sourceUrl": "https://www.nber.org/papers/w9330",
+     "tier": 3
+    }
+   ],
+   "tier": 2
+  },
+  {
+   "id": "lottery-winners-happiness",
+   "topic": "psychology",
+   "topics": [
+    "psychology"
+   ],
+   "title": "Do lottery winners end up happier? A famous study and its challengers",
+   "summary": "In 1978 Philip Brickman, Dan Coates and Ronnie Janoff-Bulman asked a question that sounds easy: does a big lottery win make people happier? They interviewed 22 major winners of the Illinois State Lottery, a comparison group of people from the same neighbourhoods, and people recently paralysed in accidents. The winners were not significantly happier than the comparison group, and they took less pleasure in everyday things like hearing a joke or getting a compliment. The accident victims were less happy, but not nearly as unhappy as might have been expected.\n\nThe study became a classic, told as proof that we soon get used to good and bad luck, and that our predictions about how much a windfall will change us run too high. But it was small, and it measured each person only once.\n\nLater studies with far more people tell a different story. In Britain, people who won medium-sized prizes had better mental health a couple of years later. In Sweden, a large study of lottery players found that big winners were more satisfied with their lives more than a decade later, with no sign of the effect fading, although their day-to-day happiness changed much less. A study in Singapore argued that earlier work missed something: people who win more have usually spent more on tickets.\n\nSo luck does change lives. It just changes some parts of life more than others.",
+   "deepDive": "Brickman's winners had won between $50,000 and $1 million; seven won $1 million. On 0 to 5 scales, present happiness averaged 4.00 for winners, 3.82 for the comparison group and 2.96 for the 29 accident victims, 11 paraplegic and 18 quadriplegic. Pleasure from everyday activities averaged 3.33 for winners against 3.82 for the comparison group. Kim and Oswald also pointed out that 32% of Brickman's winners had no educational qualifications, compared with 18% of the comparison group, and that the original study did not adjust for such differences. In Jonathan Gardner and Andrew Oswald's British study, 137 wins of over £1,000, up to £120,000, were compared with people who won nothing or small amounts; two years after a win, mental strain on a standard 36-point questionnaire scale was on average 1.4 points lower. Erik Lindqvist, Robert Östling and David Cesarini surveyed 3,362 Swedish lottery players who had shared prizes worth $277 million, following a plan registered in advance. A $100,000 after-tax prize raised life satisfaction by 0.037 standard deviations. Seonghoon Kim and Oswald's Singapore survey covered 5,626 people and recorded how much each spent on tickets; once that was taken into account, lottery wins predicted greater happiness and life satisfaction.",
+   "source": {
+    "title": "Lottery winners and accident victims: is happiness relative?",
+    "author": "Philip Brickman, Dan Coates & Ronnie Janoff-Bulman",
+    "year": 1978,
+    "url": "https://doi.org/10.1037/0022-3514.36.8.917"
+   },
+   "paths": [
+    "probability"
+   ],
+   "goDeeper": [
+    {
+     "id": "lottery-winners-and-accident-victims-is-happiness-1978",
+     "title": "Lottery winners and accident victims: is happiness relative?",
+     "authors": "Philip Brickman, Dan Coates & Ronnie Janoff-Bulman",
+     "year": 1978,
+     "type": "paper",
+     "file": "summaries/lottery-winners-and-accident-victims-is-happiness-1978.html",
+     "sourceUrl": "https://doi.org/10.1037/0022-3514.36.8.917",
+     "tier": 1
+    },
+    {
+     "id": "money-and-mental-wellbeing-a-longitudinal-study-of-2007",
+     "title": "Money and mental wellbeing: a longitudinal study of medium-sized lottery wins",
+     "authors": "Jonathan Gardner & Andrew J. Oswald",
+     "year": 2007,
+     "type": "paper",
+     "file": "summaries/money-and-mental-wellbeing-a-longitudinal-study-of-2007.html",
+     "sourceUrl": "https://docs.iza.org/dp2233.pdf",
+     "tier": 2
+    },
+    {
+     "id": "long-run-effects-of-lottery-wealth-on-psychologica-2020",
+     "title": "Long-run effects of lottery wealth on psychological well-being",
+     "authors": "Erik Lindqvist, Robert Östling & David Cesarini",
+     "year": 2020,
+     "type": "paper",
+     "file": "summaries/long-run-effects-of-lottery-wealth-on-psychologica-2020.html",
+     "sourceUrl": "https://doi.org/10.1093/restud/rdaa006",
+     "tier": 3
+    },
+    {
+     "id": "happy-lottery-winners-and-lottery-ticket-bias-2021",
+     "title": "Happy lottery winners and lottery-ticket bias",
+     "authors": "Seonghoon Kim & Andrew J. Oswald",
+     "year": 2021,
+     "type": "paper",
+     "file": "summaries/happy-lottery-winners-and-lottery-ticket-bias-2021.html",
+     "sourceUrl": "https://wrap.warwick.ac.uk/id/eprint/153706/",
+     "tier": 3
+    }
+   ],
+   "tier": 3
   }
  ]
 }
