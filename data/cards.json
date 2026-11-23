@@ -4305,6 +4305,453 @@
     }
    ],
    "tier": 3
+  },
+  {
+   "id": "rapa-nui-collapse",
+   "topic": "history",
+   "topics": [
+    "history"
+   ],
+   "title": "Did Easter Island really collapse? An old warning story meets new evidence",
+   "summary": "For decades Rapa Nui, or Easter Island, was told as a warning. Settlers arrived, cut down the palm forests and raised ever more giant statues until the land could no longer feed them. Then, the story goes, society fell apart and the population crashed, long before any European ship arrived. Jared Diamond's book Collapse is one of its best-known tellings.\n\nArchaeologists Terry Hunt and Carl Lipo began by checking the dates. Digging at Anakena beach, they argued that people arrived later than thought, around AD 1200, and that forest clearance followed soon after. That left far less time for a long, slow slide into ruin.\n\nLater work went further. A statistical study of the stone platforms that carry the statues found that building went on steadily and continued after 1722, the year the first Europeans landed. A satellite survey found far fewer stone-mulched gardens than earlier estimates, suggesting the island never held the huge population that a crash requires. And ancient genomes from islanders showed no sign of a severe population collapse in the 1600s.\n\nThe disaster that did happen came from outside: violence and new diseases brought by visitors, and later slave raids from Peru. The debate is not over, but Rapa Nui now looks less like a society that destroyed itself and more like one that lived within tight limits.",
+   "deepDive": "Hunt and Lipo's eight radiocarbon dates came from charcoal in Anakena's lowest cultural layer, which also held bones of the Polynesian rat and root moulds of the extinct giant palm. An older date of about AD 400, from a burn layer dated by Thor Heyerdahl's 1950s expedition, had anchored the long chronology, and lake-core dates turned out to be hundreds of years too old. They found that 41 radiocarbon dates linked to deforestation all fall after AD 1200, most after 1300. In 2020 Robert DiNapoli and colleagues modelled dates from 11 ahu, the statue platforms, and found that construction rose rapidly sometime between the early 14th and mid-15th centuries, against a common story in which building stopped around AD 1600. In 2024 Dylan Davis and colleagues used shortwave-infrared satellite images and machine learning to map only 0.76 square kilometres of rock gardens, about one fifth of the most conservative earlier estimate. On sweet potatoes alone, that supports no more than about 4,000 people, against an earlier estimate of over 16,000, and fits the roughly 3,000 people European visitors reported in the 18th century. The same year, J. Víctor Moreno-Mayar and colleagues sequenced 15 islanders who lived between about 1670 and 1950 and rejected a severe bottleneck in the 1600s. They also found about 10% Native American ancestry from contact around 1250 to 1430. In the 1860s Peruvian slave raiders kidnapped a third of the population, which later fell to an estimated 110 people.",
+   "source": {
+    "title": "A model-based approach to the tempo of “collapse”: the case of Rapa Nui (Easter Island)",
+    "author": "Robert J. DiNapoli, Timothy M. Rieth, Carl P. Lipo & Terry L. Hunt",
+    "year": 2020,
+    "url": "https://doi.org/10.1016/j.jas.2020.105094"
+   },
+   "paths": [
+    "collapse"
+   ],
+   "goDeeper": [
+    {
+     "id": "late-colonization-of-easter-island-2006",
+     "title": "Late colonization of Easter Island",
+     "authors": "Terry L. Hunt & Carl P. Lipo",
+     "year": 2006,
+     "type": "paper",
+     "file": "summaries/late-colonization-of-easter-island-2006.html",
+     "sourceUrl": "https://doi.org/10.1126/science.1121879",
+     "tier": 1
+    },
+    {
+     "id": "a-model-based-approach-to-the-tempo-of-collapse-th-2020",
+     "title": "A model-based approach to the tempo of collapse: the case of Rapa Nui (Easter Island)",
+     "authors": "Robert J. DiNapoli, Timothy M. Rieth, Carl P. Lipo & Terry L. Hunt",
+     "year": 2020,
+     "type": "paper",
+     "file": "summaries/a-model-based-approach-to-the-tempo-of-collapse-th-2020.html",
+     "sourceUrl": "https://doi.org/10.1016/j.jas.2020.105094",
+     "tier": 2
+    },
+    {
+     "id": "island-wide-characterization-of-agricultural-produ-2024",
+     "title": "Island-wide characterization of agricultural production challenges the demographic collapse hypothesis for Rapa Nui (Easter Island)",
+     "authors": "Dylan S. Davis, Robert J. DiNapoli, Gina Pakarati, Terry L. Hunt & Carl P. Lipo",
+     "year": 2024,
+     "type": "paper",
+     "file": "summaries/island-wide-characterization-of-agricultural-produ-2024.html",
+     "sourceUrl": "https://doi.org/10.1126/sciadv.ado1459",
+     "tier": 3
+    },
+    {
+     "id": "ancient-rapanui-genomes-reveal-resilience-and-pre-2024",
+     "title": "Ancient Rapanui genomes reveal resilience and pre-European contact with the Americas",
+     "authors": "J. Víctor Moreno-Mayar, Bárbara Sousa da Mota, Tom Higham and many others",
+     "year": 2024,
+     "type": "paper",
+     "file": "summaries/ancient-rapanui-genomes-reveal-resilience-and-pre-2024.html",
+     "sourceUrl": "https://doi.org/10.1038/s41586-024-07881-4",
+     "tier": 3
+    }
+   ],
+   "tier": 3
+  },
+  {
+   "id": "civil-resistance-works",
+   "topic": "history",
+   "topics": [
+    "history"
+   ],
+   "title": "Why unarmed uprisings have won more often than armed ones",
+   "summary": "When people rise against a government, does it pay to take up arms? Maria Stephan and Erica Chenoweth put the question to a century of resistance campaigns, from independence struggles to uprisings against dictators. Their answer surprised many political scientists: campaigns that relied on protests, strikes and boycotts succeeded about twice as often as armed rebellions.\n\nTheir explanation is about people. A nonviolent movement is easier to join, so it can draw in far more, and far more varied, supporters. A broad movement can bring a city or an economy to a halt. Violent crackdowns on peaceful crowds tend to backfire, winning the movement sympathy at home and abroad. And soldiers and police ordered to fire on unarmed neighbours are more likely to disobey or defect than when facing armed rebels.\n\nChenoweth later spotted a striking pattern: in her data, every campaign that brought 3.5% of the population out at its peak had succeeded. The ‘3.5% rule’ drew wide attention, especially among activists. But she has since stressed that it describes past cases and is not a promise. At least one movement, in Bahrain, failed despite larger crowds, and most successful campaigns won with fewer people.\n\nThe record has also turned. Since 2010 nonviolent revolutions have succeeded much less often, though armed ones have fared even worse.",
+   "deepDive": "Stephan and Chenoweth's NAVCO data set covered 323 violent and nonviolent resistance campaigns from 1900 to 2006 aimed at regime change, ending foreign occupation or self-determination. Major nonviolent campaigns succeeded 53% of the time, against 26% for violent ones. They compared cases in Southeast Asia where both methods were used: the Philippines, Burma and East Timor. They called their main limitation hard to avoid: campaigns crushed in their infancy may never be recorded, which biases the data towards success. Chenoweth's 3.5% figure came from dividing the number of participants at a campaign's largest event by the country's population in its final year; she first presented it in 2013, building on Mark Lichbach's speculation about a 5% threshold. In newer data, only 17 of 169 nonviolent campaigns between 1945 and 2013 crossed 3.5%, and 83% of successful nonviolent campaigns won without doing so. Bahrain's 2011–2014 uprising reportedly drew 100,000 people to one demonstration, over 6% of the population. Across 565 campaigns over 120 years, about 51% of nonviolent and 26% of violent campaigns succeeded outright. From the 1960s to about 2010, nonviolent revolutions succeeded more than 40% of the time, peaking at 65% in the 1990s; since 2010 the figures are under 34% for nonviolent and 8% for violent revolutions. Chenoweth blames both savvier governments and movements that, in the digital age, can draw huge crowds quickly before building organisation and strategy.",
+   "source": {
+    "title": "Why civil resistance works: the strategic logic of nonviolent conflict",
+    "author": "Maria J. Stephan & Erica Chenoweth",
+    "year": 2008,
+    "url": "https://doi.org/10.1162/isec.2008.33.1.7"
+   },
+   "paths": [
+    "revolutions"
+   ],
+   "goDeeper": [
+    {
+     "id": "why-civil-resistance-works-the-strategic-logic-of-2008",
+     "title": "Why civil resistance works: the strategic logic of nonviolent conflict",
+     "authors": "Maria J. Stephan & Erica Chenoweth",
+     "year": 2008,
+     "type": "paper",
+     "file": "summaries/why-civil-resistance-works-the-strategic-logic-of-2008.html",
+     "sourceUrl": "https://doi.org/10.1162/isec.2008.33.1.7",
+     "tier": 1
+    },
+    {
+     "id": "questions-answers-and-some-cautionary-updates-rega-2020",
+     "title": "Questions, answers, and some cautionary updates regarding the 3.5% rule",
+     "authors": "Erica Chenoweth",
+     "year": 2020,
+     "type": "paper",
+     "file": "summaries/questions-answers-and-some-cautionary-updates-rega-2020.html",
+     "sourceUrl": "https://www.hks.harvard.edu/centers/carr/publications/questions-answers-and-some-cautionary-updates-regarding-35-rule",
+     "tier": 2
+    },
+    {
+     "id": "the-future-of-nonviolent-resistance-2020",
+     "title": "The future of nonviolent resistance",
+     "authors": "Erica Chenoweth",
+     "year": 2020,
+     "type": "paper",
+     "file": "summaries/the-future-of-nonviolent-resistance-2020.html",
+     "sourceUrl": "https://doi.org/10.1353/jod.2020.0046",
+     "tier": 3
+    }
+   ],
+   "tier": 2
+  },
+  {
+   "id": "bystander-effect",
+   "topic": "psychology",
+   "topics": [
+    "psychology"
+   ],
+   "title": "The bystander effect: why help can come slower in a crowd, and the myth of the 38 witnesses",
+   "summary": "A famous New York Times story reported that 38 neighbours watched from their windows as Kitty Genovese was murdered in Queens, and that none of them called the police. Commentators blamed apathy and the coldness of city life.\n\nTwo psychologists in New York, John Darley and Bibb Latané, suspected something else. In their experiment, students talked over an intercom when one of them seemed to have a seizure. Students who believed they were the only listener nearly always went for help, and quickly. Those who believed four others could hear it often had not acted by the time the fit ended. They had not stopped caring; many were trembling and sweating. The responsibility had simply been spread thin. Decades of later studies found a similar but more modest effect, weaker when the danger was obvious.\n\nThe founding story, though, was largely wrong. Going back to the trial records, Rachel Manning, Mark Levine and Alan Collins found no evidence that so many people saw the attack. Few could see much at all, the fatal attack happened out of sight in a stairwell, and some people did act: one man shouted and scared the attacker away, and there are reports of calls to the police.\n\nReal life looks more hopeful still. In CCTV footage of public fights in Britain, the Netherlands and South Africa, someone stepped in nine times out of ten, and more bystanders meant more chance of help.",
+   "deepDive": "Darley and Latané's 1968 study involved 72 New York University students, 59 women and 13 men. They were told the intercom kept the discussion anonymous; all the other voices were tape recordings. Of those who thought they were alone with the victim, 85% reported the seizure before his voice was cut off, against 62% in three-person groups and 31% in six-person groups, with average response times of 52, 93 and 166 seconds. Everyone who thought they were alone eventually reported it, against 62% in the largest groups, and personality measures did not predict who helped. Manning and colleagues trace the 38 to Martin Gansberg's front-page article of 27 March 1964, two weeks after the murder. At the trial, five neighbours testified, three of whom saw Genovese and her attacker together, and the prosecutor recalled finding only about half a dozen useful witnesses. Peter Fischer and colleagues pooled 105 effect sizes from more than 7,700 participants and found an average effect of g = −0.35, weaker in dangerous emergencies, when a perpetrator was present, and when helping carried physical costs. Richard Philpot and colleagues coded 219 surveillance clips from Lancaster, Amsterdam and Cape Town: at least one bystander intervened in 90.9% of them and, on average, 3.76 people stepped in. Each extra bystander raised the odds of help by a factor of about 1.1.",
+   "source": {
+    "title": "Bystander intervention in emergencies: diffusion of responsibility",
+    "author": "John M. Darley & Bibb Latané",
+    "year": 1968,
+    "url": "https://doi.org/10.1037/h0025589"
+   },
+   "paths": [
+    "social"
+   ],
+   "goDeeper": [
+    {
+     "id": "bystander-intervention-in-emergencies-diffusion-of-1968",
+     "title": "Bystander intervention in emergencies: diffusion of responsibility",
+     "authors": "John M. Darley & Bibb Latané",
+     "year": 1968,
+     "type": "paper",
+     "file": "summaries/bystander-intervention-in-emergencies-diffusion-of-1968.html",
+     "sourceUrl": "https://doi.org/10.1037/h0025589",
+     "tier": 1
+    },
+    {
+     "id": "the-kitty-genovese-murder-and-the-social-psycholog-2007",
+     "title": "The Kitty Genovese murder and the social psychology of helping: the parable of the 38 witnesses",
+     "authors": "Rachel Manning, Mark Levine & Alan Collins",
+     "year": 2007,
+     "type": "paper",
+     "file": "summaries/the-kitty-genovese-murder-and-the-social-psycholog-2007.html",
+     "sourceUrl": "https://doi.org/10.1037/0003-066X.62.6.555",
+     "tier": 2
+    },
+    {
+     "id": "the-bystander-effect-a-meta-analytic-review-on-bys-2011",
+     "title": "The bystander-effect: a meta-analytic review on bystander intervention in dangerous and non-dangerous emergencies",
+     "authors": "Peter Fischer, Joachim I. Krueger, Tobias Greitemeyer, Claudia Vogrincic, Andreas Kastenmüller, Dieter Frey, Moritz Heene, Magdalena Wicher & Martina Kainbacher",
+     "year": 2011,
+     "type": "paper",
+     "file": "summaries/the-bystander-effect-a-meta-analytic-review-on-bys-2011.html",
+     "sourceUrl": "https://doi.org/10.1037/a0023304",
+     "tier": 2
+    },
+    {
+     "id": "would-i-be-helped-cross-national-cctv-footage-show-2020",
+     "title": "Would I be helped? Cross-national CCTV footage shows that intervention is the norm in public conflicts",
+     "authors": "Richard Philpot, Lasse S. Liebst, Mark Levine, Wim Bernasco & Marie Rosenkrantz Lindegaard",
+     "year": 2020,
+     "type": "paper",
+     "file": "summaries/would-i-be-helped-cross-national-cctv-footage-show-2020.html",
+     "sourceUrl": "https://doi.org/10.1037/amp0000469",
+     "tier": 3
+    }
+   ],
+   "tier": 2
+  },
+  {
+   "id": "facial-feedback-pen",
+   "topic": "psychology",
+   "topics": [
+    "psychology"
+   ],
+   "title": "Does smiling make cartoons funnier? The pen-in-mouth study and its replications",
+   "summary": "In 1988 Fritz Strack, Leonard Martin and Sabine Stepper found a clever way to make people smile without telling them. Students held a pen in their mouths, supposedly to test how people manage tasks with parts of the body not normally used for them. Holding the pen in the teeth pulls the face into something like a smile; holding it with the lips makes smiling impossible. Then they rated cartoons from Gary Larson's The Far Side. The ‘smilers’ found them funnier.\n\nThe study became a textbook favourite: your face can feed back into your feelings, even when you don't know you are smiling.\n\nNearly three decades later, 17 labs repeated it following the same plan, agreed in advance, with far more participants. The difference between smilers and pouters was close to zero. Some argued the replication had changed something important: it filmed participants, and being watched might switch the effect off. That question is still debated.\n\nThe wider picture is more mixed than a simple failure. A large review of the field found a real but small effect of facial expressions on feelings. And a big international test, designed jointly by supporters and sceptics, found that deliberately smiling, or copying a smile, made people a little happier. The hidden pen trick, though, showed no reliable effect.",
+   "deepDive": "Strack's Study 1 involved 92 University of Illinois undergraduates. On a 0–9 scale, cartoons averaged 4.32 with the pen in the lips, 4.77 with the pen in the non-dominant hand and 5.14 with the teeth; the authors called the effect small. Study 2, with 83 students in Mannheim, found the pen changed how amused people felt but not their judgment of how funny the cartoons were. The 2016 Registered Replication Report, led by Eric-Jan Wagenmakers, pooled 1,894 participants from 17 labs. The original difference of 0.82 points shrank to 0.03, with a 95% confidence interval from −0.11 to 0.16, and all 17 lab-level Bayes factors from the default test favoured no effect. A video camera recorded participants, a change made on an expert reviewer's advice. In 2019 Nicholas Coles, Jeff Larsen and Heather Lench pooled 286 effect sizes from 138 studies, a fifth of them unpublished, and found d = 0.20; they detected publication bias in studies of judgments like cartoon funniness, but not in studies of felt emotion. The Many Smiles Collaboration, with 3,878 participants in 19 countries and Strack as a co-author, found happiness rose 0.49 points with facial mimicry and 0.40 with voluntary smiling, but just 0.04 with the pen. When its strict exclusion rules were relaxed, the pen effect reached 0.14, a result the team had registered in advance as a weaker test.",
+   "source": {
+    "title": "Inhibiting and facilitating conditions of the human smile: a nonobtrusive test of the facial feedback hypothesis",
+    "author": "Fritz Strack, Leonard L. Martin & Sabine Stepper",
+    "year": 1988,
+    "url": "https://doi.org/10.1037/0022-3514.54.5.768"
+   },
+   "paths": [
+    "replication"
+   ],
+   "goDeeper": [
+    {
+     "id": "inhibiting-and-facilitating-conditions-of-the-huma-1988",
+     "title": "Inhibiting and facilitating conditions of the human smile: a nonobtrusive test of the facial feedback hypothesis",
+     "authors": "Fritz Strack, Leonard L. Martin & Sabine Stepper",
+     "year": 1988,
+     "type": "paper",
+     "file": "summaries/inhibiting-and-facilitating-conditions-of-the-huma-1988.html",
+     "sourceUrl": "https://doi.org/10.1037/0022-3514.54.5.768",
+     "tier": 1
+    },
+    {
+     "id": "registered-replication-report-strack-martin-steppe-2016",
+     "title": "Registered replication report: Strack, Martin, & Stepper (1988)",
+     "authors": "Eric-Jan Wagenmakers, Titia Beek, Laura Dijkhoff, Quentin F. Gronau and many others",
+     "year": 2016,
+     "type": "paper",
+     "file": "summaries/registered-replication-report-strack-martin-steppe-2016.html",
+     "sourceUrl": "https://doi.org/10.1177/1745691616674458",
+     "tier": 2
+    },
+    {
+     "id": "a-meta-analysis-of-the-facial-feedback-literature-2019",
+     "title": "A meta-analysis of the facial feedback literature: effects of facial feedback on emotional experience are small and variable",
+     "authors": "Nicholas A. Coles, Jeff T. Larsen & Heather C. Lench",
+     "year": 2019,
+     "type": "paper",
+     "file": "summaries/a-meta-analysis-of-the-facial-feedback-literature-2019.html",
+     "sourceUrl": "https://doi.org/10.1037/bul0000194",
+     "tier": 3
+    },
+    {
+     "id": "a-multi-lab-test-of-the-facial-feedback-hypothesis-2022",
+     "title": "A multi-lab test of the facial feedback hypothesis by the Many Smiles Collaboration",
+     "authors": "Nicholas A. Coles, David S. March, Fernando Marmolejo-Ramos, Jeff T. Larsen and many others, including Fritz Strack",
+     "year": 2022,
+     "type": "paper",
+     "file": "summaries/a-multi-lab-test-of-the-facial-feedback-hypothesis-2022.html",
+     "sourceUrl": "https://doi.org/10.1038/s41562-022-01458-9",
+     "tier": 3
+    }
+   ],
+   "tier": 3
+  },
+  {
+   "id": "long-words-backfire",
+   "topic": "literature",
+   "topics": [
+    "literature",
+    "psychology"
+   ],
+   "title": "Why needlessly long words make writers seem less clever",
+   "summary": "Many students try to sound smarter by reaching for longer words. When the psychologist Daniel Oppenheimer asked Stanford undergraduates, most admitted doing it on purpose, often with a thesaurus.\n\nHe then tested whether it works. Readers saw real samples of writing, such as application essays for graduate school and a dissertation abstract, either as written or rewritten. In one version, every noun, verb and adjective was swapped for its longest thesaurus entry. In another, an abstract full of long words was simplified.\n\nAgain and again, the plainer versions were judged to come from more intelligent authors. Even a simpler translation of Descartes won higher ratings. The cost seemed to come from how hard the text was to read, not from long words as such: an essay printed in a fussy, hard-to-read font made its author seem less clever too.\n\nThere was a twist. When readers had an obvious excuse for the difficulty, a printout from a printer running low on toner, the penalty disappeared, and they even over-corrected in the author's favour.\n\nWriting guides have long said this. In the 1940s Rudolf Flesch built a famous readability score from two simple measures, word length and sentence length. Oppenheimer's own title makes the joke: ‘Consequences of erudite vernacular utilized irrespective of necessity.’",
+   "deepDive": "Of 110 Stanford undergraduates Oppenheimer surveyed, 86.4% admitted making their vocabulary more complex to seem intelligent, and nearly two-thirds had used a thesaurus to do so. In his first experiment, 71 students read excerpts from graduate-school personal statements in English literature, made more complex with the longest entries from the Microsoft Word 2000 thesaurus; complex versions were rated harder to read and less likely to win admission, whatever the quality of the original. With a passage from Descartes's fourth Meditation attributed to Descartes, the simpler of two translations earned an intelligence rating of 6.5 against 5.6. A simplified sociology abstract earned 4.80 against 4.26 for the original. An essay in the italic Juice ITC font lowered intelligence ratings, while a low-toner printout raised them, to 5.0 against 4.0. Rudolf Flesch's 1948 reading-ease formula, RE = 206.835 − 0.846 wl − 1.015 sl, combines syllables per 100 words with average sentence length and gives scores from 0 to 100; he noted that the main body of his own paper scored only 30. In a 2009 review of processing fluency, Adam Alter and Oppenheimer described how, among roughly 700 New York Stock Exchange stocks, the 10 with the simplest names beat the 10 with the hardest names by 11% on their first trading day and 33% over a year. Not every fluency effect holds up: a pooled analysis of a famous hard-to-read-font experiment and 16 replications found no benefit for problem solving.",
+   "source": {
+    "title": "Consequences of erudite vernacular utilized irrespective of necessity: problems with using long words needlessly",
+    "author": "Daniel M. Oppenheimer",
+    "year": 2006,
+    "url": "https://doi.org/10.1002/acp.1178"
+   },
+   "paths": [
+    "craft"
+   ],
+   "goDeeper": [
+    {
+     "id": "consequences-of-erudite-vernacular-utilized-irresp-2006",
+     "title": "Consequences of erudite vernacular utilized irrespective of necessity: problems with using long words needlessly",
+     "authors": "Daniel M. Oppenheimer",
+     "year": 2006,
+     "type": "paper",
+     "file": "summaries/consequences-of-erudite-vernacular-utilized-irresp-2006.html",
+     "sourceUrl": "https://doi.org/10.1002/acp.1178",
+     "tier": 1
+    },
+    {
+     "id": "a-new-readability-yardstick-1948",
+     "title": "A new readability yardstick",
+     "authors": "Rudolf Flesch",
+     "year": 1948,
+     "type": "paper",
+     "file": "summaries/a-new-readability-yardstick-1948.html",
+     "sourceUrl": "https://doi.org/10.1037/h0057532",
+     "tier": 2
+    },
+    {
+     "id": "uniting-the-tribes-of-fluency-to-form-a-metacognit-2009",
+     "title": "Uniting the tribes of fluency to form a metacognitive nation",
+     "authors": "Adam L. Alter & Daniel M. Oppenheimer",
+     "year": 2009,
+     "type": "paper",
+     "file": "summaries/uniting-the-tribes-of-fluency-to-form-a-metacognit-2009.html",
+     "sourceUrl": "https://doi.org/10.1177/1088868309341564",
+     "tier": 3
+    }
+   ],
+   "tier": 1
+  },
+  {
+   "id": "paper-vs-screen",
+   "topic": "literature",
+   "topics": [
+    "literature"
+   ],
+   "title": "Paper or screen? Why we understand a little less when we read on screens",
+   "summary": "Most of us now read more on screens than on paper. Does it change how well we understand what we read?\n\nIn two Norwegian schools, Anne Mangen and colleagues gave teenagers the same two texts, one a story and one informational, either printed or as a PDF on a computer. Those who read on paper scored better on the comprehension test. The researchers suspected scrolling: on paper, each passage stays in a fixed place on a page you can see and flip back to.\n\nOne small study proves little, so Pablo Delgado and colleagues pooled dozens of experiments involving a very large number of readers. Paper won, but only by a small margin. The gap was larger when people read against the clock, and it appeared for informational texts but not for stories. And contrary to the hope that it would fade as people grew used to screens, the paper advantage grew over the years they studied.\n\nA later review of tablets and e-readers, devices designed to feel more like books, found the same small advantage for print.\n\nSo screens are not a disaster for reading, and the effect is modest. But when understanding really matters, especially for dense, factual text under time pressure, paper seems to give a small, real edge.",
+   "deepDive": "Mangen's study tested 72 tenth graders aged 15 and 16, randomly assigned to read two texts of 1,400 to 2,000 words on paper or as PDFs on screen; the groups did not differ on pretests of vocabulary and word reading, and the narrative and expository texts were affected alike. Delgado, Cristina Vargas, Rakefet Ackerman and Ladislao Salmerón screened 1,840 records from 2000 to 2017 and included 54 studies with 171,055 participants. Both between-participant and within-participant designs gave an advantage for paper of g = −0.21. The advantage was larger in time-limited reading, held for informational or mixed texts but not for narrative-only texts, increased with publication year, and did not differ by educational level. Salmerón and colleagues' 2024 meta-analysis of handheld devices included 49 studies and 63 effect sizes and found small advantages for print of g = −0.113 between participants and −0.103 within participants. The screen disadvantage was larger for undergraduates than for school pupils, and when people were tested individually rather than in groups; time limits, publication year, text genre and navigation made no significant difference.",
+   "source": {
+    "title": "Don't throw away your printed books: a meta-analysis on the effects of reading media on reading comprehension",
+    "author": "Pablo Delgado, Cristina Vargas, Rakefet Ackerman & Ladislao Salmerón",
+    "year": 2018,
+    "url": "https://doi.org/10.1016/j.edurev.2018.09.003"
+   },
+   "paths": [
+    "mind"
+   ],
+   "goDeeper": [
+    {
+     "id": "reading-linear-texts-on-paper-versus-computer-scre-2013",
+     "title": "Reading linear texts on paper versus computer screen: effects on reading comprehension",
+     "authors": "Anne Mangen, Bente R. Walgermo & Kolbjørn Brønnick",
+     "year": 2013,
+     "type": "paper",
+     "file": "summaries/reading-linear-texts-on-paper-versus-computer-scre-2013.html",
+     "sourceUrl": "https://doi.org/10.1016/j.ijer.2012.12.002",
+     "tier": 1
+    },
+    {
+     "id": "don-t-throw-away-your-printed-books-a-meta-analysi-2018",
+     "title": "Don't throw away your printed books: a meta-analysis on the effects of reading media on reading comprehension",
+     "authors": "Pablo Delgado, Cristina Vargas, Rakefet Ackerman & Ladislao Salmerón",
+     "year": 2018,
+     "type": "paper",
+     "file": "summaries/don-t-throw-away-your-printed-books-a-meta-analysi-2018.html",
+     "sourceUrl": "https://doi.org/10.1016/j.edurev.2018.09.003",
+     "tier": 2
+    },
+    {
+     "id": "reading-comprehension-on-handheld-devices-versus-o-2024",
+     "title": "Reading comprehension on handheld devices versus on paper: a narrative review and meta-analysis of the medium effect and its moderators",
+     "authors": "Ladislao Salmerón, Lidia Altamura, Pablo Delgado, Anastasia Karagiorgi & Cristina Vargas",
+     "year": 2024,
+     "type": "paper",
+     "file": "summaries/reading-comprehension-on-handheld-devices-versus-o-2024.html",
+     "sourceUrl": "https://doi.org/10.1037/edu0000830",
+     "tier": 3
+    }
+   ],
+   "tier": 2
+  },
+  {
+   "id": "milk-bottle-tits",
+   "topic": "biology",
+   "topics": [
+    "biology"
+   ],
+   "title": "The tits that learned to open milk bottles",
+   "summary": "In 1921, near Southampton, small birds were seen prising open the waxboard tops of milk bottles left on doorsteps and drinking the milk. Over the next quarter of a century the habit turned up across Britain.\n\nThe naturalists James Fisher and Robert Hinde gathered hundreds of reports from birdwatchers and newspaper readers. Blue tits and great tits were the usual culprits. They hammered through foil caps or peeled cardboard ones layer by layer. Some followed the milkman's cart down the street, and a few drowned head first in the bottles.\n\nThe map told a story. Tits rarely travel far, yet the habit kept appearing in places far from earlier records, then spreading locally around them. Fisher and Hinde concluded that a few unusual birds had discovered the trick independently in many places, and that others then picked it up by some sort of imitation. They admitted they could not say exactly how that learning happened.\n\nDecades later, Lucy Aplin's team tested the idea in a wild wood near Oxford. They taught a few great tits one way to open a puzzle box. The trick spread along the birds' social ties, each local group stuck to the version it had been taught, and those traditions returned the next winter even though many of the birds were new.",
+   "deepDive": "The first record, from 1921, came from Swaythling, near Southampton, and by 1949 at least eleven bird species had been seen opening bottles. Fisher and Hinde's survey drew 141 records from 126 British Trust for Ornithology members and over 200 more replies after appeals in the press. Of 400 identifications, 246 were blue tits, 142 great tits, 11 coal tits and 1 a marsh tit. Because tits rarely move more than about fifteen miles, the 89 records by 1947 that lay more than fifteen miles from any earlier one suggested many separate inventions. In East Anglia the habit spread from Lowestoft to Norwich and then became widespread, and milkmen in affected areas were told to put tins or jars over bottles. In 2015 Lucy Aplin and colleagues trained two males from each of five sub-populations of great tits in Wytham Woods to open a two-way puzzle box, with three untrained control groups. The skill reached an average of 75% of local birds, and 508 birds made 58,975 solutions. Of 14 birds that moved between areas with different traditions, 10 switched to the local technique. The next winter, when only about 40% of birds were the same individuals, the traditions reappeared. In a 2017 follow-up, when the established technique began to yield sunflower seeds and the alternative yielded mealworms, 49% of birds switched within 14 days, younger birds fastest.",
+   "source": {
+    "title": "The opening of milk bottles by birds",
+    "author": "James Fisher & Robert A. Hinde",
+    "year": 1949,
+    "url": "https://www.bto.org/our-work/science/publications/papers/opening-milk-bottles-birds"
+   },
+   "paths": [
+    "animal-culture"
+   ],
+   "goDeeper": [
+    {
+     "id": "the-opening-of-milk-bottles-by-birds-1949",
+     "title": "The opening of milk bottles by birds",
+     "authors": "James Fisher & Robert A. Hinde",
+     "year": 1949,
+     "type": "paper",
+     "file": "summaries/the-opening-of-milk-bottles-by-birds-1949.html",
+     "sourceUrl": "https://www.bto.org/our-work/science/publications/papers/opening-milk-bottles-birds",
+     "tier": 1
+    },
+    {
+     "id": "experimentally-induced-innovations-lead-to-persist-2015",
+     "title": "Experimentally induced innovations lead to persistent culture via conformity in wild birds",
+     "authors": "Lucy M. Aplin, Damien R. Farine, Julie Morand-Ferron, Andrew Cockburn, Alex Thornton & Ben C. Sheldon",
+     "year": 2015,
+     "type": "paper",
+     "file": "summaries/experimentally-induced-innovations-lead-to-persist-2015.html",
+     "sourceUrl": "https://doi.org/10.1038/nature13998",
+     "tier": 2
+    },
+    {
+     "id": "conformity-does-not-perpetuate-suboptimal-traditio-2017",
+     "title": "Conformity does not perpetuate suboptimal traditions in a wild population of songbirds",
+     "authors": "Lucy M. Aplin, Ben C. Sheldon & Richard McElreath",
+     "year": 2017,
+     "type": "paper",
+     "file": "summaries/conformity-does-not-perpetuate-suboptimal-traditio-2017.html",
+     "sourceUrl": "https://doi.org/10.1073/pnas.1621067114",
+     "tier": 3
+    }
+   ],
+   "tier": 1
+  },
+  {
+   "id": "transforming-principle-dna",
+   "topic": "biology",
+   "topics": [
+    "biology"
+   ],
+   "title": "Dead bacteria that changed living ones: how DNA was shown to carry heredity",
+   "summary": "In 1928 Frederick Griffith, a British government medical officer, was studying the bacteria that cause pneumonia. Some strains wear a sugary coat and kill mice; a coatless form is harmless. Griffith injected mice with a little of the harmless form together with a large dose of the deadly kind, killed by heat. Neither should have harmed them. Yet many mice died, and their blood was full of living, coated bacteria of the dead strain's type. Something from the dead cells had changed the living ones.\n\nAt the Rockefeller Institute in New York, Oswald Avery, Colin MacLeod and Maclyn McCarty spent years purifying this ‘transforming principle’. In 1944 they reported that it was DNA. Enzymes that destroy proteins or RNA left it working, while preparations that break down DNA destroyed it. A tiny amount was enough, and the change passed on to later generations of bacteria.\n\nMany scientists were not convinced. DNA was widely thought to be too simple and uniform to carry genetic information, and a trace of protein might have done the work.\n\nIn 1952 Alfred Hershey and Martha Chase labelled viruses that infect bacteria, tagging the protein and the DNA with different radioactive atoms. Mostly DNA, not protein, entered the cells and passed on to the next generation of viruses. Together these experiments made the case that genes are made of DNA.",
+   "deepDive": "Griffith injected mice under the skin with a small dose of a living, harmless R strain derived from Type II, plus a large dose of virulent Type I bacteria heated to 60°C; in one run four mice died within three to five days. Heating to 80°C destroyed the Type I culture's transforming power, and mixing the cultures in a test tube did not produce the change. Avery's team worked with the change from R Type II to encapsulated Type III in the test tube. Their purified preparations had nitrogen-to-phosphorus ratios of 1.58 to 1.75, close to the 1.67 expected for DNA, and as little as 0.003 micrograms caused transformation, about one part in 600 million. Crystalline trypsin, chymotrypsin and ribonuclease left the activity intact, and within the limits of their methods the material contained no demonstrable protein. McCarty later recalled that the team was convinced by spring 1942, submitted the paper on 1 November 1943, and that citations lagged in the early years. Hershey and Chase labelled phage T2 with radioactive sulfur, found in protein, or radioactive phosphorus, found in DNA. Spinning infected bacteria in a Waring blender stripped off 75% of the sulfur but only 15% of the phosphorus, and the cells still produced new phage. The offspring carried less than 1% of the parents' sulfur but 30% or more of their phosphorus. The authors warned that further chemical inferences should not be drawn from their experiments.",
+   "source": {
+    "title": "Studies on the chemical nature of the substance inducing transformation of pneumococcal types",
+    "author": "Oswald T. Avery, Colin M. MacLeod & Maclyn McCarty",
+    "year": 1944,
+    "url": "https://doi.org/10.1084/jem.79.2.137"
+   },
+   "paths": [
+    "lab-surprises"
+   ],
+   "goDeeper": [
+    {
+     "id": "the-significance-of-pneumococcal-types-1928",
+     "title": "The significance of pneumococcal types",
+     "authors": "Frederick Griffith",
+     "year": 1928,
+     "type": "paper",
+     "file": "summaries/the-significance-of-pneumococcal-types-1928.html",
+     "sourceUrl": "https://doi.org/10.1017/S0022172400031879",
+     "tier": 1
+    },
+    {
+     "id": "studies-on-the-chemical-nature-of-the-substance-in-1944",
+     "title": "Studies on the chemical nature of the substance inducing transformation of pneumococcal types",
+     "authors": "Oswald T. Avery, Colin M. MacLeod & Maclyn McCarty",
+     "year": 1944,
+     "type": "paper",
+     "file": "summaries/studies-on-the-chemical-nature-of-the-substance-in-1944.html",
+     "sourceUrl": "https://doi.org/10.1084/jem.79.2.137",
+     "tier": 2
+    },
+    {
+     "id": "independent-functions-of-viral-protein-and-nucleic-1952",
+     "title": "Independent functions of viral protein and nucleic acid in growth of bacteriophage",
+     "authors": "Alfred D. Hershey & Martha Chase",
+     "year": 1952,
+     "type": "paper",
+     "file": "summaries/independent-functions-of-viral-protein-and-nucleic-1952.html",
+     "sourceUrl": "https://doi.org/10.1085/jgp.36.1.39",
+     "tier": 2
+    }
+   ],
+   "tier": 1
   }
  ]
 }
